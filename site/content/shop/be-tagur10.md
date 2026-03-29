@@ -33,7 +33,7 @@
           30カプセル入り　 7500円　左上<br>
           100カプセル入り22500円　左<br></font>
           <hr width="60%" size="1" align="left" noshade>
-          <font size="4" color="red"><a href="tyuumon.htm">商品のご注文は</a>こちらへどうぞ。<br></font>
+          <!--<font size="4" color="red"><a href="tyuumon.htm">商品のご注文は</a>こちらへどうぞ。<br></font>-->
         </td>
       </tr>
       <tr>

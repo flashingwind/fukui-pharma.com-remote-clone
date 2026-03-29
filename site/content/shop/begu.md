@@ -44,6 +44,6 @@
   <br>
   <!--ご質問、ご注文は−電話・FAX　━０４８（２２３）１６６１━　へお気軽に。<BR
 留守番電話の場合−電話番号をお知らせ頂けば、帰り次第ご連絡いたします。-->
-   <font size="4" color="red"><a href="tyuumon.htm">商品のご注文はこちらから</a>どうぞ。</font></font></p>
+   <!--<font size="4" color="red"><a href="tyuumon.htm">商品のご注文はこちらから</a>どうぞ。</font></font></p>-->
   <hr>
   <a href="index.html" target="_top">ホームページへ</a>

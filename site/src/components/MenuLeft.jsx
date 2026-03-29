@@ -129,25 +129,25 @@ const MenuLeft = () => {
 
       {/* 通販 */}
       <div className="menu-section" onClick={() => toggleSection('shop')} style={{cursor:'pointer'}}>
-        通販 {openSection.shop ? '▼' : '▶'}
+        サプリメント {openSection.shop ? '▼' : '▶'}
       </div>
       {openSection.shop && (
         <ul className="menu-group">
-          <li><a href="/tyuumon">注文方法</a></li>
+          {/* <li><a href="/tyuumon">注文方法</a></li> */}
           <li><a href="/megafudo">メガフードアルファ</a></li>
           <li><a href="/be-tagur">ベータグルカン</a></li>
         </ul>
       )}
 
       {/* アクセス */}
-      <div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>
+			  {/*<div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>
         アクセス {openSection.access ? '▼' : '▶'}
       </div>
       {openSection.access && (
         <ul className="menu-group">
           <li><a href="/access">アクセス情報</a></li>
         </ul>
-      )}
+      )}*/}
 
       {/* 花の写真集 */}
       <div className="menu-section" onClick={() => toggleSection('flower')} style={{cursor:'pointer'}}>

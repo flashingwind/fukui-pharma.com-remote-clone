@@ -1,4 +1,4 @@
-<span class="red">
+<!--<span class="red">
 お薦めの商品</span>
 
 <center>
@@ -51,6 +51,7 @@
 　 </B><BR>
 <Li><B>お名前　ご住所　電話番号　ご注文の商品　個数</B><BR>
   お書きの上お送りください、必ず電話番号を書いて下さい。<BR>-->
+<!--
 <BR>
 <Li><B>お支払いはヤマト運輸の<span class="red">代引き</span> になります。宅配時に代金を現金にてお支払いください。</B><BR>
 　送料……全国一律６００円<BR>
@@ -78,3 +79,4 @@
 <HR width="90%" size=1 align="left" noshade>
 
 <A HREF="/" TARGET="_top">ホームページへ</A>
+-->

@@ -26,7 +26,7 @@
 輸入発売元　株式会社　シェルライフジャパン<BR>
 価格　30カプセル入り　７５００円<BR>
 </span>
-<span class="red"><A HREF="/tyuumon">商品のご注文はこちらへ</A>どうぞ。<BR>
+<!--<span class="red"><A HREF="/tyuumon">商品のご注文はこちらへ</A>どうぞ。<BR>-->
 
 <HR width="60%" size=1 align="left" noshade>
 
