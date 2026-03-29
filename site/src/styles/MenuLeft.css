@@ -1,0 +1,76 @@
+/* メニュー全体（スクロール対応） */
+.menu-left {
+  width: 210px;
+  height: 100vh;
+  background: #f5deb3;
+  border-right: 2px solid #bfa76f;
+  padding: 20px 10px 10px 10px;
+  font-family: 'MS UI Gothic', 'Meiryo', sans-serif;
+  font-size: 15px;
+  box-shadow: 2px 0 6px rgba(191,167,111,0.08);
+  overflow-y: auto;
+  position: relative;
+}
+/* メニューリスト */
+.menu-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+  background: transparent;
+}
+/* メニュー項目 */
+.menu-left li {
+  margin-bottom: 8px;
+  background: transparent;
+}
+/* 通常リンク */
+.menu-left a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 2px 0 2px 8px;
+  display: block;
+  border-radius: 3px;
+  background: transparent;
+}
+.menu-left a:hover {
+  color: #c00;
+  background: #f9e7c2;
+  text-decoration: underline;
+}
+
+/* セクションタイトル */
+.menu-section {
+  font-weight: bold;
+  color: #bfa76f;
+  margin: 18px 0 6px 4px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  background: #f5deb3;
+  border-radius: 3px;
+  padding: 2px 4px;
+  user-select: none;
+}
+
+/* 年度・サブタイトル */
+.menu-subtitle {
+  font-size: 13px;
+  color: #a67c00;
+  margin: 8px 0 2px 8px;
+  font-weight: bold;
+  background: #f5deb3;
+  border-radius: 3px;
+  padding: 2px 4px;
+  user-select: none;
+}
+
+/* トップページタイトル */
+.menu-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #c00;
+  margin-bottom: 10px;
+  background: #f5deb3;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
