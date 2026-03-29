@@ -1,76 +1,83 @@
 /* メニュー全体（スクロール対応） */
 .menu-left {
-  width: 210px;
+  width: 20vw;
+  min-width: 220px;
+  max-width: 320px;
   height: 100vh;
   background: #f5deb3;
-  border-right: 2px solid #bfa76f;
-  padding: 20px 10px 10px 10px;
+  border-right: 1px solid #c8b38a;
+  padding: 0;
   font-family: 'MS UI Gothic', 'Meiryo', sans-serif;
-  font-size: 15px;
-  box-shadow: 2px 0 6px rgba(191,167,111,0.08);
+  font-size: 14px;
   overflow-y: auto;
-  position: relative;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.menu-header-link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.menu-header-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-left-nav {
+  padding: 12px 10px;
 }
 /* メニューリスト */
-.menu-left ul {
+.menu-left-nav ul {
   list-style: none;
   padding: 0;
   margin: 0 0 12px 0;
   background: transparent;
 }
 /* メニュー項目 */
-.menu-left li {
-  margin-bottom: 8px;
+.menu-left-nav li {
+  margin-bottom: 6px;
   background: transparent;
 }
 /* 通常リンク */
-.menu-left a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.2s;
-  padding: 2px 0 2px 8px;
-  display: block;
-  border-radius: 3px;
+.menu-left-nav a {
+  color: #0000ee;
+  text-decoration: underline;
+  padding: 0;
+  display: inline;
   background: transparent;
 }
-.menu-left a:hover {
-  color: #c00;
-  background: #f9e7c2;
+.menu-left-nav a:hover {
+  color: #0000ee;
+  background: transparent;
   text-decoration: underline;
 }
 
 /* セクションタイトル */
 .menu-section {
   font-weight: bold;
-  color: #bfa76f;
-  margin: 18px 0 6px 4px;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+  color: #000;
+  margin: 14px 0 6px;
+  font-size: 15px;
   background: #f5deb3;
-  border-radius: 3px;
-  padding: 2px 4px;
+  padding: 0;
   user-select: none;
 }
 
 /* 年度・サブタイトル */
 .menu-subtitle {
   font-size: 13px;
-  color: #a67c00;
-  margin: 8px 0 2px 8px;
+  color: #000;
+  margin: 8px 0 2px;
   font-weight: bold;
   background: #f5deb3;
-  border-radius: 3px;
-  padding: 2px 4px;
+  padding: 0;
   user-select: none;
-}
-
-/* トップページタイトル */
-.menu-title {
-  font-size: 17px;
-  font-weight: bold;
-  color: #c00;
-  margin-bottom: 10px;
-  background: #f5deb3;
-  border-radius: 3px;
-  padding: 2px 4px;
 }

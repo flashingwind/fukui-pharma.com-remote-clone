@@ -1,21 +1,117 @@
 .markdown-body {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #222;
+  font-size: 16px;
+  line-height: 1.5;
+  color: navy;
   background: transparent;
 }
 .markdown-body h1, .markdown-body h2, .markdown-body h3 {
-  color: #1a237e;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  color: navy;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
 }
 .markdown-body ul {
-  margin-left: 1.5em;
+  margin-left: 1.3em;
 }
 .markdown-body .red {
-  color: #c00;
-  font-weight: bold;
-  background: #fff0f0;
-  padding: 0 2px;
-  border-radius: 2px;
+  color: red;
+  font-weight: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+.markdown-body .top-products {
+  text-align: left;
+  padding-left: 10ch;
+}
+
+.markdown-body .top-products p {
+  margin: 0 0 0.45em 0;
+}
+
+.markdown-body .top-menu-title {
+  margin-left: 10ch;
+  text-align: left;
+}
+
+.markdown-body .top-menu-title + ol {
+  margin-left: 10ch;
+  padding-left: 1.6em;
+  list-style-position: outside;
+  text-align: left;
+}
+
+.markdown-body a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.markdown-body pre {
+  white-space: pre;
+  overflow-x: auto;
+  background: transparent;
+  border: 0;
+  margin: 0.4em 0;
+  padding: 0;
+  color: navy;
+  font-family: 'MS UI Gothic', 'Meiryo', sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.markdown-body pre code {
+  white-space: pre;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+.markdown-body code {
+  background: transparent;
+  color: inherit;
+}
+
+.markdown-body center {
+  display: block;
+  text-align: center;
+}
+
+.markdown-body table {
+  width: 100%;
+  table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  color: navy;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #666;
+  padding: 4px 6px;
+  vertical-align: top;
+}
+
+.markdown-body .pre-table {
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+  border-collapse: collapse;
+}
+
+.markdown-body .pre-table-cell {
+  white-space: pre;
+  font-family: 'MS UI Gothic', 'Meiryo', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  border: 1px solid #888;
+  padding: 2px 6px;
+  background: transparent;
+}
+
+.markdown-body td pre,
+.markdown-body th pre {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
 }

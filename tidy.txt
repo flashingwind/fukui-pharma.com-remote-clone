@@ -1,1607 +1,416 @@
 ./2006cattleya.html
-line 9 column 1 - Warning: missing </font> before </body>
-line 8 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-./paphio101.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 2 - Warning: <img> lacks "alt" attribute
 line 13 column 3 - Warning: <img> lacks "alt" attribute
-line 14 column 3 - Warning: <img> lacks "alt" attribute
-line 15 column 3 - Warning: <img> lacks "alt" attribute
-line 16 column 2 - Warning: <img> lacks "alt" attribute
-line 17 column 3 - Warning: <img> lacks "alt" attribute
-line 18 column 3 - Warning: <img> lacks "alt" attribute
-line 19 column 3 - Warning: <img> lacks "alt" attribute
-line 20 column 3 - Warning: <img> lacks "alt" attribute
-line 21 column 3 - Warning: <img> lacks "alt" attribute
-line 22 column 3 - Warning: <img> lacks "alt" attribute
-./googleb47d50038c5e8b10.html
-line 1 column 1 - Warning: missing <!DOCTYPE> declaration
-line 1 column 1 - Warning: plain text isn't allowed in <head> elements
-line 1 column 1 - Warning: inserting implicit <body>
-line 1 column 1 - Warning: inserting missing 'title' element
-./cattleya1.html
-line 11 column 1 - Warning: missing </font> before </body>
-line 10 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 2 - Warning: <img> lacks "alt" attribute
-line 15 column 2 - Warning: <img> lacks "alt" attribute
-line 16 column 3 - Warning: <img> lacks "alt" attribute
-line 17 column 3 - Warning: <img> lacks "alt" attribute
-line 18 column 2 - Warning: <img> lacks "alt" attribute
-line 19 column 3 - Warning: <img> lacks "alt" attribute
-line 20 column 2 - Warning: <img> lacks "alt" attribute
-line 21 column 3 - Warning: <img> lacks "alt" attribute
-line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 5 - Warning: <img> lacks "alt" attribute
+line 17 column 5 - Warning: <img> lacks "alt" attribute
+line 19 column 5 - Warning: <img> lacks "alt" attribute
+line 21 column 5 - Warning: <img> lacks "alt" attribute
 line 23 column 3 - Warning: <img> lacks "alt" attribute
-./be-tagur10.html
-line 15 column 1 - Warning: <table> isn't allowed in <table> elements
-line 18 column 1 - Warning: missing </center>
-line 25 column 1 - Warning: missing </font> before </td>
-line 37 column 6 - Warning: plain text isn't allowed in <tr> elements
-line 40 column 1 - Warning: missing </center>
-line 60 column 1 - Warning: missing </center> before <td>
-line 63 column 1 - Warning: inserting implicit <table>
-line 63 column 1 - Warning: missing <tr>
-line 64 column 1 - Warning: missing </font> before </tr>
-line 76 column 6 - Warning: plain text isn't allowed in <table> elements
-line 76 column 6 - Warning: discarding unexpected </td>
-line 15 column 1 - Warning: missing </table>
-line 13 column 1 - Warning: missing </center>
-line 11 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 1 - Warning: <table> lacks "summary" attribute
-line 15 column 1 - Warning: <table> lacks "summary" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <font> attribute "color" has invalid value "DARKBLUE"
-line 41 column 1 - Warning: <img> lacks "alt" attribute
-line 47 column 1 - Warning: <font> attribute "color" has invalid value "DARKBLUE"
-line 61 column 1 - Warning: <img> lacks "alt" attribute
-line 63 column 1 - Warning: <table> lacks "summary" attribute
-line 64 column 1 - Warning: <font> attribute "color" has invalid value "DARKBLUE"
-line 14 column 1 - Warning: trimming empty <table>
-line 78 column 1 - Warning: trimming empty <p>
-line 23 column 1 - Warning: <td> proprietary attribute "algin"
-./index.html
-line 11 column 1 - Warning: <frameset> proprietary attribute "frameborder"
-line 11 column 1 - Warning: <frameset> proprietary attribute "framespacing"
-line 13 column 5 - Warning: <frameset> proprietary attribute "frameborder"
-line 13 column 5 - Warning: <frameset> proprietary attribute "framespacing"
-./cattleya.html
-line 11 column 1 - Warning: missing </font> before </body>
-line 10 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 29 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-line 31 column 1 - Warning: <img> lacks "alt" attribute
-line 33 column 1 - Warning: <img> lacks "alt" attribute
-line 34 column 1 - Warning: <img> lacks "alt" attribute
-line 35 column 1 - Warning: <img> lacks "alt" attribute
-./paphiopedilum2.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-./oldcar.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 27 column 1 - Warning: <img> lacks "alt" attribute
-./2006ranten.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 12 column 1 - Warning: <img> proprietary attribute "target"
-line 13 column 1 - Warning: <img> proprietary attribute "target"
-line 14 column 1 - Warning: <img> proprietary attribute "target"
-line 16 column 1 - Warning: <img> proprietary attribute "target"
-line 17 column 1 - Warning: <img> proprietary attribute "target"
-line 18 column 1 - Warning: <img> proprietary attribute "target"
-line 20 column 1 - Warning: <img> proprietary attribute "target"
-./tex.html
-line 77 column 10 - Warning: inserting implicit <p>
-line 134 column 39 - Warning: missing </font> before <p>
-line 155 column 4 - Warning: inserting implicit <font>
-line 155 column 4 - Warning: missing </font> before <li>
-line 158 column 5 - Warning: inserting implicit <font>
-line 169 column 50 - Warning: discarding unexpected </font>
-line 170 column 1 - Warning: inserting implicit <p>
-line 173 column 1 - Warning: missing </font> before <ul>
-line 175 column 5 - Warning: inserting implicit <font>
-line 175 column 5 - Warning: missing </font> before <li>
-line 177 column 5 - Warning: inserting implicit <font>
-line 179 column 6 - Warning: discarding unexpected </font>
-line 193 column 156 - Warning: unescaped & or unknown entity "&bc1"
-line 193 column 167 - Warning: unescaped & or unknown entity "&IS2"
-line 193 column 173 - Warning: unescaped & or unknown entity "&bg1"
-line 193 column 184 - Warning: unescaped & or unknown entity "&fc1"
-line 193 column 195 - Warning: unescaped & or unknown entity "&lc1"
-line 193 column 206 - Warning: unescaped & or unknown entity "&t"
-line 193 column 222 - Warning: unescaped & or unknown entity "&o"
-line 193 column 226 - Warning: unescaped & or unknown entity "&p"
-line 193 column 230 - Warning: unescaped & or unknown entity "&l"
-line 193 column 236 - Warning: unescaped & or unknown entity "&m"
-line 193 column 245 - Warning: unescaped & or unknown entity "&f"
-line 193 column 251 - Warning: unescaped & or unknown entity "&ref"
-line 193 column 268 - Warning: unescaped & or unknown entity "&asins"
-line 193 column 285 - Warning: unescaped & or unknown entity "&linkId"
-line 198 column 156 - Warning: unescaped & or unknown entity "&bc1"
-line 198 column 167 - Warning: unescaped & or unknown entity "&IS2"
-line 198 column 173 - Warning: unescaped & or unknown entity "&bg1"
-line 198 column 184 - Warning: unescaped & or unknown entity "&fc1"
-line 198 column 195 - Warning: unescaped & or unknown entity "&lc1"
-line 198 column 206 - Warning: unescaped & or unknown entity "&t"
-line 198 column 215 - Warning: unescaped & or unknown entity "&o"
-line 198 column 219 - Warning: unescaped & or unknown entity "&p"
-line 198 column 223 - Warning: unescaped & or unknown entity "&l"
-line 198 column 229 - Warning: unescaped & or unknown entity "&m"
-line 198 column 238 - Warning: unescaped & or unknown entity "&f"
-line 198 column 244 - Warning: unescaped & or unknown entity "&ref"
-line 198 column 261 - Warning: unescaped & or unknown entity "&asins"
-line 198 column 278 - Warning: unescaped & or unknown entity "&linkId"
-line 229 column 1 - Warning: discarding unexpected </font>
-line 229 column 8 - Warning: discarding unexpected </a>
-line 229 column 12 - Warning: discarding unexpected </font>
-line 240 column 1 - Warning: missing </font> before <hr>
-line 242 column 1 - Warning: inserting implicit <font>
-line 242 column 1 - Warning: missing </font> before <p>
-line 244 column 24 - Warning: inserting implicit <font>
-line 244 column 24 - Warning: missing </font> before <p>
-line 250 column 47 - Warning: inserting implicit <font>
-line 250 column 47 - Warning: missing </font> before <p>
-line 263 column 57 - Warning: inserting implicit <font>
-line 263 column 57 - Warning: missing </font> before <p>
-line 273 column 44 - Warning: inserting implicit <font>
-line 273 column 44 - Warning: missing </font> before <p>
-line 277 column 8 - Warning: inserting implicit <font>
-line 277 column 8 - Warning: missing </font> before <p>
-line 280 column 54 - Warning: inserting implicit <font>
-line 280 column 54 - Warning: missing </font> before <p>
-line 282 column 42 - Warning: inserting implicit <font>
-line 296 column 69 - Warning: unescaped & or unknown entity "&w"
-line 298 column 1 - Warning: discarding unexpected </font>
-line 298 column 8 - Warning: inserting implicit <p>
-line 298 column 12 - Warning: discarding unexpected </center>
-line 36 column 1 - Warning: missing </form>
-line 17 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 79 column 1 - Warning: <img> lacks "alt" attribute
-line 83 column 1 - Warning: <img> lacks "alt" attribute
-line 90 column 1 - Warning: <img> lacks "alt" attribute
-line 173 column 1 - Warning: <font> attribute "color" had invalid value "5840aa" and has been replaced
-line 175 column 5 - Warning: <font> attribute "color" had invalid value "5840aa" and has been replaced
-line 177 column 5 - Warning: <font> attribute "color" had invalid value "5840aa" and has been replaced
-line 188 column 1 - Warning: <table> attribute "color" had invalid value "f5deb3" and has been replaced
-line 188 column 1 - Warning: <table> lacks "summary" attribute
-line 191 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 196 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 206 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 207 column 24 - Warning: <img> lacks "alt" attribute
-line 242 column 1 - Warning: <font> attribute "size" has invalid value "4""
-line 296 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 48 - Warning: trimming empty <p>
-line 30 column 1 - Warning: trimming empty <h3>
-line 77 column 10 - Warning: trimming empty <p>
-line 90 column 49 - Warning: trimming empty <font>
-line 98 column 41 - Warning: trimming empty <p>
-line 103 column 128 - Warning: trimming empty <p>
-line 107 column 1 - Warning: trimming empty <p>
-line 108 column 103 - Warning: trimming empty <p>
-line 112 column 1 - Warning: trimming empty <p>
-line 114 column 189 - Warning: trimming empty <p>
-line 116 column 199 - Warning: trimming empty <p>
-line 124 column 1 - Warning: trimming empty <p>
-line 133 column 1 - Warning: trimming empty <p>
-line 155 column 4 - Warning: trimming empty <font>
-line 155 column 1 - Warning: trimming empty <p>
-line 170 column 1 - Warning: trimming empty <p>
-line 240 column 1 - Warning: trimming empty <font>
-line 292 column 57 - Warning: trimming empty <p>
-line 298 column 8 - Warning: trimming empty <p>
-line 188 column 1 - Warning: <table> proprietary attribute "height"
-line 188 column 1 - Warning: <table> proprietary attribute "color"
-./paphio202.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 2 - Warning: <img> lacks "alt" attribute
-line 14 column 3 - Warning: <img> lacks "alt" attribute
-line 15 column 3 - Warning: <img> lacks "alt" attribute
-line 16 column 3 - Warning: <img> lacks "alt" attribute
-line 17 column 3 - Warning: <img> lacks "alt" attribute
-line 18 column 3 - Warning: <img> lacks "alt" attribute
-line 19 column 3 - Warning: <img> lacks "alt" attribute
-line 20 column 3 - Warning: <img> lacks "alt" attribute
-line 21 column 3 - Warning: <img> lacks "alt" attribute
-line 22 column 3 - Warning: <img> lacks "alt" attribute
-line 23 column 3 - Warning: <img> lacks "alt" attribute
-line 24 column 3 - Warning: <img> lacks "alt" attribute
 line 25 column 3 - Warning: <img> lacks "alt" attribute
-line 26 column 2 - Warning: <img> lacks "alt" attribute
-line 27 column 3 - Warning: <img> lacks "alt" attribute
-line 28 column 3 - Warning: <img> lacks "alt" attribute
-./2007paphE.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-./begu.html
-line 17 column 1 - Warning: missing </font> before <p>
-line 18 column 75 - Warning: inserting implicit <font>
-line 18 column 75 - Warning: missing </font> before <p>
-line 19 column 67 - Warning: inserting implicit <font>
-line 19 column 67 - Warning: missing </font> before <p>
-line 21 column 74 - Warning: inserting implicit <font>
-line 21 column 74 - Warning: missing </font> before <p>
-line 24 column 44 - Warning: inserting implicit <font>
-line 24 column 44 - Warning: missing </font> before <p>
-line 25 column 71 - Warning: inserting implicit <font>
-line 25 column 71 - Warning: missing </font> before <p>
-line 28 column 90 - Warning: inserting implicit <font>
-line 28 column 90 - Warning: missing </font> before <p>
-line 32 column 26 - Warning: inserting implicit <font>
-line 32 column 26 - Warning: missing </font> before <p>
-line 34 column 81 - Warning: inserting implicit <font>
-line 34 column 81 - Warning: missing </font> before <p>
-line 37 column 56 - Warning: inserting implicit <font>
-line 37 column 56 - Warning: missing </font> before <p>
-line 40 column 31 - Warning: inserting implicit <font>
-line 40 column 31 - Warning: missing </font> before <p>
-line 44 column 40 - Warning: inserting implicit <font>
-line 44 column 40 - Warning: missing </font> before <p>
-line 47 column 28 - Warning: inserting implicit <font>
-line 47 column 28 - Warning: missing </font> before <p>
-line 50 column 48 - Warning: inserting implicit <font>
-line 51 column 9 - Warning: missing </font> before <p>
-line 56 column 28 - Warning: inserting implicit <font>
-line 58 column 1 - Warning: missing </font> before <p>
-line 61 column 23 - Warning: inserting implicit <font>
-line 11 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 50 column 48 - Warning: trimming empty <font>
-line 56 column 28 - Warning: trimming empty <font>
-./2007catC.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-./masdevallia.html
-line 9 column 1 - Warning: missing </font> before </body>
-line 8 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 2 - Warning: <img> lacks "alt" attribute
-line 13 column 2 - Warning: <img> lacks "alt" attribute
-line 14 column 2 - Warning: <img> lacks "alt" attribute
-line 16 column 2 - Warning: <img> lacks "alt" attribute
-line 17 column 3 - Warning: <img> lacks "alt" attribute
-line 18 column 3 - Warning: <img> lacks "alt" attribute
-line 19 column 3 - Warning: <img> lacks "alt" attribute
-line 20 column 3 - Warning: <img> lacks "alt" attribute
-line 21 column 3 - Warning: <img> lacks "alt" attribute
-line 23 column 2 - Warning: <img> lacks "alt" attribute
-line 24 column 3 - Warning: <img> lacks "alt" attribute
-./phalaenopsis4.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-./dendrobiumnew.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-line 27 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 29 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-./2006paphio.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-./2004ran.html
-line 12 column 1 - Warning: missing </font> before </body>
-line 11 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-line 31 column 1 - Warning: <img> lacks "alt" attribute
-line 32 column 1 - Warning: <img> lacks "alt" attribute
-line 33 column 1 - Warning: <img> lacks "alt" attribute
-./harubotan16.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-line 31 column 1 - Warning: <img> lacks "alt" attribute
-line 33 column 1 - Warning: <img> lacks "alt" attribute
-line 34 column 1 - Warning: <img> lacks "alt" attribute
-line 35 column 1 - Warning: <img> lacks "alt" attribute
-line 36 column 1 - Warning: <img> lacks "alt" attribute
-line 37 column 1 - Warning: <img> lacks "alt" attribute
-line 38 column 1 - Warning: <img> lacks "alt" attribute
-line 39 column 1 - Warning: <img> lacks "alt" attribute
-line 40 column 1 - Warning: <img> lacks "alt" attribute
-line 41 column 1 - Warning: <img> lacks "alt" attribute
-line 42 column 1 - Warning: <img> lacks "alt" attribute
-line 43 column 1 - Warning: <img> lacks "alt" attribute
-line 44 column 1 - Warning: <img> lacks "alt" attribute
-line 45 column 1 - Warning: <img> lacks "alt" attribute
-./lipoicacid.html
-line 18 column 22 - Warning: missing </font> before <p>
-line 17 column 8 - Warning: missing </font> before <p>
-line 21 column 9 - Warning: inserting implicit <font>
-line 21 column 9 - Warning: inserting implicit <font>
-line 21 column 9 - Warning: missing </font> before <p>
-line 21 column 9 - Warning: missing </font> before <p>
-line 24 column 46 - Warning: inserting implicit <font>
-line 24 column 46 - Warning: inserting implicit <font>
-line 24 column 46 - Warning: missing </font> before <p>
-line 24 column 46 - Warning: missing </font> before <p>
-line 28 column 54 - Warning: inserting implicit <font>
-line 28 column 54 - Warning: inserting implicit <font>
-line 28 column 54 - Warning: missing </font> before <p>
-line 28 column 54 - Warning: missing </font> before <p>
-line 30 column 57 - Warning: inserting implicit <font>
-line 30 column 57 - Warning: inserting implicit <font>
-line 30 column 57 - Warning: missing </font> before <p>
-line 30 column 57 - Warning: missing </font> before <p>
-line 33 column 65 - Warning: inserting implicit <font>
-line 33 column 65 - Warning: inserting implicit <font>
-line 33 column 65 - Warning: missing </font> before <p>
-line 33 column 65 - Warning: missing </font> before <p>
-line 35 column 48 - Warning: inserting implicit <font>
-line 35 column 48 - Warning: inserting implicit <font>
-line 37 column 8 - Warning: missing </font> before <p>
-line 36 column 1 - Warning: missing </font> before <p>
-line 35 column 48 - Warning: missing </font> before <p>
-line 35 column 48 - Warning: missing </font> before <p>
-line 38 column 125 - Warning: inserting implicit <font>
-line 38 column 125 - Warning: inserting implicit <font>
-line 38 column 125 - Warning: inserting implicit <font>
-line 38 column 125 - Warning: inserting implicit <font>
-line 38 column 125 - Warning: missing </font> before <p>
-line 38 column 125 - Warning: missing </font> before <p>
-line 38 column 125 - Warning: missing </font> before <p>
-line 38 column 125 - Warning: missing </font> before <p>
-line 40 column 49 - Warning: inserting implicit <font>
-line 40 column 49 - Warning: inserting implicit <font>
-line 40 column 49 - Warning: inserting implicit <font>
-line 40 column 49 - Warning: inserting implicit <font>
-line 40 column 49 - Warning: missing </font> before <p>
-line 40 column 49 - Warning: missing </font> before <p>
-line 40 column 49 - Warning: missing </font> before <p>
-line 40 column 49 - Warning: missing </font> before <p>
-line 42 column 135 - Warning: inserting implicit <font>
-line 42 column 135 - Warning: inserting implicit <font>
-line 42 column 135 - Warning: inserting implicit <font>
-line 42 column 135 - Warning: inserting implicit <font>
-line 42 column 135 - Warning: missing </font> before <p>
-line 42 column 135 - Warning: missing </font> before <p>
-line 42 column 135 - Warning: missing </font> before <p>
-line 42 column 135 - Warning: missing </font> before <p>
-line 45 column 84 - Warning: inserting implicit <font>
-line 45 column 84 - Warning: inserting implicit <font>
-line 45 column 84 - Warning: inserting implicit <font>
-line 45 column 84 - Warning: inserting implicit <font>
-line 45 column 84 - Warning: missing </font> before <p>
-line 45 column 84 - Warning: missing </font> before <p>
-line 45 column 84 - Warning: missing </font> before <p>
-line 45 column 84 - Warning: missing </font> before <p>
-line 47 column 65 - Warning: inserting implicit <font>
-line 47 column 65 - Warning: inserting implicit <font>
-line 47 column 65 - Warning: inserting implicit <font>
-line 47 column 65 - Warning: inserting implicit <font>
-line 50 column 13 - Warning: missing </font> before <p>
-line 49 column 1 - Warning: missing </font> before <p>
-line 47 column 65 - Warning: missing </font> before <p>
-line 47 column 65 - Warning: missing </font> before <p>
-line 47 column 65 - Warning: missing </font> before <p>
-line 47 column 65 - Warning: missing </font> before <p>
-line 51 column 54 - Warning: inserting implicit <font>
-line 51 column 54 - Warning: inserting implicit <font>
-line 51 column 54 - Warning: inserting implicit <font>
-line 51 column 54 - Warning: inserting implicit <font>
-line 51 column 54 - Warning: inserting implicit <font>
-line 51 column 54 - Warning: inserting implicit <font>
-line 51 column 54 - Warning: missing </font> before <p>
-line 51 column 54 - Warning: missing </font> before <p>
-line 51 column 54 - Warning: missing </font> before <p>
-line 51 column 54 - Warning: missing </font> before <p>
-line 51 column 54 - Warning: missing </font> before <p>
-line 51 column 54 - Warning: missing </font> before <p>
-line 54 column 64 - Warning: inserting implicit <font>
-line 54 column 64 - Warning: inserting implicit <font>
-line 54 column 64 - Warning: inserting implicit <font>
-line 54 column 64 - Warning: inserting implicit <font>
-line 54 column 64 - Warning: inserting implicit <font>
-line 54 column 64 - Warning: inserting implicit <font>
-line 54 column 64 - Warning: missing </font> before <p>
-line 54 column 64 - Warning: missing </font> before <p>
-line 54 column 64 - Warning: missing </font> before <p>
-line 54 column 64 - Warning: missing </font> before <p>
-line 54 column 64 - Warning: missing </font> before <p>
-line 54 column 64 - Warning: missing </font> before <p>
-line 59 column 44 - Warning: inserting implicit <font>
-line 59 column 44 - Warning: inserting implicit <font>
-line 59 column 44 - Warning: inserting implicit <font>
-line 59 column 44 - Warning: inserting implicit <font>
-line 59 column 44 - Warning: inserting implicit <font>
-line 59 column 44 - Warning: inserting implicit <font>
-line 59 column 44 - Warning: missing </font> before <p>
-line 59 column 44 - Warning: missing </font> before <p>
-line 59 column 44 - Warning: missing </font> before <p>
-line 59 column 44 - Warning: missing </font> before <p>
-line 59 column 44 - Warning: missing </font> before <p>
-line 59 column 44 - Warning: missing </font> before <p>
-line 61 column 70 - Warning: inserting implicit <font>
-line 61 column 70 - Warning: inserting implicit <font>
-line 61 column 70 - Warning: inserting implicit <font>
-line 61 column 70 - Warning: inserting implicit <font>
-line 61 column 70 - Warning: inserting implicit <font>
-line 61 column 70 - Warning: inserting implicit <font>
-line 61 column 70 - Warning: missing </font> before <p>
-line 61 column 70 - Warning: missing </font> before <p>
-line 61 column 70 - Warning: missing </font> before <p>
-line 61 column 70 - Warning: missing </font> before <p>
-line 61 column 70 - Warning: missing </font> before <p>
-line 61 column 70 - Warning: missing </font> before <p>
-line 63 column 63 - Warning: inserting implicit <font>
-line 63 column 63 - Warning: inserting implicit <font>
-line 63 column 63 - Warning: inserting implicit <font>
-line 63 column 63 - Warning: inserting implicit <font>
-line 63 column 63 - Warning: inserting implicit <font>
-line 63 column 63 - Warning: inserting implicit <font>
-line 63 column 63 - Warning: missing </font> before <p>
-line 63 column 63 - Warning: missing </font> before <p>
-line 63 column 63 - Warning: missing </font> before <p>
-line 63 column 63 - Warning: missing </font> before <p>
-line 63 column 63 - Warning: missing </font> before <p>
-line 63 column 63 - Warning: missing </font> before <p>
-line 66 column 63 - Warning: inserting implicit <font>
-line 66 column 63 - Warning: inserting implicit <font>
-line 66 column 63 - Warning: inserting implicit <font>
-line 66 column 63 - Warning: inserting implicit <font>
-line 66 column 63 - Warning: inserting implicit <font>
-line 66 column 63 - Warning: inserting implicit <font>
-line 66 column 63 - Warning: missing </font> before <p>
-line 66 column 63 - Warning: missing </font> before <p>
-line 66 column 63 - Warning: missing </font> before <p>
-line 66 column 63 - Warning: missing </font> before <p>
-line 66 column 63 - Warning: missing </font> before <p>
-line 66 column 63 - Warning: missing </font> before <p>
-line 70 column 55 - Warning: inserting implicit <font>
-line 70 column 55 - Warning: inserting implicit <font>
-line 70 column 55 - Warning: inserting implicit <font>
-line 70 column 55 - Warning: inserting implicit <font>
-line 70 column 55 - Warning: inserting implicit <font>
-line 70 column 55 - Warning: inserting implicit <font>
-line 70 column 55 - Warning: missing </font> before <p>
-line 70 column 55 - Warning: missing </font> before <p>
-line 70 column 55 - Warning: missing </font> before <p>
-line 70 column 55 - Warning: missing </font> before <p>
-line 70 column 55 - Warning: missing </font> before <p>
-line 70 column 55 - Warning: missing </font> before <p>
-line 76 column 50 - Warning: inserting implicit <font>
-line 76 column 50 - Warning: inserting implicit <font>
-line 76 column 50 - Warning: inserting implicit <font>
-line 76 column 50 - Warning: inserting implicit <font>
-line 76 column 50 - Warning: inserting implicit <font>
-line 76 column 50 - Warning: inserting implicit <font>
-line 76 column 50 - Warning: missing </font> before <p>
-line 76 column 50 - Warning: missing </font> before <p>
-line 76 column 50 - Warning: missing </font> before <p>
-line 76 column 50 - Warning: missing </font> before <p>
-line 76 column 50 - Warning: missing </font> before <p>
-line 76 column 50 - Warning: missing </font> before <p>
-line 78 column 71 - Warning: inserting implicit <font>
-line 78 column 71 - Warning: inserting implicit <font>
-line 78 column 71 - Warning: inserting implicit <font>
-line 78 column 71 - Warning: inserting implicit <font>
-line 78 column 71 - Warning: inserting implicit <font>
-line 78 column 71 - Warning: inserting implicit <font>
-line 78 column 71 - Warning: missing </font> before <p>
-line 78 column 71 - Warning: missing </font> before <p>
-line 78 column 71 - Warning: missing </font> before <p>
-line 78 column 71 - Warning: missing </font> before <p>
-line 78 column 71 - Warning: missing </font> before <p>
-line 78 column 71 - Warning: missing </font> before <p>
-line 82 column 49 - Warning: inserting implicit <font>
-line 82 column 49 - Warning: inserting implicit <font>
-line 82 column 49 - Warning: inserting implicit <font>
-line 82 column 49 - Warning: inserting implicit <font>
-line 82 column 49 - Warning: inserting implicit <font>
-line 82 column 49 - Warning: inserting implicit <font>
-line 82 column 49 - Warning: missing </font> before <p>
-line 82 column 49 - Warning: missing </font> before <p>
-line 82 column 49 - Warning: missing </font> before <p>
-line 82 column 49 - Warning: missing </font> before <p>
-line 82 column 49 - Warning: missing </font> before <p>
-line 82 column 49 - Warning: missing </font> before <p>
-line 85 column 42 - Warning: inserting implicit <font>
-line 85 column 42 - Warning: inserting implicit <font>
-line 85 column 42 - Warning: inserting implicit <font>
-line 85 column 42 - Warning: inserting implicit <font>
-line 85 column 42 - Warning: inserting implicit <font>
-line 85 column 42 - Warning: inserting implicit <font>
-line 85 column 42 - Warning: missing </font> before <p>
-line 85 column 42 - Warning: missing </font> before <p>
-line 85 column 42 - Warning: missing </font> before <p>
-line 85 column 42 - Warning: missing </font> before <p>
-line 85 column 42 - Warning: missing </font> before <p>
-line 85 column 42 - Warning: missing </font> before <p>
-line 87 column 64 - Warning: inserting implicit <font>
-line 87 column 64 - Warning: inserting implicit <font>
-line 87 column 64 - Warning: inserting implicit <font>
-line 87 column 64 - Warning: inserting implicit <font>
-line 87 column 64 - Warning: inserting implicit <font>
-line 87 column 64 - Warning: inserting implicit <font>
-line 87 column 64 - Warning: missing </font> before <p>
-line 87 column 64 - Warning: missing </font> before <p>
-line 87 column 64 - Warning: missing </font> before <p>
-line 87 column 64 - Warning: missing </font> before <p>
-line 87 column 64 - Warning: missing </font> before <p>
-line 87 column 64 - Warning: missing </font> before <p>
-line 89 column 58 - Warning: inserting implicit <font>
-line 89 column 58 - Warning: inserting implicit <font>
-line 89 column 58 - Warning: inserting implicit <font>
-line 89 column 58 - Warning: inserting implicit <font>
-line 89 column 58 - Warning: inserting implicit <font>
-line 89 column 58 - Warning: inserting implicit <font>
-line 89 column 58 - Warning: missing </font> before <p>
-line 89 column 58 - Warning: missing </font> before <p>
-line 89 column 58 - Warning: missing </font> before <p>
-line 89 column 58 - Warning: missing </font> before <p>
-line 89 column 58 - Warning: missing </font> before <p>
-line 89 column 58 - Warning: missing </font> before <p>
-line 93 column 42 - Warning: inserting implicit <font>
-line 93 column 42 - Warning: inserting implicit <font>
-line 93 column 42 - Warning: inserting implicit <font>
-line 93 column 42 - Warning: inserting implicit <font>
-line 93 column 42 - Warning: inserting implicit <font>
-line 93 column 42 - Warning: inserting implicit <font>
-line 93 column 42 - Warning: missing </font> before <p>
-line 93 column 42 - Warning: missing </font> before <p>
-line 93 column 42 - Warning: missing </font> before <p>
-line 93 column 42 - Warning: missing </font> before <p>
-line 93 column 42 - Warning: missing </font> before <p>
-line 93 column 42 - Warning: missing </font> before <p>
-line 95 column 124 - Warning: inserting implicit <font>
-line 95 column 124 - Warning: inserting implicit <font>
-line 95 column 124 - Warning: inserting implicit <font>
-line 95 column 124 - Warning: inserting implicit <font>
-line 95 column 124 - Warning: inserting implicit <font>
-line 95 column 124 - Warning: inserting implicit <font>
-line 95 column 124 - Warning: missing </font> before <p>
-line 95 column 124 - Warning: missing </font> before <p>
-line 95 column 124 - Warning: missing </font> before <p>
-line 95 column 124 - Warning: missing </font> before <p>
-line 95 column 124 - Warning: missing </font> before <p>
-line 95 column 124 - Warning: missing </font> before <p>
-line 98 column 48 - Warning: inserting implicit <font>
-line 98 column 48 - Warning: inserting implicit <font>
-line 98 column 48 - Warning: inserting implicit <font>
-line 98 column 48 - Warning: inserting implicit <font>
-line 98 column 48 - Warning: inserting implicit <font>
-line 98 column 48 - Warning: inserting implicit <font>
-line 98 column 48 - Warning: missing </font> before <p>
-line 98 column 48 - Warning: missing </font> before <p>
-line 98 column 48 - Warning: missing </font> before <p>
-line 98 column 48 - Warning: missing </font> before <p>
-line 98 column 48 - Warning: missing </font> before <p>
-line 98 column 48 - Warning: missing </font> before <p>
-line 100 column 65 - Warning: inserting implicit <font>
-line 100 column 65 - Warning: inserting implicit <font>
-line 100 column 65 - Warning: inserting implicit <font>
-line 100 column 65 - Warning: inserting implicit <font>
-line 100 column 65 - Warning: inserting implicit <font>
-line 100 column 65 - Warning: inserting implicit <font>
-line 100 column 65 - Warning: missing </font> before <p>
-line 100 column 65 - Warning: missing </font> before <p>
-line 100 column 65 - Warning: missing </font> before <p>
-line 100 column 65 - Warning: missing </font> before <p>
-line 100 column 65 - Warning: missing </font> before <p>
-line 100 column 65 - Warning: missing </font> before <p>
-line 102 column 52 - Warning: inserting implicit <font>
-line 102 column 52 - Warning: inserting implicit <font>
-line 102 column 52 - Warning: inserting implicit <font>
-line 102 column 52 - Warning: inserting implicit <font>
-line 102 column 52 - Warning: inserting implicit <font>
-line 102 column 52 - Warning: inserting implicit <font>
-line 102 column 52 - Warning: missing </font> before <p>
-line 102 column 52 - Warning: missing </font> before <p>
-line 102 column 52 - Warning: missing </font> before <p>
-line 102 column 52 - Warning: missing </font> before <p>
-line 102 column 52 - Warning: missing </font> before <p>
-line 102 column 52 - Warning: missing </font> before <p>
-line 104 column 103 - Warning: inserting implicit <font>
-line 104 column 103 - Warning: inserting implicit <font>
-line 104 column 103 - Warning: inserting implicit <font>
-line 104 column 103 - Warning: inserting implicit <font>
-line 104 column 103 - Warning: inserting implicit <font>
-line 104 column 103 - Warning: inserting implicit <font>
-line 104 column 103 - Warning: missing </font> before <p>
-line 104 column 103 - Warning: missing </font> before <p>
-line 104 column 103 - Warning: missing </font> before <p>
-line 104 column 103 - Warning: missing </font> before <p>
-line 104 column 103 - Warning: missing </font> before <p>
-line 104 column 103 - Warning: missing </font> before <p>
-line 106 column 74 - Warning: inserting implicit <font>
-line 106 column 74 - Warning: inserting implicit <font>
-line 106 column 74 - Warning: inserting implicit <font>
-line 106 column 74 - Warning: inserting implicit <font>
-line 106 column 74 - Warning: inserting implicit <font>
-line 106 column 74 - Warning: inserting implicit <font>
-line 106 column 74 - Warning: missing </font> before <p>
-line 106 column 74 - Warning: missing </font> before <p>
-line 106 column 74 - Warning: missing </font> before <p>
-line 106 column 74 - Warning: missing </font> before <p>
-line 106 column 74 - Warning: missing </font> before <p>
-line 106 column 74 - Warning: missing </font> before <p>
-line 108 column 48 - Warning: inserting implicit <font>
-line 108 column 48 - Warning: inserting implicit <font>
-line 108 column 48 - Warning: inserting implicit <font>
-line 108 column 48 - Warning: inserting implicit <font>
-line 108 column 48 - Warning: inserting implicit <font>
-line 108 column 48 - Warning: inserting implicit <font>
-line 108 column 48 - Warning: missing </font> before <p>
-line 108 column 48 - Warning: missing </font> before <p>
-line 108 column 48 - Warning: missing </font> before <p>
-line 108 column 48 - Warning: missing </font> before <p>
-line 108 column 48 - Warning: missing </font> before <p>
-line 108 column 48 - Warning: missing </font> before <p>
-line 110 column 40 - Warning: inserting implicit <font>
-line 110 column 40 - Warning: inserting implicit <font>
-line 110 column 40 - Warning: inserting implicit <font>
-line 110 column 40 - Warning: inserting implicit <font>
-line 110 column 40 - Warning: inserting implicit <font>
-line 110 column 40 - Warning: inserting implicit <font>
-line 110 column 40 - Warning: missing </font> before <p>
-line 110 column 40 - Warning: missing </font> before <p>
-line 110 column 40 - Warning: missing </font> before <p>
-line 110 column 40 - Warning: missing </font> before <p>
-line 110 column 40 - Warning: missing </font> before <p>
-line 110 column 40 - Warning: missing </font> before <p>
-line 112 column 38 - Warning: inserting implicit <font>
-line 112 column 38 - Warning: inserting implicit <font>
-line 112 column 38 - Warning: inserting implicit <font>
-line 112 column 38 - Warning: inserting implicit <font>
-line 112 column 38 - Warning: inserting implicit <font>
-line 112 column 38 - Warning: inserting implicit <font>
-line 112 column 38 - Warning: missing </font> before <p>
-line 112 column 38 - Warning: missing </font> before <p>
-line 112 column 38 - Warning: missing </font> before <p>
-line 112 column 38 - Warning: missing </font> before <p>
-line 112 column 38 - Warning: missing </font> before <p>
-line 112 column 38 - Warning: missing </font> before <p>
-line 119 column 54 - Warning: inserting implicit <font>
-line 119 column 54 - Warning: inserting implicit <font>
-line 119 column 54 - Warning: inserting implicit <font>
-line 119 column 54 - Warning: inserting implicit <font>
-line 119 column 54 - Warning: inserting implicit <font>
-line 119 column 54 - Warning: inserting implicit <font>
-line 119 column 54 - Warning: missing </font> before <p>
-line 119 column 54 - Warning: missing </font> before <p>
-line 119 column 54 - Warning: missing </font> before <p>
-line 119 column 54 - Warning: missing </font> before <p>
-line 119 column 54 - Warning: missing </font> before <p>
-line 119 column 54 - Warning: missing </font> before <p>
-line 121 column 61 - Warning: inserting implicit <font>
-line 121 column 61 - Warning: inserting implicit <font>
-line 121 column 61 - Warning: inserting implicit <font>
-line 121 column 61 - Warning: inserting implicit <font>
-line 121 column 61 - Warning: inserting implicit <font>
-line 121 column 61 - Warning: inserting implicit <font>
-line 121 column 61 - Warning: missing </font> before <p>
-line 121 column 61 - Warning: missing </font> before <p>
-line 121 column 61 - Warning: missing </font> before <p>
-line 121 column 61 - Warning: missing </font> before <p>
-line 121 column 61 - Warning: missing </font> before <p>
-line 121 column 61 - Warning: missing </font> before <p>
-line 125 column 56 - Warning: inserting implicit <font>
-line 125 column 56 - Warning: inserting implicit <font>
-line 125 column 56 - Warning: inserting implicit <font>
-line 125 column 56 - Warning: inserting implicit <font>
-line 125 column 56 - Warning: inserting implicit <font>
-line 125 column 56 - Warning: inserting implicit <font>
-line 125 column 56 - Warning: missing </font> before <p>
-line 125 column 56 - Warning: missing </font> before <p>
-line 125 column 56 - Warning: missing </font> before <p>
-line 125 column 56 - Warning: missing </font> before <p>
-line 125 column 56 - Warning: missing </font> before <p>
-line 125 column 56 - Warning: missing </font> before <p>
-line 129 column 41 - Warning: inserting implicit <font>
-line 129 column 41 - Warning: inserting implicit <font>
-line 129 column 41 - Warning: inserting implicit <font>
-line 129 column 41 - Warning: inserting implicit <font>
-line 129 column 41 - Warning: inserting implicit <font>
-line 129 column 41 - Warning: inserting implicit <font>
-line 129 column 41 - Warning: missing </font> before <p>
-line 129 column 41 - Warning: missing </font> before <p>
-line 129 column 41 - Warning: missing </font> before <p>
-line 129 column 41 - Warning: missing </font> before <p>
-line 129 column 41 - Warning: missing </font> before <p>
-line 129 column 41 - Warning: missing </font> before <p>
-line 133 column 38 - Warning: inserting implicit <font>
-line 133 column 38 - Warning: inserting implicit <font>
-line 133 column 38 - Warning: inserting implicit <font>
-line 133 column 38 - Warning: inserting implicit <font>
-line 133 column 38 - Warning: inserting implicit <font>
-line 133 column 38 - Warning: inserting implicit <font>
-line 133 column 38 - Warning: missing </font> before <p>
-line 133 column 38 - Warning: missing </font> before <p>
-line 133 column 38 - Warning: missing </font> before <p>
-line 133 column 38 - Warning: missing </font> before <p>
-line 133 column 38 - Warning: missing </font> before <p>
-line 133 column 38 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: inserting implicit <font>
-line 135 column 49 - Warning: inserting implicit <font>
-line 135 column 49 - Warning: inserting implicit <font>
-line 135 column 49 - Warning: inserting implicit <font>
-line 135 column 49 - Warning: inserting implicit <font>
-line 135 column 49 - Warning: inserting implicit <font>
-line 138 column 9 - Warning: missing </font> before <p>
-line 137 column 2 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: missing </font> before <p>
-line 135 column 49 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 139 column 31 - Warning: inserting implicit <font>
-line 142 column 12 - Warning: missing </font> before <p>
-line 141 column 1 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 139 column 31 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: inserting implicit <font>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 144 column 42 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 147 column 49 - Warning: inserting implicit <font>
-line 149 column 16 - Warning: missing </font> before <p>
-line 148 column 1 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 147 column 49 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 152 column 40 - Warning: inserting implicit <font>
-line 154 column 12 - Warning: missing </font> before <p>
-line 153 column 1 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 152 column 40 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: inserting implicit <font>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 158 column 63 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: inserting implicit <font>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 162 column 39 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: inserting implicit <font>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 164 column 53 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: inserting implicit <font>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 166 column 48 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: inserting implicit <font>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 168 column 70 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: inserting implicit <font>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 170 column 56 - Warning: missing </font> before <p>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 172 column 138 - Warning: inserting implicit <font>
-line 173 column 1 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 172 column 138 - Warning: missing </font> before <hr>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 180 column 1 - Warning: inserting implicit <font>
-line 12 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-./2006lycaste11.html
-line 8 column 1 - Warning: inserting implicit <body>
-line 8 column 1 - Warning: </head> isn't allowed in <body> elements
-line 9 column 1 - Warning: discarding unexpected <body>
-line 20 column 36 - Warning: missing </font> before </body>
-line 20 column 1 - Warning: missing </a> before </body>
-line 10 column 1 - Warning: missing </font> before </body>
-line 12 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-./paphiopedilum.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 27 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 29 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-./cattleyablue.html
-line 11 column 1 - Warning: missing </font> before </body>
-line 10 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-line 27 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 29 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-line 31 column 1 - Warning: <img> lacks "alt" attribute
-./dendrobiumu.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-./tex2.html
-line 153 column 1 - Warning: discarding unexpected </font>
-line 194 column 51 - Warning: discarding unexpected </font>
-line 197 column 1 - Warning: discarding unexpected </font>
-line 197 column 8 - Warning: inserting implicit <p>
-line 197 column 17 - Warning: discarding unexpected </b>
-line 259 column 46 - Warning: discarding unexpected </font>
-line 263 column 69 - Warning: unescaped & or unknown entity "&w"
-line 265 column 1 - Warning: discarding unexpected </font>
-line 265 column 8 - Warning: inserting implicit <p>
-line 17 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 102 column 1 - Warning: <table> attribute "color" had invalid value "f5deb3" and has been replaced
-line 102 column 1 - Warning: <table> lacks "summary" attribute
-line 105 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 106 column 32 - Warning: <img> lacks "alt" attribute
-line 108 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 109 column 28 - Warning: <img> lacks "alt" attribute
-line 111 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 112 column 32 - Warning: <img> lacks "alt" attribute
-line 114 column 1 - Warning: <td> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 115 column 32 - Warning: <img> lacks "alt" attribute
-line 263 column 1 - Warning: <img> lacks "alt" attribute
-line 197 column 8 - Warning: trimming empty <p>
-line 259 column 57 - Warning: trimming empty <p>
-line 265 column 8 - Warning: trimming empty <p>
-line 102 column 1 - Warning: <table> proprietary attribute "height"
-line 102 column 1 - Warning: <table> proprietary attribute "color"
-line 196 column 1 - Warning: <a> proprietary attribute "img"
-line 196 column 1 - Warning: <a> proprietary attribute "src"
-./2007ranten120.html
-line 11 column 1 - Warning: missing </font> before </body>
-line 10 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> proprietary attribute "target"
-line 14 column 1 - Warning: <img> proprietary attribute "target"
-line 15 column 1 - Warning: <img> proprietary attribute "target"
-line 17 column 1 - Warning: <img> proprietary attribute "target"
-line 18 column 1 - Warning: <img> proprietary attribute "target"
-line 20 column 1 - Warning: <img> proprietary attribute "target"
-line 21 column 1 - Warning: <img> proprietary attribute "target"
-line 23 column 1 - Warning: <img> proprietary attribute "target"
-line 24 column 1 - Warning: <img> proprietary attribute "target"
-./lycaste1.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 2 - Warning: <img> lacks "alt" attribute
-line 15 column 3 - Warning: <img> lacks "alt" attribute
+./paphio101.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+./googleb47d50038c5e8b10.html
+line 5 column 3 - Warning: blank 'title' element
+./cattleya1.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 4 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 4 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+./be-tagur10.html
+line 14 column 5 - Warning: <table> lacks "summary" attribute
+line 18 column 13 - Warning: <img> lacks "alt" attribute
+line 35 column 13 - Warning: <img> lacks "alt" attribute
+line 54 column 13 - Warning: <img> lacks "alt" attribute
+line 55 column 13 - Warning: <table> lacks "summary" attribute
+./index.html
+line 12 column 1 - Warning: <frameset> proprietary attribute "frameborder"
+line 12 column 1 - Warning: <frameset> proprietary attribute "framespacing"
+line 14 column 3 - Warning: <frameset> proprietary attribute "frameborder"
+line 14 column 3 - Warning: <frameset> proprietary attribute "framespacing"
+./cattleya.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
 line 16 column 3 - Warning: <img> lacks "alt" attribute
-line 19 column 3 - Warning: <img> lacks "alt" attribute
-line 20 column 2 - Warning: <img> lacks "alt" attribute
-line 21 column 2 - Warning: <img> lacks "alt" attribute
-line 23 column 2 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
 line 24 column 3 - Warning: <img> lacks "alt" attribute
 line 26 column 3 - Warning: <img> lacks "alt" attribute
-line 27 column 3 - Warning: <img> lacks "alt" attribute
-line 28 column 2 - Warning: <img> lacks "alt" attribute
-./cattleya22.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+./paphiopedilum2.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
 line 14 column 3 - Warning: <img> lacks "alt" attribute
-line 15 column 3 - Warning: <img> lacks "alt" attribute
-line 16 column 2 - Warning: <img> lacks "alt" attribute
-line 17 column 2 - Warning: <img> lacks "alt" attribute
-line 18 column 2 - Warning: <img> lacks "alt" attribute
-line 19 column 3 - Warning: <img> lacks "alt" attribute
-line 20 column 3 - Warning: <img> lacks "alt" attribute
-line 21 column 3 - Warning: <img> lacks "alt" attribute
-line 22 column 3 - Warning: <img> lacks "alt" attribute
-line 23 column 3 - Warning: <img> lacks "alt" attribute
-./suppuse.html
-line 19 column 8 - Warning: missing </font> before <p>
-line 22 column 40 - Warning: inserting implicit <font>
-line 22 column 40 - Warning: missing </font> before <p>
-line 27 column 35 - Warning: inserting implicit <font>
-line 31 column 8 - Warning: missing </font> before <p>
-line 27 column 35 - Warning: missing </font> before <p>
-line 35 column 26 - Warning: inserting implicit <font>
-line 35 column 26 - Warning: inserting implicit <font>
-line 40 column 8 - Warning: missing </font> before <p>
-line 35 column 26 - Warning: missing </font> before <p>
-line 35 column 26 - Warning: missing </font> before <p>
-line 43 column 37 - Warning: inserting implicit <font>
-line 43 column 37 - Warning: inserting implicit <font>
-line 43 column 37 - Warning: inserting implicit <font>
-line 47 column 8 - Warning: missing </font> before <p>
-line 43 column 37 - Warning: missing </font> before <p>
-line 43 column 37 - Warning: missing </font> before <p>
-line 43 column 37 - Warning: missing </font> before <p>
-line 57 column 4 - Warning: inserting implicit <font>
-line 57 column 4 - Warning: inserting implicit <font>
-line 57 column 4 - Warning: inserting implicit <font>
-line 57 column 4 - Warning: inserting implicit <font>
-line 60 column 8 - Warning: missing </font> before <p>
-line 57 column 4 - Warning: missing </font> before <p>
-line 57 column 4 - Warning: missing </font> before <p>
-line 57 column 4 - Warning: missing </font> before <p>
-line 57 column 4 - Warning: missing </font> before <p>
-line 62 column 35 - Warning: inserting implicit <font>
-line 62 column 35 - Warning: inserting implicit <font>
-line 62 column 35 - Warning: inserting implicit <font>
-line 62 column 35 - Warning: inserting implicit <font>
-line 62 column 35 - Warning: inserting implicit <font>
-line 62 column 35 - Warning: missing </font> before <p>
-line 62 column 35 - Warning: missing </font> before <p>
-line 62 column 35 - Warning: missing </font> before <p>
-line 62 column 35 - Warning: missing </font> before <p>
-line 62 column 35 - Warning: missing </font> before <p>
-line 66 column 53 - Warning: inserting implicit <font>
-line 66 column 53 - Warning: inserting implicit <font>
-line 66 column 53 - Warning: inserting implicit <font>
-line 66 column 53 - Warning: inserting implicit <font>
-line 66 column 53 - Warning: inserting implicit <font>
-line 66 column 53 - Warning: missing </font> before <p>
-line 66 column 53 - Warning: missing </font> before <p>
-line 66 column 53 - Warning: missing </font> before <p>
-line 66 column 53 - Warning: missing </font> before <p>
-line 66 column 53 - Warning: missing </font> before <p>
-line 71 column 8 - Warning: inserting implicit <font>
-line 71 column 8 - Warning: inserting implicit <font>
-line 71 column 8 - Warning: inserting implicit <font>
-line 71 column 8 - Warning: inserting implicit <font>
-line 71 column 8 - Warning: inserting implicit <font>
-line 71 column 8 - Warning: missing </font> before <p>
-line 71 column 8 - Warning: missing </font> before <p>
-line 71 column 8 - Warning: missing </font> before <p>
-line 71 column 8 - Warning: missing </font> before <p>
-line 71 column 8 - Warning: missing </font> before <p>
-line 76 column 88 - Warning: inserting implicit <font>
-line 76 column 88 - Warning: inserting implicit <font>
-line 76 column 88 - Warning: inserting implicit <font>
-line 76 column 88 - Warning: inserting implicit <font>
-line 76 column 88 - Warning: inserting implicit <font>
-line 76 column 88 - Warning: missing </font> before <hr>
-line 76 column 88 - Warning: missing </font> before <hr>
-line 76 column 88 - Warning: missing </font> before <hr>
-line 76 column 88 - Warning: missing </font> before <hr>
-line 81 column 1 - Warning: inserting implicit <font>
-line 81 column 1 - Warning: inserting implicit <font>
-line 81 column 1 - Warning: inserting implicit <font>
-line 81 column 1 - Warning: inserting implicit <font>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-./paphio103.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 3 - Warning: <img> lacks "alt" attribute
-line 15 column 3 - Warning: <img> lacks "alt" attribute
 line 16 column 3 - Warning: <img> lacks "alt" attribute
-line 17 column 3 - Warning: <img> lacks "alt" attribute
 line 18 column 3 - Warning: <img> lacks "alt" attribute
-line 19 column 2 - Warning: <img> lacks "alt" attribute
-line 20 column 2 - Warning: <img> lacks "alt" attribute
-line 21 column 2 - Warning: <img> lacks "alt" attribute
-line 22 column 2 - Warning: <img> lacks "alt" attribute
-line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
 line 24 column 3 - Warning: <img> lacks "alt" attribute
-./lycasteNew.html
-line 8 column 1 - Warning: <title> isn't allowed in <html> elements
-line 11 column 1 - Warning: missing </font> before </body>
-line 10 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 31 column 1 - Warning: <img> lacks "alt" attribute
-line 32 column 1 - Warning: <img> lacks "alt" attribute
-line 33 column 1 - Warning: <img> lacks "alt" attribute
-line 35 column 1 - Warning: <img> lacks "alt" attribute
-line 8 column 1 - Warning: discarding unexpected <title>
-./sonota.html
-line 11 column 1 - Warning: missing </font> before </body>
-line 10 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 27 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
-line 29 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 1 - Warning: <img> lacks "alt" attribute
-./fukui.html
-line 13 column 21 - Warning: missing </font> before <p>
-line 30 column 64 - Warning: inserting implicit <font>
-line 30 column 64 - Warning: missing </font> before <p>
-line 54 column 65 - Warning: inserting implicit <font>
-line 11 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 29 column 1 - Warning: <img> lacks "alt" attribute
-line 30 column 5 - Warning: <img> lacks "alt" attribute
-line 49 column 5 - Warning: <img> lacks "alt" attribute
-line 51 column 5 - Warning: <img> lacks "alt" attribute
-line 54 column 5 - Warning: <img> lacks "alt" attribute
-line 57 column 1 - Warning: <img> lacks "alt" attribute
-./kaizyou.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-./phalaenopsis.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 13 column 2 - Warning: <img> lacks "alt" attribute
-line 14 column 3 - Warning: <img> lacks "alt" attribute
-line 15 column 2 - Warning: <img> lacks "alt" attribute
-line 16 column 2 - Warning: <img> lacks "alt" attribute
-line 18 column 2 - Warning: <img> lacks "alt" attribute
-line 19 column 2 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+./oldcar.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
 line 21 column 3 - Warning: <img> lacks "alt" attribute
 line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 31 column 3 - Warning: <img> lacks "alt" attribute
+line 35 column 3 - Warning: <img> lacks "alt" attribute
+./2006ranten.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+./tex.html
+line 291 column 5 - Warning: </li> isn't allowed in <body> elements
+line 291 column 5 - Warning: inserting implicit <ul>
+line 291 column 5 - Warning: discarding unexpected </li>
+line 300 column 3 - Warning: discarding unexpected </ol>
+line 291 column 5 - Warning: missing </ul> before <hr>
+line 27 column 5 - Warning: <table> lacks "summary" attribute
+line 36 column 67 - Warning: <img> lacks "alt" attribute
+line 173 column 6 - Warning: <img> lacks "alt" attribute
+line 174 column 6 - Warning: <img> lacks "alt" attribute
+line 175 column 6 - Warning: <img> lacks "alt" attribute
+line 302 column 22 - Warning: <img> lacks "alt" attribute
+./paphio202.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 5 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+line 34 column 5 - Warning: <img> lacks "alt" attribute
+line 36 column 5 - Warning: <img> lacks "alt" attribute
+line 38 column 4 - Warning: <img> lacks "alt" attribute
+line 40 column 5 - Warning: <img> lacks "alt" attribute
+line 42 column 5 - Warning: <img> lacks "alt" attribute
+./2007paphE.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+./begu.html
+line 15 column 6 - Warning: <img> lacks "alt" attribute
+./2007catC.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+./masdevallia.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 4 - Warning: <img> lacks "alt" attribute
+line 16 column 4 - Warning: <img> lacks "alt" attribute
+line 18 column 4 - Warning: <img> lacks "alt" attribute
+line 20 column 5 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 4 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+./phalaenopsis4.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+./dendrobiumnew.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+./2006paphio.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 29 column 3 - Warning: <img> lacks "alt" attribute
+./2004ran.html
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 29 column 3 - Warning: <img> lacks "alt" attribute
+line 31 column 3 - Warning: <img> lacks "alt" attribute
+line 33 column 3 - Warning: <img> lacks "alt" attribute
+./harubotan16.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+line 46 column 3 - Warning: <img> lacks "alt" attribute
+line 48 column 3 - Warning: <img> lacks "alt" attribute
+line 50 column 3 - Warning: <img> lacks "alt" attribute
+line 52 column 3 - Warning: <img> lacks "alt" attribute
+line 54 column 3 - Warning: <img> lacks "alt" attribute
+line 56 column 3 - Warning: <img> lacks "alt" attribute
+line 58 column 3 - Warning: <img> lacks "alt" attribute
+line 60 column 3 - Warning: <img> lacks "alt" attribute
+line 62 column 3 - Warning: <img> lacks "alt" attribute
+line 64 column 3 - Warning: <img> lacks "alt" attribute
+line 66 column 3 - Warning: <img> lacks "alt" attribute
+line 68 column 3 - Warning: <img> lacks "alt" attribute
+line 70 column 3 - Warning: <img> lacks "alt" attribute
+line 72 column 3 - Warning: <img> lacks "alt" attribute
+./lipoicacid.html
+./2006lycaste11.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+./paphiopedilum.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+./cattleyablue.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+./dendrobiumu.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+./tex2.html
+line 159 column 5 - Warning: <table> lacks "summary" attribute
+line 161 column 67 - Warning: <img> lacks "alt" attribute
+line 162 column 67 - Warning: <img> lacks "alt" attribute
+line 163 column 67 - Warning: <img> lacks "alt" attribute
+line 164 column 67 - Warning: <img> lacks "alt" attribute
+line 231 column 32 - Warning: <img> lacks "alt" attribute
+line 280 column 3 - Warning: <img> lacks "alt" attribute
+./2007ranten120.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+./lycaste1.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 4 - Warning: <img> lacks "alt" attribute
+line 24 column 4 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 4 - Warning: <img> lacks "alt" attribute
+./cattleya22.html
+line 12 column 5 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 4 - Warning: <img> lacks "alt" attribute
+line 18 column 4 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+./suppuse.html
+./paphio103.html
+line 12 column 5 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 5 - Warning: <img> lacks "alt" attribute
+line 22 column 4 - Warning: <img> lacks "alt" attribute
+line 24 column 4 - Warning: <img> lacks "alt" attribute
+line 26 column 4 - Warning: <img> lacks "alt" attribute
+line 28 column 4 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+./lycasteNew.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+./sonota.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 29 column 3 - Warning: <img> lacks "alt" attribute
+line 31 column 3 - Warning: <img> lacks "alt" attribute
+line 33 column 3 - Warning: <img> lacks "alt" attribute
+./fukui.html
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 48 column 3 - Warning: <img> lacks "alt" attribute
+line 52 column 3 - Warning: <img> lacks "alt" attribute
+line 56 column 3 - Warning: <img> lacks "alt" attribute
+line 59 column 3 - Warning: <img> lacks "alt" attribute
+./kaizyou.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+./phalaenopsis.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 4 - Warning: <img> lacks "alt" attribute
+line 18 column 4 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 4 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
 ./takasimayabaraten.html
-line 10 column 1 - Warning: missing </font> before </body>
-line 9 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced
-line 12 column 1 - Warning: <img> lacks "alt" attribute
-line 13 column 1 - Warning: <img> lacks "alt" attribute
-line 14 column 1 - Warning: <img> lacks "alt" attribute
-line 15 column 1 - Warning: <img> lacks "alt" attribute
-line 16 column 1 - Warning: <img> lacks "alt" attribute
-line 17 column 1 - Warning: <img> lacks "alt" attribute
-line 18 column 1 - Warning: <img> lacks "alt" attribute
-line 19 column 1 - Warning: <img> lacks "alt" attribute
-line 20 column 1 - Warning: <img> lacks "alt" attribute
-line 21 column 1 - Warning: <img> lacks "alt" attribute
-line 22 column 1 - Warning: <img> lacks "alt" attribute
-line 23 column 1 - Warning: <img> lacks "alt" attribute
-line 24 column 1 - Warning: <img> lacks "alt" attribute
-line 25 column 1 - Warning: <img> lacks "alt" attribute
-line 26 column 1 - Warning: <img> lacks "alt" attribute
-line 27 column 1 - Warning: <img> lacks "alt" attribute
-line 28 column 1 - Warning: <img> lacks "alt" attribute
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
 ./hadautukusisa.html
-line 18 column 1 - Warning: missing </font> before <p>
-line 19 column 46 - Warning: inserting implicit <font>
-line 19 column 46 - Warning: missing </font> before <p>
-line 23 column 4 - Warning: inserting implicit <font>
-line 23 column 4 - Warning: missing </font> before <p>
-line 25 column 4 - Warning: inserting implicit <font>
-line 25 column 4 - Warning: missing </font> before <p>
-line 27 column 4 - Warning: inserting implicit <font>
-line 27 column 4 - Warning: missing </font> before <p>
-line 29 column 4 - Warning: inserting implicit <font>
-line 29 column 4 - Warning: missing </font> before <p>
-line 32 column 4 - Warning: inserting implicit <font>
-line 32 column 4 - Warning: missing </font> before <p>
-line 34 column 4 - Warning: inserting implicit <font>
-line 34 column 4 - Warning: missing </font> before <p>
-line 36 column 19 - Warning: inserting implicit <font>
-line 36 column 19 - Warning: missing </font> before <p>
-line 43 column 4 - Warning: inserting implicit <font>
-line 43 column 4 - Warning: missing </font> before <p>
-line 44 column 41 - Warning: inserting implicit <font>
-line 44 column 41 - Warning: missing </font> before <p>
-line 51 column 4 - Warning: inserting implicit <font>
-line 51 column 4 - Warning: missing </font> before <p>
-line 53 column 4 - Warning: inserting implicit <font>
-line 53 column 4 - Warning: missing </font> before <p>
-line 55 column 4 - Warning: inserting implicit <font>
-line 55 column 4 - Warning: missing </font> before <p>
-line 56 column 41 - Warning: inserting implicit <font>
-line 56 column 41 - Warning: missing </font> before <p>
-line 63 column 4 - Warning: inserting implicit <font>
-line 63 column 4 - Warning: missing </font> before <p>
-line 65 column 4 - Warning: inserting implicit <font>
-line 65 column 4 - Warning: missing </font> before <p>
-line 67 column 4 - Warning: inserting implicit <font>
-line 67 column 4 - Warning: missing </font> before <p>
-line 71 column 4 - Warning: inserting implicit <font>
-line 71 column 4 - Warning: missing </font> before <p>
-line 73 column 4 - Warning: inserting implicit <font>
-line 73 column 4 - Warning: missing </font> before <p>
-line 74 column 41 - Warning: inserting implicit <font>
-line 74 column 41 - Warning: missing </font> before <p>
-line 77 column 4 - Warning: inserting implicit <font>
-line 77 column 4 - Warning: missing </font> before <p>
-line 80 column 4 - Warning: inserting implicit <font>
-line 80 column 4 - Warning: missing </font> before <p>
-line 83 column 4 - Warning: inserting implicit <font>
-line 83 column 4 - Warning: missing </font> before <p>
-line 86 column 4 - Warning: inserting implicit <font>
-line 86 column 4 - Warning: missing </font> before <p>
-line 89 column 4 - Warning: inserting implicit <font>
-line 89 column 4 - Warning: missing </font> before <p>
-line 91 column 4 - Warning: inserting implicit <font>
-line 91 column 4 - Warning: missing </font> before <p>
-line 92 column 41 - Warning: inserting implicit <font>
-line 92 column 41 - Warning: missing </font> before <p>
-line 95 column 4 - Warning: inserting implicit <font>
-line 95 column 4 - Warning: missing </font> before <p>
-line 97 column 4 - Warning: inserting implicit <font>
-line 97 column 4 - Warning: missing </font> before <p>
-line 101 column 4 - Warning: inserting implicit <font>
-line 101 column 4 - Warning: missing </font> before <p>
-line 102 column 41 - Warning: inserting implicit <font>
-line 102 column 41 - Warning: missing </font> before <p>
-line 106 column 4 - Warning: inserting implicit <font>
-line 106 column 4 - Warning: missing </font> before <p>
-line 107 column 41 - Warning: inserting implicit <font>
-line 107 column 41 - Warning: missing </font> before <p>
-line 108 column 67 - Warning: inserting implicit <font>
-line 108 column 67 - Warning: missing </font> before <p>
-line 110 column 4 - Warning: inserting implicit <font>
-line 110 column 4 - Warning: missing </font> before <p>
-line 111 column 41 - Warning: inserting implicit <font>
-line 111 column 41 - Warning: missing </font> before <p>
-line 114 column 4 - Warning: inserting implicit <font>
-line 114 column 4 - Warning: missing </font> before <p>
-line 115 column 41 - Warning: inserting implicit <font>
-line 115 column 41 - Warning: missing </font> before <p>
-line 118 column 4 - Warning: inserting implicit <font>
-line 118 column 4 - Warning: missing </font> before <p>
-line 121 column 4 - Warning: inserting implicit <font>
-line 121 column 4 - Warning: missing </font> before <p>
-line 124 column 4 - Warning: inserting implicit <font>
-line 124 column 4 - Warning: missing </font> before <p>
-line 125 column 46 - Warning: inserting implicit <font>
-line 125 column 46 - Warning: missing </font> before <p>
-line 128 column 4 - Warning: inserting implicit <font>
-line 128 column 4 - Warning: missing </font> before <p>
-line 129 column 43 - Warning: inserting implicit <font>
-line 129 column 43 - Warning: missing </font> before <p>
-line 132 column 4 - Warning: inserting implicit <font>
-line 132 column 4 - Warning: missing </font> before <p>
-line 134 column 4 - Warning: inserting implicit <font>
-line 134 column 4 - Warning: missing </font> before <p>
-line 137 column 4 - Warning: inserting implicit <font>
-line 137 column 4 - Warning: missing </font> before <p>
-line 138 column 44 - Warning: inserting implicit <font>
-line 138 column 44 - Warning: missing </font> before <p>
-line 141 column 4 - Warning: inserting implicit <font>
-line 141 column 4 - Warning: missing </font> before <p>
-line 143 column 4 - Warning: inserting implicit <font>
-line 143 column 4 - Warning: missing </font> before <p>
-line 144 column 40 - Warning: inserting implicit <font>
-line 144 column 40 - Warning: missing </font> before <p>
-line 147 column 4 - Warning: inserting implicit <font>
-line 147 column 4 - Warning: missing </font> before <p>
-line 150 column 4 - Warning: inserting implicit <font>
-line 150 column 4 - Warning: missing </font> before <p>
-line 151 column 43 - Warning: inserting implicit <font>
-line 151 column 43 - Warning: missing </font> before <p>
-line 153 column 4 - Warning: inserting implicit <font>
-line 153 column 4 - Warning: missing </font> before <p>
-line 155 column 4 - Warning: inserting implicit <font>
-line 155 column 4 - Warning: missing </font> before <p>
-line 159 column 4 - Warning: inserting implicit <font>
-line 159 column 4 - Warning: missing </font> before <p>
-line 162 column 4 - Warning: inserting implicit <font>
-line 162 column 4 - Warning: missing </font> before <p>
-line 164 column 4 - Warning: inserting implicit <font>
-line 164 column 4 - Warning: missing </font> before <p>
-line 165 column 42 - Warning: inserting implicit <font>
-line 165 column 42 - Warning: missing </font> before <p>
-line 168 column 4 - Warning: inserting implicit <font>
-line 168 column 4 - Warning: missing </font> before <p>
-line 170 column 4 - Warning: inserting implicit <font>
-line 170 column 4 - Warning: missing </font> before <p>
-line 172 column 4 - Warning: inserting implicit <font>
-line 172 column 4 - Warning: missing </font> before <p>
-line 173 column 44 - Warning: inserting implicit <font>
-line 173 column 44 - Warning: missing </font> before <p>
-line 176 column 4 - Warning: inserting implicit <font>
-line 176 column 4 - Warning: missing </font> before <p>
-line 180 column 4 - Warning: inserting implicit <font>
-line 180 column 4 - Warning: missing </font> before <p>
-line 181 column 48 - Warning: inserting implicit <font>
-line 181 column 48 - Warning: missing </font> before <p>
-line 183 column 4 - Warning: inserting implicit <font>
-line 183 column 4 - Warning: missing </font> before <p>
-line 184 column 41 - Warning: inserting implicit <font>
-line 184 column 41 - Warning: missing </font> before <p>
-line 187 column 4 - Warning: inserting implicit <font>
-line 187 column 4 - Warning: missing </font> before <p>
-line 188 column 41 - Warning: inserting implicit <font>
-line 188 column 41 - Warning: missing </font> before <p>
-line 194 column 4 - Warning: inserting implicit <font>
-line 194 column 4 - Warning: missing </font> before <p>
-line 196 column 41 - Warning: inserting implicit <font>
-line 196 column 41 - Warning: missing </font> before <p>
-line 200 column 4 - Warning: inserting implicit <font>
-line 11 column 1 - Warning: <body> attribute "bgcolor" had invalid value "f5deb3" and has been replaced

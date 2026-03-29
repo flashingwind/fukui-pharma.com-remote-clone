@@ -1,171 +1,80 @@
 body {
   background: #f5deb3;
   font-family: 'MS UI Gothic', 'Meiryo', sans-serif;
-  color: #222;
+  color: navy;
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: #003399;
-  text-decoration: underline;
-  transition: color 0.2s;
-}
-a:hover {
-  color: #c00;
+  color: #0000ee;
   text-decoration: underline;
 }
 
 #center {
-  background: #fffbe9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  margin: 32px 0 0 0;
-  padding: 32px 24px 24px 24px;
-  min-height: 400px;
-  min-width: 400px;
-}
-
-.title-area {
   background: #f5deb3;
-  text-align: center;
-  padding: 16px 0 8px 0;
+  margin: 0;
+  padding: 16px 24px 24px;
+  min-height: 100vh;
+  min-width: 0;
+  flex: 1 1 auto;
+  box-sizing: border-box;
 }
 
-.title-area img {
-  vertical-align: middle;
-  margin-right: 12px;
-}
-
-.title-area .site-title {
-  font-size: 2.2rem;
-  color: #1a237e;
-  font-style: italic;
-  letter-spacing: 0.1em;
-}
-
-/* 旧サイトの雰囲気を再現するための雛形。必要に応じて拡張 */
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
+.app-shell {
   display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+.site-footer {
+  margin-top: 14px;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: -24px;
+  padding: 8px 24px 6px;
+  background: #ffffff;
+  color: navy;
+  font-size: 12px;
+  line-height: 1.25;
 }
 
-#next-steps ul {
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.footer-links ul {
+  margin: 0;
+  padding-left: 0;
   list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
+}
 
-  .logo {
-    height: 18px;
-  }
+.footer-links li {
+  margin: 1px 0;
+}
 
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
+.footer-credit {
+  margin-top: 6px;
+  padding-top: 0;
+  font-size: 11px;
+  color: #2f2f2f;
+}
 
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
+@media (max-width: 820px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+/* 本文末尾に残る旧サイト由来の区切り線をフッター直前でのみ隠す */
+#center > .markdown-body hr:last-of-type {
+  display: none;
 }
