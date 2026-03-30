@@ -17,6 +17,7 @@
 <p><a href="hadautukusisa.md">○肌を美しくするケアと栄養</a></p>
 <p></p>
 <p><img src="books/tukaikata3.gif" width="35" height="50" /> <a href="books/mokuzitu.md">薬剤師がすすめるビタミン・ミネラルの使い方(第2版)</a> (→<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)</p>
+<p><img src="megasin.gif" width="84" height="150" /> <a href="megafudo.md">○メガフードアルファー</a> (栄養補助食品)</p>
 <p><a href="atopic/thbalance.md">○Th1・Th2バランスの図表−Th1を促進、Th2を抑制するには</a></p>
 <p><a href="nutri/shyoyou.md">○所要量、RDA,DV,ODAの比較表</a></p>
 <p><a href="atopic/menekikihon.md">○免疫基本応答の図表</a></p>
@@ -36,6 +37,7 @@
     - [マグネシウムとは、働き、必要な症状](nutri/magsiryou.md)
 3. お薦めサプリメント
     - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](supliments/be-tagur10.md)(栄養補助食品)
+    - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](megafudo.md)(栄養補助食品)
 4. <span class="red">体内の活性酸素</span>
     1. [活性酸素(フリーラジカル)が老化や成人病の原因に?](freeradical/kousanka.md)
     2. [フリーラジカル及び活性酸素](freeradical/kousanka.md#hyou)
@@ -64,7 +66,7 @@
     8. [砂糖を摂りすぎない](atopic/#atopi8)
     9. [副腎を強くしましょう](atopic/#atopi9)
     10. [ヒスタミンを減らしましょう](atopic/#atopi10)
-    11. [アトピー性皮膚炎と免疫応答の図表](atopic/#atopicb)
+    11. [アトピー性皮膚炎と免疫応答の図表](atopic/#atopicb) ![](atopic6.gif)
 
 ---
 

@@ -20,7 +20,7 @@ const FOOTER_LINKS_RIGHT = [
 function App() {
   const slug = window.location.pathname.replace(/^\/+|\/+$/g, '')
   const normalizedSlug = slug.replace(/\.(htm|html)$/i, '')
-  const isTop = normalizedSlug === '' || normalizedSlug === 'index2'
+  const isTop = normalizedSlug === '' || normalizedSlug === 'index' || normalizedSlug === 'index2'
   const contentSlug = normalizedSlug === 'access' ? 'index' : normalizedSlug
   const candidates = CONTENT_DIRS.map((dir) => `/content/${dir}/${contentSlug}.md`)
 
@@ -29,7 +29,7 @@ function App() {
       <MenuLeft />
       <section id="center">
         {isTop ? (
-          <MarkdownContent file="/content/others/index2.md" />
+          <MarkdownContent file="/content/others/index.md" />
         ) : (
           <MarkdownContent fileCandidates={candidates} />
         )}
