@@ -3,20 +3,6 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "../styles/MarkdownContent.css";
 
-const isExternal = (v) =>
-  v.startsWith("http://") ||
-  v.startsWith("https://") ||
-  v.startsWith("mailto:") ||
-  v.startsWith("data:") ||
-  v.startsWith("/");
-
-const toLegacyAssetPath = (v) => {
-  if (!v || isExternal(v)) return v;
-  const clean = v.split("?")[0].split("#")[0];
-  const name = clean.split("/").pop();
-  return name ? `/legacy/${name}` : v;
-};
-
 const extractText = (node) => {
   if (typeof node === "string") return node;
   if (Array.isArray(node)) return node.map(extractText).join("");
@@ -108,16 +94,6 @@ const MarkdownContent = ({ file, fileCandidates }) => {
                   </a>
                 );
               }
-              if (!isExternal(href)) {
-                const imageLike = href.match(/\.(gif|png|jpe?g|webp|svg)([#?].*)?$/i);
-                if (imageLike) {
-                  return (
-                    <a href={toLegacyAssetPath(href)} {...props}>
-                      {children}
-                    </a>
-                  );
-                }
-              }
               return (
                 <a href={href} {...props}>
                   {children}
@@ -125,7 +101,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
               );
             },
             img: ({ src = "", alt = "", ...props }) => {
-              return <img src={toLegacyAssetPath(src)} alt={alt} {...props} />;
+              return <img src={src} alt={alt} {...props} />;
             },
           }}
         >
