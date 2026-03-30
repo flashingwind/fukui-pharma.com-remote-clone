@@ -10,6 +10,7 @@ const MINERAL_SLUGS = new Set([
   "magganyu", "magsiryou", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "dganyuu",
   "douganyu", "eganyuu", "ganyuute", "karigany", "keisogan", "lipoicacid", "mangagan", "meneki",
   "menekikihon", "senigany", "serengan", "serensir", "tetugany", "tetusiryou", "thbalance", "vanagany",
+  "cromugan", "yo-dogan", "moribuga", "housogan", "gerumaga", "inosigan",
 ]);
 
 const FLOWER_2007 = new Set(["2007ranten120", "2007catC", "2007paphE"]);
@@ -124,18 +125,18 @@ const MenuLeft = () => {
       </div>
       {openSection.vitamin && (
         <ul className="menu-group">
-          <li><a href="/eiyou">ビタミン総論</a></li>
-          <li><a href="/b1ganyuu">ビタミンB1</a></li>
-          <li><a href="/b2ganyuu">ビタミンB2</a></li>
-          <li><a href="/b3ganyuu">ビタミンB3</a></li>
-          <li><a href="/b5ganyuu">ビタミンB5</a></li>
-          <li><a href="/b6ganyuu">ビタミンB6</a></li>
-          <li><a href="/b12ganyu">ビタミンB12</a></li>
-          <li><a href="/cganyuu">ビタミンC</a></li>
-          <li><a href="/eganyuu">ビタミンE</a></li>
-          <li><a href="/vitasi2">ビタミンA</a></li>
-          <li><a href="/vitasi3">ビタミンD</a></li>
-          <li><a href="/vitasi4">ビタミンK</a></li>
+          <li><a href="/eiyou">症状別:不足栄養素</a></li>
+          <li><a href="/vitasi2">必要性(総論)</a></li>
+          <li><a href="/vitasi3">働き(前編)</a></li>
+          <li><a href="/vitasi4">働き(後編)</a></li>
+          <li><a href="/b1ganyuu">V.B1 含有食品</a></li>
+          <li><a href="/b2ganyuu">V.B2 含有食品</a></li>
+          <li><a href="/b3ganyuu">V.B3 含有食品</a></li>
+          <li><a href="/b5ganyuu">V.B5 含有食品</a></li>
+          <li><a href="/b6ganyuu">V.B6 含有食品</a></li>
+          <li><a href="/b12ganyu">V.B12 含有食品</a></li>
+          <li><a href="/cganyuu">V.C 含有食品</a></li>
+          <li><a href="/eganyuu">V.E 含有食品</a></li>
         </ul>
       )}
 
@@ -145,30 +146,36 @@ const MenuLeft = () => {
       </div>
       {openSection.mineral && (
         <ul className="menu-group">
-          <li><a href="/magganyu">マグネシウム</a></li>
+          <li><a href="/magganyu">Mg 含有食品</a></li>
           <li><a href="/magsiryou">マグネシウム資料</a></li>
-          <li><a href="/bkganyuu">カリウム</a></li>
-          <li><a href="/carugany">カルシウム</a></li>
-          <li><a href="/cganyuu">クロム</a></li>
-          <li><a href="/colingan">コバルト</a></li>
-          <li><a href="/coqganyu">コエンザイムQ10</a></li>
-          <li><a href="/dganyuu">銅</a></li>
-          <li><a href="/douganyu">銅資料</a></li>
-          <li><a href="/eganyuu">鉄</a></li>
-          <li><a href="/ganyuute">亜鉛</a></li>
-          <li><a href="/karigany">カリウム</a></li>
-          <li><a href="/keisogan">ケイ素</a></li>
+          <li><a href="/carugany">Ca 含有食品</a></li>
+          <li><a href="/karigany">K 含有食品</a></li>
+          <li><a href="/ganyuute">Zn 含有食品</a></li>
+          <li><a href="/tetugany">Fe 含有食品</a></li>
+          <li><a href="/douganyu">Cu 含有食品</a></li>
+          <li><a href="/cromugan">Cr 含有食品</a></li>
+          <li><a href="/mangagan">Mn 含有食品</a></li>
+          <li><a href="/yo-dogan">ヨード含有食品</a></li>
+          <li><a href="/serengan">セレン含有食品</a></li>
+          <li><a href="/moribuga">Mo 含有食品</a></li>
+          <li><a href="/vanagany">V 含有食品</a></li>
+          <li><a href="/senigany">食物繊維 含有</a></li>
+          <li><a href="/keisogan">ケイ素 含有食品</a></li>
+          <li><a href="/housogan">ホウ素 含有食品</a></li>
+          <li><a href="/gerumaga">ゲルマニウム 含有</a></li>
+          <li><a href="/colingan">コリン 含有食品</a></li>
+          <li><a href="/coqganyu">CoQ10 含有食品</a></li>
+          <li><a href="/inosigan">イノシトール 含有</a></li>
+          <li><a href="/bkganyuu">V.K 含有食品</a></li>
+          <li><a href="/dganyuu">V.D 含有食品</a></li>
+          <li><a href="/cganyuu">V.C 含有食品</a></li>
+          <li><a href="/eganyuu">V.E 含有食品</a></li>
+          <li><a href="/tetusiryou">鉄 資料</a></li>
+          <li><a href="/serensir">セレン 資料2</a></li>
           <li><a href="/lipoicacid">αリポ酸</a></li>
-          <li><a href="/mangagan">マンガン</a></li>
           <li><a href="/meneki">免疫とミネラル</a></li>
           <li><a href="/menekikihon">免疫の基本</a></li>
-          <li><a href="/senigany">セレン</a></li>
-          <li><a href="/serengan">セレン資料</a></li>
-          <li><a href="/serensir">セレン資料2</a></li>
-          <li><a href="/tetugany">鉄</a></li>
-          <li><a href="/tetusiryou">鉄資料</a></li>
-          <li><a href="/thbalance">ミネラルバランス</a></li>
-          <li><a href="/vanagany">バナジウム</a></li>
+          <li><a href="/thbalance">Th1/Th2バランス</a></li>
         </ul>
       )}
       {/* 出版 */}

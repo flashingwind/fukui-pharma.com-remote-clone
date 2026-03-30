@@ -1,4 +1,4 @@
-> <span class="red"> 1.アトピー性皮膚炎と栄養素の関係</span> <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
+> <span class="red"> 1.アトピー性皮膚炎と栄養素の関係</span> <span class="red">[new]</span>
 >
 > > <span class="red">  
 > > [1)アトピー性皮膚炎の特徴](atopic.md#atopi1)  
@@ -14,7 +14,7 @@
 > > </span>  
 >
 >   
-> <span class="red"> [2.アトピー性皮膚炎と免疫応答の図表](atopic.md#atopicb)</span> <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
+> <span class="red"> [2.アトピー性皮膚炎と免疫応答の図表](atopic.md#atopicb)</span> <span class="red">[new]</span>
 
 **アトピー性皮膚炎と栄養素の関係**
 

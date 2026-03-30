@@ -1,12 +1,12 @@
 - <span class="red"> </span>
 - 免疫とは、免疫を受け持つ細胞
-- [血液中の細胞、図表](meneki.md#ketueki) <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
+- [血液中の細胞、図表](meneki.md#ketueki) <span class="red">[new]</span>
 - [免疫低下の原因](meneki.md#mentei)
 - [免疫を高めるには](meneki.md#mentei2)
 - [免疫の働きとビタミン](meneki.md#menbita)
-- [ヘルパーＴ１とヘルパーＴ２のバランス](meneki.md#th1th2)<img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
-- [Ｔh１を高めＴh２を抑える図表](meneki.md#th1th2p) [○Ｔｈ１Ｔｈ２バランスの図表](thbalance.md) <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
-- [免疫基本応答の図表](meneki.md#menoukihon) <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
+- [ヘルパーＴ１とヘルパーＴ２のバランス](meneki.md#th1th2)<span class="red">[new]</span>
+- [Ｔh１を高めＴh２を抑える図表](meneki.md#th1th2p) [○Ｔｈ１Ｔｈ２バランスの図表](thbalance.md) <span class="red">[new]</span>
+- [免疫基本応答の図表](meneki.md#menoukihon) <span class="red">[new]</span>
 - [免疫応答の図表](meneki.md#menoutou)
 - [ベータグルカンと免疫細胞及び図表](meneki.md#betaguru)
 - [ウイルス感染免疫応答の経過図表](meneki.md#menkei)
@@ -160,7 +160,7 @@
 
 <span class="red"> 細胞性免疫と液性免疫</span>  
   
-<span id="th1th2"><span class="red"> Ｔｈ１を促しＴｈ２を抑える</span></span> <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />
+<span id="th1th2"><span class="red"> Ｔｈ１を促しＴｈ２を抑える</span></span> <span class="red">[new]</span>
 
     身体が感染症と戦う２つの異なった方法が存在します。
     細胞性免疫能(Ｔｈ１)と液性免疫(Ｔｈ２)です。
@@ -232,7 +232,7 @@
 
 ------------------------------------------------------------------------
 
-<span id="th1th2p"><span class="red">Ｔｈ１応答を高め、Ｔｈ２応答を抑えるには</span></span> ![](/minerals/th1th2barance.gif) <img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" />  
+<span id="th1th2p"><span class="red">Ｔｈ１応答を高め、Ｔｈ２応答を抑えるには</span></span> ![](/minerals/th1th2barance.gif) <span class="red">[new]</span>  
 
 ------------------------------------------------------------------------
 

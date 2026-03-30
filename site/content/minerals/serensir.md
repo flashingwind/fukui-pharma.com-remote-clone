@@ -1,4 +1,4 @@
-<img src="http://www.fukui-pharma.com/new2.gif" data-wudth="40" height="10" /> <span class="red">セレン</span><span class="red"> </span>
+<span class="red">[new]</span> <span class="red">セレン</span><span class="red"> </span>
 
 - セレンの働き
 
