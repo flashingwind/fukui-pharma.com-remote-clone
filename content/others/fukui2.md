@@ -1,3 +1,7 @@
+---
+title: 福井薬局ご案内図
+---
+
 <span class="red">福井薬局へのご案内</span><br>
   <span>川口市領家３−１２−２２<br>
   電話０４８−２２３−１６６１<br>
@@ -38,14 +42,3 @@
   領家３丁目の商店街です<br>
   <br>
   <img src="/access/syoutengai2.jpg" width="500" height="350">　<br>
-  <br>
-  福井薬局外観<br>
-  <br>
-  <img src="/access/fukuiyakyoku.jpg" width="500" height="350"><br></span></p>
-  <p><span>●車でご来店の場合は<br>
-  <br>
-  <img src="/access/ryoukedouro.gif" width="500" height="350"><br>
-  <br>
-  東京方面からは、環状七号線の鹿浜交差点を川口方面に曲がって、直進約数分ほどで<br>
-  左側に河合病院があります、信号のある交差点を左折、２本目の十字路を左に曲がりすぐです<br>
-  <a href="/" target="_top"><span>ホームページへ</span></a></span></p>

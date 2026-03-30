@@ -1,25 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="ja">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>福井薬局 店舗情報（旧ページ）</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta http-equiv="keywords" content="福井薬局のビタミン健康情報 ">
-  <meta name="description" content="ビタミン vitamin ミネラル mineral 福井薬局 サプリメント 栄養療法 免疫 ベータグルカン メガフード">
-</head>
-<body bgcolor="f5deb3">
-<div style="margin:1em 0 2em 0; color:red; font-size:1.2em;">【ご注意】このページは過去の店舗情報ページです。現在は営業しておりません。</div>
+---
+title: 福井薬局 店舗情報（旧ページ）
+---
+
+【ご注意】このページは過去の店舗情報ページです。現在は営業しておりません。
+
 <font size="3" color="red">福井薬局へのご案内</font><br><font size="3" color="black">
 川口市領家３−１２−２２<br>
 電話０４８−２２３−１６６１<br><br>
-
 ○ＪＲ京浜東北線−川口駅下車(東京駅から２５分)<br>
 改札口を出て右へ−陸橋へ（正面にそごうデパートが見えます）<br><br>
-
 ○タクシーの場合（１０分、１３００円程度）−右の下りエスカレーターを降りて<br>
 左にタクシーの列が並んでいます−乗り場はずっと先です<br>
 タクシーの運転手は「領家３丁目商店街、福井薬局」でわかると思います<br><br>
-
 ○バスの場合（２０分、１９０円）陸橋の右側に−バス乗り場の表示があります<br>
 「川０１東領家循環」の掲示板のある階段を下ります<br>
 乗り場は先の方です−車両の表示は「川０１番−東領家循環」<br><br>
@@ -38,22 +30,3 @@
 　14 　 05　　35　　　　｜　　14　　05　　30　　　　　　　  <br>
 　15 　 00　　30　　　　｜　　15　　00　　20　　45　　　　　　　　 <br>
 　16 　 00　　30　　　　｜　　16　　10　　35　　　　　　　　  <br>
-　17　　00　　25　　45  ｜　　17　　00　　25　　50　　　　　　　　 <br>
-　　　　お問合せ：川口営業所 TEL048-252-5660　<br>
-
-「領家小学校裏」で降ります、信号の有る十字路（河合病院手前）を左折−<br>
-２本目の十字路を左へ、くすりの看板がでています、徒歩５分ほどです<br>
-<br><img src="hukuiyakyokutizu.gif" width="500" height="350"><br><br>
-領家３丁目の商店街です<br>
-<br><img src="syoutengai2.jpg" width="500" height="350">　<br><br>
-
-福井薬局外観<br>
-<br><img src="fukuiyakyoku.jpg" width="500" height="350"><br><p>
-
-●車でご来店の場合は<br><br>
-<img src="ryoukedouro.gif" width="500" height="350"><br><br>
-
-東京方面からは、環状七号線の鹿浜交差点を川口方面に曲がって、直進約数分ほどで<br>
-左側に河合病院があります、信号のある交差点を左折、２本目の十字路を左に曲がりすぐです<br>
-</body>
-</html>
