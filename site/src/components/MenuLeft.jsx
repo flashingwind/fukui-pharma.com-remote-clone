@@ -79,42 +79,42 @@ const MenuLeft = () => {
       {openSection.nutrientFoods && (
         <ul className="menu-group">
           <li className="menu-subtitle">ビタミン</li>
-          <li><a href="/aganyuu">ビタミンAを多く含む食品</a></li>
-          <li><a href="/eganyuu">ビタミンEを多く含む食品</a></li>
-          <li><a href="/dganyuu">ビタミンDを多く含む食品</a></li>
-          <li><a href="/bkganyuu">ビタミンKを多く含む食品</a></li>
-          <li><a href="/cganyuu">ビタミンCを多く含む食品</a></li>
-          <li><a href="/b1ganyuu">ビタミンB1を多く含む食品</a></li>
-          <li><a href="/b2ganyuu">ビタミンB2を多く含む食品</a></li>
-          <li><a href="/b3ganyuu">ビタミンB3（ナイアシン）を多く含む食品</a></li>
-          <li><a href="/b5ganyuu">ビタミンB5（パントテン酸）を多く含む食品</a></li>
-          <li><a href="/b6ganyuu">ビタミンB6を多く含む食品</a></li>
-          <li><a href="/b12ganyu">ビタミンB12を多く含む食品</a></li>
-          <li><a href="/yousanga">葉酸を多く含む食品</a></li>
-          <li><a href="/biotinga">ビオチンを多く含む食品</a></li>
+          <li><a href="/aganyuu">ビタミンA</a></li>
+          <li><a href="/eganyuu">ビタミンE</a></li>
+          <li><a href="/dganyuu">ビタミンD</a></li>
+          <li><a href="/bkganyuu">ビタミンK</a></li>
+          <li><a href="/cganyuu">ビタミンC</a></li>
+          <li><a href="/b1ganyuu">ビタミンB1</a></li>
+          <li><a href="/b2ganyuu">ビタミンB2</a></li>
+          <li><a href="/b3ganyuu">ビタミンB3（ナイアシン）</a></li>
+          <li><a href="/b5ganyuu">ビタミンB5（パントテン酸）</a></li>
+          <li><a href="/b6ganyuu">ビタミンB6</a></li>
+          <li><a href="/b12ganyu">ビタミンB12</a></li>
+          <li><a href="/yousanga">葉酸</a></li>
+          <li><a href="/biotinga">ビオチン</a></li>
 
           <li className="menu-subtitle">ミネラル</li>
-          <li><a href="/carugany">カルシウムを多く含む食品</a></li>
-          <li><a href="/magganyu">マグネシウムを多く含む食品</a></li>
-          <li><a href="/karigany">カリウムを多く含む食品</a></li>
-          <li><a href="/aenganyu">亜鉛を多く含む食品</a></li>
-          <li><a href="/tetugany">鉄を多く含む食品</a></li>
-          <li><a href="/douganyu">銅を多く含む食品</a></li>
-          <li><a href="/cromugan">クロムを多く含む食品</a></li>
-          <li><a href="/mangagan">マンガンを多く含む食品</a></li>
-          <li><a href="/yo-dogan">ヨードを多く含む食品</a></li>
-          <li><a href="/serengan">セレンを多く含む食品</a></li>
-          <li><a href="/moribuga">モリブデンを多く含む食品</a></li>
-          <li><a href="/vanagany">バナジウムを多く含む食品</a></li>
-          <li><a href="/senigany">食物繊維を多く含む食品</a></li>
-          <li><a href="/keisogan">ケイ素（シリコン）を多く含む食品</a></li>
-          <li><a href="/housogan">ホウ素を多く含む食品</a></li>
-          <li><a href="/gerumaga">ゲルマニウムを多く含む食品</a></li>
+          <li><a href="/carugany">カルシウム</a></li>
+          <li><a href="/magganyu">マグネシウム</a></li>
+          <li><a href="/karigany">カリウム</a></li>
+          <li><a href="/aenganyu">亜鉛</a></li>
+          <li><a href="/tetugany">鉄</a></li>
+          <li><a href="/douganyu">銅</a></li>
+          <li><a href="/cromugan">クロム</a></li>
+          <li><a href="/mangagan">マンガン</a></li>
+          <li><a href="/yo-dogan">ヨード</a></li>
+          <li><a href="/serengan">セレン</a></li>
+          <li><a href="/moribuga">モリブデン</a></li>
+          <li><a href="/vanagany">バナジウム</a></li>
+          <li><a href="/senigany">食物繊維</a></li>
+          <li><a href="/keisogan">ケイ素（シリコン）</a></li>
+          <li><a href="/housogan">ホウ素</a></li>
+          <li><a href="/gerumaga">ゲルマニウム</a></li>
 
           <li className="menu-subtitle">その他</li>
-          <li><a href="/coqganyu">CoQを多く含む食品</a></li>
-          <li><a href="/colingan">コリンを多く含む食品</a></li>
-          <li><a href="/inosigan">イノシトールを多く含む食品</a></li>
+          <li><a href="/coqganyu">CoQ</a></li>
+          <li><a href="/colingan">コリン</a></li>
+          <li><a href="/inosigan">イノシトール</a></li>
         </ul>
       )}
 
