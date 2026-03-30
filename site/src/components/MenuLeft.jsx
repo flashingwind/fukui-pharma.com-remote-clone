@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "../styles/MenuLeft.css";
 
 const VITAMIN_SLUGS = new Set([
-  "eiyou", "eiyouso", "b1ganyuu", "b2ganyuu", "b3ganyuu", "b5ganyuu", "b6ganyuu", "b12ganyu",
-  "cganyuu", "eganyuu", "vitasi2", "vitasi3", "vitasi4",
+  "eiyou", "vitasi2", "vitasi3", "vitasi4",
 ]);
 
 const MINERAL_SLUGS = new Set([
@@ -80,42 +79,42 @@ const MenuLeft = () => {
       {openSection.nutrientFoods && (
         <ul className="menu-group">
           <li className="menu-subtitle">ビタミン</li>
-          <li><a href="/aganyuu">ビタミンA</a></li>
-          <li><a href="/eganyuu">ビタミンE</a></li>
-          <li><a href="/dganyuu">ビタミンD</a></li>
-          <li><a href="/bkganyuu">ビタミンK</a></li>
-          <li><a href="/cganyuu">ビタミンC</a></li>
-          <li><a href="/b1ganyuu">ビタミンB1</a></li>
-          <li><a href="/b2ganyuu">ビタミンB2</a></li>
-          <li><a href="/b3ganyuu">ビタミンB3</a></li>
-          <li><a href="/b5ganyuu">ビタミンB5</a></li>
-          <li><a href="/b6ganyuu">ビタミンB6</a></li>
-          <li><a href="/b12ganyu">ビタミンB12</a></li>
-          <li><a href="/yousanga">葉酸</a></li>
-          <li><a href="/biotinga">ビオチン</a></li>
+          <li><a href="/aganyuu">ビタミンAを多く含む食品</a></li>
+          <li><a href="/eganyuu">ビタミンEを多く含む食品</a></li>
+          <li><a href="/dganyuu">ビタミンDを多く含む食品</a></li>
+          <li><a href="/bkganyuu">ビタミンKを多く含む食品</a></li>
+          <li><a href="/cganyuu">ビタミンCを多く含む食品</a></li>
+          <li><a href="/b1ganyuu">ビタミンB1を多く含む食品</a></li>
+          <li><a href="/b2ganyuu">ビタミンB2を多く含む食品</a></li>
+          <li><a href="/b3ganyuu">ビタミンB3（ナイアシン）を多く含む食品</a></li>
+          <li><a href="/b5ganyuu">ビタミンB5（パントテン酸）を多く含む食品</a></li>
+          <li><a href="/b6ganyuu">ビタミンB6を多く含む食品</a></li>
+          <li><a href="/b12ganyu">ビタミンB12を多く含む食品</a></li>
+          <li><a href="/yousanga">葉酸を多く含む食品</a></li>
+          <li><a href="/biotinga">ビオチンを多く含む食品</a></li>
 
           <li className="menu-subtitle">ミネラル</li>
-          <li><a href="/carugany">カルシウム</a></li>
-          <li><a href="/magganyu">マグネシウム</a></li>
-          <li><a href="/karigany">カリウム</a></li>
-          <li><a href="/aenganyu">亜鉛</a></li>
-          <li><a href="/tetugany">鉄</a></li>
-          <li><a href="/douganyu">銅</a></li>
-          <li><a href="/cromugan">クロム</a></li>
-          <li><a href="/mangagan">マンガン</a></li>
-          <li><a href="/yo-dogan">ヨード</a></li>
-          <li><a href="/serengan">セレン</a></li>
-          <li><a href="/moribuga">モリブデン</a></li>
-          <li><a href="/vanagany">バナジウム</a></li>
-          <li><a href="/senigany">食物繊維</a></li>
-          <li><a href="/keisogan">ケイ素</a></li>
-          <li><a href="/housogan">ホウ素</a></li>
-          <li><a href="/gerumaga">ゲルマニウム</a></li>
+          <li><a href="/carugany">カルシウムを多く含む食品</a></li>
+          <li><a href="/magganyu">マグネシウムを多く含む食品</a></li>
+          <li><a href="/karigany">カリウムを多く含む食品</a></li>
+          <li><a href="/aenganyu">亜鉛を多く含む食品</a></li>
+          <li><a href="/tetugany">鉄を多く含む食品</a></li>
+          <li><a href="/douganyu">銅を多く含む食品</a></li>
+          <li><a href="/cromugan">クロムを多く含む食品</a></li>
+          <li><a href="/mangagan">マンガンを多く含む食品</a></li>
+          <li><a href="/yo-dogan">ヨードを多く含む食品</a></li>
+          <li><a href="/serengan">セレンを多く含む食品</a></li>
+          <li><a href="/moribuga">モリブデンを多く含む食品</a></li>
+          <li><a href="/vanagany">バナジウムを多く含む食品</a></li>
+          <li><a href="/senigany">食物繊維を多く含む食品</a></li>
+          <li><a href="/keisogan">ケイ素（シリコン）を多く含む食品</a></li>
+          <li><a href="/housogan">ホウ素を多く含む食品</a></li>
+          <li><a href="/gerumaga">ゲルマニウムを多く含む食品</a></li>
 
           <li className="menu-subtitle">その他</li>
-          <li><a href="/coqganyu">CoQ10</a></li>
-          <li><a href="/colingan">コリン</a></li>
-          <li><a href="/inosigan">イノシトール</a></li>
+          <li><a href="/coqganyu">CoQを多く含む食品</a></li>
+          <li><a href="/colingan">コリンを多く含む食品</a></li>
+          <li><a href="/inosigan">イノシトールを多く含む食品</a></li>
         </ul>
       )}
 
@@ -125,18 +124,20 @@ const MenuLeft = () => {
       </div>
       {openSection.vitamin && (
         <ul className="menu-group">
-          <li><a href="/eiyou">症状別:不足栄養素</a></li>
-          <li><a href="/vitasi2">必要性(総論)</a></li>
-          <li><a href="/vitasi3">働き(前編)</a></li>
-          <li><a href="/vitasi4">働き(後編)</a></li>
-          <li><a href="/b1ganyuu">V.B1 含有食品</a></li>
-          <li><a href="/b2ganyuu">V.B2 含有食品</a></li>
-          <li><a href="/b3ganyuu">V.B3 含有食品</a></li>
-          <li><a href="/b5ganyuu">V.B5 含有食品</a></li>
-          <li><a href="/b6ganyuu">V.B6 含有食品</a></li>
-          <li><a href="/b12ganyu">V.B12 含有食品</a></li>
-          <li><a href="/cganyuu">V.C 含有食品</a></li>
-          <li><a href="/eganyuu">V.E 含有食品</a></li>
+          <li className="menu-subtitle">総論</li>
+          <li><a href="/eiyou">症状と不足が疑われる栄養素</a></li>
+          <li><a href="/vitasi2">ビタミン・ミネラルの必要性</a></li>
+          <li><a href="/vitasi3">ビタミンとミネラルの働き（前編）</a></li>
+          <li><a href="/vitasi4">ビタミンとミネラルの働き（後編）</a></li>
+          <li className="menu-subtitle">含有食品</li>
+          <li><a href="/b1ganyuu">ビタミンB1</a></li>
+          <li><a href="/b2ganyuu">ビタミンB2</a></li>
+          <li><a href="/b3ganyuu">ビタミンB3（ナイアシン）</a></li>
+          <li><a href="/b5ganyuu">ビタミンB5（パントテン酸）</a></li>
+          <li><a href="/b6ganyuu">ビタミンB6</a></li>
+          <li><a href="/b12ganyu">ビタミンB12</a></li>
+          <li><a href="/cganyuu">ビタミンC</a></li>
+          <li><a href="/eganyuu">ビタミンE</a></li>
         </ul>
       )}
 
@@ -146,36 +147,36 @@ const MenuLeft = () => {
       </div>
       {openSection.mineral && (
         <ul className="menu-group">
-          <li><a href="/magganyu">Mg 含有食品</a></li>
-          <li><a href="/magsiryou">マグネシウム資料</a></li>
-          <li><a href="/carugany">Ca 含有食品</a></li>
-          <li><a href="/karigany">K 含有食品</a></li>
-          <li><a href="/ganyuute">Zn 含有食品</a></li>
-          <li><a href="/tetugany">Fe 含有食品</a></li>
-          <li><a href="/douganyu">Cu 含有食品</a></li>
-          <li><a href="/cromugan">Cr 含有食品</a></li>
-          <li><a href="/mangagan">Mn 含有食品</a></li>
-          <li><a href="/yo-dogan">ヨード含有食品</a></li>
-          <li><a href="/serengan">セレン含有食品</a></li>
-          <li><a href="/moribuga">Mo 含有食品</a></li>
-          <li><a href="/vanagany">V 含有食品</a></li>
-          <li><a href="/senigany">食物繊維 含有</a></li>
-          <li><a href="/keisogan">ケイ素 含有食品</a></li>
-          <li><a href="/housogan">ホウ素 含有食品</a></li>
-          <li><a href="/gerumaga">ゲルマニウム 含有</a></li>
-          <li><a href="/colingan">コリン 含有食品</a></li>
-          <li><a href="/coqganyu">CoQ10 含有食品</a></li>
-          <li><a href="/inosigan">イノシトール 含有</a></li>
-          <li><a href="/bkganyuu">V.K 含有食品</a></li>
-          <li><a href="/dganyuu">V.D 含有食品</a></li>
-          <li><a href="/cganyuu">V.C 含有食品</a></li>
-          <li><a href="/eganyuu">V.E 含有食品</a></li>
-          <li><a href="/tetusiryou">鉄 資料</a></li>
-          <li><a href="/serensir">セレン 資料2</a></li>
-          <li><a href="/lipoicacid">αリポ酸</a></li>
-          <li><a href="/meneki">免疫とミネラル</a></li>
-          <li><a href="/menekikihon">免疫の基本</a></li>
-          <li><a href="/thbalance">Th1/Th2バランス</a></li>
+          <li><a href="/magganyu">マグネシウムを多く含む食品</a></li>
+          <li><a href="/magsiryou">マグネシウムとはどんなものか</a></li>
+          <li><a href="/carugany">カルシウムを多く含む食品</a></li>
+          <li><a href="/karigany">カリウムを多く含む食品</a></li>
+          <li><a href="/ganyuute">ビタミン・ミネラルを多く含む食品（一覧）</a></li>
+          <li><a href="/tetugany">鉄を多く含む食品</a></li>
+          <li><a href="/tetusiryou">鉄とはどんなものか</a></li>
+          <li><a href="/douganyu">銅を多く含む食品</a></li>
+          <li><a href="/cromugan">クロムを多く含む食品</a></li>
+          <li><a href="/mangagan">マンガンを多く含む食品</a></li>
+          <li><a href="/yo-dogan">ヨードを多く含む食品</a></li>
+          <li><a href="/serengan">セレンを多く含む食品</a></li>
+          <li><a href="/serensir">セレンの働き（詳細）</a></li>
+          <li><a href="/moribuga">モリブデンを多く含む食品</a></li>
+          <li><a href="/vanagany">バナジウムを多く含む食品</a></li>
+          <li><a href="/senigany">食物繊維を多く含む食品</a></li>
+          <li><a href="/keisogan">ケイ素（シリコン）を多く含む食品</a></li>
+          <li><a href="/housogan">ホウ素を多く含む食品</a></li>
+          <li><a href="/gerumaga">ゲルマニウムを多く含む食品</a></li>
+          <li><a href="/colingan">コリンを多く含む食品</a></li>
+          <li><a href="/coqganyu">CoQを多く含む食品</a></li>
+          <li><a href="/inosigan">イノシトールを多く含む食品</a></li>
+          <li><a href="/bkganyuu">ビタミンKを多く含む食品</a></li>
+          <li><a href="/dganyuu">ビタミンDを多く含む食品</a></li>
+          <li><a href="/cganyuu">ビタミンCを多く含む食品</a></li>
+          <li><a href="/eganyuu">ビタミンEを多く含む食品</a></li>
+          <li><a href="/lipoicacid">アルファリポ酸</a></li>
+          <li><a href="/meneki">免疫とは（免疫を受け持つ細胞）</a></li>
+          {/* <li><a href="/menekikihon">免疫の基本応答</a></li> */}
+          {/* <li><a href="/thbalance">Th1とTh2のバランス</a></li> */}
         </ul>
       )}
       {/* 出版 */}
@@ -184,7 +185,7 @@ const MenuLeft = () => {
       </div>
       {openSection.publication && (
         <ul className="menu-group">
-          <li><a href="/mokuzitu">書籍『ビタミン・ミネラルの使い方』</a></li>
+          <li><a href="/mokuzitu">『薬剤師がすすめるビタミン・ミネラルの使い方（第2版）』</a></li>
         </ul>
       )}
 
@@ -272,14 +273,14 @@ const MenuLeft = () => {
       {openSection.travel && (
         <ul className="menu-group">
           <li className="menu-subtitle">マウイ島</li>
-          <li><a href="/mauisunset">カアナパリ</a></li>
-          <li><a href="/hanaumabay">ハナウマ湾</a></li>
-          <li className="menu-subtitle">ワイキキ</li>
-          <li><a href="/wikikibeach">カラカウア</a></li>
-          <li><a href="/mauibus">マウイのバス</a></li>
-          <li><a href="/mauisyokubutu">マウイ植物園</a></li>
+          <li><a href="/mauisunset">カアナパリの夕日・虹</a></li>
+          <li><a href="/mauibus">マウイのバス（ホエールビレッジ）</a></li>
+          <li><a href="/mauisyokubutu">マウイ植物園（バナナ・ジンジャーの花）</a></li>
           <li><a href="/suizokukan">マウイ水族館</a></li>
-          <li><a href="/hawaibeach">ビーチ</a></li>
+          <li className="menu-subtitle">オアフ島</li>
+          <li><a href="/hanaumabay">ハナウマ湾</a></li>
+          <li><a href="/wikikibeach">ワイキキ・カラカウア通り</a></li>
+          <li><a href="/hawaibeach">ハワイのビーチ</a></li>
         </ul>
       )}
       </nav>

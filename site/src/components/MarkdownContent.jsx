@@ -42,7 +42,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
         }
       }
       if (!cancelled) {
-        setError("コンテンツが見つかりませんでした。");
+        setError("このページはありません。");
       }
     };
 
