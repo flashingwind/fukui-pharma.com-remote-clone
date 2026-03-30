@@ -1,17 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-  <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.8.0">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>福井薬局ご案内図 | 福井薬局のビタミン健康情報</title>
-  <meta http-equiv="keywords" content="福井薬局のビタミン健康情報">
-  <meta name="description" content="ビタミン vitamin ミネラル mineral 福井薬局 サプリメント 栄養療法 免疫 ベータグルカン メガフード">
-  <meta name="robots" content="index,follow">
-</head>
-<body bgcolor="#F5DEB3">
-  <font size="3" color="red">福井薬局へのご案内</font><br>
-  <font size="3" color="black">川口市領家３−１２−２２<br>
+<span class="red">福井薬局へのご案内</span><br>
+  <span>川口市領家３−１２−２２<br>
   電話０４８−２２３−１６６１<br>
   <br>
   ○ＪＲ京浜東北線−川口駅下車(東京駅から２５分)<br>
@@ -25,10 +13,10 @@
   「川０１東領家循環」の掲示板のある階段を下ります<br>
   乗り場は先の方です−車両の表示は「川０１番−東領家循環」<br>
   <br>
-  <img src="kawaguchibasu.jpg" width="500" height="350"><br>
+  <img src="/legacy/kawaguchibasu.jpg" width="500" height="350"><br>
   <br>
-  <img src="kawagutieki.gif" width="500" height="350"><br></font>
-  <p><font size="3" color="black">ここの停留所名は 川口駅東口(かわぐちえきひがしぐち)　乗車表示の<br>
+  <img src="/legacy/kawagutieki.gif" width="500" height="350"><br></span>
+  <p><span>ここの停留所名は 川口駅東口(かわぐちえきひがしぐち)　乗車表示の<br>
   「系統 川０２ 行き先 東領家循環」にお乗りいただいて−下車は「領家小学校裏」です<br>
   このバスの発車時間表は(１６年９月１日改定)<br>
   　　　平日　　　　　　 土曜日・日曜祭日<br>
@@ -45,21 +33,19 @@
   「領家小学校裏」で降ります、信号の有る十字路（河合病院手前）を左折−<br>
   ２本目の十字路を左へ、くすりの看板がでています、徒歩５分ほどです<br>
   <br>
-  <img src="hukuiyakyokutizu.gif" width="500" height="350"><br>
+  <img src="/legacy/hukuiyakyokutizu.gif" width="500" height="350"><br>
   <br>
   領家３丁目の商店街です<br>
   <br>
-  <img src="syoutengai2.jpg" width="500" height="350">　<br>
+  <img src="/legacy/syoutengai2.jpg" width="500" height="350">　<br>
   <br>
   福井薬局外観<br>
   <br>
-  <img src="fukuiyakyoku.jpg" width="500" height="350"><br></font></p>
-  <p><font size="3" color="black">●車でご来店の場合は<br>
+  <img src="/legacy/fukuiyakyoku.jpg" width="500" height="350"><br></span></p>
+  <p><span>●車でご来店の場合は<br>
   <br>
-  <img src="ryoukedouro.gif" width="500" height="350"><br>
+  <img src="/legacy/ryoukedouro.gif" width="500" height="350"><br>
   <br>
   東京方面からは、環状七号線の鹿浜交差点を川口方面に曲がって、直進約数分ほどで<br>
   左側に河合病院があります、信号のある交差点を左折、２本目の十字路を左に曲がりすぐです<br>
-  <a href="index.html" target="_top"><font size="2">ホームページへ</font></a></font></p>
-</body>
-</html>
+  <a href="/" target="_top"><span>ホームページへ</span></a></span></p>
