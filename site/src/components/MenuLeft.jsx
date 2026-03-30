@@ -202,14 +202,14 @@ const MenuLeft = () => {
       )}
 
       {/* アクセス */}
-			  {/*<div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>
-        アクセス {openSection.access ? '▼' : '▶'}
+      <div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>
+        アクセス（店舗情報） {openSection.access ? '▼' : '▶'}
       </div>
       {openSection.access && (
         <ul className="menu-group">
           <li><a href="/access">アクセス情報</a></li>
         </ul>
-      )}*/}
+      )}
 
       {/* 花の写真集 */}
       <div className="menu-section" onClick={() => toggleSection('flower')} style={{cursor:'pointer'}}>
