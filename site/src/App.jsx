@@ -13,8 +13,8 @@ const FOOTER_LINKS_RIGHT = [
   { href: '/eiyou', label: 'ビタミン' },
   { href: '/mineral', label: 'ミネラル' },
   { href: '/mokuzitu', label: '出版' },
-  { href: '/tyuumon', label: '通販' },
-  { href: '/access', label: 'アクセス情報' },
+  //{ href: '/tyuumon', label: '通販' },
+  //{ href: '/access', label: 'アクセス情報' },
 ]
 
 function App() {
