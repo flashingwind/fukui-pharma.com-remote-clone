@@ -1,6 +1,6 @@
 - <span class="red"> マグネシウム<img src="http://www.fukui-pharma.com/new2.gif" width="40" height="10" /></span>
 - マグネシウムとはどんなものか,マグネシウムのお話
 - [マグネシウムは体内でどのように働くか](magsiryou.md#maghata)
-- [マグネシウムはどんな時に有用か](magsiryou.md#magtukai) ![](maghana.gif)
-- <span id="maghata">マグネシウムは体内でどのように働くか</span> ![](maghata.gif)
-- <span id="magtukai">マグネシウムはどんな時に有用か</span> ![](magtukai.gif)
+- [マグネシウムはどんな時に有用か](magsiryou.md#magtukai) ![](/minerals/maghana.gif)
+- <span id="maghata">マグネシウムは体内でどのように働くか</span> ![](/minerals/maghata.gif)
+- <span id="magtukai">マグネシウムはどんな時に有用か</span> ![](/minerals/magtukai.gif)

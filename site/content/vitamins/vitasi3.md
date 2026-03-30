@@ -54,7 +54,7 @@
 許容上限摂取量：２５０μｇ  
 働き：酸化を防ぐ酵素、グルタチオンペルオキシダーゼの構成要素。  
 　　　ビタミンＥと共同して働く、正常な成長と発育に必要である。  
-<img src="new2.gif" data-wudth="40" height="10" />  
+<img src="/vitamins/new2.gif" data-wudth="40" height="10" />  
 [セレンについて詳しくは､こちらへ](serensir.md)  
 <span class="red">  
 </span>
@@ -187,7 +187,7 @@
 働き：消化や代謝、生殖､治癒に関連する多くの酵素に必須。  
 　　　不足すると、味や臭いや聴力の感覚が低下する、免疫力が落ちる。  
 　　　血糖の調整に大切なインシュリンを構成する要素である。  
-<img src="new2.gif" data-wudth="40" height="10" /> [亜鉛について詳しくは､こちらへ](aensiryou.md)
+<img src="/vitamins/new2.gif" data-wudth="40" height="10" /> [亜鉛について詳しくは､こちらへ](aensiryou.md)
 
 銅
 
@@ -222,7 +222,7 @@
 許容上限摂取量：７００ｍｇ  
 働き：多くの酵素の活性化に働き、特にエネルギー生産には重要である。  
 　　　神経と筋肉の機能を助ける。  
-<img src="new2.gif" data-wudth="40" height="10" /> [マグネシウムについて詳しくは､こちらへ](magsiryou.md)
+<img src="/vitamins/new2.gif" data-wudth="40" height="10" /> [マグネシウムについて詳しくは､こちらへ](magsiryou.md)
 
 カリウム
 
@@ -237,7 +237,7 @@
 許容上限摂取量：２５０μｇ  
 働き：抗酸化酵素のグルタチオンペルオキシダーゼの構成要素として重要。  
 　　　ビタミンＥと共同して働く、発ガンのリスクを下げる。  
-<img src="new2.gif" data-wudth="40" height="10" /> [セレンについて詳しくは､こちらへ](serensir.md)
+<img src="/vitamins/new2.gif" data-wudth="40" height="10" /> [セレンについて詳しくは､こちらへ](serensir.md)
 
 鉄
 
@@ -246,7 +246,7 @@
 許容上限摂取量：４０ｍｇ  
 働き：体内で酸素を運搬する赤血球の構成と働きに必要である。  
 　　　エネルギー生産に働く。  
-<img src="new2.gif" data-wudth="40" height="10" /> [鉄について詳しくは､こちらへ](tetusiryou.md)
+<img src="/vitamins/new2.gif" data-wudth="40" height="10" /> [鉄について詳しくは､こちらへ](tetusiryou.md)
 
 クロム
 

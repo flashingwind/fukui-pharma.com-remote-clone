@@ -3,7 +3,7 @@
       <tr>
         <td>
           <center>
-            <img src="betaglucan30.gif" width="50" height="90"><br>
+            <img src="/shop/betaglucan30.gif" width="50" height="90"><br>
             30カプセル<br>
             7500円
           </center>
@@ -20,7 +20,7 @@
       <tr>
         <td>
           <center>
-            <img src="betaglucan100.gif" width="130" height="90"><br>
+            <img src="/shop/betaglucan100.gif" width="130" height="90"><br>
             100カプセル<br>
             22500円
           </center>
@@ -39,7 +39,7 @@
       <tr>
         <td>
           <center>
-            <img src="mfbackgr.gif" width="130" height="90"><br>
+            <img src="/shop/mfbackgr.gif" width="130" height="90"><br>
             <table>
               <tr>
                 <td bgcolor="#F8F7D9"><font size="4" color="#010066">「おとりになる量」<br>

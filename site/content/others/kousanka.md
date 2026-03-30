@@ -117,11 +117,11 @@
 
 ------------------------------------------------------------------------
 
-<span id="zuhyou"><span class="red">活性酸素の生成と消去図表</span></span> ![](furiiraz.gif)
+<span id="zuhyou"><span class="red">活性酸素の生成と消去図表</span></span> ![](/others/furiiraz.gif)
 
 ------------------------------------------------------------------------
 
-<span id="zuhyou2"><span class="red">分子で示す活性酸素の生成と変換 </span></span> ![](kasseisa.gif)
+<span id="zuhyou2"><span class="red">分子で示す活性酸素の生成と変換 </span></span> ![](/others/kasseisa.gif)
 
 <a href="index.html" target="_top">ホームページへ</a>
 

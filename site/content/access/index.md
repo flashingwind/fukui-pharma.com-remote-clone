@@ -13,9 +13,9 @@
   「川０１東領家循環」の掲示板のある階段を下ります<br>
   乗り場は先の方です−車両の表示は「川０１番−東領家循環」<br>
   <br>
-  <img src="/legacy/kawaguchibasu.jpg" width="500" height="350"><br>
+  <img src="/access/kawaguchibasu.jpg" width="500" height="350"><br>
   <br>
-  <img src="/legacy/kawagutieki.gif" width="500" height="350"><br></span>
+  <img src="/access/kawagutieki.gif" width="500" height="350"><br></span>
   <p><span>ここの停留所名は 川口駅東口(かわぐちえきひがしぐち)　乗車表示の<br>
   「系統 川０２ 行き先 東領家循環」にお乗りいただいて−下車は「領家小学校裏」です<br>
   このバスの発車時間表は(１６年９月１日改定)<br>
@@ -33,18 +33,18 @@
   「領家小学校裏」で降ります、信号の有る十字路（河合病院手前）を左折−<br>
   ２本目の十字路を左へ、くすりの看板がでています、徒歩５分ほどです<br>
   <br>
-  <img src="/legacy/hukuiyakyokutizu.gif" width="500" height="350"><br>
+  <img src="/access/hukuiyakyokutizu.gif" width="500" height="350"><br>
   <br>
   領家３丁目の商店街です<br>
   <br>
-  <img src="/legacy/syoutengai2.jpg" width="500" height="350">　<br>
+  <img src="/access/syoutengai2.jpg" width="500" height="350">　<br>
   <br>
   福井薬局外観<br>
   <br>
-  <img src="/legacy/fukuiyakyoku.jpg" width="500" height="350"><br></span></p>
+  <img src="/access/fukuiyakyoku.jpg" width="500" height="350"><br></span></p>
   <p><span>●車でご来店の場合は<br>
   <br>
-  <img src="/legacy/ryoukedouro.gif" width="500" height="350"><br>
+  <img src="/access/ryoukedouro.gif" width="500" height="350"><br>
   <br>
   東京方面からは、環状七号線の鹿浜交差点を川口方面に曲がって、直進約数分ほどで<br>
   左側に河合病院があります、信号のある交差点を左折、２本目の十字路を左に曲がりすぐです<br>

@@ -4,7 +4,7 @@ description: ビタミン vitamin ミネラル mineral 福井薬局 サプリメ
 ---
 
 <center>
-<img src="../../tukaikata3.gif" width="75" height="100" />
+<img src="/others/tukaikata3.gif" width="75" height="100" />
 </center>
 
 ---

@@ -1,4 +1,4 @@
-<img src="mega10s.gif" data-width"90"="" height="160" />
+<img src="/shop/mega10s.gif" data-width"90"="" height="160" />
 
 <span class="red"><span class="red">メガフードアルファー</span>  
 (酵母加工食品)  
@@ -10,7 +10,7 @@
 
   
 
-<img src="megaalph.gif" width="130" height="200" />
+<img src="/shop/megaalph.gif" width="130" height="200" />
 
 左図はアメリカの MegaFoodAlha (メガフードアルファー)  
 製造発売元　BioSan　Labs. Inc.　USA  

@@ -2,7 +2,7 @@
 <center>
 <TABLE>
 <TR><TD ALIGN=CENTER>
-<IMG SRC="/legacy/tukaikata3.gif" WIDTH="75"HEIGHT="100">
+<IMG SRC="/publication/tukaikata3.gif" WIDTH="75"HEIGHT="100">
 </TD> <TD ALIGN=RIGHT>
 
 </TD></TR>

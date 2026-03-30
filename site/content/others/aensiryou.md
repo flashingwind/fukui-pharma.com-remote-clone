@@ -12,13 +12,13 @@
 
 - <span id="aenhata"><span class="red">亜鉛は体内でどのように働くか</span></span>
 
-![](aenhata.gif)
+![](/others/aenhata.gif)
 
 ------------------------------------------------------------------------
 
 - <span class="red"><span id="aenhuso">亜鉛が不足するとどんなことが起こるか</span></span>
 
-![](aenhusok.gif)
+![](/others/aenhusok.gif)
 
 ------------------------------------------------------------------------
 

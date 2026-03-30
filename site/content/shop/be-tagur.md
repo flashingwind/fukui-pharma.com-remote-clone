@@ -3,7 +3,7 @@
 <TABLE BORDER="2" CELLSPACING="3" WIDTH="650" ALIGN="CENTER">
 <TR>
 <TD>
-<IMG SRC="/legacy/beta10.gif" WIDTH="130" HEIGHT="200"></TD>
+<IMG SRC="/shop/beta10.gif" WIDTH="130" HEIGHT="200"></TD>
 
 <TD ALGIN="LEFT" BGCOLOR="#f8f7d9">
 <span class="red">ベータグルカン</span>
@@ -16,7 +16,7 @@
 </span>
 </TD></TR>
 <TR><TD>
-<IMG SRC="/legacy/betaglucan30.gif" WIDTH="130" HEIGHT="200"></TD>
+<IMG SRC="/shop/betaglucan30.gif" WIDTH="130" HEIGHT="200"></TD>
 <TD BGCOLOR="#f8f7d9" >
 <span class="red">
 日本の製品名は「ベータグルカン」
@@ -40,7 +40,7 @@
 </TD></TR>
 
 <TR><TD>
-<IMG SRC="/legacy/mfbackgr.gif" WIDTH="130" HEIGHT="200">
+<IMG SRC="/shop/mfbackgr.gif" WIDTH="130" HEIGHT="200">
 </TD>
 
 <TD BGCOLOR="#f8f7d9" >

@@ -2,7 +2,7 @@
 <table>
   <tr>
     <td align="center">
-      <img src="sinhon5.jpg" width="75" height="100" />
+      <img src="/others/sinhon5.jpg" width="75" height="100" />
     </td>
     <td align="right"></td>
   </tr>

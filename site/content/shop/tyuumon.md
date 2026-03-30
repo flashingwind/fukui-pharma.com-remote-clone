@@ -13,7 +13,7 @@
 <HR width="90%" size=1 align="left" noshade>
 
 商品一覧<BR>
-<IMG SRC="/legacy/kakaku.gif">
+<IMG SRC="/shop/kakaku.gif">
 <HR width="90%" size=1 align="left" noshade>
 
 

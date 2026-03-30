@@ -1,6 +1,6 @@
   <hr>
   <font size="5" color="red"><b>ベータグルカン</b> (betaglucan)</font><br>
-  <p><img src="betaglucan35.jpg" width="100" height="70"><font size="3" color="red">１００カプセル</font><br></p>
+  <p><img src="/shop/betaglucan35.jpg" width="100" height="70"><font size="3" color="red">１００カプセル</font><br></p>
   <p><font size="4" color="black">ベータグルカンは、パン酵母の細胞壁から取り出された成分で、<br>
   免疫（体内異物を排除する能力）に対する効果が期待されています。　<br></font></p>
   <p><font size="4" color="black">グルカンというのは、グルコース（ブドウ糖）が鎖状に多数連結した物質です、<br>
