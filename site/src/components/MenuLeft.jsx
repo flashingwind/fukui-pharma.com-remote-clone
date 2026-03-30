@@ -78,7 +78,6 @@ const MenuLeft = () => {
       </div>
       {openSection.nutrientFoods && (
         <ul className="menu-group">
-          <li><a href="/eiyouso">栄養素を多く含む食品 一覧</a></li>
           <li className="menu-subtitle">ビタミン</li>
           <li><a href="/aganyuu">ビタミンA</a></li>
           <li><a href="/eganyuu">ビタミンE</a></li>
@@ -126,7 +125,6 @@ const MenuLeft = () => {
       {openSection.vitamin && (
         <ul className="menu-group">
           <li><a href="/eiyou">ビタミン総論</a></li>
-          <li><a href="/eiyouso">ビタミンの働き</a></li>
           <li><a href="/b1ganyuu">ビタミンB1</a></li>
           <li><a href="/b2ganyuu">ビタミンB2</a></li>
           <li><a href="/b3ganyuu">ビタミンB3</a></li>
