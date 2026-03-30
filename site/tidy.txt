@@ -1,0 +1,416 @@
+./2006cattleya.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 5 - Warning: <img> lacks "alt" attribute
+line 17 column 5 - Warning: <img> lacks "alt" attribute
+line 19 column 5 - Warning: <img> lacks "alt" attribute
+line 21 column 5 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+./paphio101.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+./googleb47d50038c5e8b10.html
+line 5 column 3 - Warning: blank 'title' element
+./cattleya1.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 4 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 4 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+./be-tagur10.html
+line 14 column 5 - Warning: <table> lacks "summary" attribute
+line 18 column 13 - Warning: <img> lacks "alt" attribute
+line 35 column 13 - Warning: <img> lacks "alt" attribute
+line 54 column 13 - Warning: <img> lacks "alt" attribute
+line 55 column 13 - Warning: <table> lacks "summary" attribute
+./index.html
+line 12 column 1 - Warning: <frameset> proprietary attribute "frameborder"
+line 12 column 1 - Warning: <frameset> proprietary attribute "framespacing"
+line 14 column 3 - Warning: <frameset> proprietary attribute "frameborder"
+line 14 column 3 - Warning: <frameset> proprietary attribute "framespacing"
+./cattleya.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+./paphiopedilum2.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+./oldcar.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 31 column 3 - Warning: <img> lacks "alt" attribute
+line 35 column 3 - Warning: <img> lacks "alt" attribute
+./2006ranten.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+./tex.html
+line 291 column 5 - Warning: </li> isn't allowed in <body> elements
+line 291 column 5 - Warning: inserting implicit <ul>
+line 291 column 5 - Warning: discarding unexpected </li>
+line 300 column 3 - Warning: discarding unexpected </ol>
+line 291 column 5 - Warning: missing </ul> before <hr>
+line 27 column 5 - Warning: <table> lacks "summary" attribute
+line 36 column 67 - Warning: <img> lacks "alt" attribute
+line 173 column 6 - Warning: <img> lacks "alt" attribute
+line 174 column 6 - Warning: <img> lacks "alt" attribute
+line 175 column 6 - Warning: <img> lacks "alt" attribute
+line 302 column 22 - Warning: <img> lacks "alt" attribute
+./paphio202.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 5 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+line 34 column 5 - Warning: <img> lacks "alt" attribute
+line 36 column 5 - Warning: <img> lacks "alt" attribute
+line 38 column 4 - Warning: <img> lacks "alt" attribute
+line 40 column 5 - Warning: <img> lacks "alt" attribute
+line 42 column 5 - Warning: <img> lacks "alt" attribute
+./2007paphE.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+./begu.html
+line 15 column 6 - Warning: <img> lacks "alt" attribute
+./2007catC.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+./masdevallia.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 4 - Warning: <img> lacks "alt" attribute
+line 16 column 4 - Warning: <img> lacks "alt" attribute
+line 18 column 4 - Warning: <img> lacks "alt" attribute
+line 20 column 5 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 4 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+./phalaenopsis4.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+./dendrobiumnew.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+./2006paphio.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 29 column 3 - Warning: <img> lacks "alt" attribute
+./2004ran.html
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 25 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 29 column 3 - Warning: <img> lacks "alt" attribute
+line 31 column 3 - Warning: <img> lacks "alt" attribute
+line 33 column 3 - Warning: <img> lacks "alt" attribute
+./harubotan16.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+line 46 column 3 - Warning: <img> lacks "alt" attribute
+line 48 column 3 - Warning: <img> lacks "alt" attribute
+line 50 column 3 - Warning: <img> lacks "alt" attribute
+line 52 column 3 - Warning: <img> lacks "alt" attribute
+line 54 column 3 - Warning: <img> lacks "alt" attribute
+line 56 column 3 - Warning: <img> lacks "alt" attribute
+line 58 column 3 - Warning: <img> lacks "alt" attribute
+line 60 column 3 - Warning: <img> lacks "alt" attribute
+line 62 column 3 - Warning: <img> lacks "alt" attribute
+line 64 column 3 - Warning: <img> lacks "alt" attribute
+line 66 column 3 - Warning: <img> lacks "alt" attribute
+line 68 column 3 - Warning: <img> lacks "alt" attribute
+line 70 column 3 - Warning: <img> lacks "alt" attribute
+line 72 column 3 - Warning: <img> lacks "alt" attribute
+./lipoicacid.html
+./2006lycaste11.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+./paphiopedilum.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+./cattleyablue.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+./dendrobiumu.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+./tex2.html
+line 159 column 5 - Warning: <table> lacks "summary" attribute
+line 161 column 67 - Warning: <img> lacks "alt" attribute
+line 162 column 67 - Warning: <img> lacks "alt" attribute
+line 163 column 67 - Warning: <img> lacks "alt" attribute
+line 164 column 67 - Warning: <img> lacks "alt" attribute
+line 231 column 32 - Warning: <img> lacks "alt" attribute
+line 280 column 3 - Warning: <img> lacks "alt" attribute
+./2007ranten120.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+./lycaste1.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 4 - Warning: <img> lacks "alt" attribute
+line 24 column 4 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 4 - Warning: <img> lacks "alt" attribute
+./cattleya22.html
+line 12 column 5 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 4 - Warning: <img> lacks "alt" attribute
+line 18 column 4 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 5 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+line 28 column 5 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+./suppuse.html
+./paphio103.html
+line 12 column 5 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 5 - Warning: <img> lacks "alt" attribute
+line 18 column 5 - Warning: <img> lacks "alt" attribute
+line 20 column 5 - Warning: <img> lacks "alt" attribute
+line 22 column 4 - Warning: <img> lacks "alt" attribute
+line 24 column 4 - Warning: <img> lacks "alt" attribute
+line 26 column 4 - Warning: <img> lacks "alt" attribute
+line 28 column 4 - Warning: <img> lacks "alt" attribute
+line 30 column 5 - Warning: <img> lacks "alt" attribute
+line 32 column 5 - Warning: <img> lacks "alt" attribute
+./lycasteNew.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+./sonota.html
+line 13 column 3 - Warning: <img> lacks "alt" attribute
+line 15 column 3 - Warning: <img> lacks "alt" attribute
+line 17 column 3 - Warning: <img> lacks "alt" attribute
+line 19 column 3 - Warning: <img> lacks "alt" attribute
+line 21 column 3 - Warning: <img> lacks "alt" attribute
+line 23 column 3 - Warning: <img> lacks "alt" attribute
+line 27 column 3 - Warning: <img> lacks "alt" attribute
+line 29 column 3 - Warning: <img> lacks "alt" attribute
+line 31 column 3 - Warning: <img> lacks "alt" attribute
+line 33 column 3 - Warning: <img> lacks "alt" attribute
+./fukui.html
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 48 column 3 - Warning: <img> lacks "alt" attribute
+line 52 column 3 - Warning: <img> lacks "alt" attribute
+line 56 column 3 - Warning: <img> lacks "alt" attribute
+line 59 column 3 - Warning: <img> lacks "alt" attribute
+./kaizyou.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+./phalaenopsis.html
+line 12 column 4 - Warning: <img> lacks "alt" attribute
+line 14 column 5 - Warning: <img> lacks "alt" attribute
+line 16 column 4 - Warning: <img> lacks "alt" attribute
+line 18 column 4 - Warning: <img> lacks "alt" attribute
+line 20 column 4 - Warning: <img> lacks "alt" attribute
+line 22 column 4 - Warning: <img> lacks "alt" attribute
+line 24 column 5 - Warning: <img> lacks "alt" attribute
+line 26 column 5 - Warning: <img> lacks "alt" attribute
+./takasimayabaraten.html
+line 12 column 3 - Warning: <img> lacks "alt" attribute
+line 14 column 3 - Warning: <img> lacks "alt" attribute
+line 16 column 3 - Warning: <img> lacks "alt" attribute
+line 18 column 3 - Warning: <img> lacks "alt" attribute
+line 20 column 3 - Warning: <img> lacks "alt" attribute
+line 22 column 3 - Warning: <img> lacks "alt" attribute
+line 24 column 3 - Warning: <img> lacks "alt" attribute
+line 26 column 3 - Warning: <img> lacks "alt" attribute
+line 28 column 3 - Warning: <img> lacks "alt" attribute
+line 30 column 3 - Warning: <img> lacks "alt" attribute
+line 32 column 3 - Warning: <img> lacks "alt" attribute
+line 34 column 3 - Warning: <img> lacks "alt" attribute
+line 36 column 3 - Warning: <img> lacks "alt" attribute
+line 38 column 3 - Warning: <img> lacks "alt" attribute
+line 40 column 3 - Warning: <img> lacks "alt" attribute
+line 42 column 3 - Warning: <img> lacks "alt" attribute
+line 44 column 3 - Warning: <img> lacks "alt" attribute
+./hadautukusisa.html
