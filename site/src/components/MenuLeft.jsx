@@ -22,6 +22,14 @@ const TRAVEL_SLUGS = new Set(["mauisunset", "hanaumabay", "wikikibeach", "mauibu
 const SHOP_SLUGS = new Set(["tyuumon", "megafudo", "be-tagur"]);
 const PUBLICATION_SLUGS = new Set(["mokuzitu"]);
 const ACCESS_SLUGS = new Set(["access"]);
+const NUTRIENT_FOOD_SLUGS = new Set([
+  "eiyouso",
+  "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
+  "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
+  "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
+  "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
+  "coqganyu", "colingan", "inosigan",
+]);
 
 const MenuLeft = () => {
   const slug = window.location.pathname.replace(/^\/+|\/+$/g, "").replace(/\.(htm|html)$/i, "");
@@ -36,6 +44,7 @@ const MenuLeft = () => {
     publication: PUBLICATION_SLUGS.has(slug),
     shop: SHOP_SLUGS.has(slug),
     access: ACCESS_SLUGS.has(slug),
+    nutrientFoods: NUTRIENT_FOOD_SLUGS.has(slug),
   }));
   const [openYear, setOpenYear] = useState(() => ({
     y2007: FLOWER_2007.has(slug),
@@ -63,6 +72,53 @@ const MenuLeft = () => {
         <img className="menu-header-image" src="/taitorf.gif" alt="福井薬局" />
       </a>
       <nav className="menu-left-nav">
+      {/* 栄養素を多く含む食品 */}
+      <div className="menu-section" onClick={() => toggleSection('nutrientFoods')} style={{cursor:'pointer'}}>
+        栄養素を多く含む食品 {openSection.nutrientFoods ? '▼' : '▶'}
+      </div>
+      {openSection.nutrientFoods && (
+        <ul className="menu-group">
+          <li><a href="/eiyouso">栄養素を多く含む食品 一覧</a></li>
+          <li className="menu-subtitle">ビタミン</li>
+          <li><a href="/aganyuu">ビタミンA</a></li>
+          <li><a href="/eganyuu">ビタミンE</a></li>
+          <li><a href="/dganyuu">ビタミンD</a></li>
+          <li><a href="/bkganyuu">ビタミンK</a></li>
+          <li><a href="/cganyuu">ビタミンC</a></li>
+          <li><a href="/b1ganyuu">ビタミンB1</a></li>
+          <li><a href="/b2ganyuu">ビタミンB2</a></li>
+          <li><a href="/b3ganyuu">ビタミンB3</a></li>
+          <li><a href="/b5ganyuu">ビタミンB5</a></li>
+          <li><a href="/b6ganyuu">ビタミンB6</a></li>
+          <li><a href="/b12ganyu">ビタミンB12</a></li>
+          <li><a href="/yousanga">葉酸</a></li>
+          <li><a href="/biotinga">ビオチン</a></li>
+
+          <li className="menu-subtitle">ミネラル</li>
+          <li><a href="/carugany">カルシウム</a></li>
+          <li><a href="/magganyu">マグネシウム</a></li>
+          <li><a href="/karigany">カリウム</a></li>
+          <li><a href="/aenganyu">亜鉛</a></li>
+          <li><a href="/tetugany">鉄</a></li>
+          <li><a href="/douganyu">銅</a></li>
+          <li><a href="/cromugan">クロム</a></li>
+          <li><a href="/mangagan">マンガン</a></li>
+          <li><a href="/yo-dogan">ヨード</a></li>
+          <li><a href="/serengan">セレン</a></li>
+          <li><a href="/moribuga">モリブデン</a></li>
+          <li><a href="/vanagany">バナジウム</a></li>
+          <li><a href="/senigany">食物繊維</a></li>
+          <li><a href="/keisogan">ケイ素</a></li>
+          <li><a href="/housogan">ホウ素</a></li>
+          <li><a href="/gerumaga">ゲルマニウム</a></li>
+
+          <li className="menu-subtitle">その他</li>
+          <li><a href="/coqganyu">CoQ10</a></li>
+          <li><a href="/colingan">コリン</a></li>
+          <li><a href="/inosigan">イノシトール</a></li>
+        </ul>
+      )}
+
       {/* ビタミン */}
       <div className="menu-section" onClick={() => toggleSection('vitamin')} style={{cursor:'pointer'}}>
         ビタミン {openSection.vitamin ? '▼' : '▶'}
