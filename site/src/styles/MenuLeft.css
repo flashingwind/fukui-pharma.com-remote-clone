@@ -71,6 +71,23 @@
   user-select: none;
 }
 
+/* セクションと同格の直リンク */
+.menu-section-link {
+  display: block;
+  font-weight: bold;
+  color: #000;
+  margin: 14px 0 6px;
+  font-size: 15px;
+  text-decoration: none;
+  background: #f5deb3;
+  padding: 0;
+}
+.menu-section-link:hover {
+  text-decoration: underline;
+  color: #000;
+  background: #f5deb3;
+}
+
 /* 年度・サブタイトル */
 .menu-subtitle {
   font-size: 13px;

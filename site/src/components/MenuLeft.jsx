@@ -22,6 +22,7 @@ const TRAVEL_SLUGS = new Set(["mauisunset", "hanaumabay", "wikikibeach", "mauibu
 const SHOP_SLUGS = new Set(["tyuumon", "megafudo", "be-tagur"]);
 const PUBLICATION_SLUGS = new Set(["mokuzitu"]);
 const ACCESS_SLUGS = new Set(["access"]);
+const SKIN_SLUGS = new Set(["hadautukusisa"]);
 const NUTRIENT_FOOD_SLUGS = new Set([
   "eiyouso",
   "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
@@ -179,6 +180,9 @@ const MenuLeft = () => {
           {/* <li><a href="/thbalance">Th1とTh2のバランス</a></li> */}
         </ul>
       )}
+      {/* 肌の美しさと栄養 */}
+      <a className="menu-section-link" href="/hadautukusisa">肌の美しさと栄養</a>
+
       {/* 出版 */}
       <div className="menu-section" onClick={() => toggleSection('publication')} style={{cursor:'pointer'}}>
         出版 {openSection.publication ? '▼' : '▶'}
@@ -189,7 +193,7 @@ const MenuLeft = () => {
         </ul>
       )}
 
-      {/* 通販（サプリメント）セクション非表示 */}
+      {/* サプリメント */}
       {/*
       <div className="menu-section" onClick={() => toggleSection('shop')} style={{cursor:'pointer'}}>
         サプリメント {openSection.shop ? '▼' : '▶'}
@@ -202,13 +206,13 @@ const MenuLeft = () => {
       )}
       */}
 
-      {/* アクセス */}
+      {/* 福井薬局 */}
         {/*<div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>
         アクセス（店舗情報） {openSection.access ? '▼' : '▶'}
       </div>
       {openSection.access && (
         <ul className="menu-group">
-          <li><a href="/access">アクセス情報</a></li>
+          <li><a href="/access">アクセス</a></li>
         </ul>
       )}
       */}
