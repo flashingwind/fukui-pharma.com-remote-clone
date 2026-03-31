@@ -1,0 +1,3 @@
+Ｔｈ１とＴｈ２のバランス-Ｔｈ１を促進、Ｔｈ２を抑制するには\
+![](th1th2barannce.gif)\
+[ホームページへ](index.html){target="_top"}
