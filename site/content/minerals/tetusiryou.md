@@ -1,15 +1,13 @@
-<span class="red">鉄</span>
-
-<span class="red"> </span>
+鉄
 
 - 鉄とはどんなものか,鉄のお話
-- [鉄は体内でどのように働くか](tetusiryou.md#tetuseir)
-- [鉄はどんな状態に有用か](tetusiryou.md#tetutuka)
+- [鉄は体内でどのように働くか](tetusiryou.htm#tetuseir)
+- [鉄はどんな状態に有用か](tetusiryou.htm#tetutuka)
 
 ------------------------------------------------------------------------
 
-- <span id="tetutuka">どんな時に鉄を摂ると良いでしょうか</span>
+- [どんな時に鉄を摂ると良いでしょうか]{#tetutuka}
 
 ------------------------------------------------------------------------
 
-<a href="index.html" target="_top">ホームページへ</a>
+[ホームページへ](index.html){target="_top"}
