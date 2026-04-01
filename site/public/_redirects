@@ -1,3 +1,8 @@
 # Cloudflare Pages用リダイレクト設定
+# ホスト全体リダイレクト（同時有効化は不可: ループ防止のため片方向のみ有効化）
+https://new.fukui-pharma.com/*    https://fukui-pharma.com/:splat    301
+# https://fukui-pharma.com/*      https://new.fukui-pharma.com/:splat 301
+
+/mokuzito.html    /mokuzito    301
 /content/*    /content/:splat   200
 /*    /index.html   200
