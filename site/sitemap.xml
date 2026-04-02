@@ -223,13 +223,37 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fukui-pharma.com/minerals/bkganyuu.html</loc>
+    <lastmod>2026-04-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fukui-pharma.com/minerals/carugany.html</loc>
     <lastmod>2026-04-02T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fukui-pharma.com/minerals/cganyuu.html</loc>
+    <lastmod>2026-04-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fukui-pharma.com/minerals/cromugan.html</loc>
+    <lastmod>2026-04-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fukui-pharma.com/minerals/dganyuu.html</loc>
+    <lastmod>2026-04-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fukui-pharma.com/minerals/eganyuu.html</loc>
     <lastmod>2026-04-02T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -278,6 +302,12 @@
   </url>
   <url>
     <loc>https://fukui-pharma.com/minerals/tetusiryou.html</loc>
+    <lastmod>2026-04-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fukui-pharma.com/minerals/vanagany.html</loc>
     <lastmod>2026-04-02T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
