@@ -1,7 +1,32 @@
 import React, { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkBreaks from "remark-breaks";
 import "../styles/MarkdownContent.css";
+
+const escapeHtml = (value = "") => {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;");
+};
+
+const normalizeLegacyImageAttrs = (markdown = "") => {
+  // Convert legacy markdown-it style image attributes into raw HTML img tags.
+  return markdown.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{([^}]*)\}/g, (_m, alt, src, attrsText) => {
+    const attrs = [];
+    const attrRegex = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*\"([^\"]*)\"/g;
+    let match;
+    while ((match = attrRegex.exec(attrsText)) !== null) {
+      const [, key, value] = match;
+      attrs.push(`${key}=\"${escapeHtml(value)}\"`);
+    }
+
+    const attrSuffix = attrs.length ? ` ${attrs.join(" ")}` : "";
+    return `<img src=\"${escapeHtml(src)}\" alt=\"${escapeHtml(alt)}\"${attrSuffix}>`;
+  });
+};
 
 const extractText = (node) => {
   if (typeof node === "string") return node;
@@ -12,9 +37,19 @@ const extractText = (node) => {
   return "";
 };
 
+const ImgWithFallback = ({ src, alt, dirs, ...props }) => {
+  const [idx, setIdx] = useState(0);
+  const resolvedSrc = `${dirs[idx]}/${src}`;
+  const handleError = () => {
+    if (idx < dirs.length - 1) setIdx(i => i + 1);
+  };
+  return <img src={resolvedSrc} alt={alt} onError={handleError} {...props} />;
+};
+
 const MarkdownContent = ({ file, fileCandidates }) => {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
+  const [loadedPath, setLoadedPath] = useState("");
   const candidates = useMemo(() => {
     return file ? [file] : (fileCandidates || []);
   }, [file, fileCandidates]);
@@ -35,7 +70,11 @@ const MarkdownContent = ({ file, fileCandidates }) => {
           if (normalized.startsWith("<!doctype html") || normalized.startsWith("<html")) {
             continue;
           }
-          if (!cancelled) setContent(text);
+          if (!cancelled) {
+            const normalizedText = normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n"));
+            setContent(normalizedText);
+            setLoadedPath(path);
+          }
           return;
         } catch {
           // Try the next candidate.
@@ -58,6 +97,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
         <p>{error}</p>
       ) : (
         <ReactMarkdown
+          remarkPlugins={[remarkBreaks]}
           rehypePlugins={[rehypeRaw]}
           components={{
             a: ({ href = "", children, ...props }) => {
@@ -101,7 +141,13 @@ const MarkdownContent = ({ file, fileCandidates }) => {
               );
             },
             img: ({ src = "", alt = "", ...props }) => {
-              return <img src={src} alt={alt} {...props} />;
+              if (src.startsWith("/") || src.startsWith("http")) {
+                return <img src={src} alt={alt} {...props} />;
+              }
+              const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
+              const fallbackDirs = ["/flowers", "/travel", "/vitamins", "/minerals", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
+              return <ImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },
           }}
         >
