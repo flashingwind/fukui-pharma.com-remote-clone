@@ -12,19 +12,32 @@ const escapeHtml = (value = "") => {
     .replace(/\"/g, "&quot;");
 };
 
+const parseLegacyAttrs = (attrsText = "") => {
+  const attrs = [];
+  const attrRegex = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*\"([^\"]*)\"/g;
+  let match;
+  while ((match = attrRegex.exec(attrsText)) !== null) {
+    const [, key, value] = match;
+    attrs.push(`${key}=\"${escapeHtml(value)}\"`);
+  }
+  return attrs;
+};
+
 const normalizeLegacyImageAttrs = (markdown = "") => {
   // Convert legacy markdown-it style image attributes into raw HTML img tags.
   return markdown.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{([^}]*)\}/g, (_m, alt, src, attrsText) => {
-    const attrs = [];
-    const attrRegex = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*\"([^\"]*)\"/g;
-    let match;
-    while ((match = attrRegex.exec(attrsText)) !== null) {
-      const [, key, value] = match;
-      attrs.push(`${key}=\"${escapeHtml(value)}\"`);
-    }
-
+    const attrs = parseLegacyAttrs(attrsText);
     const attrSuffix = attrs.length ? ` ${attrs.join(" ")}` : "";
     return `<img src=\"${escapeHtml(src)}\" alt=\"${escapeHtml(alt)}\"${attrSuffix}>`;
+  });
+};
+
+const normalizeLegacyLinkAttrs = (markdown = "") => {
+  // Convert legacy markdown-it style link attributes into raw HTML anchor tags.
+  return markdown.replace(/\[([^\]]*)\]\(([^)]+)\)\s*\{([^}]*)\}/g, (_m, label, href, attrsText) => {
+    const attrs = parseLegacyAttrs(attrsText);
+    const attrSuffix = attrs.length ? ` ${attrs.join(" ")}` : "";
+    return `<a href=\"${escapeHtml(href)}\"${attrSuffix}>${escapeHtml(label)}</a>`;
   });
 };
 
@@ -71,7 +84,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
             continue;
           }
           if (!cancelled) {
-            const normalizedText = normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n"));
+            const normalizedText = normalizeLegacyLinkAttrs(normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n")));
             setContent(normalizedText);
             setLoadedPath(path);
           }
@@ -145,7 +158,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
                 return <img src={src} alt={alt} {...props} />;
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
-              const fallbackDirs = ["/flowers", "/travel", "/vitamins", "/minerals", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const fallbackDirs = ["/flowers", "/travel", "/vitamins", "/minerals", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
               const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
               return <ImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },

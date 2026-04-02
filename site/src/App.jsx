@@ -4,7 +4,7 @@ import './styles/MenuLeft.css'
 import './styles/MarkdownContent.css'
 import './App.css'
 
-const CONTENT_DIRS = ['vitamins', 'minerals', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
+const CONTENT_DIRS = ['vitamins', 'minerals', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
 const FOOTER_LINKS_LEFT = [
   { href: '/flowers-top', label: '花の写真集' },
   { href: '/travel_top', label: 'ハワイ旅行' },

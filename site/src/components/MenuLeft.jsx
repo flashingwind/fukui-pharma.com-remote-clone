@@ -7,8 +7,8 @@ const VITAMIN_SLUGS = new Set([
 
 const MINERAL_SLUGS = new Set([
   "magganyu", "magsiryou", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "dganyuu",
-  "douganyu", "eganyuu", "ganyuute", "karigany", "keisogan", "lipoicacid", "mangagan", "meneki",
-  "menekikihon", "senigany", "serengan", "serensir", "tetugany", "tetusiryou", "thbalance", "vanagany",
+  "douganyu", "eganyuu", "ganyuute", "karigany", "keisogan", "lipoicacid", "mangagan",
+  "senigany", "serengan", "serensir", "tetugany", "tetusiryou", "vanagany",
   "cromugan", "yo-dogan", "moribuga", "housogan", "gerumaga", "inosigan",
 ]);
 
@@ -22,6 +22,7 @@ const TRAVEL_SLUGS = new Set(["mauisunset", "hanaumabay", "wikikibeach", "mauibu
 const SHOP_SLUGS = new Set(["tyuumon", "megafudo", "be-tagur"]);
 const PUBLICATION_SLUGS = new Set(["mokuzitu"]);
 const ACCESS_SLUGS = new Set(["access"]);
+const ATOPIC_SLUGS = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
 const SKIN_SLUGS = new Set(["hadautukusisa"]);
 const NUTRIENT_FOOD_SLUGS = new Set([
   "eiyouso",
@@ -41,6 +42,7 @@ const MenuLeft = () => {
     flower: inFlower,
     vitamin: VITAMIN_SLUGS.has(slug),
     mineral: !VITAMIN_SLUGS.has(slug) && MINERAL_SLUGS.has(slug),
+    atopic: ATOPIC_SLUGS.has(slug),
     travel: TRAVEL_SLUGS.has(slug),
     publication: PUBLICATION_SLUGS.has(slug),
     shop: SHOP_SLUGS.has(slug),
@@ -175,13 +177,23 @@ const MenuLeft = () => {
           <li><a href="/cganyuu">ビタミンCを多く含む食品</a></li>
           <li><a href="/eganyuu">ビタミンEを多く含む食品</a></li>
           <li><a href="/lipoicacid">アルファリポ酸</a></li>
-          <li><a href="/meneki">免疫とは（免疫を受け持つ細胞）</a></li>
-          {/* <li><a href="/menekikihon">免疫の基本応答</a></li> */}
-          {/* <li><a href="/thbalance">Th1とTh2のバランス</a></li> */}
         </ul>
       )}
+      {/* アトピー */}
+      <div className="menu-section" onClick={() => toggleSection('atopic')} style={{cursor:'pointer'}}>
+        アトピー {openSection.atopic ? '▼' : '▶'}
+      </div>
+      {openSection.atopic && (
+        <ul className="menu-group">
+          <li><a href="/atopic">アトピー性皮膚炎と栄養素の関係</a></li>
+          <li><a href="/meneki">免疫とは（免疫を受け持つ細胞）</a></li>
+          <li><a href="/menekikihon">免疫の基本応答</a></li>
+          <li><a href="/thbalance">Th1とTh2のバランス</a></li>
+        </ul>
+      )}
+
       {/* 肌の美しさと栄養 */}
-      <a className="menu-section-link" href="/hadautukusisa">肌の美しさと栄養</a>
+      <a className="menu-section-link" href="/hadautukusisa">肌の美しさと栄養 ▶</a>
 
       {/* 出版 */}
       <div className="menu-section" onClick={() => toggleSection('publication')} style={{cursor:'pointer'}}>
@@ -268,7 +280,7 @@ const MenuLeft = () => {
             <li><a href="/dendrobiumnew">デンドロ</a></li>
             <li><a href="/lycasteNew">リカステ</a></li>
           </>}
-          <li><a href="/harubotan16">上野公園ぼたん展</a></li>
+          <li className="menu-subtitle"><a href="/harubotan16" style={{textDecoration:'none', color:'inherit'}}>上野公園ぼたん展 ▶</a></li>
         </ul>
       )}
 
