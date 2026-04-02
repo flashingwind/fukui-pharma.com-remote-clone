@@ -2,4 +2,3 @@
 ![](wikikibeach.jpg){width="500" height="350"}\
 ホノルルカラカウア通り\
 ![](karakaua.jpg){width="500" height="350"}
-[ホームページへ](index.html){target="_top"}

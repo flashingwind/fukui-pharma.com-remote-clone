@@ -17,6 +17,7 @@ a {
   padding: 16px 24px 24px;
   min-height: 100vh;
   min-width: 0;
+  max-width: none;
   flex: 1 1 auto;
   box-sizing: border-box;
 }

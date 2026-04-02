@@ -1,4 +1,4 @@
-content/others/atopic.md:new2.gif
+content/others/atopic.md:new.gif
 content/others/mokuzito.md:sinhon5.jpg
 content/others/mokuzito.md:tukaikata3.gif
 content/others/mokuzitu.md:tukaikata3.gif

@@ -48,14 +48,14 @@
 }
 /* 通常リンク */
 .menu-left-nav a {
-  color: #0000ee;
+  color: #7a2000;
   text-decoration: underline;
   padding: 0;
   display: inline;
   background: transparent;
 }
 .menu-left-nav a:hover {
-  color: #0000ee;
+  color: #7a2000;
   background: transparent;
   text-decoration: underline;
 }
@@ -63,7 +63,7 @@
 /* セクションタイトル */
 .menu-section {
   font-weight: bold;
-  color: #000;
+  color: #7a2000;
   margin: 14px 0 6px;
   font-size: 15px;
   background: #f5deb3;
@@ -75,7 +75,7 @@
 .menu-section-link {
   display: block;
   font-weight: bold;
-  color: #000;
+  color: #7a2000;
   margin: 14px 0 6px;
   font-size: 15px;
   text-decoration: none;
@@ -83,15 +83,15 @@
   padding: 0;
 }
 .menu-section-link:hover {
-  text-decoration: underline;
-  color: #000;
+  text-decoration: none;
+  color: #7a2000;
   background: #f5deb3;
 }
 
 /* 年度・サブタイトル */
 .menu-subtitle {
   font-size: 13px;
-  color: #000;
+  color: #7a2000;
   margin: 8px 0 2px;
   font-weight: bold;
   background: #f5deb3;

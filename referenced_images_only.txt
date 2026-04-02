@@ -321,7 +321,7 @@ menekikihon.gif
 menou1.gif
 menou2.gif
 mfbackgr.gif
-new2.gif
+new.gif
 oldcar12.jpg
 oldcar14.jpg
 oldcar151.jpg

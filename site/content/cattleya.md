@@ -33,5 +33,3 @@
 ![a1ocpry2-1](a1ocpry2-1.jpg)
 
 ![a1ocry2-1](a1ocry2-1.jpg)
-
-[ホームページへ](index.md)
