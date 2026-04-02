@@ -1,6 +1,5 @@
 ## 症状、病気と不足の可能性がある栄養素
 
-<br>
 病名索引 [ア〜オ](eiyou.htm#kigoua) [カ〜コ](eiyou.htm#kigouka)
 [サ〜ソ](eiyou.htm#kigousa) [タ〜ト](eiyou.htm#kigouta)
 [ナ〜ノ](eiyou.htm#kigouna) [ハ〜ホ](eiyou.htm#kigouha)
