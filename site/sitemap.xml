@@ -217,6 +217,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fukui-pharma.com/others/index.html</loc>
+    <lastmod>2026-04-06T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fukui-pharma.com/others/oldcar.html</loc>
     <lastmod>2026-04-06T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
