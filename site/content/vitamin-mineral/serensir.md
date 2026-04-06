@@ -1,4 +1,4 @@
-![](/icon/new.gif){wudth="40" height="10"} セレン
+![new!](/icon/new.gif){wudth="40" height="10"} セレン
 
 - セレンの働き
 
@@ -12,15 +12,15 @@
 
     ***
 
-    ![](serenhat.gif)
+    ![セレンの働き](serenhat.gif)
 
     ***
 
-- [セレンはどんな症状で有効に働くか]{#serentuk} ![](serentuka.gif)
+- [セレンはどんな症状で有効に働くか]{#serentuk} ![セレンはどんな症状で有効に働くか](serentuka.gif)
 
     ***
 
-- [活性酸素の発生と消去]{#furiiraz} ![](furiiraz.gif)
+- [活性酸素の発生と消去]{#furiiraz} ![活性酸素の発生と消去](furiiraz.gif)
 
     ***
 
@@ -67,6 +67,6 @@
 
     ***
 
-- [活性酸素の生成変換の分子図表]{#kousanka} ![](kasseisa.gif)
+- [活性酸素の生成変換の分子図表]{#kousanka} ![活性酸素の生成変換の分子図表](kasseisa.gif)
 
     ***

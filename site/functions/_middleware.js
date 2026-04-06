@@ -1,7 +1,5 @@
 const CONTENT_DIRS = [
-  'nutrient-foods',
-  'vitamins',
-  'minerals',
+  'vitamin-mineral',
   'flowers',
   'travel',
   'others',
@@ -9,6 +7,7 @@ const CONTENT_DIRS = [
   'shop',
   'access',
 ]
+const VITAMIN_MINERAL_URL_SECTION = 'vitamin-mineral'
 const NUTRIENT_FOOD_SLUGS = new Set([
   'eiyouso', 'ganyuute',
   'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
@@ -20,15 +19,21 @@ const NUTRIENT_FOOD_SLUGS = new Set([
 const NUTRI_INFO_SLUGS = new Set([
   'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou', 'shyoyou', 'lipoicacid',
 ])
+const VITAMIN_MINERAL_OTHER_SLUGS = new Set(['mokuzito', 'mokuzitu', 'kousanka', 'suppuse'])
+const VITAMIN_MINERAL_SLUGS = new Set([
+  ...NUTRIENT_FOOD_SLUGS,
+  ...NUTRI_INFO_SLUGS,
+  ...VITAMIN_MINERAL_OTHER_SLUGS,
+])
 const LEGACY_EXACT_REDIRECTS = {
   '/index.html': '/',
   '/index2.html': '/',
   '/atopic/': '/atopic',
   '/order.html': '/shop/tyuumon',
   '/skincare.html': '/others/hadautukusisa',
-  '/books/mokuzito.html': '/vitamins/mokuzito',
-  '/books/mokuzitu.html': '/vitamins/mokuzitu',
-  '/freeradical/kousanka.html': '/vitamins/kousanka',
+  '/books/mokuzito.html': '/vitamin-mineral/mokuzito',
+  '/books/mokuzitu.html': '/vitamin-mineral/mokuzitu',
+  '/freeradical/kousanka.html': '/vitamin-mineral/kousanka',
   '/oldcar/oldcar.html': '/others/oldcar',
   '/supliments/': '/shop/tyuumon',
   '/supliments/be-tagur.html': '/shop/tyuumon',
@@ -42,6 +47,14 @@ function redirectTo(url, pathname) {
   return Response.redirect(redirectUrl.toString(), 301)
 }
 
+function safeDecodePathname(pathname) {
+  try {
+    return decodeURIComponent(pathname)
+  } catch {
+    return pathname
+  }
+}
+
 function buildCandidatePaths(slug) {
   const contentSlug = slug === 'access' ? 'index' : slug
   return CONTENT_DIRS.map((dir) => `/content/${dir}/${contentSlug}.md`)
@@ -52,7 +65,10 @@ function buildSectionCandidatePath(slug) {
   if (!sectionMatch) {
     return null
   }
-  const [, section, pageSlug] = sectionMatch
+  let [, section, pageSlug] = sectionMatch
+  if (section === VITAMIN_MINERAL_URL_SECTION) {
+    section = 'vitamin-mineral'
+  }
   if (!CONTENT_DIRS.includes(section)) {
     return null
   }
@@ -87,6 +103,7 @@ async function contentExistsForSlug(slug, requestUrl, env) {
 
 export async function onRequest(context) {
   const url = new URL(context.request.url)
+  const decodedPathname = safeDecodePathname(url.pathname)
 
   // This rule is requested for the production apex domain only.
   if (url.hostname !== 'fukui-pharma.com') {
@@ -98,45 +115,40 @@ export async function onRequest(context) {
     return redirectTo(url, exactRedirect)
   }
 
-  const oldNutriMatch = url.pathname.match(/^\/nutri\/([^/]+)\.(htm|html)$/i)
+  const oldNutriMatch = decodedPathname.match(/^\/nutri\/([^/]+)\.(htm|html)$/i)
   if (oldNutriMatch) {
     const slug = oldNutriMatch[1].toLowerCase()
-    if (NUTRIENT_FOOD_SLUGS.has(slug)) {
-      return redirectTo(url, `/nutrient-foods/${slug}`)
-    }
-    if (NUTRI_INFO_SLUGS.has(slug)) {
-      if (slug === 'aensiryou' || slug === 'magsiryou' || slug === 'tetusiryou') {
-        return redirectTo(url, `/minerals/${slug}`)
-      }
-      return redirectTo(url, `/vitamins/${slug}`)
+    if (VITAMIN_MINERAL_SLUGS.has(slug)) {
+      return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${slug}`)
     }
   }
 
-  const oldHawaiiMatch = url.pathname.match(/^\/hawaii\/([^/]+)\.(htm|html)$/i)
+  const oldHawaiiMatch = decodedPathname.match(/^\/hawaii\/([^/]+)\.(htm|html)$/i)
   if (oldHawaiiMatch) {
     const slug = oldHawaiiMatch[1].toLowerCase()
     return redirectTo(url, `/travel/${slug}`)
   }
 
-  const oldFlowersMatch = url.pathname.match(/^\/flowers\/([^/]+)\.(htm|html)$/i)
+  const oldFlowersMatch = decodedPathname.match(/^\/flowers\/([^/]+)\.(htm|html)$/i)
   if (oldFlowersMatch) {
     const slug = oldFlowersMatch[1]
     return redirectTo(url, `/flowers/${slug}`)
   }
 
-  const normalized = url.pathname.replace(/^\/+|\/+$/g, '').replace(/\.(htm|html)$/i, '')
+  const normalized = decodedPathname.replace(/^\/+|\/+$/g, '').replace(/\.(htm|html)$/i, '')
   const parts = normalized.split('/').filter(Boolean)
+  if (parts.length === 1 && VITAMIN_MINERAL_SLUGS.has(parts[0])) {
+    return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[0]}`)
+  }
   if (
     parts.length === 2 &&
-    (parts[0] === 'vitamins' || parts[0] === 'minerals') &&
-    NUTRIENT_FOOD_SLUGS.has(parts[1])
+    (parts[0] === 'vitamins' || parts[0] === 'minerals' || parts[0] === 'nutrient-foods') &&
+    VITAMIN_MINERAL_SLUGS.has(parts[1])
   ) {
-    const redirectUrl = new URL(url.toString())
-    redirectUrl.pathname = `/nutrient-foods/${parts[1]}`
-    return Response.redirect(redirectUrl.toString(), 301)
+    return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[1]}`)
   }
 
-  const match = url.pathname.match(/^\/(.+)\.(htm|html)$/i)
+  const match = decodedPathname.match(/^\/(.+)\.(htm|html)$/i)
   if (!match) {
     return context.next()
   }

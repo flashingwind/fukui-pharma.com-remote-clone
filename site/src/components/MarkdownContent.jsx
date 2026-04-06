@@ -60,21 +60,23 @@ const ImgWithFallback = ({ src, alt, dirs, ...props }) => {
   return <img src={resolvedSrc} alt={alt} onError={handleError} {...props} />;
 };
 
-const NUTRIENT_FOOD_SLUGS = new Set([
+const VITAMIN_MINERAL_SLUGS = new Set([
   "eiyouso", "ganyuute",
   "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
   "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
   "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
   "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
   "coqganyu", "colingan", "inosigan",
+  "eiyou", "vitasi2", "vitasi3", "vitasi4", "serensir", "magsiryou", "aensiryou", "tetusiryou",
+  "shyoyou", "lipoicacid", "mokuzito", "mokuzitu", "kousanka", "suppuse",
 ]);
 
 const resolveContentLinkPath = (path, loadedSection) => {
   if (path.includes("/")) {
     return `/${path}`;
   }
-  if (NUTRIENT_FOOD_SLUGS.has(path)) {
-    return `/nutrient-foods/${path}`;
+  if (VITAMIN_MINERAL_SLUGS.has(path)) {
+    return `/vitamin-mineral/${path}`;
   }
   return `${loadedSection ? `/${loadedSection}` : ""}/${path}`;
 };
@@ -186,7 +188,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
                 return <img src={src} alt={alt} {...props} />;
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
-              const fallbackDirs = ["/flowers", "/travel", "/nutrient-foods", "/vitamins", "/minerals", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
               const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
               return <ImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },

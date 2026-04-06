@@ -8,7 +8,9 @@ import './App.css'
 
 const SITE_URL = 'https://fukui-pharma.com'
 const SITE_NAME = '福井薬局'
-const CONTENT_DIRS = ['nutrient-foods', 'vitamins', 'minerals', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
+const VITAMIN_MINERAL_URL_SECTION = 'vitamin-mineral'
+const VITAMIN_MINERAL_CONTENT_DIR = 'vitamin-mineral'
+const CONTENT_DIRS = ['vitamin-mineral', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
 const NUTRIENT_FOOD_SLUGS = new Set([
   'eiyouso', 'ganyuute',
   'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
@@ -17,10 +19,12 @@ const NUTRIENT_FOOD_SLUGS = new Set([
   'yo-dogan', 'serengan', 'moribuga', 'vanagany', 'senigany', 'keisogan', 'housogan', 'gerumaga',
   'coqganyu', 'colingan', 'inosigan',
 ])
+const VITAMIN_MINERAL_INFO_SLUGS = new Set([
+  'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou',
+  'shyoyou', 'lipoicacid', 'mokuzito', 'mokuzitu', 'kousanka', 'suppuse',
+])
 const SECTION_LABELS = {
-  'nutrient-foods': '栄養素を多く含む食品',
-  vitamins: 'ビタミン',
-  minerals: 'ミネラル',
+  'vitamin-mineral': 'ビタミン・ミネラル',
   atopic: 'アトピー',
   flowers: '花の写真集',
   travel: 'ハワイ旅行',
@@ -34,12 +38,31 @@ const FOOTER_LINKS_LEFT = [
   { href: '/travel_top', label: 'ハワイ旅行' },
 ]
 const FOOTER_LINKS_RIGHT = [
-  { href: '/eiyou', label: 'ビタミン' },
-  { href: '/mineral', label: 'ミネラル' },
-  { href: '/mokuzitu', label: '出版' },
+  { href: '/vitamin-mineral/eiyou', label: 'ビタミン' },
+  { href: '/vitamin-mineral/magsiryou', label: 'ミネラル' },
+  { href: '/vitamin-mineral/mokuzitu', label: '出版' },
   //{ href: '/tyuumon', label: '通販' },
   //{ href: '/access', label: 'アクセス情報' },
 ]
+
+function isVitaminMineralSlug(slug) {
+  return NUTRIENT_FOOD_SLUGS.has(slug) || VITAMIN_MINERAL_INFO_SLUGS.has(slug)
+}
+
+function normalizeSectionToContentDir(section) {
+  if (section === VITAMIN_MINERAL_URL_SECTION || section === VITAMIN_MINERAL_CONTENT_DIR) {
+    return VITAMIN_MINERAL_CONTENT_DIR
+  }
+  return section
+}
+
+function safeDecodePathname(pathname) {
+  try {
+    return decodeURIComponent(pathname)
+  } catch {
+    return pathname
+  }
+}
 
 function ensureMeta(attr, key, content) {
   let element = document.head.querySelector(`meta[${attr}="${key}"]`)
@@ -65,8 +88,8 @@ function getPreferredPath(section, slug, isTop) {
   if (isTop) {
     return '/'
   }
-  if ((section === 'vitamins' || section === 'minerals') && NUTRIENT_FOOD_SLUGS.has(slug)) {
-    return `/nutrient-foods/${slug}`
+  if (isVitaminMineralSlug(slug)) {
+    return `/${VITAMIN_MINERAL_URL_SECTION}/${slug}`
   }
   if (section) {
     return `/${section}/${slug}`
@@ -88,16 +111,26 @@ function buildSeoMeta(section, slug, isTop) {
 }
 
 function App() {
-  const rawPath = window.location.pathname.replace(/^\/+|\/+$/g, '')
+  const decodedPathname = safeDecodePathname(window.location.pathname)
+  const rawPath = decodedPathname.replace(/^\/+|\/+$/g, '')
   const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '')
   const segments = normalizedPath.split('/').filter(Boolean)
-  const section = segments.length > 1 && CONTENT_DIRS.includes(segments[0]) ? segments[0] : null
+  const rawSection = segments.length > 1 ? segments[0] : null
+  const section = rawSection && (CONTENT_DIRS.includes(rawSection) || rawSection === VITAMIN_MINERAL_URL_SECTION)
+    ? rawSection
+    : null
+  const sectionContentDir = normalizeSectionToContentDir(section)
   const baseSlug = segments.length === 0 ? '' : segments[segments.length - 1]
   const isTop = baseSlug === '' || baseSlug === 'index' || baseSlug === 'index2'
   const contentSlug = baseSlug === 'access' ? 'index' : baseSlug
   const flowersPath = flowersIndex[contentSlug]
-  const orderedDirs = section
-    ? [section, ...CONTENT_DIRS.filter((dir) => dir !== section)]
+  const shouldRedirectToVitaminMineral = !isTop && !section && segments.length === 1 && isVitaminMineralSlug(contentSlug)
+  if (shouldRedirectToVitaminMineral) {
+    window.location.replace(`/${VITAMIN_MINERAL_URL_SECTION}/${contentSlug}`)
+    return null
+  }
+  const orderedDirs = sectionContentDir
+    ? [sectionContentDir, ...CONTENT_DIRS.filter((dir) => dir !== sectionContentDir)]
     : CONTENT_DIRS
   const candidates = orderedDirs.flatMap((dir) => {
     if (dir === 'flowers' && flowersPath) {
