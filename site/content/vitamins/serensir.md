@@ -1,4 +1,4 @@
-![](/new.gif){wudth="40" height="10"} セレン
+![](/icon/new.gif){wudth="40" height="10"} セレン
 
 - セレンの働き
 
