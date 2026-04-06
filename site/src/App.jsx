@@ -1,5 +1,6 @@
 import MenuLeft from './components/MenuLeft'
 import MarkdownContent from './components/MarkdownContent'
+import flowersIndex from './generated/flowersIndex.js'
 import './styles/MenuLeft.css'
 import './styles/MarkdownContent.css'
 import './App.css'
@@ -22,7 +23,13 @@ function App() {
   const normalizedSlug = slug.replace(/\.(htm|html)$/i, '')
   const isTop = normalizedSlug === '' || normalizedSlug === 'index' || normalizedSlug === 'index2'
   const contentSlug = normalizedSlug === 'access' ? 'index' : normalizedSlug
-  const candidates = CONTENT_DIRS.map((dir) => `/content/${dir}/${contentSlug}.md`)
+  const flowersPath = flowersIndex[contentSlug]
+  const candidates = CONTENT_DIRS.flatMap((dir) => {
+    if (dir === 'flowers' && flowersPath) {
+      return [flowersPath, `/content/flowers/${contentSlug}.md`]
+    }
+    return [`/content/${dir}/${contentSlug}.md`]
+  })
 
   return (
     <div className="app-shell">

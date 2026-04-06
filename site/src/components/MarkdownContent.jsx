@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkBreaks from "remark-breaks";
+import remarkGfm from "remark-gfm";
 import "../styles/MarkdownContent.css";
 
 const escapeHtml = (value = "") => {
@@ -110,7 +111,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
         <p>{error}</p>
       ) : (
         <ReactMarkdown
-          remarkPlugins={[remarkBreaks]}
+          remarkPlugins={[remarkGfm, remarkBreaks]}
           rehypePlugins={[rehypeRaw]}
           components={{
             a: ({ href = "", children, ...props }) => {
