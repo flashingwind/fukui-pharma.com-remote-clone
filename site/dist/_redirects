@@ -1,0 +1,13 @@
+# Cloudflare Pages redirects
+# Host redirect (enable only one direction to avoid loops)
+https://new.fukui-pharma.com/mokuzito.html    https://new.fukui-pharma.com/mokuzito    301
+https://new.fukui-pharma.com/*    https://fukui-pharma.com/:splat    301
+# https://fukui-pharma.com/*      https://new.fukui-pharma.com/:splat 301
+
+/mokuzito.html    /mokuzito    301
+/nutri/vitasi4    /vitasi4    301
+/nutri/vitasi4/   /vitasi4    301
+/nutri/vitasi4.html    /vitasi4    301
+/nutri/vitasi4.htm    /vitasi4    301
+/content/*    /content/:splat   200
+/*    /index.html   200

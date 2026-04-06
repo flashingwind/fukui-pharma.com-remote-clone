@@ -1,0 +1,9 @@
+鉄
+
+- 鉄とはどんなものか,鉄のお話
+- [鉄は体内でどのように働くか](tetusiryou.htm#tetuseir)
+- [鉄はどんな状態に有用か](tetusiryou.htm#tetutuka)
+
+---
+
+- <a id="tetutuka"></a>どんな時に鉄を摂ると良いでしょうか
