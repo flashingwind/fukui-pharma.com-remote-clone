@@ -42,6 +42,13 @@ const normalizeLegacyLinkAttrs = (markdown = "") => {
   });
 };
 
+const normalizeLegacyBracketIds = (markdown = "") => {
+  // Convert legacy `[label]{#id}` syntax into explicit HTML anchors.
+  return markdown.replace(/\[([^\]]+)\]\{#([a-zA-Z0-9_-]+)\}/g, (_m, label, id) => {
+    return `<a id="${escapeHtml(id)}"></a>${label}`;
+  });
+};
+
 const extractText = (node) => {
   if (typeof node === "string") return node;
   if (Array.isArray(node)) return node.map(extractText).join("");
@@ -68,8 +75,9 @@ const VITAMIN_MINERAL_SLUGS = new Set([
   "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
   "coqganyu", "colingan", "inosigan",
   "eiyou", "vitasi2", "vitasi3", "vitasi4", "serensir", "magsiryou", "aensiryou", "tetusiryou",
-  "shyoyou", "lipoicacid", "mokuzito", "mokuzitu", "kousanka", "suppuse",
+  "shyoyou", "lipoicacid", "mokuzito", "mokuzitu", "suppuse",
 ]);
+const ACTIVE_OXYGEN_SLUGS = new Set(["kousanka"]);
 
 const resolveContentLinkPath = (path, loadedSection) => {
   if (path.includes("/")) {
@@ -77,6 +85,9 @@ const resolveContentLinkPath = (path, loadedSection) => {
   }
   if (VITAMIN_MINERAL_SLUGS.has(path)) {
     return `/vitamin-mineral/${path}`;
+  }
+  if (ACTIVE_OXYGEN_SLUGS.has(path)) {
+    return `/active-oxygen/${path}`;
   }
   return `${loadedSection ? `/${loadedSection}` : ""}/${path}`;
 };
@@ -110,7 +121,9 @@ const MarkdownContent = ({ file, fileCandidates }) => {
             continue;
           }
           if (!cancelled) {
-            const normalizedText = normalizeLegacyLinkAttrs(normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n")));
+            const normalizedText = normalizeLegacyBracketIds(
+              normalizeLegacyLinkAttrs(normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n")))
+            );
             setContent(normalizedText);
             setLoadedPath(path);
           }
@@ -188,7 +201,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
                 return <img src={src} alt={alt} {...props} />;
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
-              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
               const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
               return <ImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },
