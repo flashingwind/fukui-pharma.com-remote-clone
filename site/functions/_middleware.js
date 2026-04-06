@@ -1,5 +1,6 @@
 const CONTENT_DIRS = [
   'vitamin-mineral',
+  'active-oxygen',
   'flowers',
   'travel',
   'others',
@@ -19,7 +20,8 @@ const NUTRIENT_FOOD_SLUGS = new Set([
 const NUTRI_INFO_SLUGS = new Set([
   'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou', 'shyoyou', 'lipoicacid',
 ])
-const VITAMIN_MINERAL_OTHER_SLUGS = new Set(['mokuzito', 'mokuzitu', 'kousanka', 'suppuse'])
+const VITAMIN_MINERAL_OTHER_SLUGS = new Set(['mokuzito', 'mokuzitu', 'suppuse'])
+const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka'])
 const VITAMIN_MINERAL_SLUGS = new Set([
   ...NUTRIENT_FOOD_SLUGS,
   ...NUTRI_INFO_SLUGS,
@@ -33,7 +35,7 @@ const LEGACY_EXACT_REDIRECTS = {
   '/skincare.html': '/others/hadautukusisa',
   '/books/mokuzito.html': '/vitamin-mineral/mokuzito',
   '/books/mokuzitu.html': '/vitamin-mineral/mokuzitu',
-  '/freeradical/kousanka.html': '/vitamin-mineral/kousanka',
+  '/freeradical/kousanka.html': '/active-oxygen/kousanka',
   '/oldcar/oldcar.html': '/others/oldcar',
   '/supliments/': '/shop/tyuumon',
   '/supliments/be-tagur.html': '/shop/tyuumon',
@@ -121,6 +123,9 @@ export async function onRequest(context) {
     if (VITAMIN_MINERAL_SLUGS.has(slug)) {
       return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${slug}`)
     }
+    if (ACTIVE_OXYGEN_SLUGS.has(slug)) {
+      return redirectTo(url, `/active-oxygen/${slug}`)
+    }
   }
 
   const oldHawaiiMatch = decodedPathname.match(/^\/hawaii\/([^/]+)\.(htm|html)$/i)
@@ -140,12 +145,18 @@ export async function onRequest(context) {
   if (parts.length === 1 && VITAMIN_MINERAL_SLUGS.has(parts[0])) {
     return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[0]}`)
   }
+  if (parts.length === 1 && ACTIVE_OXYGEN_SLUGS.has(parts[0])) {
+    return redirectTo(url, `/active-oxygen/${parts[0]}`)
+  }
   if (
     parts.length === 2 &&
     (parts[0] === 'vitamins' || parts[0] === 'minerals' || parts[0] === 'nutrient-foods') &&
     VITAMIN_MINERAL_SLUGS.has(parts[1])
   ) {
     return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[1]}`)
+  }
+  if (parts.length === 2 && (parts[0] === 'vitamin-mineral' || parts[0] === 'freeradical') && ACTIVE_OXYGEN_SLUGS.has(parts[1])) {
+    return redirectTo(url, `/active-oxygen/${parts[1]}`)
   }
 
   const match = decodedPathname.match(/^\/(.+)\.(htm|html)$/i)

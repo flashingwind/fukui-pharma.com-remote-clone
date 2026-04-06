@@ -20,6 +20,7 @@ const SHOP_SLUGS = new Set(["tyuumon", "megafudo", "be-tagur"]);
 const PUBLICATION_SLUGS = new Set(["mokuzitu"]);
 const ACCESS_SLUGS = new Set(["access"]);
 const ATOPIC_SLUGS = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
+const ACTIVE_OXYGEN_SLUGS = new Set(["kousanka"]);
 const SKIN_SLUGS = new Set(["hadautukusisa"]);
 const NUTRIENT_FOOD_SLUGS = new Set([
   "eiyouso", "ganyuute",
@@ -42,6 +43,7 @@ const MenuLeft = () => {
     flower: inFlower,
     vitaminMineral: (section === "vitamin-mineral" && (VITAMIN_SLUGS.has(slug) || MINERAL_SLUGS.has(slug))) || VITAMIN_SLUGS.has(slug) || MINERAL_SLUGS.has(slug),
     atopic: section === "atopic" || ATOPIC_SLUGS.has(slug),
+    activeOxygen: section === "active-oxygen" || ACTIVE_OXYGEN_SLUGS.has(slug),
     travel: section === "travel" || TRAVEL_SLUGS.has(slug),
     publication: section === "publication" || PUBLICATION_SLUGS.has(slug),
     shop: section === "shop" || SHOP_SLUGS.has(slug),
@@ -139,9 +141,19 @@ const MenuLeft = () => {
           <li><a href="/vitamin-mineral/lipoicacid">アルファリポ酸</a></li>
         </ul>
       )}
-      {/* アトピー */}
+      {/* 活性酸素 */}
+      <div className="menu-section" onClick={() => toggleSection('activeOxygen')} style={{cursor:'pointer'}}>
+        活性酸素 {openSection.activeOxygen ? '▼' : '▶'}
+      </div>
+      {openSection.activeOxygen && (
+        <ul className="menu-group">
+          <li><a href="/active-oxygen/kousanka">活性酸素(フリーラジカル)が老化や成人病の原因に?</a></li>
+        </ul>
+      )}
+
+      {/* アトピー・免疫 */}
       <div className="menu-section" onClick={() => toggleSection('atopic')} style={{cursor:'pointer'}}>
-        アトピー {openSection.atopic ? '▼' : '▶'}
+        アトピー・免疫 {openSection.atopic ? '▼' : '▶'}
       </div>
       {openSection.atopic && (
         <ul className="menu-group">

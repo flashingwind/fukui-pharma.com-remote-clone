@@ -10,7 +10,7 @@ const SITE_URL = 'https://fukui-pharma.com'
 const SITE_NAME = '福井薬局'
 const VITAMIN_MINERAL_URL_SECTION = 'vitamin-mineral'
 const VITAMIN_MINERAL_CONTENT_DIR = 'vitamin-mineral'
-const CONTENT_DIRS = ['vitamin-mineral', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
+const CONTENT_DIRS = ['vitamin-mineral', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
 const NUTRIENT_FOOD_SLUGS = new Set([
   'eiyouso', 'ganyuute',
   'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
@@ -21,10 +21,12 @@ const NUTRIENT_FOOD_SLUGS = new Set([
 ])
 const VITAMIN_MINERAL_INFO_SLUGS = new Set([
   'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou',
-  'shyoyou', 'lipoicacid', 'mokuzito', 'mokuzitu', 'kousanka', 'suppuse',
+  'shyoyou', 'lipoicacid', 'mokuzito', 'mokuzitu', 'suppuse',
 ])
+const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka'])
 const SECTION_LABELS = {
   'vitamin-mineral': 'ビタミン・ミネラル',
+  'active-oxygen': '活性酸素',
   atopic: 'アトピー',
   flowers: '花の写真集',
   travel: 'ハワイ旅行',
@@ -33,20 +35,22 @@ const SECTION_LABELS = {
   shop: '通販',
   access: 'アクセス',
 }
-const FOOTER_LINKS_LEFT = [
-  { href: '/flowers-top', label: '花の写真集' },
-  { href: '/travel_top', label: 'ハワイ旅行' },
-]
-const FOOTER_LINKS_RIGHT = [
-  { href: '/vitamin-mineral/eiyou', label: 'ビタミン' },
-  { href: '/vitamin-mineral/magsiryou', label: 'ミネラル' },
+const FOOTER_MENU_SECTIONS = [
+  { href: '/vitamin-mineral/ganyuute', label: '栄養素を多く含む食品' },
+  { href: '/vitamin-mineral/eiyou', label: 'ビタミン・ミネラル' },
+  { href: '/active-oxygen/kousanka', label: '活性酸素' },
+  { href: '/atopic', label: 'アトピー・免疫' },
+  { href: '/hadautukusisa', label: '肌の美しさと栄養' },
   { href: '/vitamin-mineral/mokuzitu', label: '出版' },
-  //{ href: '/tyuumon', label: '通販' },
-  //{ href: '/access', label: 'アクセス情報' },
+  { href: '/harubotan16', label: '花の写真集' },
+  { href: '/mauisunset', label: 'ハワイ旅行' },
 ]
 
 function isVitaminMineralSlug(slug) {
   return NUTRIENT_FOOD_SLUGS.has(slug) || VITAMIN_MINERAL_INFO_SLUGS.has(slug)
+}
+function isActiveOxygenSlug(slug) {
+  return ACTIVE_OXYGEN_SLUGS.has(slug)
 }
 
 function normalizeSectionToContentDir(section) {
@@ -91,6 +95,9 @@ function getPreferredPath(section, slug, isTop) {
   if (isVitaminMineralSlug(slug)) {
     return `/${VITAMIN_MINERAL_URL_SECTION}/${slug}`
   }
+  if (isActiveOxygenSlug(slug)) {
+    return `/active-oxygen/${slug}`
+  }
   if (section) {
     return `/${section}/${slug}`
   }
@@ -127,6 +134,11 @@ function App() {
   const shouldRedirectToVitaminMineral = !isTop && !section && segments.length === 1 && isVitaminMineralSlug(contentSlug)
   if (shouldRedirectToVitaminMineral) {
     window.location.replace(`/${VITAMIN_MINERAL_URL_SECTION}/${contentSlug}`)
+    return null
+  }
+  const shouldRedirectToActiveOxygen = !isTop && !section && segments.length === 1 && isActiveOxygenSlug(contentSlug)
+  if (shouldRedirectToActiveOxygen) {
+    window.location.replace(`/active-oxygen/${contentSlug}`)
     return null
   }
   const orderedDirs = sectionContentDir
@@ -168,17 +180,13 @@ function App() {
         )}
         <footer className="site-footer">
           <div className="footer-title">福井薬局</div>
-          <div className="footer-links">
-            <ul>
-              {FOOTER_LINKS_LEFT.map((item) => (
-                <li key={item.href}><a href={item.href}>{item.label}</a></li>
-              ))}
-            </ul>
-            <ul>
-              {FOOTER_LINKS_RIGHT.map((item) => (
-                <li key={item.href}><a href={item.href}>{item.label}</a></li>
-              ))}
-            </ul>
+          <div className="footer-menu-inline" aria-label="Footer navigation">
+            {FOOTER_MENU_SECTIONS.map((item, index) => (
+              <span key={item.href}>
+                {index > 0 ? <span className="footer-separator"> | </span> : null}
+                <a href={item.href}>{item.label}</a>
+              </span>
+            ))}
           </div>
           <div className="footer-credit">
             (C)2022 Fukui Pharamacy., (C)2012 福井透. 2012/2/12最終更新.

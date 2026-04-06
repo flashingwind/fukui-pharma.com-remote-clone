@@ -39,11 +39,11 @@
     - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](supliments/be-tagur10.md)(栄養補助食品)
     - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](megafudo.md)(栄養補助食品)
 4. <span class="red">体内の活性酸素</span>
-    1. [活性酸素(フリーラジカル)が老化や成人病の原因に?](freeradical/kousanka.md)
-    2. [フリーラジカル及び活性酸素](freeradical/kousanka.md#hyou)
-    3. [体内抗酸化物質がなぜ消耗するのか](freeradical/kousanka.md#heru)
-    4. [活性酸素の生成と消去の図表](freeradical/kousanka.md#zuhyou)
-    5. [分子で示す活性酸素の生成と変換](freeradical/kousanka.md#zuhyou2)
+    1. [活性酸素(フリーラジカル)が老化や成人病の原因に?](active-oxygen/kousanka.md)
+    2. [フリーラジカル及び活性酸素](active-oxygen/kousanka.md#hyou)
+    3. [体内抗酸化物質がなぜ消耗するのか](active-oxygen/kousanka.md#heru)
+    4. [活性酸素の生成と消去の図表](active-oxygen/kousanka.md#zuhyou)
+    5. [分子で示す活性酸素の生成と変換](active-oxygen/kousanka.md#zuhyou2)
 5. <span class="red">免疫応答</span>
     1. [免疫とは、免疫を受け持つ細胞](atopic/meneki.md)
     2. [血液中の細胞、図表](atopic/meneki.md#ketueki)
