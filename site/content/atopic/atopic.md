@@ -147,6 +147,6 @@
 
 ---
 
-[アトピー性皮膚炎と免疫応答の図表]{#atopicb}
+<a id="atopicb"></a>アトピー性皮膚炎と免疫応答の図表
 
 ![atopic6](atopic6.gif)

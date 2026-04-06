@@ -16,15 +16,15 @@
 
     ***
 
-- [セレンはどんな症状で有効に働くか]{#serentuk} ![セレンはどんな症状で有効に働くか](serentuka.gif)
+- <a id="serentuk"></a>セレンはどんな症状で有効に働くか ![セレンはどんな症状で有効に働くか](serentuka.gif)
 
     ***
 
-- [活性酸素の発生と消去]{#furiiraz} ![活性酸素の発生と消去](furiiraz.gif)
+- <a id="furiiraz"></a>活性酸素の発生と消去 ![活性酸素の発生と消去](furiiraz.gif)
 
     ***
 
-- [活性酸素のお話]{#katsanso}
+- <a id="katsanso"></a>活性酸素のお話
 
     ***
 
@@ -67,6 +67,6 @@
 
     ***
 
-- [活性酸素の生成変換の分子図表]{#kousanka} ![活性酸素の生成変換の分子図表](kasseisa.gif)
+- <a id="kousanka"></a>活性酸素の生成変換の分子図表 ![活性酸素の生成変換の分子図表](kasseisa.gif)
 
     ***
