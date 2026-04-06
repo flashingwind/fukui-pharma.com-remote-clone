@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://new.fukui-pharma.com/sitemap.xml
+Sitemap: https://fukui-pharma.com/sitemap.xml

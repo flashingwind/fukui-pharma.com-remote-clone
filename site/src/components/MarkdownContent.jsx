@@ -60,6 +60,25 @@ const ImgWithFallback = ({ src, alt, dirs, ...props }) => {
   return <img src={resolvedSrc} alt={alt} onError={handleError} {...props} />;
 };
 
+const NUTRIENT_FOOD_SLUGS = new Set([
+  "eiyouso", "ganyuute",
+  "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
+  "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
+  "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
+  "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
+  "coqganyu", "colingan", "inosigan",
+]);
+
+const resolveContentLinkPath = (path, loadedSection) => {
+  if (path.includes("/")) {
+    return `/${path}`;
+  }
+  if (NUTRIENT_FOOD_SLUGS.has(path)) {
+    return `/nutrient-foods/${path}`;
+  }
+  return `${loadedSection ? `/${loadedSection}` : ""}/${path}`;
+};
+
 const MarkdownContent = ({ file, fileCandidates }) => {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
@@ -67,6 +86,10 @@ const MarkdownContent = ({ file, fileCandidates }) => {
   const candidates = useMemo(() => {
     return file ? [file] : (fileCandidates || []);
   }, [file, fileCandidates]);
+  const loadedSection = useMemo(() => {
+    const matched = loadedPath.match(/^\/content\/([^/]+)\//);
+    return matched ? matched[1] : "";
+  }, [loadedPath]);
 
   useEffect(() => {
     let cancelled = false;
@@ -128,22 +151,26 @@ const MarkdownContent = ({ file, fileCandidates }) => {
               }
               const htmlMatched = href.match(/^([^#?]+)\.(htm|html)(#[^?]+)?(\?.+)?$/i);
               if (htmlMatched) {
-                const path = htmlMatched[1].split("/").pop();
+                const rawPath = htmlMatched[1];
+                const path = rawPath.replace(/^\.\/+/, "").replace(/^\/+/, "");
                 const hash = htmlMatched[3] || "";
                 const search = htmlMatched[4] || "";
+                const prefixedPath = resolveContentLinkPath(path, loadedSection);
                 return (
-                  <a href={`/${path}${hash}${search}`} {...props}>
+                  <a href={`${prefixedPath}${hash}${search}`} {...props}>
                     {children}
                   </a>
                 );
               }
               const matched = href.match(/^([^#?]+)\.md(#[^?]+)?(\?.+)?$/);
               if (matched) {
-                const path = matched[1].split("/").pop();
+                const rawPath = matched[1];
+                const path = rawPath.replace(/^\.\/+/, "").replace(/^\/+/, "");
                 const hash = matched[2] || "";
                 const search = matched[3] || "";
+                const prefixedPath = resolveContentLinkPath(path, loadedSection);
                 return (
-                  <a href={`/${path}${hash}${search}`} {...props}>
+                  <a href={`${prefixedPath}${hash}${search}`} {...props}>
                     {children}
                   </a>
                 );
@@ -159,7 +186,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
                 return <img src={src} alt={alt} {...props} />;
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
-              const fallbackDirs = ["/flowers", "/travel", "/vitamins", "/minerals", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const fallbackDirs = ["/flowers", "/travel", "/nutrient-foods", "/vitamins", "/minerals", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
               const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
               return <ImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },

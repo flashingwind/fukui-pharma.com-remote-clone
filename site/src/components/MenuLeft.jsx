@@ -6,10 +6,7 @@ const VITAMIN_SLUGS = new Set([
 ]);
 
 const MINERAL_SLUGS = new Set([
-  "magganyu", "magsiryou", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "dganyuu",
-  "douganyu", "eganyuu", "ganyuute", "karigany", "keisogan", "lipoicacid", "mangagan",
-  "senigany", "serengan", "serensir", "tetugany", "tetusiryou", "vanagany",
-  "cromugan", "yo-dogan", "moribuga", "housogan", "gerumaga", "inosigan",
+  "magsiryou", "tetusiryou", "serensir", "lipoicacid",
 ]);
 
 const FLOWER_2007 = new Set(["2007ranten120", "2007catC", "2007paphE"]);
@@ -25,7 +22,7 @@ const ACCESS_SLUGS = new Set(["access"]);
 const ATOPIC_SLUGS = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
 const SKIN_SLUGS = new Set(["hadautukusisa"]);
 const NUTRIENT_FOOD_SLUGS = new Set([
-  "eiyouso",
+  "eiyouso", "ganyuute",
   "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
   "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
   "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
@@ -34,20 +31,23 @@ const NUTRIENT_FOOD_SLUGS = new Set([
 ]);
 
 const MenuLeft = () => {
-  const slug = window.location.pathname.replace(/^\/+|\/+$/g, "").replace(/\.(htm|html)$/i, "");
-  const inFlower = FLOWER_2007.has(slug) || FLOWER_2006.has(slug) || FLOWER_2005.has(slug) || FLOWER_2004.has(slug) || FLOWER_EXTRA.has(slug);
+  const normalizedPath = window.location.pathname.replace(/^\/+|\/+$/g, "").replace(/\.(htm|html)$/i, "");
+  const segments = normalizedPath.split("/").filter(Boolean);
+  const section = segments.length > 1 ? segments[0] : "";
+  const slug = segments.length === 0 ? "" : segments[segments.length - 1];
+  const inFlower = section === "flowers" || FLOWER_2007.has(slug) || FLOWER_2006.has(slug) || FLOWER_2005.has(slug) || FLOWER_2004.has(slug) || FLOWER_EXTRA.has(slug);
 
   // アコーディオン開閉状態
   const [openSection, setOpenSection] = useState(() => ({
     flower: inFlower,
-    vitamin: VITAMIN_SLUGS.has(slug),
-    mineral: !VITAMIN_SLUGS.has(slug) && MINERAL_SLUGS.has(slug),
-    atopic: ATOPIC_SLUGS.has(slug),
-    travel: TRAVEL_SLUGS.has(slug),
-    publication: PUBLICATION_SLUGS.has(slug),
-    shop: SHOP_SLUGS.has(slug),
-    access: ACCESS_SLUGS.has(slug),
-    nutrientFoods: NUTRIENT_FOOD_SLUGS.has(slug),
+    vitamin: section === "vitamins" || VITAMIN_SLUGS.has(slug),
+    mineral: section === "minerals" || (!VITAMIN_SLUGS.has(slug) && MINERAL_SLUGS.has(slug)),
+    atopic: section === "atopic" || ATOPIC_SLUGS.has(slug),
+    travel: section === "travel" || TRAVEL_SLUGS.has(slug),
+    publication: section === "publication" || PUBLICATION_SLUGS.has(slug),
+    shop: section === "shop" || SHOP_SLUGS.has(slug),
+    access: section === "access" || ACCESS_SLUGS.has(slug),
+    nutrientFoods: section === "nutrient-foods" || NUTRIENT_FOOD_SLUGS.has(slug),
   }));
   const [openYear, setOpenYear] = useState(() => ({
     y2007: FLOWER_2007.has(slug),
@@ -81,43 +81,44 @@ const MenuLeft = () => {
       </div>
       {openSection.nutrientFoods && (
         <ul className="menu-group">
+          <li><a href="/nutrient-foods/ganyuute">ビタミン・ミネラルを多く含む食品（一覧）</a></li>
           <li className="menu-subtitle">ビタミン</li>
-          <li><a href="/aganyuu">ビタミンA</a></li>
-          <li><a href="/eganyuu">ビタミンE</a></li>
-          <li><a href="/dganyuu">ビタミンD</a></li>
-          <li><a href="/bkganyuu">ビタミンK</a></li>
-          <li><a href="/cganyuu">ビタミンC</a></li>
-          <li><a href="/b1ganyuu">ビタミンB1</a></li>
-          <li><a href="/b2ganyuu">ビタミンB2</a></li>
-          <li><a href="/b3ganyuu">ビタミンB3（ナイアシン）</a></li>
-          <li><a href="/b5ganyuu">ビタミンB5（パントテン酸）</a></li>
-          <li><a href="/b6ganyuu">ビタミンB6</a></li>
-          <li><a href="/b12ganyu">ビタミンB12</a></li>
-          <li><a href="/yousanga">葉酸</a></li>
-          <li><a href="/biotinga">ビオチン</a></li>
+          <li><a href="/nutrient-foods/aganyuu">ビタミンA</a></li>
+          <li><a href="/nutrient-foods/eganyuu">ビタミンE</a></li>
+          <li><a href="/nutrient-foods/dganyuu">ビタミンD</a></li>
+          <li><a href="/nutrient-foods/bkganyuu">ビタミンK</a></li>
+          <li><a href="/nutrient-foods/cganyuu">ビタミンC</a></li>
+          <li><a href="/nutrient-foods/b1ganyuu">ビタミンB1</a></li>
+          <li><a href="/nutrient-foods/b2ganyuu">ビタミンB2</a></li>
+          <li><a href="/nutrient-foods/b3ganyuu">ビタミンB3（ナイアシン）</a></li>
+          <li><a href="/nutrient-foods/b5ganyuu">ビタミンB5（パントテン酸）</a></li>
+          <li><a href="/nutrient-foods/b6ganyuu">ビタミンB6</a></li>
+          <li><a href="/nutrient-foods/b12ganyu">ビタミンB12</a></li>
+          <li><a href="/nutrient-foods/yousanga">葉酸</a></li>
+          <li><a href="/nutrient-foods/biotinga">ビオチン</a></li>
 
           <li className="menu-subtitle">ミネラル</li>
-          <li><a href="/carugany">カルシウム</a></li>
-          <li><a href="/magganyu">マグネシウム</a></li>
-          <li><a href="/karigany">カリウム</a></li>
-          <li><a href="/aenganyu">亜鉛</a></li>
-          <li><a href="/tetugany">鉄</a></li>
-          <li><a href="/douganyu">銅</a></li>
-          <li><a href="/cromugan">クロム</a></li>
-          <li><a href="/mangagan">マンガン</a></li>
-          <li><a href="/yo-dogan">ヨード</a></li>
-          <li><a href="/serengan">セレン</a></li>
-          <li><a href="/moribuga">モリブデン</a></li>
-          <li><a href="/vanagany">バナジウム</a></li>
-          <li><a href="/senigany">食物繊維</a></li>
-          <li><a href="/keisogan">ケイ素（シリコン）</a></li>
-          <li><a href="/housogan">ホウ素</a></li>
-          <li><a href="/gerumaga">ゲルマニウム</a></li>
+          <li><a href="/nutrient-foods/carugany">カルシウム</a></li>
+          <li><a href="/nutrient-foods/magganyu">マグネシウム</a></li>
+          <li><a href="/nutrient-foods/karigany">カリウム</a></li>
+          <li><a href="/nutrient-foods/aenganyu">亜鉛</a></li>
+          <li><a href="/nutrient-foods/tetugany">鉄</a></li>
+          <li><a href="/nutrient-foods/douganyu">銅</a></li>
+          <li><a href="/nutrient-foods/cromugan">クロム</a></li>
+          <li><a href="/nutrient-foods/mangagan">マンガン</a></li>
+          <li><a href="/nutrient-foods/yo-dogan">ヨード</a></li>
+          <li><a href="/nutrient-foods/serengan">セレン</a></li>
+          <li><a href="/nutrient-foods/moribuga">モリブデン</a></li>
+          <li><a href="/nutrient-foods/vanagany">バナジウム</a></li>
+          <li><a href="/nutrient-foods/senigany">食物繊維</a></li>
+          <li><a href="/nutrient-foods/keisogan">ケイ素（シリコン）</a></li>
+          <li><a href="/nutrient-foods/housogan">ホウ素</a></li>
+          <li><a href="/nutrient-foods/gerumaga">ゲルマニウム</a></li>
 
           <li className="menu-subtitle">その他</li>
-          <li><a href="/coqganyu">CoQ</a></li>
-          <li><a href="/colingan">コリン</a></li>
-          <li><a href="/inosigan">イノシトール</a></li>
+          <li><a href="/nutrient-foods/coqganyu">CoQ</a></li>
+          <li><a href="/nutrient-foods/colingan">コリン</a></li>
+          <li><a href="/nutrient-foods/inosigan">イノシトール</a></li>
         </ul>
       )}
 
@@ -128,19 +129,10 @@ const MenuLeft = () => {
       {openSection.vitamin && (
         <ul className="menu-group">
           <li className="menu-subtitle">総論</li>
-          <li><a href="/eiyou">症状と不足が疑われる栄養素</a></li>
-          <li><a href="/vitasi2">ビタミン・ミネラルの必要性</a></li>
-          <li><a href="/vitasi3">ビタミンとミネラルの働き（前編）</a></li>
-          <li><a href="/vitasi4">ビタミンとミネラルの働き（後編）</a></li>
-          <li className="menu-subtitle">含有食品</li>
-          <li><a href="/b1ganyuu">ビタミンB1</a></li>
-          <li><a href="/b2ganyuu">ビタミンB2</a></li>
-          <li><a href="/b3ganyuu">ビタミンB3（ナイアシン）</a></li>
-          <li><a href="/b5ganyuu">ビタミンB5（パントテン酸）</a></li>
-          <li><a href="/b6ganyuu">ビタミンB6</a></li>
-          <li><a href="/b12ganyu">ビタミンB12</a></li>
-          <li><a href="/cganyuu">ビタミンC</a></li>
-          <li><a href="/eganyuu">ビタミンE</a></li>
+          <li><a href="/vitamins/eiyou">症状と不足が疑われる栄養素</a></li>
+          <li><a href="/vitamins/vitasi2">ビタミン・ミネラルの必要性</a></li>
+          <li><a href="/vitamins/vitasi3">ビタミンとミネラルの働き（前編）</a></li>
+          <li><a href="/vitamins/vitasi4">ビタミンとミネラルの働き（後編）</a></li>
         </ul>
       )}
 
@@ -150,32 +142,9 @@ const MenuLeft = () => {
       </div>
       {openSection.mineral && (
         <ul className="menu-group">
-          <li><a href="/magganyu">マグネシウムを多く含む食品</a></li>
           <li><a href="/magsiryou">マグネシウムとはどんなものか</a></li>
-          <li><a href="/carugany">カルシウムを多く含む食品</a></li>
-          <li><a href="/karigany">カリウムを多く含む食品</a></li>
-          <li><a href="/ganyuute">ビタミン・ミネラルを多く含む食品（一覧）</a></li>
-          <li><a href="/tetugany">鉄を多く含む食品</a></li>
           <li><a href="/tetusiryou">鉄とはどんなものか</a></li>
-          <li><a href="/douganyu">銅を多く含む食品</a></li>
-          <li><a href="/cromugan">クロムを多く含む食品</a></li>
-          <li><a href="/mangagan">マンガンを多く含む食品</a></li>
-          <li><a href="/yo-dogan">ヨードを多く含む食品</a></li>
-          <li><a href="/serengan">セレンを多く含む食品</a></li>
           <li><a href="/serensir">セレンの働き（詳細）</a></li>
-          <li><a href="/moribuga">モリブデンを多く含む食品</a></li>
-          <li><a href="/vanagany">バナジウムを多く含む食品</a></li>
-          <li><a href="/senigany">食物繊維を多く含む食品</a></li>
-          <li><a href="/keisogan">ケイ素（シリコン）を多く含む食品</a></li>
-          <li><a href="/housogan">ホウ素を多く含む食品</a></li>
-          <li><a href="/gerumaga">ゲルマニウムを多く含む食品</a></li>
-          <li><a href="/colingan">コリンを多く含む食品</a></li>
-          <li><a href="/coqganyu">CoQを多く含む食品</a></li>
-          <li><a href="/inosigan">イノシトールを多く含む食品</a></li>
-          <li><a href="/bkganyuu">ビタミンKを多く含む食品</a></li>
-          <li><a href="/dganyuu">ビタミンDを多く含む食品</a></li>
-          <li><a href="/cganyuu">ビタミンCを多く含む食品</a></li>
-          <li><a href="/eganyuu">ビタミンEを多く含む食品</a></li>
           <li><a href="/lipoicacid">アルファリポ酸</a></li>
         </ul>
       )}
