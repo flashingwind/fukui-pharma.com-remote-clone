@@ -40,8 +40,7 @@ const MenuLeft = () => {
   // アコーディオン開閉状態
   const [openSection, setOpenSection] = useState(() => ({
     flower: inFlower,
-    vitamin: (section === "vitamin-mineral" && VITAMIN_SLUGS.has(slug)) || VITAMIN_SLUGS.has(slug),
-    mineral: (section === "vitamin-mineral" && MINERAL_SLUGS.has(slug)) || (!VITAMIN_SLUGS.has(slug) && MINERAL_SLUGS.has(slug)),
+    vitaminMineral: (section === "vitamin-mineral" && (VITAMIN_SLUGS.has(slug) || MINERAL_SLUGS.has(slug))) || VITAMIN_SLUGS.has(slug) || MINERAL_SLUGS.has(slug),
     atopic: section === "atopic" || ATOPIC_SLUGS.has(slug),
     travel: section === "travel" || TRAVEL_SLUGS.has(slug),
     publication: section === "publication" || PUBLICATION_SLUGS.has(slug),
@@ -122,26 +121,18 @@ const MenuLeft = () => {
         </ul>
       )}
 
-      {/* ビタミン */}
-      <div className="menu-section" onClick={() => toggleSection('vitamin')} style={{cursor:'pointer'}}>
-        ビタミン {openSection.vitamin ? '▼' : '▶'}
+      {/* ビタミン・ミネラル */}
+      <div className="menu-section" onClick={() => toggleSection('vitaminMineral')} style={{cursor:'pointer'}}>
+        ビタミン・ミネラル {openSection.vitaminMineral ? '▼' : '▶'}
       </div>
-      {openSection.vitamin && (
+      {openSection.vitaminMineral && (
         <ul className="menu-group">
           <li className="menu-subtitle">総論</li>
           <li><a href="/vitamin-mineral/eiyou">症状と不足が疑われる栄養素</a></li>
           <li><a href="/vitamin-mineral/vitasi2">ビタミン・ミネラルの必要性</a></li>
           <li><a href="/vitamin-mineral/vitasi3">ビタミンとミネラルの働き（前編）</a></li>
           <li><a href="/vitamin-mineral/vitasi4">ビタミンとミネラルの働き（後編）</a></li>
-        </ul>
-      )}
-
-      {/* ミネラル */}
-      <div className="menu-section" onClick={() => toggleSection('mineral')} style={{cursor:'pointer'}}>
-        ミネラル {openSection.mineral ? '▼' : '▶'}
-      </div>
-      {openSection.mineral && (
-        <ul className="menu-group">
+          <li className="menu-subtitle">各論</li>
           <li><a href="/vitamin-mineral/magsiryou">マグネシウムとはどんなものか</a></li>
           <li><a href="/vitamin-mineral/tetusiryou">鉄とはどんなものか</a></li>
           <li><a href="/vitamin-mineral/serensir">セレンの働き（詳細）</a></li>
