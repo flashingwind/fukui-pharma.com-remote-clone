@@ -4,7 +4,8 @@ import path from 'path';
 
 const SITE_URL = 'https://fukui-pharma.com';
 const CONTENT_DIR = path.resolve('content');
-const OUTPUT_FILE = path.resolve('sitemap.xml');
+const PUBLIC_DIR = path.resolve('public');
+const OUTPUT_FILE = path.join(PUBLIC_DIR, 'sitemap.xml');
 const today = new Date().toISOString().split('T')[0];
 
 function walk(dir, ext = '.md', baseUrl = '') {
