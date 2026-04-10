@@ -145,6 +145,11 @@
   .menu-left-header {
     padding: 10px 12px;
     gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #f5deb3;
+    border-bottom: 1px solid #c8b38a;
   }
 
   .menu-header-link {
@@ -162,7 +167,7 @@
 
   .menu-left-nav {
     display: none;
-    padding: 0 12px 12px;
+    padding: 8px 12px 12px;
   }
 
   .menu-left.menu-left-open .menu-left-nav {

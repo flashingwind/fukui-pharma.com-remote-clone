@@ -1,4 +1,5 @@
-パヒオペディラム３\
+# パヒオペディラム3
+
 40![](44paphg.jpg){width="500" height="350"}\
 
 41![](45paphv.jpg){width="500" height="350"}\

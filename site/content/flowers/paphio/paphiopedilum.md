@@ -1,4 +1,5 @@
-パフィオペディラム\
+# パフィオペディラム0
+
 ![](a2opa2s.jpg){width="500" height="350"}\
 
 ![](a2opamsmf.jpg){width="500" height="350"}\

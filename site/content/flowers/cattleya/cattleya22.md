@@ -1,4 +1,5 @@
-カトレア２\
+# カトレア2-2
+
 15![](30catpg.jpg){width="500" height="350"}\
 
 16![](30ctp.jpg){width="500" height="350"}\

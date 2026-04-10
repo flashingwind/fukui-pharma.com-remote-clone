@@ -1,4 +1,5 @@
-姿の面白いパフィオペディラム\
+# 姿の面白いパフィオペディラム
+
 ![](8paphsyou020.jpg){width="500" height="350"}\
 
 ![](8paphsyou.jpg){width="500" height="350"}\

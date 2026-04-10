@@ -1,12 +1,27 @@
 // scripts/generate-sitemap.js
 import fs from 'fs';
 import path from 'path';
+import flowersIndex from '../src/generated/flowersIndex.js';
 
 const SITE_URL = 'https://fukui-pharma.com';
 const CONTENT_DIR = path.resolve('content');
 const PUBLIC_DIR = path.resolve('public');
 const OUTPUT_FILE = path.join(PUBLIC_DIR, 'sitemap.xml');
 const today = new Date().toISOString().split('T')[0];
+const CONTENT_DIRS = ['vitamin-mineral', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access'];
+const NUTRIENT_FOOD_SLUGS = new Set([
+  'eiyouso', 'ganyuute',
+  'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
+  'b5ganyuu', 'b6ganyuu', 'b12ganyu', 'yousanga', 'biotinga',
+  'carugany', 'magganyu', 'karigany', 'aenganyu', 'tetugany', 'douganyu', 'cromugan', 'mangagan',
+  'yo-dogan', 'serengan', 'moribuga', 'vanagany', 'senigany', 'keisogan', 'housogan', 'gerumaga',
+  'coqganyu', 'colingan', 'inosigan',
+]);
+const VITAMIN_MINERAL_INFO_SLUGS = new Set([
+  'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou',
+  'shyoyou', 'lipoicacid', 'mokuzito', 'mokuzitu', 'suppuse',
+]);
+const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka']);
 
 function walk(dir, ext = '.md', baseUrl = '') {
   let results = [];
@@ -25,7 +40,51 @@ function walk(dir, ext = '.md', baseUrl = '') {
   return results;
 }
 
-const urls = walk(CONTENT_DIR);
+function isRenderablePath(pathname, contentPathSet) {
+  const rawPath = pathname.replace(/^\/+|\/+$/g, '');
+  const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '');
+  const segments = normalizedPath.split('/').filter(Boolean);
+  const rawSection = segments.length > 1 ? segments[0] : null;
+  const section = rawSection && CONTENT_DIRS.includes(rawSection) ? rawSection : null;
+  const baseSlug = segments.length === 0 ? '' : segments[segments.length - 1];
+  const isTop = baseSlug === '' || baseSlug === 'index' || baseSlug === 'index2';
+  const contentSlug = baseSlug === 'access' ? 'index' : baseSlug;
+
+  if (isTop) {
+    return true;
+  }
+
+  const shouldRedirectToVitaminMineral = !section && segments.length === 1
+    && (NUTRIENT_FOOD_SLUGS.has(contentSlug) || VITAMIN_MINERAL_INFO_SLUGS.has(contentSlug));
+  if (shouldRedirectToVitaminMineral) {
+    return contentPathSet.has(`/content/vitamin-mineral/${contentSlug}.md`);
+  }
+
+  const shouldRedirectToActiveOxygen = !section && segments.length === 1 && ACTIVE_OXYGEN_SLUGS.has(contentSlug);
+  if (shouldRedirectToActiveOxygen) {
+    return contentPathSet.has(`/content/active-oxygen/${contentSlug}.md`);
+  }
+
+  const orderedDirs = section
+    ? [section, ...CONTENT_DIRS.filter((dir) => dir !== section)]
+    : CONTENT_DIRS;
+
+  const candidates = orderedDirs.flatMap((dir) => {
+    if (dir === 'flowers' && flowersIndex[contentSlug]) {
+      return [flowersIndex[contentSlug], `/content/flowers/${contentSlug}.md`];
+    }
+    return [`/content/${dir}/${contentSlug}.md`];
+  });
+
+  return candidates.some((candidate) => contentPathSet.has(candidate));
+}
+
+const allUrls = walk(CONTENT_DIR);
+const contentPathSet = new Set(allUrls.map((url) => url.replace(SITE_URL, '/content').replace(/\/?$/, '.md')));
+const urls = allUrls.filter((url) => {
+  const pathname = url.replace(SITE_URL, '');
+  return isRenderablePath(pathname, contentPathSet);
+});
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
   .map(

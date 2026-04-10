@@ -1,4 +1,5 @@
-パヒオペディラム２\
+# パヒオペディラム2
+
 9![](1pahiosiroki2.jpg){width="500" height="350"}\
 
 47![](48paphy.jpg){width="500" height="350"}\

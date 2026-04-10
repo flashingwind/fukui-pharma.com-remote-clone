@@ -1,4 +1,5 @@
-パフィオペディラム２\
+# パフィオペディラム2
+
 ![](b2opagta.jpg){width="500" height="350"}\
 
 ![](b2opaubbsw.jpg){width="500" height="350"}\

@@ -1,10 +1,11 @@
-オールドカー\
-１９１０年代東京のタクシー\
+# オールドカー
+
+1910年代東京のタクシー\
 ![](oldcar151.jpg){width="500" height="350"}\
 
 ![](oldcar16.jpg){width="500" height="350"}\
 
-豊橋市１９１０年代\
+豊橋市1910年代\
 ![](oldcar191.jpg){width="500" height="350"}\
 
 ![](oldcar12.jpg){width="500" height="350"}\

@@ -1,4 +1,5 @@
-ファレノプシス\
+# ファレノプシス
+
 ![](kotyouran1.jpg){width="500" height="350"}\
 
 ![](b1ophumg.jpg){width="500" height="350"}\

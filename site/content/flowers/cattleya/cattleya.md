@@ -1,4 +1,4 @@
-<span class="red">カトレア１</span>
+# カトレア0
 
 ![cattyoseue](cattyoseue.jpg){width="500" height="350"}
 

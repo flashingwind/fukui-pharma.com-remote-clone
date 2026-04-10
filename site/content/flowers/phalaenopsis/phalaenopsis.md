@@ -1,4 +1,5 @@
-ファレノプシス\
+# ファレノプシス
+
 8![](2kaizyou2.jpg){width="500" height="350"}\
 
 10![](2kaizyou4.jpg){width="500" height="350"}\

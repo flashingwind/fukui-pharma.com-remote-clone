@@ -1,9 +1,4 @@
----
-title: 2004世界らん展７ 日本大賞は胡蝶蘭（ファレノプシス） | 福井薬局のビタミン健康情報
----
-
-<span style="color: red; font-size: 1.2em;">２００４世界らん展  
-日本大賞は胡蝶蘭（ファレノプシス）</span>
+# その他
 
 ![2004rantenkaizyou](/others/2004rantenkaizyou.jpg)
 
