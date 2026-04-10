@@ -10,7 +10,7 @@ const SITE_URL = 'https://fukui-pharma.com'
 const SITE_NAME = '福井薬局'
 const VITAMIN_MINERAL_URL_SECTION = 'vitamin-mineral'
 const VITAMIN_MINERAL_CONTENT_DIR = 'vitamin-mineral'
-const CONTENT_DIRS = ['vitamin-mineral', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
+const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
 const NUTRIENT_FOOD_SLUGS = new Set([
   'eiyouso', 'ganyuute',
   'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
@@ -21,8 +21,9 @@ const NUTRIENT_FOOD_SLUGS = new Set([
 ])
 const VITAMIN_MINERAL_INFO_SLUGS = new Set([
   'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou',
-  'shyoyou', 'lipoicacid', 'mokuzito', 'mokuzitu', 'suppuse',
+  'lipoicacid', 'mokuzito', 'mokuzitu',
 ])
+const SUPPLEMENT_SLUGS = new Set(['shyoyou', 'suppuse', 'begu', 'be-tagur', 'be-tagur10', 'megafudo'])
 const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka'])
 const SECTION_LABELS = {
   'vitamin-mineral': 'ビタミン・ミネラル',
@@ -32,6 +33,7 @@ const SECTION_LABELS = {
   travel: 'ハワイ旅行',
   others: 'その他',
   publication: '出版',
+  supplement: 'サプリメント',
   shop: '通販',
   access: 'アクセス',
 }
@@ -51,6 +53,9 @@ function isVitaminMineralSlug(slug) {
 }
 function isActiveOxygenSlug(slug) {
   return ACTIVE_OXYGEN_SLUGS.has(slug)
+}
+function isSupplementSlug(slug) {
+  return SUPPLEMENT_SLUGS.has(slug)
 }
 
 function normalizeSectionToContentDir(section) {
@@ -135,6 +140,19 @@ function App() {
   const shouldRedirectToVitaminMineral = !isTop && !section && segments.length === 1 && isVitaminMineralSlug(contentSlug)
   if (shouldRedirectToVitaminMineral) {
     window.location.replace(`/${VITAMIN_MINERAL_URL_SECTION}/${contentSlug}`)
+    return null
+  }
+  if (section === VITAMIN_MINERAL_URL_SECTION && isSupplementSlug(contentSlug)) {
+    window.location.replace(`/supplement/${contentSlug}`)
+    return null
+  }
+  if (section === 'suppliments' && isSupplementSlug(contentSlug)) {
+    window.location.replace(`/supplement/${contentSlug}`)
+    return null
+  }
+  const shouldRedirectToSupplement = !isTop && !section && segments.length === 1 && isSupplementSlug(contentSlug)
+  if (shouldRedirectToSupplement) {
+    window.location.replace(`/supplement/${contentSlug}`)
     return null
   }
   const shouldRedirectToActiveOxygen = !isTop && !section && segments.length === 1 && isActiveOxygenSlug(contentSlug)

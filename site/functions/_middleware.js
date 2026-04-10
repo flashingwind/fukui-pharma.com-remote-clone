@@ -1,5 +1,6 @@
 const CONTENT_DIRS = [
   'vitamin-mineral',
+  'supplement',
   'active-oxygen',
   'flowers',
   'travel',
@@ -18,9 +19,10 @@ const NUTRIENT_FOOD_SLUGS = new Set([
   'coqganyu', 'colingan', 'inosigan',
 ])
 const NUTRI_INFO_SLUGS = new Set([
-  'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou', 'shyoyou', 'lipoicacid',
+  'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou', 'lipoicacid',
 ])
-const VITAMIN_MINERAL_OTHER_SLUGS = new Set(['mokuzito', 'mokuzitu', 'suppuse'])
+const VITAMIN_MINERAL_OTHER_SLUGS = new Set(['mokuzito', 'mokuzitu'])
+const SUPPLEMENT_SLUGS = new Set(['shyoyou', 'suppuse', 'begu', 'be-tagur', 'be-tagur10', 'megafudo'])
 const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka'])
 const VITAMIN_MINERAL_SLUGS = new Set([
   ...NUTRIENT_FOOD_SLUGS,
@@ -28,19 +30,13 @@ const VITAMIN_MINERAL_SLUGS = new Set([
   ...VITAMIN_MINERAL_OTHER_SLUGS,
 ])
 const LEGACY_EXACT_REDIRECTS = {
-  '/index.html': '/',
-  '/index2.html': '/',
-  '/atopic/': '/atopic',
   '/order.html': '/shop/tyuumon',
-  '/skincare.html': '/others/hadautukusisa',
   '/books/mokuzito.html': '/vitamin-mineral/mokuzito',
   '/books/mokuzitu.html': '/vitamin-mineral/mokuzitu',
   '/freeradical/kousanka.html': '/active-oxygen/kousanka',
   '/oldcar/oldcar.html': '/others/oldcar',
-  '/supliments/': '/shop/tyuumon',
-  '/supliments/be-tagur.html': '/shop/tyuumon',
-  '/supliments/be-tagur10.html': '/shop/tyuumon',
-  '/supliments/begu.html': '/shop/tyuumon',
+  '/supliments/': '/supplement/suppuse',
+  '/suppliments/': '/supplement/suppuse',
 }
 
 function redirectTo(url, pathname) {
@@ -112,6 +108,10 @@ export async function onRequest(context) {
     return context.next()
   }
 
+  if (/^\/suplement(\/|$)/i.test(decodedPathname)) {
+    return new Response('Not Found', { status: 404 })
+  }
+
   const exactRedirect = LEGACY_EXACT_REDIRECTS[url.pathname]
   if (exactRedirect) {
     return redirectTo(url, exactRedirect)
@@ -143,7 +143,19 @@ export async function onRequest(context) {
   const normalized = decodedPathname.replace(/^\/+|\/+$/g, '').replace(/\.(htm|html)$/i, '')
   const parts = normalized.split('/').filter(Boolean)
   if (parts.length === 1 && VITAMIN_MINERAL_SLUGS.has(parts[0])) {
+    if (SUPPLEMENT_SLUGS.has(parts[0])) {
+      return redirectTo(url, `/supplement/${parts[0]}`)
+    }
     return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[0]}`)
+  }
+  if (parts.length === 1 && SUPPLEMENT_SLUGS.has(parts[0])) {
+    return redirectTo(url, `/supplement/${parts[0]}`)
+  }
+  if (parts.length === 2 && parts[0] === 'vitamin-mineral' && SUPPLEMENT_SLUGS.has(parts[1])) {
+    return redirectTo(url, `/supplement/${parts[1]}`)
+  }
+  if (parts.length === 2 && parts[0] === 'suppliments' && SUPPLEMENT_SLUGS.has(parts[1])) {
+    return redirectTo(url, `/supplement/${parts[1]}`)
   }
   if (parts.length === 1 && ACTIVE_OXYGEN_SLUGS.has(parts[0])) {
     return redirectTo(url, `/active-oxygen/${parts[0]}`)

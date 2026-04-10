@@ -16,7 +16,8 @@ const FLOWER_2004 = new Set(["2004ran", "cattleya", "cattleyablue", "paphiopedil
 const FLOWER_EXTRA = new Set(["harubotan16"]);
 
 const TRAVEL_SLUGS = new Set(["mauisunset", "hanaumabay", "wikikibeach", "mauibus", "mauisyokubutu", "suizokukan", "hawaibeach"]);
-const SHOP_SLUGS = new Set(["tyuumon", "megafudo", "be-tagur"]);
+const SHOP_SLUGS = new Set(["tyuumon"]);
+const SUPPLEMENT_SLUGS = new Set(["suppuse", "shyoyou", "begu", "be-tagur", "be-tagur10", "megafudo"]);
 const PUBLICATION_SLUGS = new Set(["mokuzitu"]);
 const ACCESS_SLUGS = new Set(["access"]);
 const ATOPIC_SLUGS = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
@@ -48,6 +49,7 @@ const MenuLeft = () => {
     travel: section === "travel" || TRAVEL_SLUGS.has(slug),
     publication: section === "publication" || PUBLICATION_SLUGS.has(slug),
     shop: section === "shop" || SHOP_SLUGS.has(slug),
+    supplement: section === "supplement" || SUPPLEMENT_SLUGS.has(slug),
     access: section === "access" || ACCESS_SLUGS.has(slug),
     nutrientFoods: (section === "vitamin-mineral" && NUTRIENT_FOOD_SLUGS.has(slug)) || NUTRIENT_FOOD_SLUGS.has(slug),
   }));
@@ -155,7 +157,7 @@ const MenuLeft = () => {
           <li><a href="/vitamin-mineral/vitasi4">ビタミンとミネラルの働き（後編）</a></li>
           <li className="menu-subtitle">各論</li>
           <li><a href="/vitamin-mineral/magsiryou">マグネシウムとはどんなものか</a></li>
-          <li><a href="/vitamin-mineral/tetusiryou">鉄とはどんなものか</a></li>
+          <li>鉄とはどんなものか</li>
           <li><a href="/vitamin-mineral/serensir">セレンの働き（詳細）</a></li>
           <li><a href="/vitamin-mineral/lipoicacid">アルファリポ酸</a></li>
         </ul>
@@ -167,6 +169,21 @@ const MenuLeft = () => {
       {openSection.activeOxygen && (
         <ul className="menu-group">
           <li><a href="/active-oxygen/kousanka">活性酸素(フリーラジカル)が老化や成人病の原因に?</a></li>
+        </ul>
+      )}
+
+      {/* サプリメント */}
+      <div className="menu-section" onClick={() => toggleSection('supplement')} style={{cursor:'pointer'}}>
+        サプリメント {openSection.supplement ? '▼' : '▶'}
+      </div>
+      {openSection.supplement && (
+        <ul className="menu-group">
+          <li><a href="/supplement/shyoyou">所要量、RDA,DV,ODAの比較表</a></li>
+          <li><a href="/supplement/suppuse">サプリメントの摂り方</a></li>
+          <li><a href="/supplement/begu">ベータグルカンとは</a></li>
+          <li><a href="/supplement/be-tagur">ベータグルカン</a></li>
+          <li><a href="/supplement/be-tagur10">ベータグルカン（詳細）</a></li>
+          <li><a href="/supplement/megafudo">メガフードアルファー</a></li>
         </ul>
       )}
 
@@ -195,19 +212,6 @@ const MenuLeft = () => {
           <li><a href="/vitamin-mineral/mokuzitu">『薬剤師がすすめるビタミン・ミネラルの使い方（第2版）』</a></li>
         </ul>
       )}
-
-      {/* サプリメント */}
-      {/*
-      <div className="menu-section" onClick={() => toggleSection('shop')} style={{cursor:'pointer'}}>
-        サプリメント {openSection.shop ? '▼' : '▶'}
-      </div>
-      {openSection.shop && (
-        <ul className="menu-group">
-          <li><a href="/megafudo">メガフードアルファ</a></li>
-          <li><a href="/be-tagur">ベータグルカン</a></li>
-        </ul>
-      )}
-      */}
 
       {/* 福井薬局 */}
         {/*<div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>

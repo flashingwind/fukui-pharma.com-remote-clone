@@ -12,14 +12,14 @@
 <p><img src="/others/sinhon5.jpg" width="35" height="50" /> <a href="books/mokuzito.md">新版 薬剤師がすすめるビタミン・ミネラルのとり方</a> (→<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)</p>
 <p></p>
 <p><img src="/others/betaglucan35.jpg" width="50" height="35" /></p>
-<p><a href="supliments/begu.md">○ベータグルカンとは</a></p>
-<p><a href="suppuse.md">○サプリメントの摂り方</a></p>
+<p><a href="supplement/begu.md">○ベータグルカンとは</a></p>
+<p><a href="supplement/suppuse.md">○サプリメントの摂り方</a></p>
 <p><a href="hadautukusisa.md">○肌を美しくするケアと栄養</a></p>
 <p></p>
 <p><img src="/others/tukaikata3.gif" width="35" height="50" /> <a href="books/mokuzitu.md">薬剤師がすすめるビタミン・ミネラルの使い方(第2版)</a> (→<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)</p>
-<p><img src="/others/megasin.gif" width="84" height="150" /> <a href="megafudo.md">○メガフードアルファー</a> (栄養補助食品)</p>
+<p><img src="/others/megasin.gif" width="84" height="150" /> <a href="supplement/megafudo.md">○メガフードアルファー</a> (栄養補助食品)</p>
 <p><a href="atopic/thbalance.md">○Th1・Th2バランスの図表−Th1を促進、Th2を抑制するには</a></p>
-<p><a href="nutri/shyoyou.md">○所要量、RDA,DV,ODAの比較表</a></p>
+<p><a href="supplement/shyoyou.md">○所要量、RDA,DV,ODAの比較表</a></p>
 <p><a href="atopic/menekikihon.md">○免疫基本応答の図表</a></p>
 </div>
 
@@ -36,8 +36,8 @@
     - [セレンの働き、必要な症状、活性酸素の生成と消去の図表](nutri/serensir.md)
     - [マグネシウムとは、働き、必要な症状](nutri/magsiryou.md)
 3. お薦めサプリメント
-    - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](supliments/be-tagur10.md)(栄養補助食品)
-    - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](megafudo.md)(栄養補助食品)
+    - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](supplement/be-tagur10.md)(栄養補助食品)
+    - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](supplement/megafudo.md)(栄養補助食品)
 4. <span class="red">体内の活性酸素</span>
     1. [活性酸素(フリーラジカル)が老化や成人病の原因に?](active-oxygen/kousanka.md)
     2. [フリーラジカル及び活性酸素](active-oxygen/kousanka.md#hyou)
@@ -80,7 +80,7 @@
 <tr>
 <td data-bgcolor="#F5DEB3" data-valign="top"></td>
 <td data-bgcolor="#F5DEB3" data-valign="top"></td>
-<td data-bgcolor="#F5DEB3" data-valign="top"><a href="supliments/be-tagur.md"><img src="/others/betasin.gif" width="83" height="150" /></a></td>
+<td data-bgcolor="#F5DEB3" data-valign="top"><a href="supplement/be-tagur.md"><img src="/others/betasin.gif" width="83" height="150" /></a></td>
 </tr>
 <tr>
 <td>新版 薬剤師がすすめるビタミン・ミネラルのとり方<br />

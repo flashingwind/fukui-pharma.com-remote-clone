@@ -89,8 +89,9 @@ const VITAMIN_MINERAL_SLUGS = new Set([
   "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
   "coqganyu", "colingan", "inosigan",
   "eiyou", "vitasi2", "vitasi3", "vitasi4", "serensir", "magsiryou", "aensiryou", "tetusiryou",
-  "shyoyou", "lipoicacid", "mokuzito", "mokuzitu", "suppuse",
+  "lipoicacid", "mokuzito", "mokuzitu",
 ]);
+const SUPPLEMENT_SLUGS = new Set(["shyoyou", "suppuse", "begu", "be-tagur", "be-tagur10", "megafudo"]);
 const ACTIVE_OXYGEN_SLUGS = new Set(["kousanka"]);
 
 const resolveContentLinkPath = (path, loadedSection) => {
@@ -99,6 +100,9 @@ const resolveContentLinkPath = (path, loadedSection) => {
   }
   if (VITAMIN_MINERAL_SLUGS.has(path)) {
     return `/vitamin-mineral/${path}`;
+  }
+  if (SUPPLEMENT_SLUGS.has(path)) {
+    return `/supplement/${path}`;
   }
   if (ACTIVE_OXYGEN_SLUGS.has(path)) {
     return `/active-oxygen/${path}`;
@@ -221,7 +225,7 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus }) => {
                 );
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
-              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/supplement", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
               const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
               return <ClickableImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },
