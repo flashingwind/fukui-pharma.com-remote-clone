@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /content/
-
-Sitemap: https://fukui-pharma.com/sitemap.xml
