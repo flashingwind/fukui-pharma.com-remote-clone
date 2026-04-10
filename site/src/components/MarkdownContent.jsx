@@ -67,6 +67,20 @@ const ImgWithFallback = ({ src, alt, dirs, ...props }) => {
   return <img src={resolvedSrc} alt={alt} onError={handleError} {...props} />;
 };
 
+const ClickableImgWithFallback = ({ src, alt, dirs, ...props }) => {
+  const [idx, setIdx] = useState(0);
+  const resolvedSrc = `${dirs[idx]}/${src}`;
+  const handleError = () => {
+    if (idx < dirs.length - 1) setIdx(i => i + 1);
+  };
+
+  return (
+    <a className="markdown-image-link" href={resolvedSrc} target="_blank" rel="noreferrer">
+      <img src={resolvedSrc} alt={alt} onError={handleError} {...props} />
+    </a>
+  );
+};
+
 const VITAMIN_MINERAL_SLUGS = new Set([
   "eiyouso", "ganyuute",
   "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
@@ -92,7 +106,7 @@ const resolveContentLinkPath = (path, loadedSection) => {
   return `${loadedSection ? `/${loadedSection}` : ""}/${path}`;
 };
 
-const MarkdownContent = ({ file, fileCandidates }) => {
+const MarkdownContent = ({ file, fileCandidates, onResolveStatus }) => {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
   const [loadedPath, setLoadedPath] = useState("");
@@ -126,6 +140,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
             );
             setContent(normalizedText);
             setLoadedPath(path);
+            onResolveStatus?.("index,follow");
           }
           return;
         } catch {
@@ -134,6 +149,7 @@ const MarkdownContent = ({ file, fileCandidates }) => {
       }
       if (!cancelled) {
         setError("このページはありません。");
+        onResolveStatus?.("noindex,follow");
       }
     };
 
@@ -198,12 +214,16 @@ const MarkdownContent = ({ file, fileCandidates }) => {
             },
             img: ({ src = "", alt = "", ...props }) => {
               if (src.startsWith("/") || src.startsWith("http")) {
-                return <img src={src} alt={alt} {...props} />;
+                return (
+                  <a className="markdown-image-link" href={src} target="_blank" rel="noreferrer">
+                    <img src={src} alt={alt} {...props} />
+                  </a>
+                );
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
               const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
               const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
-              return <ImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
+              return <ClickableImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },
           }}
         >

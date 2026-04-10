@@ -16,11 +16,11 @@
 
     ***
 
-- <a id="serentuk"></a>セレンはどんな症状で有効に働くか ![セレンはどんな症状で有効に働くか](serentuka.gif)
+- <a id="serentuk"></a>セレンはどんな症状で有効に働くか ![セレンはどんな症状で有効に働くか](minerals/serentuka.gif)
 
     ***
 
-- <a id="furiiraz"></a>活性酸素の発生と消去 ![活性酸素の発生と消去](furiiraz.gif)
+- <a id="furiiraz"></a>活性酸素の発生と消去 ![活性酸素の発生と消去](active-oxyzen/furiiraz.gif)
 
     ***
 

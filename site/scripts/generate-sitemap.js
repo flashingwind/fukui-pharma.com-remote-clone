@@ -18,7 +18,7 @@ function walk(dir, ext = '.md', baseUrl = '') {
       results = results.concat(walk(filePath, ext, path.join(baseUrl, file)));
     } else if (file.endsWith(ext)) {
       const rel = path.relative(CONTENT_DIR, filePath).replace(/\\/g, '/');
-      const url = `${SITE_URL}/${rel.replace(/\.md$/, '.html')}`;
+      const url = `${SITE_URL}/${rel.replace(/\.md$/, '')}`;
       results.push(url);
     }
   });

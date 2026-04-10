@@ -117,7 +117,7 @@
 
 ---
 
-<a id="zuhyou"></a>活性酸素の生成と消去図表 ![活性酸素の生成と消去図表](furiiraz.gif)
+<a id="zuhyou"></a>活性酸素の生成と消去図表 ![活性酸素の生成と消去図表](active-oxyzen/furiiraz.gif)
 
 ---
 

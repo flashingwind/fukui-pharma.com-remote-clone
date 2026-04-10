@@ -37,6 +37,7 @@ const MenuLeft = () => {
   const section = segments.length > 1 ? segments[0] : "";
   const slug = segments.length === 0 ? "" : segments[segments.length - 1];
   const inFlower = section === "flowers" || FLOWER_2007.has(slug) || FLOWER_2006.has(slug) || FLOWER_2005.has(slug) || FLOWER_2004.has(slug) || FLOWER_EXTRA.has(slug);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // アコーディオン開閉状態
   const [openSection, setOpenSection] = useState(() => ({
@@ -70,12 +71,30 @@ const MenuLeft = () => {
     setOpenYear((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  const toggleMobileMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
-    <aside className="menu-left">
-      <a className="menu-header-link" href="/">
-        <img className="menu-header-image" src="/taitorf.gif" alt="福井薬局" />
-      </a>
-      <nav className="menu-left-nav">
+    <aside className={`menu-left ${isMenuOpen ? 'menu-left-open' : ''}`}>
+      <div className="menu-left-header">
+        <a className="menu-header-link" href="/">
+          <img className="menu-header-image" src="/taitorf.gif" alt="福井薬局" />
+        </a>
+        <button
+          type="button"
+          className="menu-left-toggle"
+          onClick={toggleMobileMenu}
+          aria-expanded={isMenuOpen}
+          aria-controls="menu-left-navigation"
+          aria-label="メニューを開閉"
+        >
+          <span className="menu-left-toggle-line" />
+          <span className="menu-left-toggle-line" />
+          <span className="menu-left-toggle-line" />
+        </button>
+      </div>
+      <nav className="menu-left-nav" id="menu-left-navigation">
       {/* 栄養素を多く含む食品 */}
       <div className="menu-section" onClick={() => toggleSection('nutrientFoods')} style={{cursor:'pointer'}}>
         栄養素を多く含む食品 {openSection.nutrientFoods ? '▼' : '▶'}

@@ -47,6 +47,23 @@
   text-decoration: underline;
 }
 
+.markdown-image-link {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.markdown-body img {
+  display: block;
+  max-width: min(100%, 420px);
+  height: auto;
+  margin: 12px auto;
+  border: 0;
+}
+
+.markdown-image-link img {
+  margin: 0;
+}
+
 .markdown-body pre {
   white-space: pre;
   overflow-x: auto;
@@ -116,4 +133,15 @@
   display: block;
   max-width: 100%;
   overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .markdown-body {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .markdown-body img {
+    max-width: 100%;
+  }
 }

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import MenuLeft from './components/MenuLeft'
 import MarkdownContent from './components/MarkdownContent'
 import flowersIndex from './generated/flowersIndex.js'
@@ -109,7 +109,7 @@ function buildSeoMeta(section, slug, isTop) {
   const canonicalUrl = `${SITE_URL}${preferredPath}`
   const sectionLabel = section ? SECTION_LABELS[section] || section : ''
   const pageTitle = isTop
-    ? `${SITE_NAME} | ビタミン・ミネラル情報`
+    ? `${SITE_NAME} | ビタミン・ミネラル、花の写真、旅行記`
     : `${sectionLabel ? `${sectionLabel} - ` : ''}${slug} | ${SITE_NAME}`
   const description = isTop
     ? '福井薬局の公式サイト。ビタミン・ミネラル・栄養情報、花の写真、旅行記などを掲載。'
@@ -118,6 +118,7 @@ function buildSeoMeta(section, slug, isTop) {
 }
 
 function App() {
+  const [seoRobots, setSeoRobots] = useState('index,follow')
   const decodedPathname = safeDecodePathname(window.location.pathname)
   const rawPath = decodedPathname.replace(/^\/+|\/+$/g, '')
   const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '')
@@ -157,26 +158,29 @@ function App() {
     document.documentElement.lang = 'ja'
     document.title = pageTitle
     ensureMeta('name', 'description', description)
+    ensureMeta('name', 'robots', seoRobots)
     ensureMeta('property', 'og:type', 'website')
     ensureMeta('property', 'og:site_name', SITE_NAME)
     ensureMeta('property', 'og:title', pageTitle)
     ensureMeta('property', 'og:description', description)
     ensureMeta('property', 'og:url', canonicalUrl)
     ensureMeta('property', 'og:image', `${SITE_URL}/taitorf.gif`)
+    ensureMeta('property', 'og:image:alt', SITE_NAME)
     ensureMeta('name', 'twitter:card', 'summary')
     ensureMeta('name', 'twitter:title', pageTitle)
     ensureMeta('name', 'twitter:description', description)
+    ensureMeta('name', 'twitter:image', `${SITE_URL}/taitorf.gif`)
     ensureCanonical(canonicalUrl)
-  }, [effectiveSection, contentSlug, isTop])
+  }, [effectiveSection, contentSlug, isTop, seoRobots])
 
   return (
     <div className="app-shell">
       <MenuLeft />
       <section id="center">
         {isTop ? (
-          <MarkdownContent file="/content/others/index.md" />
+          <MarkdownContent file="/content/others/index.md" onResolveStatus={setSeoRobots} />
         ) : (
-          <MarkdownContent fileCandidates={candidates} />
+          <MarkdownContent fileCandidates={candidates} onResolveStatus={setSeoRobots} />
         )}
         <footer className="site-footer">
           <div className="footer-title">福井薬局</div>
