@@ -7,7 +7,7 @@ import './styles/MenuLeft.css'
 import './styles/MarkdownContent.css'
 import './App.css'
 
-const SITE_URL = 'https://www.fukui-pharma.com'
+const SITE_URL = 'https://fukui-pharma.com'
 const SITE_NAME = '福井薬局'
 const VITAMIN_MINERAL_CONTENT_DIR = 'vitamin-mineral'
 const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
