@@ -58,20 +58,76 @@ const extractText = (node) => {
   return "";
 };
 
+const extractFirstHeading = (markdown = "") => {
+  const matched = markdown.match(/^\s*#\s+(.+)$/m);
+  if (!matched) return "";
+  return matched[1]
+    .replace(/\{[^}]*\}\s*$/g, "")
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[\*_`#]/g, "")
+    .trim();
+};
+
+const buildSourceVariants = (src = "") => {
+  const variants = [src];
+  variants.push(encodeURI(src));
+  const extMatch = src.match(/\.([a-zA-Z0-9]+)$/);
+  if (extMatch) {
+    const ext = extMatch[1];
+    const toggled = ext === ext.toLowerCase() ? ext.toUpperCase() : ext.toLowerCase();
+    variants.push(src.replace(/\.([a-zA-Z0-9]+)$/, `.${toggled}`));
+  }
+  return [...new Set(variants.filter(Boolean))];
+};
+
+const FLOWER_FALLBACK_DIRS = [
+  "/flowers/2004",
+  "/flowers/2006",
+  "/flowers/2007",
+  "/flowers/botan",
+  "/flowers/cattleya",
+  "/flowers/dendrobium",
+  "/flowers/lycaste",
+  "/flowers/masdevallia",
+  "/flowers/others",
+  "/flowers/paphio",
+  "/flowers/phalaenopsis",
+  "/flowers/rose",
+];
+
 const ImgWithFallback = ({ src, alt, dirs, ...props }) => {
-  const [idx, setIdx] = useState(0);
-  const resolvedSrc = `${dirs[idx]}/${src}`;
+  const sourceVariants = useMemo(() => buildSourceVariants(src), [src]);
+  const [dirIdx, setDirIdx] = useState(0);
+  const [srcIdx, setSrcIdx] = useState(0);
+  const resolvedSrc = `${dirs[dirIdx]}/${sourceVariants[srcIdx]}`;
   const handleError = () => {
-    if (idx < dirs.length - 1) setIdx(i => i + 1);
+    if (srcIdx < sourceVariants.length - 1) {
+      setSrcIdx((i) => i + 1);
+      return;
+    }
+    if (dirIdx < dirs.length - 1) {
+      setDirIdx((i) => i + 1);
+      setSrcIdx(0);
+    }
   };
   return <img src={resolvedSrc} alt={alt} onError={handleError} {...props} />;
 };
 
 const ClickableImgWithFallback = ({ src, alt, dirs, ...props }) => {
-  const [idx, setIdx] = useState(0);
-  const resolvedSrc = `${dirs[idx]}/${src}`;
+  const sourceVariants = useMemo(() => buildSourceVariants(src), [src]);
+  const [dirIdx, setDirIdx] = useState(0);
+  const [srcIdx, setSrcIdx] = useState(0);
+  const resolvedSrc = `${dirs[dirIdx]}/${sourceVariants[srcIdx]}`;
   const handleError = () => {
-    if (idx < dirs.length - 1) setIdx(i => i + 1);
+    if (srcIdx < sourceVariants.length - 1) {
+      setSrcIdx((i) => i + 1);
+      return;
+    }
+    if (dirIdx < dirs.length - 1) {
+      setDirIdx((i) => i + 1);
+      setSrcIdx(0);
+    }
   };
 
   return (
@@ -110,7 +166,7 @@ const resolveContentLinkPath = (path, loadedSection) => {
   return `${loadedSection ? `/${loadedSection}` : ""}/${path}`;
 };
 
-const MarkdownContent = ({ file, fileCandidates, onResolveStatus }) => {
+const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeading }) => {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
   const [loadedPath, setLoadedPath] = useState("");
@@ -144,6 +200,7 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus }) => {
             );
             setContent(normalizedText);
             setLoadedPath(path);
+            onResolveHeading?.(extractFirstHeading(normalizedText) || "");
             onResolveStatus?.("index,follow");
           }
           return;
@@ -153,6 +210,7 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus }) => {
       }
       if (!cancelled) {
         setError("このページはありません。");
+        onResolveHeading?.("");
         onResolveStatus?.("noindex,follow");
       }
     };
@@ -226,7 +284,8 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus }) => {
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
               const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/supplement", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
-              const dirs = [primaryDir, ...fallbackDirs.filter(d => d !== primaryDir)];
+              const flowerDirs = loadedSection === "flowers" ? FLOWER_FALLBACK_DIRS : [];
+              const dirs = [...new Set([primaryDir, ...flowerDirs, ...fallbackDirs])];
               return <ClickableImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;
             },
           }}

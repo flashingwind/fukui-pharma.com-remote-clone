@@ -83,13 +83,15 @@ function getPreferredPath(section, slug, isTop) {
   return `/${slug}`
 }
 
-function buildSeoMeta(section, slug, isTop) {
+function buildSeoMeta(section, slug, isTop, headingText) {
   const preferredPath = getPreferredPath(section, slug, isTop)
   const canonicalUrl = `${SITE_URL}${preferredPath}`
+  const baseTitleSuffix = '福井薬局 | ビタミン・ミネラル情報'
   const sectionLabel = section ? SECTION_LABELS[section] || section : ''
+  const heading = (headingText || '').trim()
   const pageTitle = isTop
-    ? `${SITE_NAME} | ビタミン・ミネラル、花の写真、旅行記`
-    : `${sectionLabel ? `${sectionLabel} - ` : ''}${slug} | ${SITE_NAME}`
+    ? baseTitleSuffix
+    : `${heading || (sectionLabel ? `${sectionLabel} - ${slug}` : slug)} ${baseTitleSuffix}`
   const description = isTop
     ? '福井薬局の公式サイト。ビタミン・ミネラル・栄養情報、花の写真、旅行記などを掲載。'
     : `福井薬局の${sectionLabel || 'コンテンツ'}ページ（${slug}）。`
@@ -98,6 +100,7 @@ function buildSeoMeta(section, slug, isTop) {
 
 function App() {
   const [seoRobots, setSeoRobots] = useState('index,follow')
+  const [seoHeading, setSeoHeading] = useState('')
   const decodedPathname = safeDecodePathname(window.location.pathname)
   const rawPath = decodedPathname.replace(/^\/+|\/+$/g, '')
   const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '')
@@ -129,7 +132,7 @@ function App() {
   const effectiveSection = section || (CONTENT_DIRS.includes(baseSlug) ? baseSlug : null)
 
   useEffect(() => {
-    const { pageTitle, description, canonicalUrl } = buildSeoMeta(effectiveSection, contentSlug, isTop)
+    const { pageTitle, description, canonicalUrl } = buildSeoMeta(effectiveSection, contentSlug, isTop, seoHeading)
     document.documentElement.lang = 'ja'
     document.title = pageTitle
     ensureMeta('name', 'description', description)
@@ -146,16 +149,24 @@ function App() {
     ensureMeta('name', 'twitter:description', description)
     ensureMeta('name', 'twitter:image', `${SITE_URL}/taitorf.gif`)
     ensureCanonical(canonicalUrl)
-  }, [effectiveSection, contentSlug, isTop, seoRobots])
+  }, [effectiveSection, contentSlug, isTop, seoRobots, seoHeading])
 
   return (
     <div className="app-shell">
       <MenuLeft />
       <section id="center">
         {isTop ? (
-          <MarkdownContent file="/content/others/index.md" onResolveStatus={setSeoRobots} />
+          <MarkdownContent
+            file="/content/others/index.md"
+            onResolveStatus={setSeoRobots}
+            onResolveHeading={setSeoHeading}
+          />
         ) : (
-          <MarkdownContent fileCandidates={candidates} onResolveStatus={setSeoRobots} />
+          <MarkdownContent
+            fileCandidates={candidates}
+            onResolveStatus={setSeoRobots}
+            onResolveHeading={setSeoHeading}
+          />
         )}
         <footer className="site-footer">
           <div className="footer-title">福井薬局</div>
