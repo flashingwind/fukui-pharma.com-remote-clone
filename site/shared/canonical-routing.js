@@ -12,31 +12,65 @@ export const CANONICAL_CONTENT_SECTIONS = [
   'access',
 ]
 
-const SECTION_ALIAS_GROUPS = [
-  { canonical: 'supplement', aliases: ['suppliments'] },
-  { canonical: 'vitamin-mineral', aliases: ['nutri', 'books', 'vitamins', 'minerals', 'nutrient-foods'] },
-  { canonical: 'travel', aliases: ['hawaii'] },
-  { canonical: 'active-oxygen', aliases: ['freeradical'] },
+const SECTION_NAME_GROUPS = [
+  { left: ['suppliments'], right: ['supplement'] },
+  { left: ['nutri', 'books', 'vitamins', 'minerals', 'nutrient-foods'], right: ['vitamin-mineral'] },
+  { left: ['hawaii'], right: ['travel'] },
+  { left: ['freeradical'], right: ['active-oxygen'] },
 ]
 
-// Left-side (alias) names are authoritative. First definition wins on duplicates.
+function resolvePreferredGroupSide(group) {
+  // When both sides have the same cardinality, prefer left-side naming.
+  if (group.left.length === group.right.length) {
+    return 'left'
+  }
+  return group.left.length > group.right.length ? 'left' : 'right'
+}
+
+function resolveCanonicalTarget(group) {
+  // For 1:1 pairs, always prefer left-side naming.
+  if (group.left.length === 1 && group.right.length === 1) {
+    return group.left[0]
+  }
+  return group.right[0]
+}
+
+// Left-side entries are authoritative keys. First definition wins on duplicates.
 export const SECTION_ALIASES = Object.freeze(
-  SECTION_ALIAS_GROUPS.reduce((acc, group) => {
-    for (const alias of group.aliases) {
+  SECTION_NAME_GROUPS.reduce((acc, group) => {
+    const primaryTarget = resolveCanonicalTarget(group)
+    for (const alias of group.left) {
       if (!acc[alias]) {
-        acc[alias] = group.canonical
+        acc[alias] = primaryTarget
+      }
+    }
+    for (const canonicalName of group.right) {
+      if (!acc[canonicalName]) {
+        acc[canonicalName] = primaryTarget
       }
     }
     return acc
   }, {})
 )
 
-// Reverse index is useful when canonical-side entries become the larger maintenance surface.
+// Right-side index supports the opposite maintenance direction (many-right or many-left).
 export const ALIASES_BY_CANONICAL = Object.freeze(
-  SECTION_ALIAS_GROUPS.reduce((acc, group) => {
-    acc[group.canonical] = [...group.aliases]
+  SECTION_NAME_GROUPS.reduce((acc, group) => {
+    for (const canonicalName of group.right) {
+      if (!acc[canonicalName]) {
+        acc[canonicalName] = []
+      }
+      acc[canonicalName].push(...group.left)
+    }
     return acc
   }, {})
+)
+
+export const PREFERRED_SECTION_NAMES = Object.freeze(
+  SECTION_NAME_GROUPS.map((group) => {
+    const preferredSide = resolvePreferredGroupSide(group)
+    return preferredSide === 'left' ? group.left[0] : group.right[0]
+  })
 )
 
 export function getCanonicalPathFromAlias(parts) {

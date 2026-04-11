@@ -95,9 +95,16 @@ async function contentExistsForSlug(slug, requestUrl, env) {
 export async function onRequest(context) {
   const url = new URL(context.request.url)
   const decodedPathname = safeDecodePathname(url.pathname)
+  const canonicalHost = 'www.fukui-pharma.com'
 
-  // This rule is requested for the production apex domain only.
-  if (url.hostname !== 'fukui-pharma.com') {
+  // Keep www as the single canonical host for search engines.
+  if (url.hostname === 'fukui-pharma.com') {
+    const redirectUrl = new URL(url.toString())
+    redirectUrl.hostname = canonicalHost
+    return Response.redirect(redirectUrl.toString(), 301)
+  }
+
+  if (url.hostname !== canonicalHost) {
     return context.next()
   }
 
