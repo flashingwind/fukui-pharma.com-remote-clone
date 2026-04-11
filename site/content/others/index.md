@@ -26,26 +26,26 @@
 <h2 class="top-menu-title">メニュー</h2>
 
 1. ビタミン・ミネラル
-    1. <span class="red">健康を維持</span>したり、<span class="red">病気の回復</span>にはなぜ[ビタミン・ミネラルが必要](nutri/vitasi2.md)なのでしょうか?
-    2. 体内の<span class="red">代謝の潤滑油</span> と言われる[ビタミン・ミネラルの働き](nutri/vitasi4.md)とは
-    3. <span class="red">ビタミン、ミネラルの不足症状と</span>、[<span class="red">症状改善に</span>選びたい栄養素](nutri/eiyou.md)
-    4. <span class="red">ビタミン、ミネラルの豊富な</span>[食品を選ぶ](nutri/eiyouso.md)
-    5. ビタミン、ミネラルの不足症状、含有食品グラフなど: <span class="red">『薬剤師がすすめるビタミン・ミネラルのとり方』</span>([目次](books/mokuzito.md)、<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)に掲載
-    6. サプリメントとして、ビタミンやミネラルを摂りたい症状など: <span class="red">『薬剤師がすすめるビタミン・ミネラルの使い方(第2版)』</span>([目次](books/mokuzitu.md)、<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)に掲載
+    1. <span class="red">健康を維持</span>したり、<span class="red">病気の回復</span>にはなぜ[ビタミン・ミネラルが必要](nutri/vitasi2)なのでしょうか?
+    2. 体内の<span class="red">代謝の潤滑油</span> と言われる[ビタミン・ミネラルの働き](nutri/vitasi4)とは
+    3. <span class="red">ビタミン、ミネラルの不足症状と</span>、[<span class="red">症状改善に</span>選びたい栄養素](nutri/eiyou)
+    4. <span class="red">ビタミン、ミネラルの豊富な</span>[食品を選ぶ](nutri/eiyouso)
+    5. ビタミン、ミネラルの不足症状、含有食品グラフなど: <span class="red">『薬剤師がすすめるビタミン・ミネラルのとり方』</span>([目次](books/mokuzito)、<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)に掲載
+    6. サプリメントとして、ビタミンやミネラルを摂りたい症状など: <span class="red">『薬剤師がすすめるビタミン・ミネラルの使い方(第2版)』</span>([目次](books/mokuzitu)、<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)に掲載
 2. ミネラル特集
-    - [セレンの働き、必要な症状、活性酸素の生成と消去の図表](nutri/serensir.md)
-    - [マグネシウムとは、働き、必要な症状](nutri/magsiryou.md)
+    - [セレンの働き、必要な症状、活性酸素の生成と消去の図表](nutri/serensir)
+    - [マグネシウムとは、働き、必要な症状](nutri/magsiryou)
 3. お薦めサプリメント
-    - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](supplement/be-tagur10.md)(栄養補助食品)
-    - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](supplement/megafudo.md)(栄養補助食品)
+    - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](supplement/be-tagur10)(栄養補助食品)
+    - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](supplement/megafudo)(栄養補助食品)
 4. <span class="red">体内の活性酸素</span>
-    1. [活性酸素(フリーラジカル)が老化や成人病の原因に?](active-oxygen/kousanka.md)
+    1. [活性酸素(フリーラジカル)が老化や成人病の原因に?](active-oxygen/kousanka)
     2. [フリーラジカル及び活性酸素](active-oxygen/kousanka.md#hyou)
     3. [体内抗酸化物質がなぜ消耗するのか](active-oxygen/kousanka.md#heru)
     4. [活性酸素の生成と消去の図表](active-oxygen/kousanka.md#zuhyou)
     5. [分子で示す活性酸素の生成と変換](active-oxygen/kousanka.md#zuhyou2)
 5. <span class="red">免疫応答</span>
-    1. [免疫とは、免疫を受け持つ細胞](atopic/meneki.md)
+    1. [免疫とは、免疫を受け持つ細胞](atopic/meneki)
     2. [血液中の細胞、図表](atopic/meneki.md#ketueki)
     3. [免疫低下の原因、免疫を高めるには](atopic/meneki.md#mentei)
     4. [免疫の働きとビタミン](atopic/meneki.md#menbita)
@@ -107,67 +107,67 @@
 
 ### 2006世界らん展
 
-[日本大賞はマスデバリア](flowers/2006ranten.md)
-[パフィオペディラム](flowers/2006paphio.md)
-[カトレア](flowers/2006cattleya.md)
-[リカステ](flowers/2006lycaste11.md)
+[日本大賞はマスデバリア](flowers/2006ranten)
+[パフィオペディラム](flowers/2006paphio)
+[カトレア](flowers/2006cattleya)
+[リカステ](flowers/2006lycaste11)
 
 ### 2005世界らん展
 
-[日本大賞はデンドロビウム](flowers/kaizyou.md)
-[パフィオペディラム1](flowers/paphio101.md)
-[パフィオペディラム2](flowers/paphio202.md)
-[パフィオペディラム3](flowers/paphio103.md)
-[カトレア1](flowers/cattleya1.md)
-[カトレア2](flowers/cattleya22.md)
-[リカステ](flowers/lycaste1.md)
-[ファレノプシス](flowers/phalaenopsis.md)
-[デンドロビウム](flowers/dendrobiumu.md)
-[シンビ・マスダ・フラグ](flowers/masdevallia.md)
+[日本大賞はデンドロビウム](flowers/kaizyou)
+[パフィオペディラム1](flowers/paphio101)
+[パフィオペディラム2](flowers/paphio202)
+[パフィオペディラム3](flowers/paphio103)
+[カトレア1](flowers/cattleya1)
+[カトレア2](flowers/cattleya22)
+[リカステ](flowers/lycaste1)
+[ファレノプシス](flowers/phalaenopsis)
+[デンドロビウム](flowers/dendrobiumu)
+[シンビ・マスダ・フラグ](flowers/masdevallia)
 
 2004世界らん展
 
-[日本大賞は胡蝶蘭](flowers/sonota.md)
+[日本大賞は胡蝶蘭](flowers/sonota)
 
-[カトレア1](flowers/cattleya.md)
+[カトレア1](flowers/cattleya)
 
-[カトレア2](flowers/cattleyablue.md)
+[カトレア2](flowers/cattleyablue)
 
-[パフィオペディラム1](flowers/paphiopedilum.md)
+[パフィオペディラム1](flowers/paphiopedilum)
 
-[パフィオペディラム2](flowers/paphiopedilum2.md)
+[パフィオペディラム2](flowers/paphiopedilum2)
 
-[ファレノプシス](flowers/phalaenopsis4.md)
+[ファレノプシス](flowers/phalaenopsis4)
 
-[デンドロビウム](flowers/dendrobiumnew.md)
+[デンドロビウム](flowers/dendrobiumnew)
 
-[リカステ](flowers/lycasteNew.md)
+[リカステ](flowers/lycasteNew)
 
 ### ぼたん
 
-[上野公園ぼたん展](flowers/harubotan16.md)
+[上野公園ぼたん展](flowers/harubotan16)
 
 ### バラ
 
-[日本橋高島屋バラ展](flowers/takasimayabaraten.md)
+[日本橋高島屋バラ展](flowers/takasimayabaraten)
 
-### [明治、大正期の車](oldcar/oldcar.md)
+### [明治、大正期の車](oldcar/oldcar)
 
 ### ハワイ旅行
 
-[マウイ島カアナパリのサンセット・虹・夕暮れ](hawaii/mauisunset.md)
+[マウイ島カアナパリのサンセット・虹・夕暮れ](hawaii/mauisunset)
 
-[オアフ島ハナウマ湾全景](hawaii/hanaumabay.md)
+[オアフ島ハナウマ湾全景](hawaii/hanaumabay)
 
-[オアフ島ワイキキビーチ・カラカウア通り](hawaii/wikikibeach.md)
+[オアフ島ワイキキビーチ・カラカウア通り](hawaii/wikikibeach)
 
-[マウイ島カアナパリのバス、ホエールビレッジ前](hawaii/mauibus.md)
+[マウイ島カアナパリのバス、ホエールビレッジ前](hawaii/mauibus)
 
-[マウイ島植物園バナナの花・しょうがの花](hawaii/mauisyokubutu.md)
+[マウイ島植物園バナナの花・しょうがの花](hawaii/mauisyokubutu)
 
-[マウイ島水族館えい・熱帯魚](hawaii/suizokukan.md)
+[マウイ島水族館えい・熱帯魚](hawaii/suizokukan)
 
-[ワイキキビーチとマウイビーチ](hawaii/hawaibeach.md)
+[ワイキキビーチとマウイビーチ](hawaii/hawaibeach)
 
 ---
 
