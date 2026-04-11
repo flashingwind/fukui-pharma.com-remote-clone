@@ -1,34 +1,9 @@
-const CONTENT_DIRS = [
-  'vitamin-mineral',
-  'supplement',
-  'active-oxygen',
-  'flowers',
-  'travel',
-  'others',
-  'publication',
-  'shop',
-  'access',
-]
-const VITAMIN_MINERAL_URL_SECTION = 'vitamin-mineral'
-const NUTRIENT_FOOD_SLUGS = new Set([
-  'eiyouso', 'ganyuute',
-  'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
-  'b5ganyuu', 'b6ganyuu', 'b12ganyu', 'yousanga', 'biotinga',
-  'carugany', 'magganyu', 'karigany', 'aenganyu', 'tetugany', 'douganyu', 'cromugan', 'mangagan',
-  'yo-dogan', 'serengan', 'moribuga', 'vanagany', 'senigany', 'keisogan', 'housogan', 'gerumaga',
-  'coqganyu', 'colingan', 'inosigan',
-])
-const NUTRI_INFO_SLUGS = new Set([
-  'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou', 'lipoicacid',
-])
-const VITAMIN_MINERAL_OTHER_SLUGS = new Set(['mokuzito', 'mokuzitu'])
-const SUPPLEMENT_SLUGS = new Set(['shyoyou', 'suppuse', 'begu', 'be-tagur', 'be-tagur10', 'megafudo'])
-const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka'])
-const VITAMIN_MINERAL_SLUGS = new Set([
-  ...NUTRIENT_FOOD_SLUGS,
-  ...NUTRI_INFO_SLUGS,
-  ...VITAMIN_MINERAL_OTHER_SLUGS,
-])
+import {
+  CANONICAL_CONTENT_SECTIONS,
+  getCanonicalPathFromAlias,
+} from '../shared/canonical-routing.js'
+
+const CONTENT_DIRS = [...CANONICAL_CONTENT_SECTIONS]
 const LEGACY_EXACT_REDIRECTS = {
   '/order.html': '/shop/tyuumon',
   '/books/mokuzito.html': '/vitamin-mineral/mokuzito',
@@ -56,6 +31,24 @@ function safeDecodePathname(pathname) {
 function buildCandidatePaths(slug) {
   const contentSlug = slug === 'access' ? 'index' : slug
   return CONTENT_DIRS.map((dir) => `/content/${dir}/${contentSlug}.md`)
+}
+
+async function sectionExistsForSlug(section, slug, requestUrl, env) {
+  const contentSlug = slug === 'access' ? 'index' : slug
+  const candidatePath = `/content/${section}/${contentSlug}.md`
+  const candidateUrl = new URL(candidatePath, requestUrl)
+  const response = await env.ASSETS.fetch(new Request(candidateUrl.toString(), { method: 'HEAD' }))
+  return response.status === 200
+}
+
+async function findCanonicalSectionForSlug(slug, requestUrl, env) {
+  for (const section of CANONICAL_CONTENT_SECTIONS) {
+    // eslint-disable-next-line no-await-in-loop
+    if (await sectionExistsForSlug(section, slug, requestUrl, env)) {
+      return section
+    }
+  }
+  return null
 }
 
 function buildSectionCandidatePath(slug) {
@@ -117,17 +110,6 @@ export async function onRequest(context) {
     return redirectTo(url, exactRedirect)
   }
 
-  const oldNutriMatch = decodedPathname.match(/^\/nutri\/([^/]+)\.(htm|html)$/i)
-  if (oldNutriMatch) {
-    const slug = oldNutriMatch[1].toLowerCase()
-    if (VITAMIN_MINERAL_SLUGS.has(slug)) {
-      return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${slug}`)
-    }
-    if (ACTIVE_OXYGEN_SLUGS.has(slug)) {
-      return redirectTo(url, `/active-oxygen/${slug}`)
-    }
-  }
-
   const oldHawaiiMatch = decodedPathname.match(/^\/hawaii\/([^/]+)\.(htm|html)$/i)
   if (oldHawaiiMatch) {
     const slug = oldHawaiiMatch[1].toLowerCase()
@@ -142,33 +124,29 @@ export async function onRequest(context) {
 
   const normalized = decodedPathname.replace(/^\/+|\/+$/g, '').replace(/\.(htm|html)$/i, '')
   const parts = normalized.split('/').filter(Boolean)
-  if (parts.length === 1 && VITAMIN_MINERAL_SLUGS.has(parts[0])) {
-    if (SUPPLEMENT_SLUGS.has(parts[0])) {
-      return redirectTo(url, `/supplement/${parts[0]}`)
+  const canonicalPath = getCanonicalPathFromAlias(parts)
+  const currentPath = decodedPathname.replace(/\/+$/g, '') || '/'
+  if (canonicalPath && canonicalPath !== currentPath) {
+    return redirectTo(url, canonicalPath)
+  }
+
+  if (parts.length === 1) {
+    const [slug] = parts
+    const canonicalSection = await findCanonicalSectionForSlug(slug, url, context.env)
+    if (canonicalSection) {
+      const nextPath = `/${canonicalSection}/${slug}`
+      if (nextPath !== currentPath) {
+        return redirectTo(url, nextPath)
+      }
     }
-    return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[0]}`)
   }
-  if (parts.length === 1 && SUPPLEMENT_SLUGS.has(parts[0])) {
-    return redirectTo(url, `/supplement/${parts[0]}`)
-  }
-  if (parts.length === 2 && parts[0] === 'vitamin-mineral' && SUPPLEMENT_SLUGS.has(parts[1])) {
-    return redirectTo(url, `/supplement/${parts[1]}`)
-  }
-  if (parts.length === 2 && parts[0] === 'suppliments' && SUPPLEMENT_SLUGS.has(parts[1])) {
-    return redirectTo(url, `/supplement/${parts[1]}`)
-  }
-  if (parts.length === 1 && ACTIVE_OXYGEN_SLUGS.has(parts[0])) {
-    return redirectTo(url, `/active-oxygen/${parts[0]}`)
-  }
-  if (
-    parts.length === 2 &&
-    (parts[0] === 'vitamins' || parts[0] === 'minerals' || parts[0] === 'nutrient-foods') &&
-    VITAMIN_MINERAL_SLUGS.has(parts[1])
-  ) {
-    return redirectTo(url, `/${VITAMIN_MINERAL_URL_SECTION}/${parts[1]}`)
-  }
-  if (parts.length === 2 && (parts[0] === 'vitamin-mineral' || parts[0] === 'freeradical') && ACTIVE_OXYGEN_SLUGS.has(parts[1])) {
-    return redirectTo(url, `/active-oxygen/${parts[1]}`)
+
+  if (parts.length === 2 && CONTENT_DIRS.includes(parts[0])) {
+    const [section, slug] = parts
+    const canonicalSection = await findCanonicalSectionForSlug(slug, url, context.env)
+    if (canonicalSection && canonicalSection !== section) {
+      return redirectTo(url, `/${canonicalSection}/${slug}`)
+    }
   }
 
   const match = decodedPathname.match(/^\/(.+)\.(htm|html)$/i)

@@ -2,29 +2,19 @@ import { useEffect, useState } from 'react'
 import MenuLeft from './components/MenuLeft'
 import MarkdownContent from './components/MarkdownContent'
 import flowersIndex from './generated/flowersIndex.js'
+import { VITAMIN_MINERAL_URL_SECTION, getCanonicalPathFromAlias } from '../shared/canonical-routing.js'
 import './styles/MenuLeft.css'
 import './styles/MarkdownContent.css'
 import './App.css'
 
 const SITE_URL = 'https://fukui-pharma.com'
 const SITE_NAME = '福井薬局'
-const VITAMIN_MINERAL_URL_SECTION = 'vitamin-mineral'
 const VITAMIN_MINERAL_CONTENT_DIR = 'vitamin-mineral'
 const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
-const NUTRIENT_FOOD_SLUGS = new Set([
-  'eiyouso', 'ganyuute',
-  'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',
-  'b5ganyuu', 'b6ganyuu', 'b12ganyu', 'yousanga', 'biotinga',
-  'carugany', 'magganyu', 'karigany', 'aenganyu', 'tetugany', 'douganyu', 'cromugan', 'mangagan',
-  'yo-dogan', 'serengan', 'moribuga', 'vanagany', 'senigany', 'keisogan', 'housogan', 'gerumaga',
-  'coqganyu', 'colingan', 'inosigan',
-])
 const VITAMIN_MINERAL_INFO_SLUGS = new Set([
   'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou',
   'lipoicacid', 'mokuzito', 'mokuzitu',
 ])
-const SUPPLEMENT_SLUGS = new Set(['shyoyou', 'suppuse', 'begu', 'be-tagur', 'be-tagur10', 'megafudo'])
-const ACTIVE_OXYGEN_SLUGS = new Set(['kousanka'])
 const SECTION_LABELS = {
   'vitamin-mineral': 'ビタミン・ミネラル',
   'active-oxygen': '活性酸素',
@@ -47,16 +37,6 @@ const FOOTER_MENU_SECTIONS = [
   { href: '/harubotan16', label: '花の写真集' },
   { href: '/mauisunset', label: 'ハワイ旅行' },
 ]
-
-function isVitaminMineralSlug(slug) {
-  return NUTRIENT_FOOD_SLUGS.has(slug) || VITAMIN_MINERAL_INFO_SLUGS.has(slug)
-}
-function isActiveOxygenSlug(slug) {
-  return ACTIVE_OXYGEN_SLUGS.has(slug)
-}
-function isSupplementSlug(slug) {
-  return SUPPLEMENT_SLUGS.has(slug)
-}
 
 function normalizeSectionToContentDir(section) {
   if (section === VITAMIN_MINERAL_URL_SECTION || section === VITAMIN_MINERAL_CONTENT_DIR) {
@@ -97,12 +77,6 @@ function getPreferredPath(section, slug, isTop) {
   if (isTop) {
     return '/'
   }
-  if (isVitaminMineralSlug(slug)) {
-    return `/${VITAMIN_MINERAL_URL_SECTION}/${slug}`
-  }
-  if (isActiveOxygenSlug(slug)) {
-    return `/active-oxygen/${slug}`
-  }
   if (section) {
     return `/${section}/${slug}`
   }
@@ -137,27 +111,10 @@ function App() {
   const isTop = baseSlug === '' || baseSlug === 'index' || baseSlug === 'index2'
   const contentSlug = baseSlug === 'access' ? 'index' : baseSlug
   const flowersPath = flowersIndex[contentSlug]
-  const shouldRedirectToVitaminMineral = !isTop && !section && segments.length === 1 && isVitaminMineralSlug(contentSlug)
-  if (shouldRedirectToVitaminMineral) {
-    window.location.replace(`/${VITAMIN_MINERAL_URL_SECTION}/${contentSlug}`)
-    return null
-  }
-  if (section === VITAMIN_MINERAL_URL_SECTION && isSupplementSlug(contentSlug)) {
-    window.location.replace(`/supplement/${contentSlug}`)
-    return null
-  }
-  if (section === 'suppliments' && isSupplementSlug(contentSlug)) {
-    window.location.replace(`/supplement/${contentSlug}`)
-    return null
-  }
-  const shouldRedirectToSupplement = !isTop && !section && segments.length === 1 && isSupplementSlug(contentSlug)
-  if (shouldRedirectToSupplement) {
-    window.location.replace(`/supplement/${contentSlug}`)
-    return null
-  }
-  const shouldRedirectToActiveOxygen = !isTop && !section && segments.length === 1 && isActiveOxygenSlug(contentSlug)
-  if (shouldRedirectToActiveOxygen) {
-    window.location.replace(`/active-oxygen/${contentSlug}`)
+  const canonicalPath = getCanonicalPathFromAlias(segments)
+  const currentPath = decodedPathname.replace(/\/+$/g, '') || '/'
+  if (!isTop && canonicalPath && canonicalPath !== currentPath) {
+    window.location.replace(canonicalPath)
     return null
   }
   const orderedDirs = sectionContentDir
