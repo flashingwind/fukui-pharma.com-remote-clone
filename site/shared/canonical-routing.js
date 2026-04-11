@@ -12,16 +12,32 @@ export const CANONICAL_CONTENT_SECTIONS = [
   'access',
 ]
 
-const SECTION_ALIASES = {
-  suppliments: 'supplement',
-  nutri: 'vitamin-mineral',
-  books: 'vitamin-mineral',
-  hawaii: 'travel',
-  vitamins: 'vitamin-mineral',
-  minerals: 'vitamin-mineral',
-  'nutrient-foods': 'vitamin-mineral',
-  freeradical: 'active-oxygen',
-}
+const SECTION_ALIAS_GROUPS = [
+  { canonical: 'supplement', aliases: ['suppliments'] },
+  { canonical: 'vitamin-mineral', aliases: ['nutri', 'books', 'vitamins', 'minerals', 'nutrient-foods'] },
+  { canonical: 'travel', aliases: ['hawaii'] },
+  { canonical: 'active-oxygen', aliases: ['freeradical'] },
+]
+
+// Left-side (alias) names are authoritative. First definition wins on duplicates.
+export const SECTION_ALIASES = Object.freeze(
+  SECTION_ALIAS_GROUPS.reduce((acc, group) => {
+    for (const alias of group.aliases) {
+      if (!acc[alias]) {
+        acc[alias] = group.canonical
+      }
+    }
+    return acc
+  }, {})
+)
+
+// Reverse index is useful when canonical-side entries become the larger maintenance surface.
+export const ALIASES_BY_CANONICAL = Object.freeze(
+  SECTION_ALIAS_GROUPS.reduce((acc, group) => {
+    acc[group.canonical] = [...group.aliases]
+    return acc
+  }, {})
+)
 
 export function getCanonicalPathFromAlias(parts) {
   if (!Array.isArray(parts) || parts.length !== 2) {
