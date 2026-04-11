@@ -12,6 +12,7 @@ const LEGACY_EXACT_REDIRECTS = {
   '/oldcar/oldcar.html': '/others/oldcar',
   '/supliments/': '/supplement/suppuse',
   '/suppliments/': '/supplement/suppuse',
+  '/suppliments/masdevallia': '/flowers/masdevallia',
 }
 
 function redirectTo(url, pathname) {

@@ -234,48 +234,48 @@ const MenuLeft = () => {
             2007 世界らん展 {openYear.y2007 ? '▼' : '▶'}
           </li>
           {openYear.y2007 && <>
-            <li><a href="/2007ranten120">日本大賞はデンドロビウム</a></li>
-            <li><a href="/2007catC">カトレア</a></li>
-            <li><a href="/2007paphE">パフィオ</a></li>
+            <li><a href="/flowers/2007ranten120">日本大賞はデンドロビウム</a></li>
+            <li><a href="/flowers/2007catC">カトレア</a></li>
+            <li><a href="/flowers/2007paphE">パフィオ</a></li>
           </>}
           <li className="menu-subtitle" onClick={() => toggleYear('y2006')} style={{cursor:'pointer'}}>
             2006 世界らん展 {openYear.y2006 ? '▼' : '▶'}
           </li>
           {openYear.y2006 && <>
-            <li><a href="/2006ranten">日本大賞はマスデバリア</a></li>
-            <li><a href="/2006cattleya">カトレア</a></li>
-            <li><a href="/2006paphio">パフィオ</a></li>
-            <li><a href="/2006lycaste11">リカステ</a></li>
+            <li><a href="/flowers/2006ranten">日本大賞はマスデバリア</a></li>
+            <li><a href="/flowers/2006cattleya">カトレア</a></li>
+            <li><a href="/flowers/2006paphio">パフィオ</a></li>
+            <li><a href="/flowers/2006lycaste11">リカステ</a></li>
           </>}
           <li className="menu-subtitle" onClick={() => toggleYear('y2005')} style={{cursor:'pointer'}}>
             2005 世界らん展 {openYear.y2005 ? '▼' : '▶'}
           </li>
           {openYear.y2005 && <>
-            <li><a href="/dendrobiumu">日本大賞はデンドロビウム</a></li>
-            <li><a href="/paphio101">パフィオ1</a></li>
-            <li><a href="/paphio202">パフィオ2</a></li>
-            <li><a href="/paphio103">パフィオ3</a></li>
-            <li><a href="/cattleya1">パフィオ4</a></li>
-            <li><a href="/cattleya22">カトレア</a></li>
-            <li><a href="/lycaste1">リカステ</a></li>
-            <li><a href="/phalaenopsis">ファレノ</a></li>
-            <li><a href="/masdevallia">マスデバリア</a></li>
-            <li><a href="/kaizyou">その他</a></li>
+            <li><a href="/flowers/dendrobiumu">日本大賞はデンドロビウム</a></li>
+            <li><a href="/flowers/paphio101">パフィオ1</a></li>
+            <li><a href="/flowers/paphio202">パフィオ2</a></li>
+            <li><a href="/flowers/paphio103">パフィオ3</a></li>
+            <li><a href="/flowers/cattleya1">パフィオ4</a></li>
+            <li><a href="/flowers/cattleya22">カトレア</a></li>
+            <li><a href="/flowers/lycaste1">リカステ</a></li>
+            <li><a href="/flowers/phalaenopsis">ファレノ</a></li>
+            <li><a href="/flowers/masdevallia">マスデバリア</a></li>
+            <li><a href="/flowers/kaizyou">その他</a></li>
           </>}
           <li className="menu-subtitle" onClick={() => toggleYear('y2004')} style={{cursor:'pointer'}}>
             2004 世界らん展 {openYear.y2004 ? '▼' : '▶'}
           </li>
           {openYear.y2004 && <>
-            <li><a href="/2004ran">日本大賞はファレノプシス</a></li>
-            <li><a href="/cattleya">カトレア</a></li>
-            <li><a href="/cattleyablue">カトレア・青</a></li>
-            <li><a href="/paphiopedilum">パフィオ1</a></li>
-            <li><a href="/paphiopedilum2">パフィオ2</a></li>
-            <li><a href="/phalaenopsis4">ファレノ</a></li>
-            <li><a href="/dendrobiumnew">デンドロ</a></li>
-            <li><a href="/lycasteNew">リカステ</a></li>
+            <li><a href="/flowers/2004ran">日本大賞はファレノプシス</a></li>
+            <li><a href="/flowers/cattleya">カトレア</a></li>
+            <li><a href="/flowers/cattleyablue">カトレア・青</a></li>
+            <li><a href="/flowers/paphiopedilum">パフィオ1</a></li>
+            <li><a href="/flowers/paphiopedilum2">パフィオ2</a></li>
+            <li><a href="/flowers/phalaenopsis4">ファレノ</a></li>
+            <li><a href="/flowers/dendrobiumnew">デンドロ</a></li>
+            <li><a href="/flowers/lycasteNew">リカステ</a></li>
           </>}
-          <li className="menu-subtitle"><a href="/harubotan16" style={{textDecoration:'none', color:'inherit'}}>上野公園ぼたん展 ▶</a></li>
+          <li className="menu-subtitle"><a href="/flowers/harubotan16" style={{textDecoration:'none', color:'inherit'}}>上野公園ぼたん展 ▶</a></li>
         </ul>
       )}
 
