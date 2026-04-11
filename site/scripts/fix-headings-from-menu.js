@@ -64,7 +64,7 @@ function resolveHrefToContentPath(href, flowersIndexMap) {
   const clean = href.split('#')[0].split('?')[0].replace(/\.html?$/i, '');
   const parts = clean.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
   if (parts.length === 0) {
-    return '/content/others/index.md';
+    return '/content/index.md';
   }
   if (parts.length >= 2) {
     const section = parts[0];

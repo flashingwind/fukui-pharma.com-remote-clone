@@ -157,7 +157,7 @@ function App() {
       <section id="center">
         {isTop ? (
           <MarkdownContent
-            file="/content/others/index.md"
+            file="/content/index.md"
             onResolveStatus={setSeoRobots}
             onResolveHeading={setSeoHeading}
           />

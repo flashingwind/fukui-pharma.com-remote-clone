@@ -49,7 +49,7 @@ function bySlug(slug) {
 function hrefToContent(href) {
   const clean = href.split('#')[0].split('?')[0].replace(/\.html?$/i, '');
   const parts = clean.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
-  if (parts.length === 0) return '/content/others/index.md';
+  if (parts.length === 0) return '/content/index.md';
   if (parts.length >= 2) {
     const p = `/content/${parts[0]}/${parts[1] === 'access' ? 'index' : parts[1]}.md`;
     return exists(p) ? p : null;
