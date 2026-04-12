@@ -28,9 +28,9 @@ description: 福井薬局へのアクセス・交通案内・地図
 - 「川01東領家循環」の掲示板のある階段を下ります
 - 乗り場は先の方、「川01番−東領家循環」
 
-![川口駅バス乗り場](../../public/kawaguchibasu.jpg)
+![川口駅バス乗り場](/access/kawaguchibasu.jpg)
 
-![川口駅陸橋](../../public/kawagutieki.gif)
+![川口駅陸橋](/access/kawagutieki.gif)
 
 #### バス時刻表（16年9月1日改定）
 
@@ -48,19 +48,19 @@ description: 福井薬局へのアクセス・交通案内・地図
 - お問合せ：川口営業所 TEL 048-252-5660
 - 「領家小学校裏」で下車、信号のある十字路（河合病院手前）を左折、2本目の十字路を左へ、くすりの看板が目印、徒歩5分ほど
 
-![福井薬局地図](../../public/hukuiyakyokutizu.gif)
+![福井薬局地図](/access/hukuiyakyokutizu.gif)
 
 領家３丁目の商店街です。
 
-![商店街](../../public/syoutengai2.jpg)
+![商店街](/access/syoutengai2.jpg)
 
 福井薬局外観
 
-![福井薬局外観](../../public/fukuiyakyoku.jpg)
+![福井薬局外観](/access/fukuiyakyoku.jpg)
 
 ## お車でご来店の場合
 
-![領家周辺道路](../../public/ryoukedouro.gif)
+![領家周辺道路](/access/ryoukedouro.gif)
 
 - 東京方面からは、環状七号線の鹿浜交差点を川口方面に曲がり、直進数分で左側に河合病院があります。
 - 信号のある交差点を左折、2本目の十字路を左に曲がりすぐです。

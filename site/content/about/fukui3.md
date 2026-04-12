@@ -17,8 +17,8 @@ title: 福井薬局 （旧）店舗情報
 ○バスの場合（２０分、１９０円）陸橋の右側に−バス乗り場の表示があります
 「川０１東領家循環」の掲示板のある階段を下ります
 乗り場は先の方です−車両の表示は「川０１番−東領家循環」
-<img src="kawaguchibasu.jpg" width="500" height="350">
-<img src="kawagutieki.gif" width="500" height="350"><p>
+<img src="/access/kawaguchibasu.jpg" alt="川口駅バス乗り場" width="500" height="350">
+<img src="/access/kawagutieki.gif" alt="川口駅陸橋" width="500" height="350"><p>
 
 ここの停留所名は 川口駅東口(かわぐちえきひがしぐち)　乗車表示の
 「系統 川０２ 行き先 東領家循環」にお乗りいただいて−下車は「領家小学校裏」です

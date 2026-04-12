@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import MenuLeft from './components/MenuLeft'
 import MarkdownContent from './components/MarkdownContent'
 import flowersIndex from './generated/flowersIndex.js'
-import { VITAMIN_MINERAL_URL_SECTION, getCanonicalPathFromAlias } from '../shared/canonical-routing.js'
+import { VITAMIN_MINERAL_URL_SECTION } from '../shared/canonical-routing.js'
 import './styles/MenuLeft.css'
 import './styles/MarkdownContent.css'
 import './App.css'
@@ -114,12 +114,6 @@ function App() {
   const isTop = baseSlug === '' || baseSlug === 'index' || baseSlug === 'index2'
   const contentSlug = baseSlug === 'access' ? 'index' : baseSlug
   const flowersPath = flowersIndex[contentSlug]
-  const canonicalPath = getCanonicalPathFromAlias(segments)
-  const currentPath = decodedPathname.replace(/\/+$/g, '') || '/'
-  if (!isTop && canonicalPath && canonicalPath !== currentPath) {
-    window.location.replace(canonicalPath)
-    return null
-  }
   const orderedDirs = sectionContentDir
     ? [sectionContentDir, ...CONTENT_DIRS.filter((dir) => dir !== sectionContentDir)]
     : CONTENT_DIRS

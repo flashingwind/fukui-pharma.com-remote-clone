@@ -24,12 +24,33 @@ const parseLegacyAttrs = (attrsText = "") => {
   return attrs;
 };
 
+const normalizeLegacyAssetPath = (src = "") => {
+  const value = String(src).trim();
+  if (!value) return "";
+  if (/^(?:https?:)?\/\//.test(value) || value.startsWith("data:")) {
+    return value;
+  }
+
+  if (!value.includes("../") && !value.includes("./") && !value.includes("public/")) {
+    return value;
+  }
+
+  const stripped = value
+    .replace(/^(?:\.\.\/)+/, "")
+    .replace(/^\.\/+/, "")
+    .replace(/^(?:.*\/)?public\//, "")
+    .replace(/^\/+/g, "");
+
+  return stripped ? `/${stripped}` : "";
+};
+
 const normalizeLegacyImageAttrs = (markdown = "") => {
   // Convert legacy markdown-it style image attributes into raw HTML img tags.
   return markdown.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{([^}]*)\}/g, (_m, alt, src, attrsText) => {
     const attrs = parseLegacyAttrs(attrsText);
     const attrSuffix = attrs.length ? ` ${attrs.join(" ")}` : "";
-    return `<img src=\"${escapeHtml(src)}\" alt=\"${escapeHtml(alt)}\"${attrSuffix}>`;
+    const normalizedSrc = normalizeLegacyAssetPath(src) || src;
+    return `<img src=\"${escapeHtml(normalizedSrc)}\" alt=\"${escapeHtml(alt)}\"${attrSuffix}>`;
   });
 };
 
@@ -275,6 +296,14 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeadi
               );
             },
             img: ({ src = "", alt = "", ...props }) => {
+              const normalizedSrc = normalizeLegacyAssetPath(src);
+              if (normalizedSrc && normalizedSrc !== src) {
+                return (
+                  <a className="markdown-image-link" href={normalizedSrc} target="_blank" rel="noreferrer">
+                    <img src={normalizedSrc} alt={alt} {...props} />
+                  </a>
+                );
+              }
               if (src.startsWith("/") || src.startsWith("http")) {
                 return (
                   <a className="markdown-image-link" href={src} target="_blank" rel="noreferrer">
