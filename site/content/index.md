@@ -9,14 +9,14 @@
 ## おすすめ
 
 <div class="top-products">
-<p><img src="/others/sinhon5.jpg" alt="新版 薬剤師がすすめるビタミン・ミネラルのとり方" width="35" height="50" /> <a href="/vitamin-mineral/mokuzito">新版 薬剤師がすすめるビタミン・ミネラルのとり方</a> (→<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)</p>
+<p><img src="/publication/sinhon5.jpg" alt="新版 薬剤師がすすめるビタミン・ミネラルのとり方" width="35" height="50" /> <a href="/vitamin-mineral/mokuzito">新版 薬剤師がすすめるビタミン・ミネラルのとり方</a> (→<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)</p>
 <p></p>
 <p><img src="/others/betaglucan35.jpg" alt="ベータグルカン" width="50" height="35" /></p>
 <p><a href="/supplement/begu">○ベータグルカンとは</a></p>
 <p><a href="/supplement/suppuse">○サプリメントの摂り方</a></p>
 <p><a href="/others/hadautukusisa">○肌を美しくするケアと栄養</a></p>
 <p></p>
-<p><img src="/others/tukaikata3.gif" alt="薬剤師がすすめるビタミン・ミネラルの使い方(第2版)" width="35" height="50" /> <a href="/vitamin-mineral/mokuzitu">薬剤師がすすめるビタミン・ミネラルの使い方(第2版)</a> (→<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)</p>
+<p><img src="/publication/tukaikata3.gif" alt="薬剤師がすすめるビタミン・ミネラルの使い方(第2版)" width="35" height="50" /> <a href="/vitamin-mineral/mokuzitu">薬剤師がすすめるビタミン・ミネラルの使い方(第2版)</a> (→<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)</p>
 <p><img src="/others/megasin.gif" alt="メガフードアルファー" width="84" height="150" /> <a href="/supplement/megafudo">○メガフードアルファー</a> (栄養補助食品)</p>
 <p><a href="/atopic/thbalance">○Th1・Th2バランスの図表−Th1を促進、Th2を抑制するには</a></p>
 <p><a href="/supplement/shyoyou">○所要量、RDA,DV,ODAの比較表</a></p>
