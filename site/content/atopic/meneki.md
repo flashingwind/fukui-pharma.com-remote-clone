@@ -45,10 +45,10 @@
 ガン細胞やウイルス感染細胞を見つけて殺します。\
 
 ## 血液の図
-<a id="ketueki"></a>
----
 
-![血液の図](ketuekis.gif)
+## <a id="ketueki"></a>
+
+![血液の図](/atopic/ketuekis.gif)
 
 ---
 
@@ -220,20 +220,20 @@
 
 ### <a id="th1th2p"></a>Th1応答を高め、Th2応答を抑えるには
 
-![Th1・Th2のバランス](th1th2barance.gif)
+![Th1・Th2のバランス](/atopic/th1th2barance.gif)
 ![new!](/icon/new.gif){width="40" height="10"}\
 
 ---
 
 ### <a id="menoukihon"></a>免疫基本応答図\
 
-![免疫基本応答図](menekikihon.gif)
+![免疫基本応答図](/atopic/menekikihon.gif)
 
 ---
 
 ### <a id="menoutou"></a>免疫応答図\
 
-![免疫応答図](meneki3.gif)
+![免疫応答図](/atopic/meneki3.gif)
 
 ---
 
@@ -253,14 +253,14 @@
 
 ---
 
-ベータグルカンと免疫細胞 ![ベータグルカンと免疫細胞](meneki70.gif)
+ベータグルカンと免疫細胞 ![ベータグルカンと免疫細胞](/atopic/meneki70.gif)
 
 ---
 
-### <a id="menkei"></a>ウイルス感染免疫応答の経過図表 ![ウイルス感染免疫応答の経過図表(1)](menou1.gif)
+### <a id="menkei"></a>ウイルス感染免疫応答の経過図表 ![ウイルス感染免疫応答の経過図表(1)](/atopic/menou1.gif)
 
 ---
 
-![ウイルス感染免疫応答の経過図表(2)](menou2.gif)
+![ウイルス感染免疫応答の経過図表(2)](/atopic/menou2.gif)
 
 ---

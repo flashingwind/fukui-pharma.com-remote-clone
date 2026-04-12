@@ -25,12 +25,12 @@
 
 ![](rose-kimori.jpg){width="500" height="350"}\
 
-![](rose-mori2.jpg){width="500" height="350"}\
+![](rose-kimori.jpg){width="500" height="350"}\
 
-![](rose-mori.jpg){width="500" height="350"}\
+![](rose-kimori.jpg){width="500" height="350"}\
 
-![](rose-kakimori.jpg){width="500" height="350"}\
+![](rose-kimori.jpg){width="500" height="350"}\
 
-![](rose-mori3.jpg){width="500" height="350"}\
+![](rose-nomu.jpg){width="500" height="350"}\
 
 ![](rose-nomu.jpg){width="500" height="350"}\

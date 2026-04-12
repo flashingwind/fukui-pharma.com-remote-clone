@@ -29,7 +29,7 @@
     1. <span class="red">健康を維持</span>したり、<span class="red">病気の回復</span>にはなぜ[ビタミン・ミネラルが必要](/vitamin-mineral/vitasi2)なのでしょうか?
     2. 体内の<span class="red">代謝の潤滑油</span> と言われる[ビタミン・ミネラルの働き](/vitamin-mineral/vitasi4)とは
     3. <span class="red">ビタミン、ミネラルの不足症状と</span>、[<span class="red">症状改善に</span>選びたい栄養素](/vitamin-mineral/eiyou)
-    4. <span class="red">ビタミン、ミネラルの豊富な</span>[食品を選ぶ](/vitamin-mineral/eiyouso)
+    4. <span class="red">ビタミン、ミネラルの豊富な</span>[食品を選ぶ](/vitamin-mineral/ganyuute)
     5. ビタミン、ミネラルの不足症状、含有食品グラフなど: <span class="red">『薬剤師がすすめるビタミン・ミネラルのとり方』</span>([目次](/vitamin-mineral/mokuzito)、<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)に掲載
     6. サプリメントとして、ビタミンやミネラルを摂りたい症状など: <span class="red">『薬剤師がすすめるビタミン・ミネラルの使い方(第2版)』</span>([目次](/vitamin-mineral/mokuzitu)、<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)に掲載
 2. ミネラル特集

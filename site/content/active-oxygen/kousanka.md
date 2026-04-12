@@ -117,10 +117,10 @@
 
 ---
 
-<a id="zuhyou"></a>活性酸素の生成と消去図表 ![活性酸素の生成と消去図表](active-oxyzen/furiiraz.gif)
+<a id="zuhyou"></a>活性酸素の生成と消去図表 ![活性酸素の生成と消去図表](/active-oxygen/furiiraz.gif)
 
 ---
 
-<a id="zuhyou2"></a>分子で示す活性酸素の生成と変換 ![分子で示す活性酸素の生成と変換](kasseisa.gif)
+<a id="zuhyou2"></a>分子で示す活性酸素の生成と変換 ![分子で示す活性酸素の生成と変換](/active-oxygen/kasseisa.gif)
 
 ---

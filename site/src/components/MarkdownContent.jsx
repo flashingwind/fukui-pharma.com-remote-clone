@@ -24,6 +24,27 @@ const parseLegacyAttrs = (attrsText = "") => {
   return attrs;
 };
 
+const LEGACY_ROOT_ASSET_DIRS = new Set([
+  "access",
+  "active-oxygen",
+  "atopic",
+  "flowers",
+  "icon",
+  "legacy",
+  "minerals",
+  "others",
+  "publication",
+  "shop",
+  "supplement",
+  "travel",
+  "vitamin-mineral",
+  "vitamins",
+]);
+
+const LEGACY_ASSET_DIR_ALIASES = {
+  "active-oxyzen": "others",
+};
+
 const normalizeLegacyAssetPath = (src = "") => {
   const value = String(src).trim();
   if (!value) return "";
@@ -31,11 +52,21 @@ const normalizeLegacyAssetPath = (src = "") => {
     return value;
   }
 
-  if (!value.includes("../") && !value.includes("./") && !value.includes("public/")) {
-    return value;
+  const aliased = value.replace(/^([^/]+)\//, (full, dir) => {
+    const mapped = LEGACY_ASSET_DIR_ALIASES[dir];
+    return mapped ? `${mapped}/` : full;
+  });
+
+  const firstDir = aliased.split("/")[0];
+  if (LEGACY_ROOT_ASSET_DIRS.has(firstDir) && !aliased.startsWith("/")) {
+    return `/${aliased}`;
   }
 
-  const stripped = value
+  if (!value.includes("../") && !value.includes("./") && !value.includes("public/")) {
+    return aliased;
+  }
+
+  const stripped = aliased
     .replace(/^(?:\.\.\/)+/, "")
     .replace(/^\.\/+/, "")
     .replace(/^(?:.*\/)?public\//, "")
@@ -312,7 +343,7 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeadi
                 );
               }
               const primaryDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
-              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/supplement", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", ""];
+              const fallbackDirs = ["/flowers", "/travel", "/vitamin-mineral", "/supplement", "/active-oxygen", "/atopic", "/others", "/legacy", "/shop", "/access", "/publication", "/minerals", "/vitamins", ""];
               const flowerDirs = loadedSection === "flowers" ? FLOWER_FALLBACK_DIRS : [];
               const dirs = [...new Set([primaryDir, ...flowerDirs, ...fallbackDirs])];
               return <ClickableImgWithFallback src={src} alt={alt} dirs={dirs} {...props} />;

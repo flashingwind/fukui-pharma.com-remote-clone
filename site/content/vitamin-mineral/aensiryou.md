@@ -6,7 +6,7 @@
 
 ---
 
-![](aenhana.gif)
+![](aenhata.gif)
 
 ---
 
