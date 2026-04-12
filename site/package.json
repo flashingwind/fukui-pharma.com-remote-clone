@@ -8,6 +8,7 @@
     "build": "npm run generate-sitemap && vite build && rm -rf dist/content && cp -R content dist/content",
     "generate-sitemap": "node ./scripts/generate-sitemap.js",
     "check-html-refs": "node ./scripts/check-html-references.js",
+    "check-live": "node ./scripts/check-live-site.js",
     "fix-broken-links": "node ./scripts/fix-broken-links.js",
     "fix-broken-links:write": "node ./scripts/fix-broken-links.js --write",
     "lint": "eslint .",
