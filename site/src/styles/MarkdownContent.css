@@ -11,6 +11,21 @@
   margin-top: 1.2em;
   margin-bottom: 0.4em;
 }
+
+.markdown-body h1 {
+  font-size: 1.6em;
+  line-height: 1.2;
+}
+
+.markdown-body h2 {
+  font-size: 1.3em;
+  line-height: 1.25;
+}
+
+.markdown-body h3 {
+  font-size: 1.12em;
+  line-height: 1.3;
+}
 .markdown-body ul {
   margin-left: 1.3em;
 }
