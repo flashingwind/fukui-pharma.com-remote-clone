@@ -3,6 +3,7 @@ const BASE_URL = process.argv[2] || 'https://fukui-pharma.com';
 const ASSET_EXT_RE = /\.(gif|jpe?g|png|webp|svg|ico|css|js|xml|txt|pdf|woff2?|ttf|eot|mp4|webm)$/i;
 
 const CRITICAL_URLS = [
+  '/icon/new.gif',
   '/suppliments/sinhon5.jpg',
   '/suppliments/megasin.gif',
   '/suppliments/betasin.gif',

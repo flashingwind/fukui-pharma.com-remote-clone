@@ -9,6 +9,8 @@
     "generate-sitemap": "node ./scripts/generate-sitemap.js",
     "check-html-refs": "node ./scripts/check-html-references.js",
     "check-live": "node ./scripts/check-live-site.js",
+    "check-live-browser": "node ./scripts/check-live-browser.js",
+    "check-linkchecker-local": "node ./scripts/check-linkchecker-local.js",
     "fix-broken-links": "node ./scripts/fix-broken-links.js",
     "fix-broken-links:write": "node ./scripts/fix-broken-links.js --write",
     "lint": "eslint .",
@@ -31,6 +33,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
+    "markdown-link-check": "^3.14.2",
     "playwright": "^1.58.2",
     "vite": "^8.0.1"
   }
