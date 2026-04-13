@@ -1,6 +1,4 @@
-# マグネシウム[new!](/icon/new.gif){width="40"
-
-height="10"}
+# マグネシウム![new!](/icon/new.gif)
 
 - マグネシウムとはどんなものか,マグネシウムのお話
 - [マグネシウムは体内でどのように働くか](magsiryou#maghata)
