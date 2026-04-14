@@ -1,19 +1,19 @@
 - 免疫とは、免疫を受け持つ細胞
-- [血液中の細胞、図表](meneki#ketueki)
+- [血液中の細胞、図表](/atopic/meneki#ketueki)
   ![new!](/icon/new.gif){width="40" height="10"}
-- [免疫低下の原因](meneki#mentei)
-- [免疫を高めるには](meneki#mentei2)
-- [免疫の働きとビタミン](meneki#menbita)
-- [ヘルパーT1とヘルパーT2のバランス](meneki#th1th2)![new!](/icon/new.gif){width="40"
+- [免疫低下の原因](/atopic/meneki#mentei)
+- [免疫を高めるには](/atopic/meneki#mentei2)
+- [免疫の働きとビタミン](/atopic/meneki#menbita)
+- [ヘルパーT1とヘルパーT2のバランス](/atopic/meneki#th1th2)![new!](/icon/new.gif){width="40"
   height="10"}
-- [Th1を高めTh2を抑える図表](meneki#th1th2p)
-  [○Th1Th2バランスの図表](thbalance)
+- [Th1を高めTh2を抑える図表](/atopic/meneki#th1th2p)
+  [○Th1Th2バランスの図表](/atopic/thbalance)
   ![new!](/icon/new.gif){width="40" height="10"}
-- [免疫基本応答の図表](meneki#menoukihon)
+- [免疫基本応答の図表](/atopic/meneki#menoukihon)
   ![new!](/icon/new.gif){width="40" height="10"}
-- [免疫応答の図表](meneki#menoutou)
-- [ベータグルカンと免疫細胞及び図表](meneki#betaguru)
-- [ウイルス感染免疫応答の経過図表](meneki#menkei)
+- [免疫応答の図表](/atopic/meneki#menoutou)
+- [ベータグルカンと免疫細胞及び図表](/atopic/meneki#betaguru)
+- [ウイルス感染免疫応答の経過図表](/atopic/meneki#menkei)
 
 ---
 

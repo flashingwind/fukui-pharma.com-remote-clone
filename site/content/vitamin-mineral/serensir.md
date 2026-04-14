@@ -1,10 +1,10 @@
 # セレン![new!](/icon/new.gif)
 
 - セレンの働き
-- [セレンはどんな症状で有用か](serensir#serentuk)
-- [体内での活性酸素の発生と消去図表](serensir#furiiraz)
-- [活性酸素のお話](serensir#katsanso)\
-- [活性酸素の生成変換の分子図表](serensir#kousanka)
+- [セレンはどんな症状で有用か](/vitamin-mineral/serensir#serentuk)
+- [体内での活性酸素の発生と消去図表](/vitamin-mineral/serensir#furiiraz)
+- [活性酸素のお話](/vitamin-mineral/serensir#katsanso)\
+- [活性酸素の生成変換の分子図表](/vitamin-mineral/serensir#kousanka)
 
     ***
 

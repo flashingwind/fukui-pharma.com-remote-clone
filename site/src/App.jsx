@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react'
 import MenuLeft from './components/MenuLeft'
 import MarkdownContent from './components/MarkdownContent'
-import flowersIndex from './generated/flowersIndex.js'
-import { VITAMIN_MINERAL_URL_SECTION } from '../shared/canonical-routing.js'
 import './styles/MenuLeft.css'
 import './styles/MarkdownContent.css'
 import './App.css'
 
 const SITE_URL = 'https://fukui-pharma.com'
 const SITE_NAME = '福井薬局'
-const VITAMIN_MINERAL_CONTENT_DIR = 'vitamin-mineral'
 const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access']
-const VITAMIN_MINERAL_INFO_SLUGS = new Set([
-  'eiyou', 'vitasi2', 'vitasi3', 'vitasi4', 'serensir', 'magsiryou', 'aensiryou', 'tetusiryou',
-  'lipoicacid', 'mokuzito', 'mokuzitu',
-])
 const SECTION_LABELS = {
   'vitamin-mineral': 'ビタミン・ミネラル',
   'active-oxygen': '活性酸素',
@@ -31,19 +24,12 @@ const FOOTER_MENU_SECTIONS = [
   { href: '/vitamin-mineral/ganyuute', label: '栄養素を多く含む食品' },
   { href: '/vitamin-mineral/eiyou', label: 'ビタミン・ミネラル' },
   { href: '/active-oxygen/kousanka', label: '活性酸素' },
-  { href: '/atopic', label: 'アトピー・免疫' },
-  { href: '/hadautukusisa', label: '肌の美しさと栄養' },
+  { href: '/atopic/atopic', label: 'アトピー・免疫' },
+  { href: '/others/hadautukusisa', label: '肌の美しさと栄養' },
   { href: '/vitamin-mineral/mokuzitu', label: '出版' },
-  { href: '/harubotan16', label: '花の写真集' },
-  { href: '/mauisunset', label: 'ハワイ旅行' },
+  { href: '/flowers/others/harubotan16', label: '花の写真集' },
+  { href: '/travel/mauisunset', label: 'ハワイ旅行' },
 ]
-
-function normalizeSectionToContentDir(section) {
-  if (section === VITAMIN_MINERAL_URL_SECTION || section === VITAMIN_MINERAL_CONTENT_DIR) {
-    return VITAMIN_MINERAL_CONTENT_DIR
-  }
-  return section
-}
 
 function safeDecodePathname(pathname) {
   try {
@@ -106,27 +92,18 @@ function App() {
   const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '')
   const segments = normalizedPath.split('/').filter(Boolean)
   const rawSection = segments.length > 1 ? segments[0] : null
-  const section = rawSection && (CONTENT_DIRS.includes(rawSection) || rawSection === VITAMIN_MINERAL_URL_SECTION)
-    ? rawSection
-    : null
-  const sectionContentDir = normalizeSectionToContentDir(section)
+  const section = rawSection && CONTENT_DIRS.includes(rawSection) ? rawSection : null
   const baseSlug = segments.length === 0 ? '' : segments[segments.length - 1]
   const isTop = baseSlug === '' || baseSlug === 'index' || baseSlug === 'index2'
-  const contentSlug = baseSlug === 'access' ? 'index' : baseSlug
-  const flowersPath = flowersIndex[contentSlug]
-  const orderedDirs = sectionContentDir
-    ? [sectionContentDir, ...CONTENT_DIRS.filter((dir) => dir !== sectionContentDir)]
-    : CONTENT_DIRS
-  const candidates = orderedDirs.flatMap((dir) => {
-    if (dir === 'flowers' && flowersPath) {
-      return [flowersPath, `/content/flowers/${contentSlug}.md`]
-    }
-    return [`/content/${dir}/${contentSlug}.md`]
-  })
-  const effectiveSection = section || (CONTENT_DIRS.includes(baseSlug) ? baseSlug : null)
+  const seoSlug = baseSlug
+  const contentPath = isTop
+    ? '/content/index.md'
+    : normalizedPath === 'access'
+      ? '/content/access/index.md'
+      : `/content/${normalizedPath}.md`
 
   useEffect(() => {
-    const { pageTitle, description, canonicalUrl } = buildSeoMeta(effectiveSection, contentSlug, isTop, seoHeading)
+    const { pageTitle, description, canonicalUrl } = buildSeoMeta(section, seoSlug, isTop, seoHeading)
     document.documentElement.lang = 'ja'
     document.title = pageTitle
     ensureMeta('name', 'description', description)
@@ -143,25 +120,17 @@ function App() {
     ensureMeta('name', 'twitter:description', description)
     ensureMeta('name', 'twitter:image', `${SITE_URL}/taitorf.gif`)
     ensureCanonical(canonicalUrl)
-  }, [effectiveSection, contentSlug, isTop, seoRobots, seoHeading])
+  }, [section, seoSlug, isTop, seoRobots, seoHeading])
 
   return (
     <div className="app-shell">
       <MenuLeft />
       <section id="center">
-        {isTop ? (
-          <MarkdownContent
-            file="/content/index.md"
-            onResolveStatus={setSeoRobots}
-            onResolveHeading={setSeoHeading}
-          />
-        ) : (
-          <MarkdownContent
-            fileCandidates={candidates}
-            onResolveStatus={setSeoRobots}
-            onResolveHeading={setSeoHeading}
-          />
-        )}
+        <MarkdownContent
+          file={contentPath}
+          onResolveStatus={setSeoRobots}
+          onResolveHeading={setSeoHeading}
+        />
         <footer className="site-footer">
           <div className="footer-title">福井薬局</div>
           <div className="footer-menu-inline" aria-label="Footer navigation">

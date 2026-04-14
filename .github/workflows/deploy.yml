@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      LOCAL_BASE_URL: http://127.0.0.1:4173
+      REMOTE_BASE_URL: https://new-fukui-pharma.pages.dev
     steps:
       - uses: actions/checkout@v4
 
@@ -21,8 +24,32 @@ jobs:
         run: npm ci
         working-directory: site
 
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: site
+
+      - name: Static Reference Check
+        run: npm run check-html-refs
+        working-directory: site
+
       - name: Build
         run: npm run build
+        working-directory: site
+
+      - name: Browser Crawl Check (localhost preview)
+        run: |
+          set -euo pipefail
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/vite-preview.log 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill ${PREVIEW_PID} || true' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS "${LOCAL_BASE_URL}" > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl -fsS "${LOCAL_BASE_URL}" > /dev/null
+          npm run check-live-browser -- "${LOCAL_BASE_URL}"
         working-directory: site
 
       - name: Deploy to Cloudflare Pages
@@ -32,3 +59,11 @@ jobs:
           accountId: f8b90b17ff39c08c681a498bf920723a
           command: pages deploy dist --project-name new-fukui-pharma
           workingDirectory: site
+
+      - name: Post Deploy Check (remote)
+        run: |
+          set -euo pipefail
+          sleep 20
+          npm run check-live -- "${REMOTE_BASE_URL}"
+          npm run check-live-browser -- "${REMOTE_BASE_URL}"
+        working-directory: site

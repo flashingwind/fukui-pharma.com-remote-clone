@@ -1,9 +1,9 @@
 ## 症状、病気と不足の可能性がある栄養素
 
-病名索引 [ア〜オ](eiyou#kigoua) [カ〜コ](eiyou#kigouka)
-[サ〜ソ](eiyou#kigousa) [タ〜ト](eiyou#kigouta)
-[ナ〜ノ](eiyou#kigouna) [ハ〜ホ](eiyou#kigouha)
-[マ〜モ](eiyou#kigouma) [ヤ〜ヨ](eiyou#kigouya)
+病名索引 [ア〜オ](/vitamin-mineral/eiyou#kigoua) [カ〜コ](/vitamin-mineral/eiyou#kigouka)
+[サ〜ソ](/vitamin-mineral/eiyou#kigousa) [タ〜ト](/vitamin-mineral/eiyou#kigouta)
+[ナ〜ノ](/vitamin-mineral/eiyou#kigouna) [ハ〜ホ](/vitamin-mineral/eiyou#kigouha)
+[マ〜モ](/vitamin-mineral/eiyou#kigouma) [ヤ〜ヨ](/vitamin-mineral/eiyou#kigouya)
 
 ---
 

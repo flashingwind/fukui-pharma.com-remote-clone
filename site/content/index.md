@@ -56,17 +56,17 @@
     9. [ベータグルカンと免疫細胞及び図表](/atopic/meneki#betaguru)
     10. [ウイルス感染免疫応答の経過図表](/atopic/meneki#menkei)
 6. <span class="red">アトピー性皮膚炎</span>
-    1. [アトピー性皮膚炎の特徴](/atopic#atopi1)
-    2. [粘膜と皮膚の不調](/atopic#atopi2)
-    3. [消化不十分の蛋白質が抗原となりやすい](/atopic#atopi3)
-    4. [免疫の不調](/atopic#atopi4)
-    5. [マクロファージの活性化](/atopic#atopi5)
-    6. [プロスタグランジンE2を減らす](/atopic#atopi6)
-    7. [プロスタグランジンE3を増やす](/atopic#atopi7)
-    8. [砂糖を摂りすぎない](/atopic#atopi8)
-    9. [副腎を強くしましょう](/atopic#atopi9)
-    10. [ヒスタミンを減らしましょう](/atopic#atopi10)
-    11. [アトピー性皮膚炎と免疫応答の図表](/atopic#atopicb) ![アトピー性皮膚炎と免疫応答の図表](/others/atopic6.gif)
+    1. [アトピー性皮膚炎の特徴](/atopic/atopic#atopi1)
+    2. [粘膜と皮膚の不調](/atopic/atopic#atopi2)
+    3. [消化不十分の蛋白質が抗原となりやすい](/atopic/atopic#atopi3)
+    4. [免疫の不調](/atopic/atopic#atopi4)
+    5. [マクロファージの活性化](/atopic/atopic#atopi5)
+    6. [プロスタグランジンE2を減らす](/atopic/atopic#atopi6)
+    7. [プロスタグランジンE3を増やす](/atopic/atopic#atopi7)
+    8. [砂糖を摂りすぎない](/atopic/atopic#atopi8)
+    9. [副腎を強くしましょう](/atopic/atopic#atopi9)
+    10. [ヒスタミンを減らしましょう](/atopic/atopic#atopi10)
+    11. [アトピー性皮膚炎と免疫応答の図表](/atopic/atopic#atopicb) ![アトピー性皮膚炎と免疫応答の図表](/others/atopic6.gif)
 
 ---
 
@@ -107,49 +107,49 @@
 
 ### 2006世界らん展
 
-[日本大賞はマスデバリア](/flowers/2006ranten)
-[パフィオペディラム](/flowers/2006paphio)
-[カトレア](/flowers/2006cattleya)
-[リカステ](/flowers/2006lycaste11)
+[日本大賞はマスデバリア](/flowers/2006/2006ranten)
+[パフィオペディラム](/flowers/2006/2006paphio)
+[カトレア](/flowers/2006/2006cattleya)
+[リカステ](/flowers/2006/2006lycaste11)
 
 ### 2005世界らん展
 
-[日本大賞はデンドロビウム](/flowers/kaizyou)
-[パフィオペディラム1](/flowers/paphio101)
-[パフィオペディラム2](/flowers/paphio202)
-[パフィオペディラム3](/flowers/paphio103)
-[カトレア1](/flowers/cattleya1)
-[カトレア2](/flowers/cattleya22)
-[リカステ](/flowers/lycaste1)
-[ファレノプシス](/flowers/phalaenopsis)
-[デンドロビウム](/flowers/dendrobiumu)
-[シンビ・マスダ・フラグ](/flowers/masdevallia)
+[日本大賞はデンドロビウム](/flowers/dendrobium/kaizyou)
+[パフィオペディラム1](/flowers/paphio/paphio101)
+[パフィオペディラム2](/flowers/paphio/paphio202)
+[パフィオペディラム3](/flowers/paphio/paphio103)
+[カトレア1](/flowers/cattleya/cattleya1)
+[カトレア2](/flowers/cattleya/cattleya22)
+[リカステ](/flowers/lycaste/lycaste1)
+[ファレノプシス](/flowers/phalaenopsis/phalaenopsis)
+[デンドロビウム](/flowers/dendrobium/dendrobiumu)
+[シンビ・マスダ・フラグ](/flowers/others/masdevallia)
 
 2004世界らん展
 
-[日本大賞は胡蝶蘭](/flowers/sonota)
+[日本大賞は胡蝶蘭](/flowers/others/sonota)
 
-[カトレア1](/flowers/cattleya)
+[カトレア1](/flowers/cattleya/cattleya)
 
-[カトレア2](/flowers/cattleyablue)
+[カトレア2](/flowers/cattleya/cattleyablue)
 
-[パフィオペディラム1](/flowers/paphiopedilum)
+[パフィオペディラム1](/flowers/paphio/paphiopedilum)
 
-[パフィオペディラム2](/flowers/paphiopedilum2)
+[パフィオペディラム2](/flowers/paphio/paphiopedilum2)
 
-[ファレノプシス](/flowers/phalaenopsis4)
+[ファレノプシス](/flowers/phalaenopsis/phalaenopsis4)
 
-[デンドロビウム](/flowers/dendrobiumnew)
+[デンドロビウム](/flowers/dendrobium/dendrobiumnew)
 
-[リカステ](/flowers/lycasteNew)
+[リカステ](/flowers/lycaste/lycasteNew)
 
 ### ぼたん
 
-[上野公園ぼたん展](/flowers/harubotan16)
+[上野公園ぼたん展](/flowers/others/harubotan16)
 
 ### バラ
 
-[日本橋高島屋バラ展](/flowers/takasimayabaraten)
+[日本橋高島屋バラ展](/flowers/others/takasimayabaraten)
 
 ### [明治、大正期の車](/others/oldcar)
 

@@ -193,15 +193,15 @@ const MenuLeft = () => {
       </div>
       {openSection.atopic && (
         <ul className="menu-group">
-          <li><a href="/atopic">アトピー性皮膚炎と栄養素の関係</a></li>
-          <li><a href="/meneki">免疫とは（免疫を受け持つ細胞）</a></li>
-          <li><a href="/menekikihon">免疫の基本応答</a></li>
-          <li><a href="/thbalance">Th1とTh2のバランス</a></li>
+          <li><a href="/atopic/atopic">アトピー性皮膚炎と栄養素の関係</a></li>
+          <li><a href="/atopic/meneki">免疫とは（免疫を受け持つ細胞）</a></li>
+          <li><a href="/atopic/menekikihon">免疫の基本応答</a></li>
+          <li><a href="/atopic/thbalance">Th1とTh2のバランス</a></li>
         </ul>
       )}
 
       {/* 肌の美しさと栄養 */}
-      <a className="menu-section-link" href="/hadautukusisa">肌の美しさと栄養 ▶</a>
+      <a className="menu-section-link" href="/others/hadautukusisa">肌の美しさと栄養 ▶</a>
 
       {/* 出版 */}
       <div className="menu-section" onClick={() => toggleSection('publication')} style={{cursor:'pointer'}}>
@@ -219,7 +219,7 @@ const MenuLeft = () => {
       </div>
       {openSection.access && (
         <ul className="menu-group">
-          <li><a href="/access">アクセス</a></li>
+          <li><a href="/shop/access">アクセス</a></li>
         </ul>
       )}
       */}
@@ -234,48 +234,48 @@ const MenuLeft = () => {
             2007 世界らん展 {openYear.y2007 ? '▼' : '▶'}
           </li>
           {openYear.y2007 && <>
-            <li><a href="/flowers/2007ranten120">日本大賞はデンドロビウム</a></li>
-            <li><a href="/flowers/2007catC">カトレア</a></li>
-            <li><a href="/flowers/2007paphE">パフィオ</a></li>
+            <li><a href="/flowers/2007/2007ranten120">日本大賞はデンドロビウム</a></li>
+            <li><a href="/flowers/2007/2007catC">カトレア</a></li>
+            <li><a href="/flowers/2007/2007paphE">パフィオ</a></li>
           </>}
           <li className="menu-subtitle" onClick={() => toggleYear('y2006')} style={{cursor:'pointer'}}>
             2006 世界らん展 {openYear.y2006 ? '▼' : '▶'}
           </li>
           {openYear.y2006 && <>
-            <li><a href="/flowers/2006ranten">日本大賞はマスデバリア</a></li>
-            <li><a href="/flowers/2006cattleya">カトレア</a></li>
-            <li><a href="/flowers/2006paphio">パフィオ</a></li>
-            <li><a href="/flowers/2006lycaste11">リカステ</a></li>
+            <li><a href="/flowers/2006/2006ranten">日本大賞はマスデバリア</a></li>
+            <li><a href="/flowers/2006/2006cattleya">カトレア</a></li>
+            <li><a href="/flowers/2006/2006paphio">パフィオ</a></li>
+            <li><a href="/flowers/2006/2006lycaste11">リカステ</a></li>
           </>}
           <li className="menu-subtitle" onClick={() => toggleYear('y2005')} style={{cursor:'pointer'}}>
             2005 世界らん展 {openYear.y2005 ? '▼' : '▶'}
           </li>
           {openYear.y2005 && <>
-            <li><a href="/flowers/dendrobiumu">日本大賞はデンドロビウム</a></li>
-            <li><a href="/flowers/paphio101">パフィオ1</a></li>
-            <li><a href="/flowers/paphio202">パフィオ2</a></li>
-            <li><a href="/flowers/paphio103">パフィオ3</a></li>
-            <li><a href="/flowers/cattleya1">パフィオ4</a></li>
-            <li><a href="/flowers/cattleya22">カトレア</a></li>
-            <li><a href="/flowers/lycaste1">リカステ</a></li>
-            <li><a href="/flowers/phalaenopsis">ファレノ</a></li>
-            <li><a href="/flowers/masdevallia">マスデバリア</a></li>
-            <li><a href="/flowers/kaizyou">その他</a></li>
+            <li><a href="/flowers/dendrobium/dendrobiumu">日本大賞はデンドロビウム</a></li>
+            <li><a href="/flowers/paphio/paphio101">パフィオ1</a></li>
+            <li><a href="/flowers/paphio/paphio202">パフィオ2</a></li>
+            <li><a href="/flowers/paphio/paphio103">パフィオ3</a></li>
+            <li><a href="/flowers/cattleya/cattleya1">パフィオ4</a></li>
+            <li><a href="/flowers/cattleya/cattleya22">カトレア</a></li>
+            <li><a href="/flowers/lycaste/lycaste1">リカステ</a></li>
+            <li><a href="/flowers/phalaenopsis/phalaenopsis">ファレノ</a></li>
+            <li><a href="/flowers/others/masdevallia">マスデバリア</a></li>
+            <li><a href="/flowers/dendrobium/kaizyou">その他</a></li>
           </>}
           <li className="menu-subtitle" onClick={() => toggleYear('y2004')} style={{cursor:'pointer'}}>
             2004 世界らん展 {openYear.y2004 ? '▼' : '▶'}
           </li>
           {openYear.y2004 && <>
-            <li><a href="/flowers/2004ran">日本大賞はファレノプシス</a></li>
-            <li><a href="/flowers/cattleya">カトレア</a></li>
-            <li><a href="/flowers/cattleyablue">カトレア・青</a></li>
-            <li><a href="/flowers/paphiopedilum">パフィオ1</a></li>
-            <li><a href="/flowers/paphiopedilum2">パフィオ2</a></li>
-            <li><a href="/flowers/phalaenopsis4">ファレノ</a></li>
-            <li><a href="/flowers/dendrobiumnew">デンドロ</a></li>
-            <li><a href="/flowers/lycasteNew">リカステ</a></li>
+            <li><a href="/flowers/2004/2004ran">日本大賞はファレノプシス</a></li>
+            <li><a href="/flowers/cattleya/cattleya">カトレア</a></li>
+            <li><a href="/flowers/cattleya/cattleyablue">カトレア・青</a></li>
+            <li><a href="/flowers/paphio/paphiopedilum">パフィオ1</a></li>
+            <li><a href="/flowers/paphio/paphiopedilum2">パフィオ2</a></li>
+            <li><a href="/flowers/phalaenopsis/phalaenopsis4">ファレノ</a></li>
+            <li><a href="/flowers/dendrobium/dendrobiumnew">デンドロ</a></li>
+            <li><a href="/flowers/lycaste/lycasteNew">リカステ</a></li>
           </>}
-          <li className="menu-subtitle"><a href="/flowers/harubotan16" style={{textDecoration:'none', color:'inherit'}}>上野公園ぼたん展 ▶</a></li>
+          <li className="menu-subtitle"><a href="/flowers/others/harubotan16" style={{textDecoration:'none', color:'inherit'}}>上野公園ぼたん展 ▶</a></li>
         </ul>
       )}
 
@@ -286,14 +286,14 @@ const MenuLeft = () => {
       {openSection.travel && (
         <ul className="menu-group">
           <li className="menu-subtitle">マウイ島</li>
-          <li><a href="/mauisunset">カアナパリの夕日・虹</a></li>
-          <li><a href="/mauibus">マウイのバス（ホエールビレッジ）</a></li>
-          <li><a href="/mauisyokubutu">マウイ植物園（バナナ・ジンジャーの花）</a></li>
-          <li><a href="/suizokukan">マウイ水族館</a></li>
+          <li><a href="/travel/mauisunset">カアナパリの夕日・虹</a></li>
+          <li><a href="/travel/mauibus">マウイのバス（ホエールビレッジ）</a></li>
+          <li><a href="/travel/mauisyokubutu">マウイ植物園（バナナ・ジンジャーの花）</a></li>
+          <li><a href="/travel/suizokukan">マウイ水族館</a></li>
           <li className="menu-subtitle">オアフ島</li>
-          <li><a href="/hanaumabay">ハナウマ湾</a></li>
-          <li><a href="/wikikibeach">ワイキキ・カラカウア通り</a></li>
-          <li><a href="/hawaibeach">ハワイのビーチ</a></li>
+          <li><a href="/travel/hanaumabay">ハナウマ湾</a></li>
+          <li><a href="/travel/wikikibeach">ワイキキ・カラカウア通り</a></li>
+          <li><a href="/travel/hawaibeach">ハワイのビーチ</a></li>
         </ul>
       )}
       </nav>

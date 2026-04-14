@@ -16,6 +16,12 @@ function normalizeBase(url) {
   return url.endsWith('/') ? url.slice(0, -1) : url;
 }
 
+function mapUrlToBase(url, base) {
+  const baseParsed = new URL(base);
+  const parsed = new URL(url, base);
+  return `${baseParsed.origin}${parsed.pathname}${parsed.search}${parsed.hash}`;
+}
+
 async function fetchSitemapUrls(base) {
   const sitemapUrl = `${base}/sitemap.xml`;
   const res = await fetch(sitemapUrl, { redirect: 'follow' });
@@ -51,7 +57,7 @@ async function checkUrl(url) {
 
 async function main() {
   const base = normalizeBase(BASE_URL);
-  const sitemapUrls = await fetchSitemapUrls(base);
+  const sitemapUrls = (await fetchSitemapUrls(base)).map((url) => mapUrlToBase(url, base));
   const criticalUrls = CRITICAL_URLS.map((p) => `${base}${p}`);
   const urls = [...new Set([...sitemapUrls, ...criticalUrls])];
 

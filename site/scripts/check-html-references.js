@@ -1,7 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import flowersIndex from '../src/generated/flowersIndex.js';
-
 const ROOT = process.cwd();
 const CONTENT_DIR = path.join(ROOT, 'content');
 const PUBLIC_DIR = path.join(ROOT, 'public');
@@ -10,20 +8,6 @@ const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic'
 const ASSET_EXT_RE = /\.(gif|jpe?g|png|webp|svg|ico|css|js|xml|txt|pdf|woff2?|ttf|eot|mp4|webm)$/i;
 const IMAGE_EXT_RE = /\.(gif|jpe?g|png|webp|svg)$/i;
 const PAGE_EXT_RE = /\.(md|htm|html)$/i;
-const FLOWER_FALLBACK_DIRS = [
-  '/flowers/2004',
-  '/flowers/2006',
-  '/flowers/2007',
-  '/flowers/botan',
-  '/flowers/cattleya',
-  '/flowers/dendrobium',
-  '/flowers/lycaste',
-  '/flowers/masdevallia',
-  '/flowers/others',
-  '/flowers/paphio',
-  '/flowers/phalaenopsis',
-  '/flowers/rose',
-];
 const COMMON_FALLBACK_DIRS = ['/flowers', '/travel', '/vitamin-mineral', '/supplement', '/active-oxygen', '/atopic', '/others', '/legacy', '/shop', '/access', '/publication', ''];
 
 function walk(dir, exts) {
@@ -70,27 +54,31 @@ function stripQueryHash(ref) {
   return ref.split('#', 1)[0].split('?', 1)[0];
 }
 
+function resolveRelativeRoutePath(filePath, routePath) {
+  const relFromContent = path.relative(CONTENT_DIR, filePath).replace(/\\/g, '/');
+  const relFromPublic = path.relative(PUBLIC_DIR, filePath).replace(/\\/g, '/');
+  const baseDir = relFromContent && !relFromContent.startsWith('..')
+    ? path.posix.dirname('/' + relFromContent.replace(/\.md$/i, ''))
+    : path.posix.dirname('/' + relFromPublic.replace(/\.(htm|html)$/i, ''));
+  const cleaned = routePath.replace(/^\.\/+/, '').replace(/^\/+/, '');
+  const joined = path.posix.join(baseDir, cleaned);
+  return joined.startsWith('/') ? joined : `/${joined}`;
+}
+
 function routeExists(routePath) {
   const raw = routePath.replace(/^\/+|\/+$/g, '').replace(/\.(htm|html)$/i, '');
-  if (!raw || raw === 'index' || raw === 'index2') return true;
+  if (!raw || raw === 'index' || raw === 'index2') {
+    return fs.existsSync(path.join(CONTENT_DIR, 'index.md'));
+  }
 
   const segments = raw.split('/').filter(Boolean);
   const section = segments.length > 1 && CONTENT_DIRS.includes(segments[0]) ? segments[0] : null;
-  const baseSlug = segments[segments.length - 1];
-  const contentSlug = baseSlug === 'access' ? 'index' : baseSlug;
+  if (!section) {
+    return false;
+  }
 
-  const ordered = section
-    ? [section, ...CONTENT_DIRS.filter((dir) => dir !== section)]
-    : CONTENT_DIRS;
-
-  const candidates = ordered.flatMap((dir) => {
-    if (dir === 'flowers' && flowersIndex[contentSlug]) {
-      return [flowersIndex[contentSlug], `/content/flowers/${contentSlug}.md`];
-    }
-    return [`/content/${dir}/${contentSlug}.md`];
-  });
-
-  return candidates.some((candidate) => fs.existsSync(path.join(ROOT, candidate.replace(/^\//, ''))));
+  const contentPath = path.join(CONTENT_DIR, `${raw}.md`);
+  return fs.existsSync(contentPath);
 }
 
 function checkRef(filePath, ref) {
@@ -120,9 +108,8 @@ function checkRef(filePath, ref) {
     if (fs.existsSync(resolved)) return null;
 
     const relFromContent = path.relative(CONTENT_DIR, filePath).replace(/\\/g, '/');
-    const section = relFromContent.split('/')[0];
     const mdDir = path.posix.dirname('/' + relFromContent.replace(/\.md$/i, ''));
-    const runtimeDirs = [mdDir, ...(section === 'flowers' ? FLOWER_FALLBACK_DIRS : []), ...COMMON_FALLBACK_DIRS];
+    const runtimeDirs = [mdDir, ...COMMON_FALLBACK_DIRS];
     const uniqueDirs = [...new Set(runtimeDirs)];
 
     const found = uniqueDirs.some((dir) => {
@@ -139,16 +126,20 @@ function checkRef(filePath, ref) {
 
   if (PAGE_EXT_RE.test(bare)) {
     if (!fs.existsSync(resolved)) {
-      const slug = path.basename(bare).replace(PAGE_EXT_RE, '');
-      if (!routeExists(`/${slug}`)) {
+      const rawRoute = bare.replace(PAGE_EXT_RE, '');
+      const resolvedRoute = resolveRelativeRoutePath(filePath, rawRoute);
+      if (!routeExists(resolvedRoute)) {
         return { type: 'route', ref };
       }
     }
     return null;
   }
 
-  if (!fs.existsSync(resolved) && !routeExists(`/${bare.replace(/^\.\/+/, '')}`)) {
-    return { type: 'route', ref };
+  if (!fs.existsSync(resolved)) {
+    const resolvedRoute = resolveRelativeRoutePath(filePath, bare);
+    if (!routeExists(resolvedRoute)) {
+      return { type: 'route', ref };
+    }
   }
 
   return null;

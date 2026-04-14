@@ -189,42 +189,17 @@ const ClickableImgWithFallback = ({ src, alt, dirs, ...props }) => {
   );
 };
 
-const VITAMIN_MINERAL_SLUGS = new Set([
-  "eiyouso", "ganyuute",
-  "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
-  "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
-  "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
-  "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
-  "coqganyu", "colingan", "inosigan",
-  "eiyou", "vitasi2", "vitasi3", "vitasi4", "serensir", "magsiryou", "aensiryou", "tetusiryou",
-  "lipoicacid", "mokuzito", "mokuzitu",
-]);
-const SUPPLEMENT_SLUGS = new Set(["shyoyou", "suppuse", "begu", "be-tagur", "be-tagur10", "megafudo"]);
-const ACTIVE_OXYGEN_SLUGS = new Set(["kousanka"]);
-
-const resolveContentLinkPath = (path, loadedSection) => {
-  if (path.includes("/")) {
-    return `/${path}`;
-  }
-  if (VITAMIN_MINERAL_SLUGS.has(path)) {
-    return `/vitamin-mineral/${path}`;
-  }
-  if (SUPPLEMENT_SLUGS.has(path)) {
-    return `/supplement/${path}`;
-  }
-  if (ACTIVE_OXYGEN_SLUGS.has(path)) {
-    return `/active-oxygen/${path}`;
-  }
-  return `${loadedSection ? `/${loadedSection}` : ""}/${path}`;
+const resolveContentLinkPath = (path, loadedPath) => {
+  const cleaned = path.replace(/^\.\/+/, "").replace(/^\/+/, "");
+  const baseDir = loadedPath.replace(/\/[^/]+$/, "").replace(/^\/content/, "");
+  const prefix = baseDir.startsWith("/") ? baseDir : `/${baseDir}`;
+  return cleaned ? `${prefix}/${cleaned}` : prefix;
 };
 
-const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeading }) => {
+const MarkdownContent = ({ file, onResolveStatus, onResolveHeading }) => {
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
   const [loadedPath, setLoadedPath] = useState("");
-  const candidates = useMemo(() => {
-    return file ? [file] : (fileCandidates || []);
-  }, [file, fileCandidates]);
   const loadedSection = useMemo(() => {
     const matched = loadedPath.match(/^\/content\/([^/]+)\//);
     return matched ? matched[1] : "";
@@ -235,30 +210,28 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeadi
 
     const load = async () => {
       setError("");
-      for (const path of candidates) {
-        try {
-          const res = await fetch(path);
-          if (!res.ok) continue;
-          const contentType = res.headers.get("content-type") || "";
-          if (contentType.includes("text/html")) continue;
-          const text = await res.text();
-          const normalized = text.trimStart().toLowerCase();
-          if (normalized.startsWith("<!doctype html") || normalized.startsWith("<html")) {
-            continue;
-          }
-          if (!cancelled) {
-            const normalizedText = normalizeLegacyBracketIds(
-              normalizeLegacyLinkAttrs(normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n")))
-            );
-            setContent(normalizedText);
-            setLoadedPath(path);
-            onResolveHeading?.(extractFirstHeading(normalizedText) || "");
-            onResolveStatus?.("index,follow");
-          }
-          return;
-        } catch {
-          // Try the next candidate.
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error("not-found");
+        const contentType = res.headers.get("content-type") || "";
+        if (contentType.includes("text/html")) throw new Error("html-response");
+        const text = await res.text();
+        const normalized = text.trimStart().toLowerCase();
+        if (normalized.startsWith("<!doctype html") || normalized.startsWith("<html")) {
+          throw new Error("html-body");
         }
+        if (!cancelled) {
+          const normalizedText = normalizeLegacyBracketIds(
+            normalizeLegacyLinkAttrs(normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n")))
+          );
+          setContent(normalizedText);
+          setLoadedPath(file);
+          onResolveHeading?.(extractFirstHeading(normalizedText) || "");
+          onResolveStatus?.("index,follow");
+        }
+        return;
+      } catch {
+        // Fall through to 404 state.
       }
       if (!cancelled) {
         setError("このページはありません。");
@@ -271,7 +244,7 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeadi
     return () => {
       cancelled = true;
     };
-  }, [candidates]);
+  }, [file]);
 
   return (
     <div className="markdown-body">
@@ -297,10 +270,12 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeadi
               const htmlMatched = href.match(/^([^#?]+)\.(htm|html)(#[^?]+)?(\?.+)?$/i);
               if (htmlMatched) {
                 const rawPath = htmlMatched[1];
-                const path = rawPath.replace(/^\.\/+/, "").replace(/^\/+/, "");
+                const path = rawPath.replace(/^\.\/+/, "");
                 const hash = htmlMatched[3] || "";
                 const search = htmlMatched[4] || "";
-                const prefixedPath = resolveContentLinkPath(path, loadedSection);
+                const prefixedPath = rawPath.startsWith("/")
+                  ? `/${path.replace(/^\/+/, "")}`
+                  : resolveContentLinkPath(path, loadedPath);
                 return (
                   <a href={`${prefixedPath}${hash}${search}`} {...props}>
                     {children}
@@ -310,10 +285,12 @@ const MarkdownContent = ({ file, fileCandidates, onResolveStatus, onResolveHeadi
               const matched = href.match(/^([^#?]+)\.md(#[^?]+)?(\?.+)?$/);
               if (matched) {
                 const rawPath = matched[1];
-                const path = rawPath.replace(/^\.\/+/, "").replace(/^\/+/, "");
+                const path = rawPath.replace(/^\.\/+/, "");
                 const hash = matched[2] || "";
                 const search = matched[3] || "";
-                const prefixedPath = resolveContentLinkPath(path, loadedSection);
+                const prefixedPath = rawPath.startsWith("/")
+                  ? `/${path.replace(/^\/+/, "")}`
+                  : resolveContentLinkPath(path, loadedPath);
                 return (
                   <a href={`${prefixedPath}${hash}${search}`} {...props}>
                     {children}

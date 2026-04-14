@@ -8,13 +8,12 @@ const IGNORED_REQUEST_HOSTS = new Set([
   'www.googletagmanager.com',
   'googletagmanager.com',
 ]);
+const SOFT_404_PATTERNS = [/このページはありません。?/];
+const SKIP_CRAWL_PATH_PREFIXES = ['/cdn-cgi/'];
+const MAX_CRAWL_PAGES = 250;
 
 function normalizeBase(url) {
   return url.endsWith('/') ? url.slice(0, -1) : url;
-}
-
-function isCiEnv() {
-  return process.env.CI === '1' || process.env.CI === 'true';
 }
 
 async function fetchSitemapUrls(base) {
@@ -33,6 +32,19 @@ async function fetchSitemapUrls(base) {
   return urls;
 }
 
+function mapUrlToBase(url, base) {
+  const baseParsed = new URL(base);
+  const parsed = new URL(url, base);
+  return `${baseParsed.origin}${parsed.pathname}${parsed.search}${parsed.hash}`;
+}
+
+function normalizeForCrawl(url, base) {
+  const parsed = new URL(url, base);
+  parsed.search = '';
+  parsed.hash = '';
+  return `${parsed.origin}${parsed.pathname}`;
+}
+
 function isIgnoredRequest(url, baseOrigin) {
   try {
     const parsed = new URL(url);
@@ -48,8 +60,27 @@ function isIgnoredRequest(url, baseOrigin) {
   }
 }
 
+function shouldSkipCrawl(url, baseOrigin) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.origin !== baseOrigin) {
+      return true;
+    }
+    if (SKIP_CRAWL_PATH_PREFIXES.some((prefix) => parsed.pathname.startsWith(prefix))) {
+      return true;
+    }
+    if (/\.(?:gif|jpe?g|png|webp|svg|ico|css|js|xml|txt|pdf|woff2?|ttf|eot|mp4|webm)$/i.test(parsed.pathname)) {
+      return true;
+    }
+    return false;
+  } catch {
+    return true;
+  }
+}
+
 async function checkSinglePage(page, url, baseOrigin) {
   const pageFailures = [];
+  const discoveredLinks = [];
   const reqFailures = [];
   const consoleErrors = [];
   const runtimeErrors = [];
@@ -83,10 +114,10 @@ async function checkSinglePage(page, url, baseOrigin) {
     const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
     if (!response || !response.ok()) {
       pageFailures.push(`HTTP ${response ? response.status() : 0} at ${url}`);
-      return pageFailures;
+      return { failures: pageFailures, discoveredLinks };
     }
 
-    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {
+    await page.waitForLoadState('networkidle', { timeout: 3000 }).catch(() => {
       // Some pages may keep connections open; domcontentloaded is enough for this check.
     });
 
@@ -114,7 +145,39 @@ async function checkSinglePage(page, url, baseOrigin) {
       pageFailures.push(`pageerror ${url} :: ${line}`);
     }
 
-    return pageFailures;
+    const soft404 = await page.evaluate((patterns) => {
+      const text = document.body?.innerText || '';
+      return patterns.some((pattern) => {
+        try {
+          const re = new RegExp(pattern, 'i');
+          return re.test(text);
+        } catch {
+          return false;
+        }
+      });
+    }, SOFT_404_PATTERNS.map((x) => x.source));
+
+    if (soft404) {
+      pageFailures.push(`soft404 ${url} :: page contains \"このページはありません\"`);
+    }
+
+    const links = await page.evaluate(() => {
+      const anchors = Array.from(document.querySelectorAll('a[href]'));
+      return anchors.map((a) => a.href).filter(Boolean);
+    });
+
+    for (const href of links) {
+      try {
+        const parsed = new URL(href);
+        if (parsed.origin === baseOrigin) {
+          discoveredLinks.push(href);
+        }
+      } catch {
+        // ignore invalid href values
+      }
+    }
+
+    return { failures: pageFailures, discoveredLinks };
   } finally {
     page.off('requestfailed', onRequestFailed);
     page.off('console', onConsole);
@@ -123,39 +186,65 @@ async function checkSinglePage(page, url, baseOrigin) {
 }
 
 async function main() {
-  if (isCiEnv()) {
-    console.log('mode=skip');
-    console.log('reason=CI environment');
-    process.exit(0);
-  }
-
   const base = normalizeBase(BASE_URL);
   const parsed = new URL(base);
-  if (parsed.protocol !== 'https:') {
-    console.error(`fatal: only https is supported: ${base}`);
+  if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
+    console.error(`fatal: only http/https is supported: ${base}`);
     process.exit(1);
   }
 
-  const sitemapUrls = await fetchSitemapUrls(base);
-  const urls = [...new Set([base, ...sitemapUrls])];
+  const sitemapUrlsRaw = await fetchSitemapUrls(base);
+  const sitemapUrls = sitemapUrlsRaw.map((url) => mapUrlToBase(url, base));
 
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({ ignoreHTTPSErrors: false });
+  const context = await browser.newContext({ ignoreHTTPSErrors: parsed.protocol === 'http:' });
   const page = await context.newPage();
   const baseOrigin = parsed.origin;
 
+  const queue = [base, ...sitemapUrls];
+  const seen = new Set();
   const failures = [];
-  for (const url of urls) {
-    const result = await checkSinglePage(page, url, baseOrigin);
-    failures.push(...result);
+
+  while (queue.length > 0) {
+    if (seen.size >= MAX_CRAWL_PAGES) {
+      break;
+    }
+    const next = queue.shift();
+    const current = normalizeForCrawl(next, base);
+
+    if (seen.has(current)) {
+      continue;
+    }
+    seen.add(current);
+
+    if (shouldSkipCrawl(current, baseOrigin)) {
+      continue;
+    }
+    if (seen.size % 20 === 0) {
+      console.log(`progress_checked=${seen.size}`);
+    }
+
+    const { failures: pageFailures, discoveredLinks } = await checkSinglePage(page, current, baseOrigin);
+    failures.push(...pageFailures);
+
+    for (const link of discoveredLinks) {
+      const normalized = normalizeForCrawl(link, base);
+      if (!seen.has(normalized) && !shouldSkipCrawl(normalized, baseOrigin)) {
+        queue.push(normalized);
+      }
+    }
+  }
+  if (seen.size >= MAX_CRAWL_PAGES && queue.length > 0) {
+    console.log(`warn=crawl_cap_reached:${MAX_CRAWL_PAGES}`);
   }
 
   await context.close();
   await browser.close();
 
-  console.log(`mode=local`);
+  console.log('mode=browser-crawl');
   console.log(`base_url=${base}`);
-  console.log(`checked_pages=${urls.length}`);
+  console.log(`checked_pages=${seen.size}`);
+  console.log(`seed_sitemap=${sitemapUrls.length}`);
   console.log(`failures=${failures.length}`);
 
   for (const line of failures.slice(0, MAX_FAILURES_LOG)) {
