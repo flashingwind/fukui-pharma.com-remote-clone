@@ -23,7 +23,8 @@ This project uses an Apache-like policy with minimal redirects.
     - Only `/index.html -> /` (301)
 - Rewrites:
     - `/content/* -> /content/:splat` (200) to serve markdown/static assets directly
-    - `/* -> /index.html` (200) for SPA entry
+
+SPA entry (`/index.html`) is served by middleware only when the mapped markdown exists.
 
 ## 404 Rules
 

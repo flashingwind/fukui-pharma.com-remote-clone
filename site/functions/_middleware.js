@@ -41,6 +41,19 @@ async function assetExists(context, url, pathname) {
   return res.ok
 }
 
+async function fetchAsset(context, url, pathname, method = 'GET') {
+  const targetUrl = new URL(pathname, url)
+  const req = new Request(targetUrl.toString(), {
+    method,
+    headers: { 'x-route-check': '1' },
+  })
+
+  if (context.env?.ASSETS?.fetch) {
+    return context.env.ASSETS.fetch(req)
+  }
+  return fetch(req)
+}
+
 export async function onRequest(context) {
   if (context.request.headers.get('x-route-check') === '1') {
     return context.next()
@@ -65,5 +78,9 @@ export async function onRequest(context) {
 
   const contentPath = toContentMarkdownPath(decodedPathname)
   const exists = await assetExists(context, url, contentPath)
-  return exists ? context.next() : new Response('Not Found', { status: 404 })
+  if (!exists) {
+    return new Response('Not Found', { status: 404 })
+  }
+
+  return fetchAsset(context, url, '/index.html', method)
 }
