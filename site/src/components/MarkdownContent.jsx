@@ -101,6 +101,11 @@ const normalizeLegacyBracketIds = (markdown = "") => {
   });
 };
 
+const stripFrontMatter = (markdown = "") => {
+  // Remove a YAML front matter block only when it appears at the top of the file.
+  return markdown.replace(/^---\s*\r?\n[\s\S]*?\r?\n---\s*(?:\r?\n|$)/, "");
+};
+
 const extractText = (node) => {
   if (typeof node === "string") return node;
   if (Array.isArray(node)) return node.map(extractText).join("");
@@ -222,7 +227,9 @@ const MarkdownContent = ({ file, onResolveStatus, onResolveHeading }) => {
         }
         if (!cancelled) {
           const normalizedText = normalizeLegacyBracketIds(
-            normalizeLegacyLinkAttrs(normalizeLegacyImageAttrs(text.replace(/\\\n/g, "\n")))
+            normalizeLegacyLinkAttrs(
+              normalizeLegacyImageAttrs(stripFrontMatter(text).replace(/\\\n/g, "\n"))
+            )
           );
           setContent(normalizedText);
           setLoadedPath(file);
