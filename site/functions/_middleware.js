@@ -6,21 +6,64 @@ function safeDecodePathname(pathname) {
   }
 }
 
-function redirectTo(url, pathname) {
-  const redirectUrl = new URL(url.toString())
-  redirectUrl.pathname = pathname
-  return Response.redirect(redirectUrl.toString(), 301)
+function hasFileExtension(pathname) {
+  const match = pathname.match(/\/[^/]+\.([^/]+)$/)
+  if (!match) {
+    return false
+  }
+  const ext = match[1].toLowerCase()
+  // Treat legacy .html/.htm as markdown content routes instead of static file requests.
+  return ext !== 'html' && ext !== 'htm'
+}
+
+function toContentMarkdownPath(pathname) {
+  const rawPath = pathname.replace(/^\/+|\/+$/g, '')
+  const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '')
+  if (!normalizedPath || normalizedPath === 'index' || normalizedPath === 'index2') {
+    return '/content/index.md'
+  }
+  return `/content/${normalizedPath}.md`
+}
+
+async function assetExists(context, url, pathname) {
+  const targetUrl = new URL(pathname, url)
+  const req = new Request(targetUrl.toString(), {
+    method: 'HEAD',
+    headers: { 'x-route-check': '1' },
+  })
+
+  let res
+  if (context.env?.ASSETS?.fetch) {
+    res = await context.env.ASSETS.fetch(req)
+  } else {
+    res = await fetch(req)
+  }
+  return res.ok
 }
 
 export async function onRequest(context) {
-  const url = new URL(context.request.url)
-  const decodedPathname = safeDecodePathname(url.pathname)
-  const legacyMatch = decodedPathname.match(/^(.+?)\.(htm|html)$/i)
-
-  if (!legacyMatch) {
+  if (context.request.headers.get('x-route-check') === '1') {
     return context.next()
   }
 
-  const nextPath = legacyMatch[1] || '/'
-  return redirectTo(url, nextPath)
+  const method = context.request.method.toUpperCase()
+  if (method !== 'GET' && method !== 'HEAD') {
+    return context.next()
+  }
+
+  const url = new URL(context.request.url)
+  const decodedPathname = safeDecodePathname(url.pathname)
+
+  if (decodedPathname.startsWith('/content/')) {
+    return context.next()
+  }
+
+  if (hasFileExtension(decodedPathname)) {
+    const exists = await assetExists(context, url, decodedPathname)
+    return exists ? context.next() : new Response('Not Found', { status: 404 })
+  }
+
+  const contentPath = toContentMarkdownPath(decodedPathname)
+  const exists = await assetExists(context, url, contentPath)
+  return exists ? context.next() : new Response('Not Found', { status: 404 })
 }
