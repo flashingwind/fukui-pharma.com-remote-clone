@@ -1,4 +1,6 @@
 const BASE_URL = process.argv[2] || 'https://fukui-pharma.com';
+const FETCH_RETRIES = Number(process.env.CHECK_LIVE_FETCH_RETRIES || 3);
+const FETCH_TIMEOUT_MS = Number(process.env.CHECK_LIVE_FETCH_TIMEOUT_MS || 15000);
 
 const ASSET_EXT_RE = /\.(gif|jpe?g|png|webp|svg|ico|css|js|xml|txt|pdf|woff2?|ttf|eot|mp4|webm)$/i;
 
@@ -22,9 +24,33 @@ function mapUrlToBase(url, base) {
   return `${baseParsed.origin}${parsed.pathname}${parsed.search}${parsed.hash}`;
 }
 
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchWithRetry(url, options = {}) {
+  let lastError;
+  for (let attempt = 1; attempt <= FETCH_RETRIES; attempt += 1) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+    try {
+      const res = await fetch(url, { ...options, signal: controller.signal });
+      clearTimeout(timer);
+      return res;
+    } catch (error) {
+      clearTimeout(timer);
+      lastError = error;
+      if (attempt < FETCH_RETRIES) {
+        await wait(250 * attempt);
+      }
+    }
+  }
+  throw lastError;
+}
+
 async function fetchSitemapUrls(base) {
   const sitemapUrl = `${base}/sitemap.xml`;
-  const res = await fetch(sitemapUrl, { redirect: 'follow' });
+  const res = await fetchWithRetry(sitemapUrl, { redirect: 'follow' });
   if (!res.ok) {
     throw new Error(`failed to fetch sitemap: ${res.status}`);
   }
@@ -45,7 +71,7 @@ function isAssetUrl(url) {
 
 async function checkUrl(url) {
   try {
-    const res = await fetch(url, { redirect: 'follow' });
+    const res = await fetchWithRetry(url, { redirect: 'follow' });
     const ct = (res.headers.get('content-type') || '').toLowerCase();
     const okStatus = res.ok;
     const okType = !isAssetUrl(url) || !ct.includes('text/html');
@@ -57,7 +83,12 @@ async function checkUrl(url) {
 
 async function main() {
   const base = normalizeBase(BASE_URL);
-  const sitemapUrls = (await fetchSitemapUrls(base)).map((url) => mapUrlToBase(url, base));
+  let sitemapUrls = [];
+  try {
+    sitemapUrls = (await fetchSitemapUrls(base)).map((url) => mapUrlToBase(url, base));
+  } catch (error) {
+    console.error(`warn: sitemap fetch failed; continuing with critical URLs only (${error.message})`);
+  }
   const criticalUrls = CRITICAL_URLS.map((p) => `${base}${p}`);
   const urls = [...new Set([...sitemapUrls, ...criticalUrls])];
 
