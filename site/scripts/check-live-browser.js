@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 
-const BASE_URL = process.argv[2] || 'https://fukui-pharma.com';
+const BASE_URL = process.argv[2] || 'http://127.0.0.1:4173';
 const MAX_FAILURES_LOG = 120;
 const IGNORED_REQUEST_HOSTS = new Set([
   'www.google-analytics.com',
@@ -14,6 +14,15 @@ const MAX_CRAWL_PAGES = 250;
 
 function normalizeBase(url) {
   return url.endsWith('/') ? url.slice(0, -1) : url;
+}
+
+function isLocalBase(url) {
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname === 'localhost' || parsed.hostname === '127.0.0.1' || parsed.hostname === '::1';
+  } catch {
+    return false;
+  }
 }
 
 async function fetchSitemapUrls(base) {
@@ -190,6 +199,10 @@ async function main() {
   const parsed = new URL(base);
   if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
     console.error(`fatal: only http/https is supported: ${base}`);
+    process.exit(1);
+  }
+  if (!isLocalBase(base)) {
+    console.error(`fatal: local-only check-live refuses non-local URL: ${base}`);
     process.exit(1);
   }
 

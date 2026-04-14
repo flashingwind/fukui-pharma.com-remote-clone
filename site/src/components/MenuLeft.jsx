@@ -214,15 +214,7 @@ const MenuLeft = () => {
       )}
 
       {/* 福井薬局 */}
-        {/*<div className="menu-section" onClick={() => toggleSection('access')} style={{cursor:'pointer'}}>
-        アクセス（店舗情報） {openSection.access ? '▼' : '▶'}
-      </div>
-      {openSection.access && (
-        <ul className="menu-group">
-          <li><a href="/shop/access">アクセス</a></li>
-        </ul>
-      )}
-      */}
+      <a className="menu-section-link" href="/shop/fukui">当店について ▶</a>
 
       {/* 花の写真集 */}
       <div className="menu-section" onClick={() => toggleSection('flower')} style={{cursor:'pointer'}}>

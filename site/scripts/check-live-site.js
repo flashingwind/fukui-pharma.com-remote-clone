@@ -1,4 +1,4 @@
-const BASE_URL = process.argv[2] || 'https://fukui-pharma.com';
+const BASE_URL = process.argv[2] || 'http://127.0.0.1:4173';
 const FETCH_RETRIES = Number(process.env.CHECK_LIVE_FETCH_RETRIES || 3);
 const FETCH_TIMEOUT_MS = Number(process.env.CHECK_LIVE_FETCH_TIMEOUT_MS || 15000);
 
@@ -16,6 +16,15 @@ const CRITICAL_URLS = [
 
 function normalizeBase(url) {
   return url.endsWith('/') ? url.slice(0, -1) : url;
+}
+
+function isLocalBase(url) {
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname === 'localhost' || parsed.hostname === '127.0.0.1' || parsed.hostname === '::1';
+  } catch {
+    return false;
+  }
 }
 
 function mapUrlToBase(url, base) {
@@ -84,6 +93,12 @@ async function checkUrl(url) {
 async function main() {
   const base = normalizeBase(BASE_URL);
   let sitemapUrls = [];
+
+  if (!isLocalBase(base)) {
+    console.error(`fatal: local-only check-live refuses non-local URL: ${base}`);
+    process.exit(1);
+  }
+
   try {
     sitemapUrls = (await fetchSitemapUrls(base)).map((url) => mapUrlToBase(url, base));
   } catch (error) {

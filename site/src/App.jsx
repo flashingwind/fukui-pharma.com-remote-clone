@@ -26,6 +26,7 @@ const FOOTER_MENU_SECTIONS = [
   { href: '/active-oxygen/kousanka', label: '活性酸素' },
   { href: '/atopic/atopic', label: 'アトピー・免疫' },
   { href: '/others/hadautukusisa', label: '肌の美しさと栄養' },
+  { href: '/shop/fukui', label: '当店について' },
   { href: '/vitamin-mineral/mokuzitu', label: '出版' },
   { href: '/flowers/others/harubotan16', label: '花の写真集' },
   { href: '/travel/mauisunset', label: 'ハワイ旅行' },
