@@ -152,7 +152,7 @@ function checkRenderRisk(refInfo) {
   if (!bare) return null;
   if (isExternal(bare)) return null;
 
-  // Image URLs referenced as links are often non-rendering mistakes (e.g. [new!](/icon/new.gif)).
+  // Image URLs referenced as links are often non-rendering mistakes (e.g. [new!](/icon/new.svg)).
   if (IMAGE_EXT_RE.test(bare) && (source === 'md-link' || source === 'html-href')) {
     return { type: 'render', ref, source };
   }

@@ -35,6 +35,9 @@ dist-ssr
 
 # Icon must end with two \r
 Icon
+!public/icon/
+public/icon/new.gif
+!public/icon/new.svg
 
 
 # Thumbnails

@@ -1,4 +1,4 @@
-# 亜鉛![new!](/icon/new.gif){width="40" height="10"}
+# 亜鉛![new!](/icon/new.svg){width="40" height="10"}
 
 - 亜鉛とはどんなものか,亜鉛のお話
 - [亜鉛は体内でどのように働くか](/vitamin-mineral/aensiryou#aenhata)

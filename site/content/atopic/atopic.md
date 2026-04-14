@@ -1,5 +1,5 @@
 > 1.アトピー性皮膚炎と栄養素の関係
-> ![new2](/icon/new.gif){width="40" height="10"}
+> ![new2](/icon/new.svg){width="40" height="10"}
 >
 > > \
 > > [1)アトピー性皮膚炎の特徴](/atopic/atopic#atopi1)\
@@ -16,7 +16,7 @@
 >
 > \
 > [2.アトピー性皮膚炎と免疫応答の図表](/atopic/atopic#atopicb)
-> ![new2](/icon/new.gif){width="40" height="10"}
+> ![new2](/icon/new.svg){width="40" height="10"}
 
 ## アトピー性皮膚炎と栄養素の関係
 

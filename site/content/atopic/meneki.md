@@ -1,16 +1,16 @@
 - 免疫とは、免疫を受け持つ細胞
 - [血液中の細胞、図表](/atopic/meneki#ketueki)
-  ![new!](/icon/new.gif){width="40" height="10"}
+  ![new!](/icon/new.svg){width="40" height="10"}
 - [免疫低下の原因](/atopic/meneki#mentei)
 - [免疫を高めるには](/atopic/meneki#mentei2)
 - [免疫の働きとビタミン](/atopic/meneki#menbita)
-- [ヘルパーT1とヘルパーT2のバランス](/atopic/meneki#th1th2)![new!](/icon/new.gif){width="40"
+- [ヘルパーT1とヘルパーT2のバランス](/atopic/meneki#th1th2)![new!](/icon/new.svg){width="40"
   height="10"}
 - [Th1を高めTh2を抑える図表](/atopic/meneki#th1th2p)
   [○Th1Th2バランスの図表](/atopic/thbalance)
-  ![new!](/icon/new.gif){width="40" height="10"}
+  ![new!](/icon/new.svg){width="40" height="10"}
 - [免疫基本応答の図表](/atopic/meneki#menoukihon)
-  ![new!](/icon/new.gif){width="40" height="10"}
+  ![new!](/icon/new.svg){width="40" height="10"}
 - [免疫応答の図表](/atopic/meneki#menoutou)
 - [ベータグルカンと免疫細胞及び図表](/atopic/meneki#betaguru)
 - [ウイルス感染免疫応答の経過図表](/atopic/meneki#menkei)
@@ -141,7 +141,7 @@
 
 ### <a id="th1th2"></a>Th1を促しTh2を抑える
 
-![new!](/icon/new.gif){width="40" height="10"}
+![new!](/icon/new.svg){width="40" height="10"}
 
     身体が感染症と戦う2つの異なった方法が存在します。
     細胞性免疫能(Th1)と液性免疫(Th2)です。
@@ -221,7 +221,7 @@
 ### <a id="th1th2p"></a>Th1応答を高め、Th2応答を抑えるには
 
 ![Th1・Th2のバランス](/atopic/th1th2barance.gif)
-![new!](/icon/new.gif){width="40" height="10"}\
+![new!](/icon/new.svg){width="40" height="10"}\
 
 ---
 

@@ -1,4 +1,4 @@
-# セレン![new!](/icon/new.gif)
+# セレン![new!](/icon/new.svg)
 
 - セレンの働き
 - [セレンはどんな症状で有用か](/vitamin-mineral/serensir#serentuk)
