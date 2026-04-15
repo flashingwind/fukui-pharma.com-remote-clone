@@ -106,6 +106,12 @@ const stripFrontMatter = (markdown = "") => {
   return markdown.replace(/^---\s*\r?\n[\s\S]*?\r?\n---\s*(?:\r?\n|$)/, "");
 };
 
+const normalizeLegacyLeadingIndent = (markdown = "") => {
+  // Legacy source often uses 4+ leading spaces for visual alignment in plain text.
+  // In CommonMark this becomes a code block, so normalize only Japanese-led lines.
+  return markdown.replace(/^(?: {4,}|\t+)(?=[\u3000]*[\u3040-\u30ff\u3400-\u9fff\uff10-\uff19\uff21-\uff3a\uff41-\uff5a])/gm, "");
+};
+
 const extractText = (node) => {
   if (typeof node === "string") return node;
   if (Array.isArray(node)) return node.map(extractText).join("");
@@ -228,7 +234,9 @@ const MarkdownContent = ({ file, onResolveStatus, onResolveHeading }) => {
         if (!cancelled) {
           const normalizedText = normalizeLegacyBracketIds(
             normalizeLegacyLinkAttrs(
-              normalizeLegacyImageAttrs(stripFrontMatter(text).replace(/\\\n/g, "\n"))
+              normalizeLegacyImageAttrs(
+                normalizeLegacyLeadingIndent(stripFrontMatter(text).replace(/\\\n/g, "\n"))
+              )
             )
           );
           setContent(normalizedText);

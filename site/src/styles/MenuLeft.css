@@ -13,6 +13,7 @@
   position: sticky;
   top: 0;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .menu-left-header {
@@ -65,6 +66,7 @@
 
 .menu-left-nav {
   padding: 12px 10px;
+  text-align: left;
 }
 /* メニューリスト */
 .menu-left-nav ul {
@@ -72,11 +74,13 @@
   padding: 0;
   margin: 0 0 12px 0;
   background: transparent;
+  text-align: left;
 }
 /* メニュー項目 */
 .menu-left-nav li {
   margin-bottom: 6px;
   background: transparent;
+  text-align: left;
 }
 /* 通常リンク */
 .menu-left-nav a {
@@ -110,14 +114,29 @@
   color: #7a2000;
   margin: 14px 0 6px;
   font-size: 15px;
-  text-decoration: none;
+  text-decoration: none !important;
   background: #f5deb3;
   padding: 0;
 }
 .menu-section-link:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #7a2000;
   background: #f5deb3;
+}
+
+.menu-section-link:visited,
+.menu-section-link:focus,
+.menu-section-link:active {
+  text-decoration: none !important;
+  color: #7a2000;
+}
+
+.menu-left-nav a.menu-section-link,
+.menu-left-nav a.menu-section-link:hover,
+.menu-left-nav a.menu-section-link:visited,
+.menu-left-nav a.menu-section-link:focus,
+.menu-left-nav a.menu-section-link:active {
+  text-decoration: none !important;
 }
 
 /* 年度・サブタイトル */
