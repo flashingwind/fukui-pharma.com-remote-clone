@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -56,5 +59,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: f8b90b17ff39c08c681a498bf920723a
-          command: pages deploy dist --project-name new-fukui-pharma
+          command: pages deploy dist --project-name new-fukui-pharma --functions functions
           workingDirectory: site
