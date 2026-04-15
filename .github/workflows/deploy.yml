@@ -44,13 +44,28 @@ jobs:
           npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/vite-preview.log 2>&1 &
           PREVIEW_PID=$!
           trap 'kill ${PREVIEW_PID} || true' EXIT
-          for i in $(seq 1 30); do
+
+          READY=0
+          for i in $(seq 1 60); do
+            if ! kill -0 "${PREVIEW_PID}" 2>/dev/null; then
+              echo "preview process exited early"
+              cat /tmp/vite-preview.log || true
+              exit 1
+            fi
+
             if curl -fsS "${LOCAL_BASE_URL}" > /dev/null; then
+              READY=1
               break
             fi
             sleep 1
           done
-          curl -fsS "${LOCAL_BASE_URL}" > /dev/null
+
+          if [ "${READY}" -ne 1 ]; then
+            echo "preview did not become ready within timeout"
+            cat /tmp/vite-preview.log || true
+            exit 1
+          fi
+
           npm run check-live-browser -- "${LOCAL_BASE_URL}"
         working-directory: site
 
