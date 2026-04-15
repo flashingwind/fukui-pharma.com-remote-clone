@@ -23,7 +23,7 @@
 <p><a href="/atopic/menekikihon">○免疫基本応答の図表</a></p>
 </div>
 
-<h2 class="top-menu-title">メニュー</h2>
+## メニュー
 
 1. ビタミン・ミネラル
     1. <span class="red">健康を維持</span>したり、<span class="red">病気の回復</span>にはなぜ[ビタミン・ミネラルが必要](/vitamin-mineral/vitasi2)なのでしょうか?
@@ -33,8 +33,8 @@
     5. ビタミン、ミネラルの不足症状、含有食品グラフなど: <span class="red">『薬剤師がすすめるビタミン・ミネラルのとり方』</span>([目次](/vitamin-mineral/mokuzito)、<a href="https://www.amazon.co.jp/dp/4621083074" target="_top">Amazon</a>)に掲載
     6. サプリメントとして、ビタミンやミネラルを摂りたい症状など: <span class="red">『薬剤師がすすめるビタミン・ミネラルの使い方(第2版)』</span>([目次](/vitamin-mineral/mokuzitu)、<a href="https://www.amazon.co.jp/dp/4621301306/" target="_top">Amazon</a>)に掲載
 2. ミネラル特集
-    - [セレンの働き、必要な症状、活性酸素の生成と消去の図表](/vitamin-mineral/serensir)
-    - [マグネシウムとは、働き、必要な症状](/vitamin-mineral/magsiryou)
+   　　- [セレンの働き、必要な症状、活性酸素の生成と消去の図表](/vitamin-mineral/serensir)
+   　　- [マグネシウムとは、働き、必要な症状](/vitamin-mineral/magsiryou)
 3. お薦めサプリメント
     - <span class="red">免疫の栄養、パン酵母成分</span> [ベータグルカン](/supplement/be-tagur10)(栄養補助食品)
     - <span class="red">マルチビタミンミネラル</span> [メガフードアルファー](/supplement/megafudo)(栄養補助食品)
@@ -100,75 +100,5 @@
 </tr>
 </tbody>
 </table>
-
----
-
-## フォトギャラリー
-
-### 2006世界らん展
-
-[日本大賞はマスデバリア](/flowers/2006/2006ranten)
-[パフィオペディラム](/flowers/2006/2006paphio)
-[カトレア](/flowers/2006/2006cattleya)
-[リカステ](/flowers/2006/2006lycaste11)
-
-### 2005世界らん展
-
-[日本大賞はデンドロビウム](/flowers/dendrobium/kaizyou)
-[パフィオペディラム1](/flowers/paphio/paphio101)
-[パフィオペディラム2](/flowers/paphio/paphio202)
-[パフィオペディラム3](/flowers/paphio/paphio103)
-[カトレア1](/flowers/cattleya/cattleya1)
-[カトレア2](/flowers/cattleya/cattleya22)
-[リカステ](/flowers/lycaste/lycaste1)
-[ファレノプシス](/flowers/phalaenopsis/phalaenopsis)
-[デンドロビウム](/flowers/dendrobium/dendrobiumu)
-[シンビ・マスダ・フラグ](/flowers/others/masdevallia)
-
-2004世界らん展
-
-[日本大賞は胡蝶蘭](/flowers/others/sonota)
-
-[カトレア1](/flowers/cattleya/cattleya)
-
-[カトレア2](/flowers/cattleya/cattleyablue)
-
-[パフィオペディラム1](/flowers/paphio/paphiopedilum)
-
-[パフィオペディラム2](/flowers/paphio/paphiopedilum2)
-
-[ファレノプシス](/flowers/phalaenopsis/phalaenopsis4)
-
-[デンドロビウム](/flowers/dendrobium/dendrobiumnew)
-
-[リカステ](/flowers/lycaste/lycasteNew)
-
-### ぼたん
-
-[上野公園ぼたん展](/flowers/others/harubotan16)
-
-### バラ
-
-[日本橋高島屋バラ展](/flowers/others/takasimayabaraten)
-
-### [明治、大正期の車](/others/oldcar)
-
-### ハワイ旅行
-
-[マウイ島カアナパリのサンセット・虹・夕暮れ](/travel/mauisunset)
-
-[オアフ島ハナウマ湾全景](/travel/hanaumabay)
-
-[オアフ島ワイキキビーチ・カラカウア通り](/travel/wikikibeach)
-
-[マウイ島カアナパリのバス、ホエールビレッジ前](/travel/mauibus)
-
-[マウイ島植物園バナナの花・しょうがの花](/travel/mauisyokubutu)
-
-[マウイ島水族館えい・熱帯魚](/travel/suizokukan)
-
-[ワイキキビーチとマウイビーチ](/travel/hawaibeach)
-
----
 
 [![アクセスカウンター](https://www.f-counter.net/j/62/1688138251/)](https://www.free-counter.jp/)
