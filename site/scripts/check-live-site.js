@@ -6,9 +6,9 @@ const ASSET_EXT_RE = /\.(gif|jpe?g|png|webp|svg|ico|css|js|xml|txt|pdf|woff2?|tt
 
 const CRITICAL_URLS = [
   '/icon/new.svg',
-  '/suppliments/sinhon5.jpg',
-  '/suppliments/megasin.gif',
-  '/suppliments/betasin.gif',
+  '/supplement/sinhon5.jpg',
+  '/supplement/megasin.gif',
+  '/supplement/betasin.gif',
   '/publication/sinhon5.jpg',
   '/others/megasin.gif',
   '/others/betasin.gif',
