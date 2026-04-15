@@ -70,9 +70,11 @@ jobs:
         working-directory: site
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: f8b90b17ff39c08c681a498bf920723a
-          command: pages deploy dist --project-name new-fukui-pharma
-          workingDirectory: site
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: f8b90b17ff39c08c681a498bf920723a
+        run: |
+          set -euo pipefail
+          npm i --no-save wrangler@4.83.0
+          npx wrangler pages deploy dist --project-name new-fukui-pharma
+        working-directory: site
