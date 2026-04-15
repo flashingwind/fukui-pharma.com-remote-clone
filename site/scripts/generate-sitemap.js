@@ -43,6 +43,10 @@ function walk(dir, ext = '.md', baseUrl = '') {
 function isRenderablePath(pathname, contentPathSet) {
   const rawPath = pathname.replace(/^\/+|\/+$/g, '');
   const normalizedPath = rawPath.replace(/\.(htm|html)$/i, '');
+  const exactPath = normalizedPath ? `/content/${normalizedPath}.md` : '/content/index.md';
+  if (contentPathSet.has(exactPath)) {
+    return true;
+  }
   const segments = normalizedPath.split('/').filter(Boolean);
   const rawSection = segments.length > 1 ? segments[0] : null;
   const section = rawSection && CONTENT_DIRS.includes(rawSection) ? rawSection : null;
@@ -57,7 +61,8 @@ function isRenderablePath(pathname, contentPathSet) {
   const shouldRedirectToVitaminMineral = !section && segments.length === 1
     && (NUTRIENT_FOOD_SLUGS.has(contentSlug) || VITAMIN_MINERAL_INFO_SLUGS.has(contentSlug));
   if (shouldRedirectToVitaminMineral) {
-    return contentPathSet.has(`/content/vitamin-mineral/${contentSlug}.md`);
+    return contentPathSet.has(`/content/vitamin-mineral/nutrient-foods/${contentSlug}.md`)
+      || contentPathSet.has(`/content/vitamin-mineral/${contentSlug}.md`);
   }
 
   const shouldRedirectToActiveOxygen = !section && segments.length === 1 && ACTIVE_OXYGEN_SLUGS.has(contentSlug);
