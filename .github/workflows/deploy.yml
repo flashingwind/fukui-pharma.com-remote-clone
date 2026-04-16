@@ -76,5 +76,5 @@ jobs:
         run: |
           set -euo pipefail
           npm i --no-save wrangler@4.83.0
-          npx wrangler pages deploy dist --project-name new-fukui-pharma
+          node_modules/.bin/wrangler pages deploy dist --project-name new-fukui-pharma
         working-directory: site
