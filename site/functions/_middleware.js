@@ -38,7 +38,14 @@ async function assetExists(context, url, pathname) {
   } else {
     res = await fetch(req)
   }
-  return res.ok
+  if (!res.ok) return false
+  // Cloudflare Pages SPA fallback returns index.html (text/html) for missing
+  // assets. Treat an HTML response as "not found" for non-HTML paths.
+  const ct = res.headers.get('content-type') || ''
+  if (ct.includes('text/html') && !pathname.endsWith('.html') && !pathname.endsWith('.htm')) {
+    return false
+  }
+  return true
 }
 
 async function fetchAsset(context, url, pathname, method = 'GET') {
