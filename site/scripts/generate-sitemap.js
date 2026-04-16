@@ -8,7 +8,7 @@ const CONTENT_DIR = path.resolve('content');
 const PUBLIC_DIR = path.resolve('public');
 const OUTPUT_FILE = path.join(PUBLIC_DIR, 'sitemap.xml');
 const today = new Date().toISOString().split('T')[0];
-const CONTENT_DIRS = ['vitamin-mineral', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access'];
+const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access'];
 const NUTRIENT_FOOD_SLUGS = new Set([
   'eiyouso', 'ganyuute',
   'aganyuu', 'eganyuu', 'dganyuu', 'bkganyuu', 'cganyuu', 'b1ganyuu', 'b2ganyuu', 'b3ganyuu',

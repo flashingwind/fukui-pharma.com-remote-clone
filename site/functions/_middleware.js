@@ -71,6 +71,11 @@ export async function onRequest(context) {
     return context.next()
   }
 
+  // Block legacy typo path that no longer exists.
+  if (decodedPathname.startsWith('/suppliments/') || decodedPathname === '/suppliments') {
+    return new Response('Not Found', { status: 404 })
+  }
+
   if (hasFileExtension(decodedPathname)) {
     const exists = await assetExists(context, url, decodedPathname)
     return exists ? context.next() : new Response('Not Found', { status: 404 })
