@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "npm run generate-flowers-index && npm run generate-sitemap && vite build && rm -rf dist/content && cp -R content dist/content",
+    "dev": "astro dev",
+    "build": "astro build",
     "generate-flowers-index": "node ./scripts/generate-flowers-index.js",
     "generate-sitemap": "node ./scripts/generate-sitemap.js",
     "check-html-refs": "node ./scripts/check-html-references.js",
@@ -18,8 +18,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "@astrojs/react": "^5.0.3",
+    "astro": "^6.1.7",
+    "marked": "^18.0.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "react-markdown": "^10.1.0",
     "rehype-raw": "^7.0.0",
     "remark-breaks": "^4.0.0",

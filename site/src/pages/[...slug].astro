@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import MarkdownLayout from '../layouts/MarkdownLayout.astro';
+
+export async function getStaticPaths() {
+  const allCollections = [
+    'vitamin-mineral',
+    'supplement',
+    'active-oxygen',
+    'atopic',
+    'flowers',
+    'travel',
+    'others',
+    'shop',
+    'access',
+  ];
+
+  const paths = [];
+
+  for (const collection of allCollections) {
+    try {
+      const entries = await getCollection(collection);
+      if (entries && Array.isArray(entries)) {
+        for (const entry of entries) {
+          // Use id as slug if slug doesn't exist
+          const slug = entry.slug || entry.id;
+          if (slug && slug !== 'index') {
+            paths.push({
+              params: { slug: slug },
+              props: { entry },
+            });
+          }
+        }
+      }
+    } catch (e) {
+      console.error(`Error loading collection`, e.message);
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  entry: any;
+}
+
+const { entry } = Astro.props;
+const htmlContent = await marked(entry.body);
+---
+
+<MarkdownLayout
+  frontmatter={entry.data}
+>
+  <Fragment set:html={htmlContent} />
+</MarkdownLayout>
