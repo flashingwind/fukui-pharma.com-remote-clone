@@ -1,7 +1,7 @@
 // scripts/generate-sitemap.js
 import fs from 'fs';
 import path from 'path';
-import flowersIndex from '../src/generated/flowersIndex.js';
+// flowersIndex は src/generated/flowersIndex.js で生成される（自動）
 
 const SITE_URL = 'https://fukui-pharma.com';
 const CONTENT_DIR = path.resolve('content');
@@ -75,8 +75,23 @@ function isRenderablePath(pathname, contentPathSet) {
     : CONTENT_DIRS;
 
   const candidates = orderedDirs.flatMap((dir) => {
-    if (dir === 'flowers' && flowersIndex[contentSlug]) {
-      return [flowersIndex[contentSlug], `/content/flowers/${contentSlug}.md`];
+    if (dir === 'flowers') {
+      // flowersページは深いディレクトリ構造をスキャンして候補を集める
+      const flowersCandidates = [
+        `/content/flowers/2004/${contentSlug}.md`,
+        `/content/flowers/2006/${contentSlug}.md`,
+        `/content/flowers/2007/${contentSlug}.md`,
+        `/content/flowers/botan/${contentSlug}.md`,
+        `/content/flowers/cattleya/${contentSlug}.md`,
+        `/content/flowers/dendrobium/${contentSlug}.md`,
+        `/content/flowers/lycaste/${contentSlug}.md`,
+        `/content/flowers/masdevallia/${contentSlug}.md`,
+        `/content/flowers/others/${contentSlug}.md`,
+        `/content/flowers/paphio/${contentSlug}.md`,
+        `/content/flowers/phalaenopsis/${contentSlug}.md`,
+        `/content/flowers/rose/${contentSlug}.md`,
+      ];
+      return flowersCandidates;
     }
     return [`/content/${dir}/${contentSlug}.md`];
   });

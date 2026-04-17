@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate-sitemap && vite build && rm -rf dist/content && cp -R content dist/content",
+    "build": "npm run generate-flowers-index && npm run generate-sitemap && vite build && rm -rf dist/content && cp -R content dist/content",
+    "generate-flowers-index": "node ./scripts/generate-flowers-index.js",
     "generate-sitemap": "node ./scripts/generate-sitemap.js",
     "check-html-refs": "node ./scripts/check-html-references.js",
     "check-live": "node ./scripts/check-live-site.js",

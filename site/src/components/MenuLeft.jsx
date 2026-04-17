@@ -9,11 +9,11 @@ const MINERAL_SLUGS = new Set([
   "magsiryou", "tetusiryou", "serensir", "lipoicacid",
 ]);
 
-const FLOWER_2007 = new Set(["2007ranten120", "2007catC", "2007paphE"]);
-const FLOWER_2006 = new Set(["2006ranten", "2006cattleya", "2006paphio", "2006lycaste11"]);
-const FLOWER_2005 = new Set(["dendrobiumu", "paphio101", "paphio202", "paphio103", "cattleya1", "cattleya22", "lycaste1", "phalaenopsis", "masdevallia", "kaizyou"]);
-const FLOWER_2004 = new Set(["2004ran", "cattleya", "cattleyablue", "paphiopedilum", "paphiopedilum2", "phalaenopsis4", "dendrobiumnew", "lycasteNew"]);
-const FLOWER_EXTRA = new Set(["harubotan16"]);
+const FLOWER_2004 = new Set(["2004ran"]);
+const FLOWER_2006 = new Set(["2006cattleya", "2006lycaste11", "2006paphio", "2006ranten"]);
+const FLOWER_2007 = new Set(["2007catC", "2007paphE", "2007ranten120"]);
+const FLOWER_EXTRA = new Set(["cattleya", "cattleyablue", "dendrobiumnew", "harubotan16", "lycasteNew", "paphiopedilum", "paphiopedilum2", "phalaenopsis4", "sonota", "takasimayabaraten"]);
+const FLOWER_2005 = new Set(["cattleya1", "cattleya22", "dendrobiumu", "kaizyou", "lycaste1", "masdevallia", "paphio101", "paphio103", "paphio202", "phalaenopsis"]);
 
 const TRAVEL_SLUGS = new Set(["mauisunset", "hanaumabay", "wikikibeach", "mauibus", "mauisyokubutu", "suizokukan", "hawaibeach"]);
 const SHOP_SLUGS = new Set(["tyuumon"]);
