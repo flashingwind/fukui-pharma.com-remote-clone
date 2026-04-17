@@ -16,6 +16,10 @@ export const collections = {
     loader: glob({ pattern: '**/*.md', base: './src/content/vitamin-mineral' }),
     schema: contentSchema,
   }),
+  'nutrient-foods': defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/nutrient-foods' }),
+    schema: contentSchema,
+  }),
   supplement: defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/supplement' }),
     schema: contentSchema,

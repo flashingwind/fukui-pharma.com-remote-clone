@@ -152,6 +152,14 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"nutrient-foods": Record<string, {
+  id: string;
+  body?: string;
+  collection: "nutrient-foods";
+  data: InferEntrySchema<"nutrient-foods">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 "others": Record<string, {
   id: string;
   body?: string;
