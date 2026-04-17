@@ -47,10 +47,17 @@ interface Props {
 
 const { entry } = Astro.props;
 const htmlContent = await marked(entry.body);
+
+// Extract section from entry ID (e.g., "vitamin-mineral/nutrient-foods/aenganyu" -> "vitamin-mineral")
+const idParts = entry.id.split('/');
+const section = idParts.length > 1 ? idParts[0] : entry.id;
+const slug = entry.id.split('/').pop();
 ---
 
 <MarkdownLayout
   frontmatter={entry.data}
+  slug={slug}
+  section={section}
 >
   <Fragment set:html={htmlContent} />
 </MarkdownLayout>

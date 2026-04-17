@@ -7,22 +7,26 @@ export interface Props {
     description?: string;
     keywords?: string;
   };
+  slug?: string;
+  section?: string;
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, slug = '', section = '' } = Astro.props;
 ---
 
 <BaseLayout
   title={frontmatter.title}
   description={frontmatter.description}
   keywords={frontmatter.keywords}
+  currentSlug={slug}
+  currentSection={section}
 >
-  <main>
+  <section class="content-wrapper">
     {frontmatter.title && <h1>{frontmatter.title}</h1>}
     <article>
       <slot />
     </article>
-  </main>
+  </section>
 </BaseLayout>
 
 <style>
