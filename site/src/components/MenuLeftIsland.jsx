@@ -25,14 +25,14 @@ const ABOUT = new Set(["fukui", "fukui2", "fukui3"]);
 export const MenuLeftIsland = ({ currentSlug = "", currentSection = "" }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSection, setOpenSection] = useState({
-    flower: currentSection === "flowers" || FLOWERS.has(currentSlug),
-    vitaminMineral: currentSection === "vitamin-mineral" || VITAMIN_MINERAL.has(currentSlug),
-    atopic: currentSection === "atopic" || ATOPIC.has(currentSlug),
-    activeOxygen: currentSection === "active-oxygen" || ACTIVE_OXYGEN.has(currentSlug),
-    travel: currentSection === "travel" || TRAVEL.has(currentSlug),
-    publication: currentSection === "publication" || VITAMIN_MINERAL.has(currentSlug),
-    shop: currentSection === "shop" || SHOP.has(currentSlug),
-    supplement: currentSection === "supplement" || SUPPLEMENT.has(currentSlug),
+    flower: currentSection === "flowers",
+    vitaminMineral: currentSection === "vitamin-mineral",
+    atopic: currentSection === "atopic",
+    activeOxygen: currentSection === "active-oxygen",
+    travel: currentSection === "travel",
+    publication: currentSection === "publication",
+    shop: currentSection === "shop",
+    supplement: currentSection === "supplement",
     access: currentSection === "access",
     nutrientFoods: false,
   });

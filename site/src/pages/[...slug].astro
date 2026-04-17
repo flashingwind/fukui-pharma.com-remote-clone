@@ -23,12 +23,13 @@ export async function getStaticPaths() {
       const entries = await getCollection(collection);
       if (entries && Array.isArray(entries)) {
         for (const entry of entries) {
-          // Use id as slug if slug doesn't exist
-          const slug = entry.slug || entry.id;
-          if (slug && slug !== 'index') {
+          const entrySlug = entry.slug || entry.id;
+          if (entrySlug && entrySlug !== 'index') {
+            // URLをコレクション名/entryIdで構築（例: vitamin-mineral/mokuzito）
+            const urlSlug = `${collection}/${entrySlug}`;
             paths.push({
-              params: { slug: slug },
-              props: { entry },
+              params: { slug: urlSlug },
+              props: { entry, collection },
             });
           }
         }
@@ -43,14 +44,14 @@ export async function getStaticPaths() {
 
 interface Props {
   entry: any;
+  collection: string;
 }
 
-const { entry } = Astro.props;
+const { entry, collection } = Astro.props;
 const htmlContent = await marked(entry.body);
 
-// Extract section from entry ID (e.g., "vitamin-mineral/nutrient-foods/aenganyu" -> "vitamin-mineral")
-const idParts = entry.id.split('/');
-const section = idParts.length > 1 ? idParts[0] : entry.id;
+// コレクション名をsectionとして使用、slugはentryIdの末尾
+const section = collection;
 const slug = entry.id.split('/').pop();
 
 // frontmatterにdescriptionがなければ本文冒頭から自動生成
