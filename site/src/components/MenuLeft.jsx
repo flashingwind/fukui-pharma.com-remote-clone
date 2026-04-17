@@ -1,77 +1,55 @@
 import React, { useState } from "react";
 import "../styles/MenuLeft.css";
 
-const VITAMIN_SLUGS = new Set([
-  "eiyou", "vitasi2", "vitasi3", "vitasi4",
-]);
-
-const MINERAL_SLUGS = new Set([
-  "magsiryou", "tetusiryou", "serensir", "lipoicacid",
-]);
-
-const FLOWER_2004 = new Set(["2004ran"]);
-const FLOWER_2006 = new Set(["2006cattleya", "2006lycaste11", "2006paphio", "2006ranten"]);
-const FLOWER_2007 = new Set(["2007catC", "2007paphE", "2007ranten120"]);
-const FLOWER_EXTRA = new Set(["cattleya", "cattleyablue", "dendrobiumnew", "harubotan16", "lycasteNew", "paphiopedilum", "paphiopedilum2", "phalaenopsis4", "sonota", "takasimayabaraten"]);
-const FLOWER_2005 = new Set(["cattleya1", "cattleya22", "dendrobiumu", "kaizyou", "lycaste1", "masdevallia", "paphio101", "paphio103", "paphio202", "phalaenopsis"]);
-
-const TRAVEL_SLUGS = new Set(["mauisunset", "hanaumabay", "wikikibeach", "mauibus", "mauisyokubutu", "suizokukan", "hawaibeach"]);
-const SHOP_SLUGS = new Set(["tyuumon"]);
-const SUPPLEMENT_SLUGS = new Set(["suppuse", "shyoyou", "begu", "be-tagur", "be-tagur10", "megafudo"]);
-const PUBLICATION_SLUGS = new Set(["mokuzitu"]);
-const ACCESS_SLUGS = new Set(["access"]);
-const ATOPIC_SLUGS = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
-const ACTIVE_OXYGEN_SLUGS = new Set(["kousanka"]);
-const SKIN_SLUGS = new Set(["hadautukusisa"]);
-const NUTRIENT_FOOD_SLUGS = new Set([
-  "eiyouso", "ganyuute",
-  "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
-  "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
-  "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
-  "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
-  "coqganyu", "colingan", "inosigan",
-]);
-const NUTRIENT_VITAMIN_SLUGS = new Set([
-  "aganyuu", "eganyuu", "dganyuu", "bkganyuu", "cganyuu", "b1ganyuu", "b2ganyuu", "b3ganyuu",
-  "b5ganyuu", "b6ganyuu", "b12ganyu", "yousanga", "biotinga",
-]);
-const NUTRIENT_MINERAL_SLUGS = new Set([
-  "carugany", "magganyu", "karigany", "aenganyu", "tetugany", "douganyu", "cromugan", "mangagan",
-  "yo-dogan", "serengan", "moribuga", "vanagany", "senigany", "keisogan", "housogan", "gerumaga",
-]);
-const NUTRIENT_OTHER_SLUGS = new Set(["coqganyu", "colingan", "inosigan"]);
+// Auto-generated from content/ directory by scripts/generate-menu-sets.js
+const VITAMIN_MINERAL_NUTRIENT_FOODS = new Set(["aenganyu", "aganyuu", "b12ganyu", "b1ganyuu", "b2ganyuu", "b3ganyuu", "b5ganyuu", "b6ganyuu", "biotinga", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "cromugan", "dganyuu", "douganyu", "eganyuu", "gerumaga", "housogan", "inosigan", "karigany", "keisogan", "magganyu", "mangagan", "moribuga", "senigany", "serengan", "tetugany", "vanagany", "yo-dogan", "yousanga"]);
+const VITAMIN_MINERAL = new Set(["aenganyu", "aensiryou", "aganyuu", "b12ganyu", "b1ganyuu", "b2ganyuu", "b3ganyuu", "b5ganyuu", "b6ganyuu", "biotinga", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "cromugan", "dganyuu", "douganyu", "eganyuu", "eiyou", "ganyuute", "gerumaga", "housogan", "inosigan", "karigany", "keisogan", "lipoicacid", "magganyu", "magsiryou", "mangagan", "mokuzito", "mokuzitu", "moribuga", "senigany", "serengan", "serensir", "tetugany", "tetusiryou", "vanagany", "vitasi2", "vitasi3", "vitasi4", "yo-dogan", "yousanga"]);
+const SUPPLEMENT = new Set(["be-tagur", "be-tagur10", "begu", "megafudo", "shyoyou", "suppuse"]);
+const ACTIVE_OXYGEN = new Set(["kousanka"]);
+const ATOPIC = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
+const FLOWERS_2004 = new Set(["2004ran"]);
+const FLOWERS_2006 = new Set(["2006cattleya", "2006lycaste11", "2006paphio", "2006ranten"]);
+const FLOWERS_2007 = new Set(["2007catC", "2007paphE", "2007ranten120"]);
+const FLOWERS_CATTLEYA = new Set(["cattleya", "cattleya1", "cattleya22", "cattleyablue"]);
+const FLOWERS_DENDROBIUM = new Set(["dendrobiumnew", "dendrobiumu", "kaizyou"]);
+const FLOWERS_LYCASTE = new Set(["lycaste1", "lycasteNew"]);
+const FLOWERS_OTHERS = new Set(["harubotan16", "masdevallia", "sonota", "takasimayabaraten"]);
+const FLOWERS_PAPHIO = new Set(["paphio101", "paphio103", "paphio202", "paphiopedilum", "paphiopedilum2"]);
+const FLOWERS_PHALAENOPSIS = new Set(["phalaenopsis", "phalaenopsis4"]);
+const FLOWERS = new Set(["2004ran", "2006cattleya", "2006lycaste11", "2006paphio", "2006ranten", "2007catC", "2007paphE", "2007ranten120", "cattleya", "cattleya1", "cattleya22", "cattleyablue", "dendrobiumnew", "dendrobiumu", "harubotan16", "kaizyou", "lycaste1", "lycasteNew", "masdevallia", "paphio101", "paphio103", "paphio202", "paphiopedilum", "paphiopedilum2", "phalaenopsis", "phalaenopsis4", "sonota", "takasimayabaraten"]);
+const TRAVEL = new Set(["hanaumabay", "hawaibeach", "mauibus", "mauisunset", "mauisyokubutu", "suizokukan", "wikikibeach"]);
+const OTHERS = new Set(["hadautukusisa", "oldcar"]);
+const SHOP = new Set(["fukui", "order", "tyuumon"]);
+const ABOUT = new Set(["fukui", "fukui2", "fukui3"]);
 
 const MenuLeft = () => {
   const normalizedPath = window.location.pathname.replace(/^\/+|\/+$/g, "").replace(/\.(htm|html)$/i, "");
   const segments = normalizedPath.split("/").filter(Boolean);
   const section = segments.length > 1 ? segments[0] : "";
   const slug = segments.length === 0 ? "" : segments[segments.length - 1];
-  const inFlower = section === "flowers" || FLOWER_2007.has(slug) || FLOWER_2006.has(slug) || FLOWER_2005.has(slug) || FLOWER_2004.has(slug) || FLOWER_EXTRA.has(slug);
+  const inFlower = section === "flowers" || FLOWERS.has(slug);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // アコーディオン開閉状態
   const [openSection, setOpenSection] = useState(() => ({
     flower: inFlower,
-    vitaminMineral: (section === "vitamin-mineral" && (VITAMIN_SLUGS.has(slug) || MINERAL_SLUGS.has(slug))) || VITAMIN_SLUGS.has(slug) || MINERAL_SLUGS.has(slug),
-    atopic: section === "atopic" || ATOPIC_SLUGS.has(slug),
-    activeOxygen: section === "active-oxygen" || ACTIVE_OXYGEN_SLUGS.has(slug),
-    travel: section === "travel" || TRAVEL_SLUGS.has(slug),
-    publication: section === "publication" || PUBLICATION_SLUGS.has(slug),
-    shop: section === "shop" || SHOP_SLUGS.has(slug),
-    supplement: section === "supplement" || SUPPLEMENT_SLUGS.has(slug),
-    access: section === "access" || ACCESS_SLUGS.has(slug),
+    vitaminMineral: section === "vitamin-mineral" || VITAMIN_MINERAL.has(slug),
+    atopic: section === "atopic" || ATOPIC.has(slug),
+    activeOxygen: section === "active-oxygen" || ACTIVE_OXYGEN.has(slug),
+    travel: section === "travel" || TRAVEL.has(slug),
+    publication: section === "publication" || VITAMIN_MINERAL.has(slug), // mokuzitu is in VITAMIN_MINERAL
+    shop: section === "shop" || SHOP.has(slug),
+    supplement: section === "supplement" || SUPPLEMENT.has(slug),
+    access: section === "access", // no access files
     nutrientFoods: false,
   }));
   const [openYear, setOpenYear] = useState(() => ({
-    y2007: FLOWER_2007.has(slug),
-    y2006: FLOWER_2006.has(slug),
-    y2005: FLOWER_2005.has(slug),
-    y2004: FLOWER_2004.has(slug),
+    y2007: FLOWERS_2007.has(slug),
+    y2006: FLOWERS_2006.has(slug),
+    y2004: FLOWERS_2004.has(slug),
   }));
   const [openNutrientGroup, setOpenNutrientGroup] = useState(() => ({
-    vitamin: section === "vitamin-mineral" && NUTRIENT_VITAMIN_SLUGS.has(slug),
-    mineral: section === "vitamin-mineral" && NUTRIENT_MINERAL_SLUGS.has(slug),
-    other: section === "vitamin-mineral" && NUTRIENT_OTHER_SLUGS.has(slug),
+    vitamin: section === "vitamin-mineral" && VITAMIN_MINERAL_NUTRIENT_FOODS.has(slug), // simplified; all nutrient-foods are minerals/vitamins
   }));
 
   // セクション開閉
