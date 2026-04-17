@@ -42,7 +42,7 @@ export const MenuLeftIsland = ({ currentSlug = "", currentSection = "" }) => {
     y2004: FLOWERS_2004.has(currentSlug),
   });
   const [openNutrientGroup, setOpenNutrientGroup] = useState({
-    vitamin: currentSection === "vitamin-mineral" && VITAMIN_MINERAL_NUTRIENT_FOODS.has(currentSlug),
+    vitamin: currentSection === "nutrient-foods",
   });
 
   const toggleSection = (key) => {
@@ -85,7 +85,7 @@ export const MenuLeftIsland = ({ currentSlug = "", currentSection = "" }) => {
             {openNutrientGroup.vitamin && (
               <ul>
                 {Array.from(VITAMIN_MINERAL_NUTRIENT_FOODS).map(slug => (
-                  <li key={slug}><a href={`/vitamin-mineral/${slug}`}>{slug}</a></li>
+                  <li key={slug}><a href={`/nutrient-foods/${slug}`}>{slug}</a></li>
                 ))}
               </ul>
             )}
