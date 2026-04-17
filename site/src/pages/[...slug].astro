@@ -52,10 +52,25 @@ const htmlContent = await marked(entry.body);
 const idParts = entry.id.split('/');
 const section = idParts.length > 1 ? idParts[0] : entry.id;
 const slug = entry.id.split('/').pop();
+
+// frontmatterにdescriptionがなければ本文冒頭から自動生成
+const description = entry.data.description ?? (() => {
+  const text = entry.body
+    .replace(/^#+\s+.*/gm, '')                   // 見出しを除去
+    .replace(/\[Image\][^\n]*/g, '')              // [Image]プレースホルダを除去
+    .replace(/<[^>]+>/g, '')                      // HTMLタグを除去
+    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')   // リンク・画像をテキスト化
+    .replace(/^[-*>|=]{2,}\s*$/gm, '')             // 水平線・markdown記号行を除去
+    .replace(/^[-*>|]\s*/gm, '')                   // 行頭のmarkdown記号を除去
+    .replace(/[`_*]/g, '')
+    .replace(/\s+/g, ' ')                         // 空白を正規化
+    .trim();
+  return text.slice(0, 120) || undefined;
+})();
 ---
 
 <MarkdownLayout
-  frontmatter={entry.data}
+  frontmatter={{ ...entry.data, description }}
   slug={slug}
   section={section}
 >

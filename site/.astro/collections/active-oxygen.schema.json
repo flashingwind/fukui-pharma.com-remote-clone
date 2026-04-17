@@ -8,9 +8,6 @@
     "description": {
       "type": "string"
     },
-    "keywords": {
-      "type": "string"
-    },
     "date": {
       "type": "string",
       "format": "date-time"
