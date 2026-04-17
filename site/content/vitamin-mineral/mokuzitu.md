@@ -2,7 +2,7 @@
 
 ---
 
-![薬剤師がすすめるビタミン・ミネラルの使い方(第２版)](tukaikata3.gif){width="75" height="100"}
+![薬剤師がすすめるビタミン・ミネラルの使い方(第２版)](/publication/tukaikata3.gif){width="75" height="100"}
 
 ---
 
