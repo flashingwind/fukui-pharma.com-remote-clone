@@ -78,8 +78,8 @@
 </colgroup>
 <tbody>
 <tr>
-<td data-bgcolor="#F5DEB3" data-valign="top"></td>
-<td data-bgcolor="#F5DEB3" data-valign="top"></td>
+<td data-bgcolor="#F5DEB3" data-valign="top"><a href="https://www.amazon.co.jp/dp/4621083074" target="_top"><img src="/publication/sinhon5.jpg" alt="新版 薬剤師がすすめるビタミン・ミネラルのとり方" width="35" height="50" /></a></td>
+<td data-bgcolor="#F5DEB3" data-valign="top"><a href="https://www.amazon.co.jp/dp/4621301306/" target="_top"><img src="/publication/tukaikata3.gif" alt="薬剤師がすすめるビタミン・ミネラルの使い方(第2版)" width="35" height="50" /></a></td>
 <td data-bgcolor="#F5DEB3" data-valign="top"><a href="/supplement/be-tagur"><img src="/others/betasin.gif" alt="ベータグルカン" width="83" height="150" /></a></td>
 </tr>
 <tr>

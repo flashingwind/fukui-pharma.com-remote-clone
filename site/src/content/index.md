@@ -66,7 +66,7 @@
     8. [砂糖を摂りすぎない](/atopic/atopic#atopi8)
     9. [副腎を強くしましょう](/atopic/atopic#atopi9)
     10. [ヒスタミンを減らしましょう](/atopic/atopic#atopi10)
-    11. [アトピー性皮膚炎と免疫応答の図表](/atopic/atopic#atopicb) [Image]
+    11. [アトピー性皮膚炎と免疫応答の図表](/atopic/atopic#atopicb) ![アトピー性皮膚炎と免疫応答の図表](/others/atopic6.gif)
 
 ---
 
@@ -78,8 +78,8 @@
 </colgroup>
 <tbody>
 <tr>
-<td data-bgcolor="#F5DEB3" data-valign="top"></td>
-<td data-bgcolor="#F5DEB3" data-valign="top"></td>
+<td data-bgcolor="#F5DEB3" data-valign="top"><a href="https://www.amazon.co.jp/dp/4621083074" target="_top"><img src="/publication/sinhon5.jpg" alt="新版 薬剤師がすすめるビタミン・ミネラルのとり方" width="35" height="50" /></a></td>
+<td data-bgcolor="#F5DEB3" data-valign="top"><a href="https://www.amazon.co.jp/dp/4621301306/" target="_top"><img src="/publication/tukaikata3.gif" alt="薬剤師がすすめるビタミン・ミネラルの使い方(第2版)" width="35" height="50" /></a></td>
 <td data-bgcolor="#F5DEB3" data-valign="top"><a href="/supplement/be-tagur"><img src="/others/betasin.gif" alt="ベータグルカン" width="83" height="150" /></a></td>
 </tr>
 <tr>
@@ -101,4 +101,4 @@
 </tbody>
 </table>
 
-[[Image]](https://www.free-counter.jp/)
+[![アクセスカウンター](https://www.f-counter.net/j/62/1688138251/)](https://www.free-counter.jp/)
