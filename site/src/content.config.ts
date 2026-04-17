@@ -8,7 +8,6 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const contentSchema = z.object({
   title: z.string().optional(),
   description: z.string().optional(),
-  keywords: z.string().optional(),
   date: z.date().optional(),
 });
 

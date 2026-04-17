@@ -5,7 +5,6 @@ export interface Props {
   frontmatter: {
     title?: string;
     description?: string;
-    keywords?: string;
   };
   slug?: string;
   section?: string;
@@ -17,7 +16,6 @@ const { frontmatter, slug = '', section = '' } = Astro.props;
 <BaseLayout
   title={frontmatter.title}
   description={frontmatter.description}
-  keywords={frontmatter.keywords}
   currentSlug={slug}
   currentSection={section}
 >

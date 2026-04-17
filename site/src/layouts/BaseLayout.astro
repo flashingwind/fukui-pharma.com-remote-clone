@@ -4,12 +4,11 @@ import { MenuLeftIsland } from '../components/MenuLeftIsland.jsx';
 export interface Props {
   title?: string;
   description?: string;
-  keywords?: string;
   currentSlug?: string;
   currentSection?: string;
 }
 
-const { title = 'Fukui Pharma', description = '', keywords = '', currentSlug = '', currentSection = '' } = Astro.props;
+const { title = 'Fukui Pharma', description = '', currentSlug = '', currentSection = '' } = Astro.props;
 const site = Astro.site || new URL('https://fukui-pharma.com');
 const canonicalURL = new URL(Astro.url.pathname, site);
 ---
@@ -22,7 +21,6 @@ const canonicalURL = new URL(Astro.url.pathname, site);
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-    {keywords && <meta name="keywords" content={keywords} />}
   </head>
   <body>
     <div class="layout-wrapper">
