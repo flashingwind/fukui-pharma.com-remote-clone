@@ -1,190 +1,110 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/MenuLeft.css";
 
-// Auto-generated from content/ directory
-const VITAMIN_MINERAL_NUTRIENT_FOODS = new Set(["aenganyu", "aganyuu", "b12ganyu", "b1ganyuu", "b2ganyuu", "b3ganyuu", "b5ganyuu", "b6ganyuu", "biotinga", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "cromugan", "dganyuu", "douganyu", "eganyuu", "gerumaga", "housogan", "inosigan", "karigany", "keisogan", "magganyu", "mangagan", "moribuga", "senigany", "serengan", "tetugany", "vanagany", "yo-dogan", "yousanga"]);
-const VITAMIN_MINERAL = new Set(["aenganyu", "aensiryou", "aganyuu", "b12ganyu", "b1ganyuu", "b2ganyuu", "b3ganyuu", "b5ganyuu", "b6ganyuu", "biotinga", "bkganyuu", "carugany", "cganyuu", "colingan", "coqganyu", "cromugan", "dganyuu", "douganyu", "eganyuu", "eiyou", "ganyuute", "gerumaga", "housogan", "inosigan", "karigany", "keisogan", "lipoicacid", "magganyu", "magsiryou", "mangagan", "mokuzito", "mokuzitu", "moribuga", "senigany", "serengan", "serensir", "tetugany", "tetusiryou", "vanagany", "vitasi2", "vitasi3", "vitasi4", "yo-dogan", "yousanga"]);
-const SUPPLEMENT = new Set(["be-tagur", "be-tagur10", "begu", "megafudo", "shyoyou", "suppuse"]);
-const ACTIVE_OXYGEN = new Set(["kousanka"]);
-const ATOPIC = new Set(["atopic", "meneki", "menekikihon", "thbalance"]);
-const FLOWERS_2004 = new Set(["2004ran"]);
-const FLOWERS_2006 = new Set(["2006cattleya", "2006lycaste11", "2006paphio", "2006ranten"]);
-const FLOWERS_2007 = new Set(["2007catC", "2007paphE", "2007ranten120"]);
-const FLOWERS_CATTLEYA = new Set(["cattleya", "cattleya1", "cattleya22", "cattleyablue"]);
-const FLOWERS_DENDROBIUM = new Set(["dendrobiumnew", "dendrobiumu", "kaizyou"]);
-const FLOWERS_LYCASTE = new Set(["lycaste1", "lycasteNew"]);
-const FLOWERS_OTHERS = new Set(["harubotan16", "masdevallia", "sonota", "takasimayabaraten"]);
-const FLOWERS_PAPHIO = new Set(["paphio101", "paphio103", "paphio202", "paphiopedilum", "paphiopedilum2"]);
-const FLOWERS_PHALAENOPSIS = new Set(["phalaenopsis", "phalaenopsis4"]);
-const FLOWERS = new Set(["2004ran", "2006cattleya", "2006lycaste11", "2006paphio", "2006ranten", "2007catC", "2007paphE", "2007ranten120", "cattleya", "cattleya1", "cattleya22", "cattleyablue", "dendrobiumnew", "dendrobiumu", "harubotan16", "kaizyou", "lycaste1", "lycasteNew", "masdevallia", "paphio101", "paphio103", "paphio202", "paphiopedilum", "paphiopedilum2", "phalaenopsis", "phalaenopsis4", "sonota", "takasimayabaraten"]);
-const TRAVEL = new Set(["hanaumabay", "hawaibeach", "mauibus", "mauisunset", "mauisyokubutu", "suizokukan", "wikikibeach"]);
-const OTHERS = new Set(["hadautukusisa", "oldcar"]);
-const SHOP = new Set(["fukui", "order", "tyuumon"]);
-const ABOUT = new Set(["fukui", "fukui2", "fukui3"]);
+// flowersサブディレクトリの年度マッピング
+const FLOWER_YEAR = { '2004': '2004年', '2006': '2006年', '2007': '2007年' };
 
-export const MenuLeftIsland = ({ currentSlug = "", currentSection = "" }) => {
+function groupBySubdir(pages) {
+  const groups = {};
+  for (const p of pages) {
+    const parts = p.id.split('/');
+    const subdir = parts.length > 1 ? parts[0] : '';
+    if (!groups[subdir]) groups[subdir] = [];
+    groups[subdir].push(p);
+  }
+  return groups;
+}
+
+export const MenuLeftIsland = ({ currentSlug = "", currentSection = "", allPages = [] }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openSection, setOpenSection] = useState({
-    flower: currentSection === "flowers",
-    vitaminMineral: currentSection === "vitamin-mineral",
-    atopic: currentSection === "atopic",
-    activeOxygen: currentSection === "active-oxygen",
-    travel: currentSection === "travel",
-    publication: currentSection === "publication",
-    shop: currentSection === "shop",
-    supplement: currentSection === "supplement",
-    access: currentSection === "access",
-    nutrientFoods: false,
-  });
-  const [openYear, setOpenYear] = useState({
-    y2007: FLOWERS_2007.has(currentSlug),
-    y2006: FLOWERS_2006.has(currentSlug),
-    y2004: FLOWERS_2004.has(currentSlug),
-  });
-  const [openNutrientGroup, setOpenNutrientGroup] = useState({
-    vitamin: currentSection === "nutrient-foods",
+
+  const byCollection = {};
+  for (const p of allPages) {
+    if (!byCollection[p.collection]) byCollection[p.collection] = [];
+    byCollection[p.collection].push(p);
+  }
+
+  const [openSection, setOpenSection] = useState(currentSection);
+  const [openFlowerSub, setOpenFlowerSub] = useState(() => {
+    if (currentSection !== 'flowers') return null;
+    const match = allPages.find(p => p.id.endsWith(currentSlug));
+    if (!match) return null;
+    return match.id.split('/')[0] ?? null;
   });
 
   const toggleSection = (key) => {
-    setOpenSection((prev) => {
-      const next = Object.keys(prev).reduce((acc, k) => ({ ...acc, [k]: false }), {});
-      next[key] = !prev[key];
-      return next;
-    });
+    setOpenSection(prev => prev === key ? null : key);
   };
 
-  const toggleYear = (key) => {
-    setOpenYear((prev) => ({ ...prev, [key]: !prev[key] }));
+  const toggleFlowerSub = (sub) => {
+    setOpenFlowerSub(prev => prev === sub ? null : sub);
   };
 
-  const toggleNutrientGroup = (key) => {
-    setOpenNutrientGroup((prev) => {
-      const next = Object.keys(prev).reduce((acc, k) => ({ ...acc, [k]: false }), {});
-      next[key] = !prev[key];
-      return next;
-    });
-  };
+  const flowerGroups = groupBySubdir(byCollection['flowers'] ?? []);
 
-  const toggleMobileMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  // sections定義（表示順）
+  const sections = [
+    { key: 'vitamin-mineral', label: 'ビタミン・ミネラル' },
+    { key: 'nutrient-foods',  label: '含有食品' },
+    { key: 'supplement',      label: 'サプリメント' },
+    { key: 'active-oxygen',   label: '活性酸素' },
+    { key: 'atopic',          label: 'アトピー' },
+    { key: 'flowers',         label: '花' },
+    { key: 'travel',          label: '旅行' },
+    { key: 'others',          label: 'その他' },
+    { key: 'shop',            label: 'ショップ' },
+    { key: 'access',          label: 'アクセス' },
+  ];
 
   return (
     <aside className={`menu-left ${isMenuOpen ? 'menu-left-open' : ''}`}>
-      <button className="menu-toggle" onClick={toggleMobileMenu}>
+      <button className="menu-toggle" onClick={() => setIsMenuOpen(p => !p)}>
         ☰ Menu
       </button>
 
       <nav className="menu-nav">
-        {/* Vitamin & Mineral */}
-        <details open={openSection.vitaminMineral} onToggle={() => toggleSection('vitaminMineral')}>
-          <summary>ビタミン・ミネラル</summary>
-          <ul>
-            <li><a href="/vitamin-mineral/eiyou">栄養素について</a></li>
-            <li><a href="/vitamin-mineral/ganyuute">含有食品</a></li>
-            {openNutrientGroup.vitamin && (
-              <ul>
-                {Array.from(VITAMIN_MINERAL_NUTRIENT_FOODS).map(slug => (
-                  <li key={slug}><a href={`/nutrient-foods/${slug}`}>{slug}</a></li>
-                ))}
-              </ul>
-            )}
-          </ul>
-        </details>
+        {sections.map(({ key, label }) => {
+          const pages = byCollection[key] ?? [];
+          if (pages.length === 0) return null;
+          const isOpen = openSection === key;
 
-        {/* Supplement */}
-        <details open={openSection.supplement} onToggle={() => toggleSection('supplement')}>
-          <summary>サプリメント</summary>
-          <ul>
-            {Array.from(SUPPLEMENT).map(slug => (
-              <li key={slug}><a href={`/supplement/${slug}`}>{slug}</a></li>
-            ))}
-          </ul>
-        </details>
+          return (
+            <details key={key} open={isOpen} onToggle={() => toggleSection(key)}>
+              <summary>{label}</summary>
 
-        {/* Active Oxygen */}
-        <details open={openSection.activeOxygen} onToggle={() => toggleSection('activeOxygen')}>
-          <summary>活性酸素</summary>
-          <ul>
-            {Array.from(ACTIVE_OXYGEN).map(slug => (
-              <li key={slug}><a href={`/active-oxygen/${slug}`}>{slug}</a></li>
-            ))}
-          </ul>
-        </details>
-
-        {/* Atopic */}
-        <details open={openSection.atopic} onToggle={() => toggleSection('atopic')}>
-          <summary>アトピー</summary>
-          <ul>
-            {Array.from(ATOPIC).map(slug => (
-              <li key={slug}><a href={`/atopic/${slug}`}>{slug}</a></li>
-            ))}
-          </ul>
-        </details>
-
-        {/* Flowers */}
-        <details open={openSection.flower} onToggle={() => toggleSection('flower')}>
-          <summary>花</summary>
-          <ul>
-            <li><a href="/flowers/2007catC">2007年</a>
-              <details open={openYear.y2007} onToggle={() => toggleYear('y2007')}>
+              {key === 'flowers' ? (
                 <ul>
-                  {Array.from(FLOWERS_2007).map(slug => (
-                    <li key={slug}><a href={`/flowers/${slug}`}>{slug}</a></li>
+                  {Object.entries(flowerGroups).map(([sub, subPages]) => {
+                    const subLabel = FLOWER_YEAR[sub] ?? sub;
+                    const isSubOpen = openFlowerSub === sub;
+                    return (
+                      <li key={sub}>
+                        <details open={isSubOpen} onToggle={() => toggleFlowerSub(sub)}>
+                          <summary>{subLabel}</summary>
+                          <ul>
+                            {subPages.map(p => (
+                              <li key={p.urlSlug}>
+                                <a href={`/${p.urlSlug}`}>{p.id.split('/').pop()}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </details>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                <ul>
+                  {pages.map(p => (
+                    <li key={p.urlSlug}>
+                      <a href={`/${p.urlSlug}`}>{p.id.split('/').pop()}</a>
+                    </li>
                   ))}
                 </ul>
-              </details>
-            </li>
-            <li><a href="/flowers/2006cattleya">2006年</a>
-              <details open={openYear.y2006} onToggle={() => toggleYear('y2006')}>
-                <ul>
-                  {Array.from(FLOWERS_2006).map(slug => (
-                    <li key={slug}><a href={`/flowers/${slug}`}>{slug}</a></li>
-                  ))}
-                </ul>
-              </details>
-            </li>
-            <li><a href="/flowers/2004ran">2004年</a>
-              <details open={openYear.y2004} onToggle={() => toggleYear('y2004')}>
-                <ul>
-                  {Array.from(FLOWERS_2004).map(slug => (
-                    <li key={slug}><a href={`/flowers/${slug}`}>{slug}</a></li>
-                  ))}
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </details>
-
-        {/* Travel */}
-        <details open={openSection.travel} onToggle={() => toggleSection('travel')}>
-          <summary>旅行</summary>
-          <ul>
-            {Array.from(TRAVEL).map(slug => (
-              <li key={slug}><a href={`/travel/${slug}`}>{slug}</a></li>
-            ))}
-          </ul>
-        </details>
-
-        {/* Shop */}
-        <details open={openSection.shop} onToggle={() => toggleSection('shop')}>
-          <summary>ショップ</summary>
-          <ul>
-            {Array.from(SHOP).map(slug => (
-              <li key={slug}><a href={`/shop/${slug}`}>{slug}</a></li>
-            ))}
-          </ul>
-        </details>
-
-        {/* About */}
-        <details open={openSection.access} onToggle={() => toggleSection('access')}>
-          <summary>アクセス</summary>
-          <ul>
-            {Array.from(ABOUT).map(slug => (
-              <li key={slug}><a href={`/about/${slug}`}>{slug}</a></li>
-            ))}
-          </ul>
-        </details>
+              )}
+            </details>
+          );
+        })}
       </nav>
     </aside>
   );

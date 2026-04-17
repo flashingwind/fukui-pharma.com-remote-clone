@@ -6,9 +6,10 @@ export interface Props {
   description?: string;
   currentSlug?: string;
   currentSection?: string;
+  allPages?: { collection: string; id: string; urlSlug: string }[];
 }
 
-const { title = 'Fukui Pharma', description = '', currentSlug = '', currentSection = '' } = Astro.props;
+const { title = 'Fukui Pharma', description = '', currentSlug = '', currentSection = '', allPages = [] } = Astro.props;
 const site = Astro.site || new URL('https://fukui-pharma.com');
 const canonicalURL = new URL(Astro.url.pathname, site);
 ---
@@ -24,7 +25,7 @@ const canonicalURL = new URL(Astro.url.pathname, site);
   </head>
   <body>
     <div class="layout-wrapper">
-      <MenuLeftIsland client:load currentSlug={currentSlug} currentSection={currentSection} />
+      <MenuLeftIsland client:load currentSlug={currentSlug} currentSection={currentSection} allPages={allPages} />
       <main class="main-content">
         <slot />
       </main>
