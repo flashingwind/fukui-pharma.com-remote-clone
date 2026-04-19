@@ -1,3 +1,3 @@
 # 免疫の基本応答
 
-[Image]\
+![](/atopic/menekikihon.gif)\

@@ -1,16 +1,16 @@
 # 2006 日本大賞はマスデバリア
 
 大賞はマスデバリア\
-[Image]{width="500" height="350"}\
+![](/flowers/6taisyou.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180376.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180375.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2250002.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2250010.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2250012.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2250014.jpg)\

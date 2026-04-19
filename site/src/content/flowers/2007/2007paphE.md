@@ -1,15 +1,15 @@
 # 姿の面白いパフィオペディラム
 
-[Image]{width="500" height="350"}\
+![](/flowers/8paphsyou020.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/8paphsyou.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/7paphgQ2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/7paphgQ18.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/7paphgQ20.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/7paphgQ19.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/7paphgQ21.jpg)\

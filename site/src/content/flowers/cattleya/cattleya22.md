@@ -1,21 +1,21 @@
 # カトレア2-2
 
-15[Image]{width="500" height="350"}\
+15![](/flowers/30catpg.jpg)\
 
-16[Image]{width="500" height="350"}\
+16![](/flowers/30ctp.jpg)\
 　\
-2[Image]{width="500" height="350"}\
+2![](/flowers/12catsyou.jpg)\
 
-7[Image]{width="500" height="350"}\
+7![](/flowers/1katoreamura.jpg)\
 
-8[Image]{width="500" height="350"}\
+8![](/flowers/1katoreamura2.jpg)\
 
-12[Image]{width="500" height="350"}\
+12![](/flowers/1katoreausumura.jpg)\
 　\
-13[Image]{width="500" height="350"}\
+13![](/flowers/1katoreav2.jpg)\
 
-19[Image]{width="500" height="350"}\
+19![](/flowers/57catvg.jpg)\
 
-21[Image]{width="500" height="350"}\
+21![](/flowers/61catb.jpg)\
 
-24[Image]{width="500" height="350"}\
+24![](/flowers/65catv.jpg)\

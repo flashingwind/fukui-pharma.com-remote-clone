@@ -1,4 +1,4 @@
-# セレン[Image]
+# セレン![セレンの働き](/vitamin-mineral/serenhat.gif)
 
 - セレンの働き
 - [セレンはどんな症状で有用か](/vitamin-mineral/serensir#serentuk)
@@ -8,19 +8,19 @@
 
     ***
 
-[Image]
+![セレンはどんな症状で有効に働くか](/vitamin-mineral/serentuka.gif)
 
     ***
 
 ## <a id="serentuk"></a>セレンはどんな症状で有効に働くか
 
-[Image]
+![活性酸素の発生と消去](/active-oxygen/furiiraz.gif)
 
     ***
 
 ## <a id="furiiraz"></a>活性酸素の発生と消去
 
-[Image]
+![活性酸素の生成変換の分子図表](/active-oxygen/kasseisa.gif)
 
 ## <a id="katsanso"></a>活性酸素のお話
 
@@ -67,6 +67,6 @@
 
 ## <a id="kousanka"></a>活性酸素の生成変換の分子図表
 
-[Image]
+![new!](/icon/new.svg)
 
     ***

@@ -1,4 +1,4 @@
 # オアフ島ハナウマ湾
 
 オアフ島ハナウマ湾全景\
-[Image]{width="500" height="350"}
+![](/travel/hanaumabay.jpg)

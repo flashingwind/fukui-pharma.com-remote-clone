@@ -1,33 +1,33 @@
 # デンドロビウム
 
-[Image]{width="500" height="350"}\
+![](/flowers/a3odmwg1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a3odumkg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odgr.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odyw1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odwumy.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a3odyg1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odyrg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odytsg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odwum3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a3odwg2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odwr1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odwg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odwyg.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/a3odwyg2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3odwmy.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/b1odwg1-1.jpg)\

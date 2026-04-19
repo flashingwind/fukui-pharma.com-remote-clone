@@ -1,23 +1,23 @@
 # リカステ
 
-8[Image]{width="500" height="350"}\
+8![](/flowers/2taisyou2.jpg)\
 
-10[Image]{width="500" height="350"}\
+10![](/flowers/47lycp.jpg)\
 
-17[Image]{width="500" height="350"}\
+17![](/flowers/83lycp.jpg)\
 　\
-18[Image]{width="500" height="350"}\
+18![](/flowers/84lycpg.jpg)\
 
-4[Image]{width="500" height="350"}\
+4![](/flowers/1rakasutemura.jpg)\
 
-6[Image]{width="500" height="350"}\
+6![](/flowers/1rakasutesiro.jpg)\
 　\
-5[Image]{width="500" height="350"}\
+5![](/flowers/1rakasutemura2.jpg)\
 
-19[Image]{width="500" height="350"}\
+19![](/flowers/85lycp.jpg)\
 
-13[Image]{width="500" height="350"}\
+13![](/flowers/74lucy.jpg)\
 　\
-15[Image]{width="500" height="350"}\
+15![](/flowers/76lycwg.jpg)\
 
-3[Image]{width="500" height="350"}\
+3![](/flowers/1rakasutekigun.jpg)\

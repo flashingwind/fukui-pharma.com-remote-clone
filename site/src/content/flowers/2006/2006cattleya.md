@@ -2,12 +2,12 @@
 
 カトレア\
 華麗な美しさ\
-[Image]{width="500" height="350"}\
- \* [Image]{width="500" height="350"}\
- \* [Image]{width="500" height="350"}\
- \* [Image]{width="500" height="350"}\
- \* [Image]{width="500" height="350"}\
+![](/flowers/cattp.jpg)\
+ \* ![](/flowers/catty1.jpg)\
+ \* ![](/flowers/catty3.jpg)\
+ \* ![](/flowers/cattw2.jpg)\
+ \* ![](/flowers/cattwv2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/Cattv3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/Cattv4.jpg)\

@@ -1,15 +1,15 @@
 # リカステ
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2250042.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180111.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180349.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180351.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180348.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180361.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180362.jpg)\

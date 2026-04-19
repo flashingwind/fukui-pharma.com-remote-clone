@@ -1,6 +1,6 @@
 # ハワイのビーチ
 
 ワイキキビーチハイアット前\
-[Image]{width="500" height="350"}\
+![](/travel/wikikizou.jpg)\
 マウイビーチシェラトン前\
-[Image]{width="500" height="350"}
+![](/travel/mauibeach.jpg)

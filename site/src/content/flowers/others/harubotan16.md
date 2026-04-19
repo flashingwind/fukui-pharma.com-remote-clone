@@ -1,63 +1,63 @@
 # 上野公園ぼたん展
 
-[Image]{width="500" height="350"}\
+![](/flowers/tousyougu.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanen1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botantubomiki1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanki5.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanki8.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanki10.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanki9.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botantubomiaka2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanaka5.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botantubomiaka1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanaka1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanmura1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanmura2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botantubomipink1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink12.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanaka4.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink9.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink5.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink6.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink7.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink8.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botanpink10.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro4.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro6.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro9.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro10.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro7.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/botansiro3.jpg)\

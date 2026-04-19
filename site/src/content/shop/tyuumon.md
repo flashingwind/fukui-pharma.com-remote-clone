@@ -5,7 +5,7 @@
 ---
 
 商品一覧\
-[Image]
+![商品一覧](/shop/kakaku.gif)
 
 ---
 

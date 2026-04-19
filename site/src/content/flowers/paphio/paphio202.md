@@ -1,33 +1,33 @@
 # パヒオペディラム2
 
-9[Image]{width="500" height="350"}\
+9![](/flowers/1pahiosiroki2.jpg)\
 
-47[Image]{width="500" height="350"}\
+47![](/flowers/48paphy.jpg)\
 
-19[Image]{width="500" height="350"}\
+19![](/flowers/25paphg.jpg)\
 　\
-20[Image]{width="500" height="350"}\
+20![](/flowers/25paphsyou.jpg)\
 
-22[Image]{width="500" height="350"}\
+22![](/flowers/26paphg.jpg)\
 
-23[Image]{width="500" height="350"}\
+23![](/flowers/27paphf.jpg)\
 　\
-24[Image]{width="500" height="350"}\
+24![](/flowers/31paphtyafu.jpg)\
 
-18[Image]{width="500" height="350"}\
+18![](/flowers/24paphw.jpg)\
 
-21[Image]{width="500" height="350"}\
+21![](/flowers/25paphw.jpg)\
 
-25[Image]{width="500" height="350"}\
+25![](/flowers/31paphw.jpg)\
 
-28[Image]{width="500" height="350"}\
+28![](/flowers/33paphw.jpg)\
 
-37[Image]{width="500" height="350"}\
+37![](/flowers/41paphwy.jpg)\
 
-38[Image]{width="500" height="350"}\
+38![](/flowers/42paphw.jpg)\
 　\
-8[Image]{width="500" height="350"}\
+8![](/flowers/1pahiosiroki.jpg)\
 　\
-15[Image]{width="500" height="350"}\
+15![](/flowers/1paphisoiro.jpg)\
 　\
-32[Image]{width="500" height="350"}\
+32![](/flowers/38paphwg.jpg)\

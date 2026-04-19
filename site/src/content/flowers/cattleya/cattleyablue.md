@@ -1,35 +1,35 @@
 # カトレア・青
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ockyaku.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocbv1-1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocbw2-1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocubb2-1.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocubby.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocuby3-1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2ocbuy.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocwb2-3.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocwby1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocwby1-2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocwby1-4.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ocwby1-1.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/a1ocum3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ocumw2-1.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/b1ocumw2-2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ocumw2-3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3ocummy.jpg)\

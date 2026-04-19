@@ -1,33 +1,33 @@
 # リカステ
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3olwupg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2olwm2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2olwmy.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/b3olwumy.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2olw.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3olpr1-1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3olprg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3olpw3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1olpy1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2olprg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2olumw.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1olumr.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a3olk2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3olk.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2olpw.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b3olyut.jpg)\

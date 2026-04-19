@@ -1,23 +1,23 @@
 # 日本大賞はデンドロビウム
 
-[Image]{width="500" height="350"}\
+![](/flowers/13nihontaisou.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/120odmyg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/1denkigun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/1denkigun3.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/1denndorokigun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/122denw.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/123odmwg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/87denwg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/23denwg.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/dentyahu.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/71denyg.jpg)\

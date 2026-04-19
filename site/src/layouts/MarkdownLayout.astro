@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import '../styles/MarkdownContent.css';
 
 export interface Props {
   frontmatter: {
@@ -12,27 +13,17 @@ export interface Props {
 }
 
 const { frontmatter, slug = '', section = '', allPages = [] } = Astro.props;
+const pageTitle = frontmatter.title ? `${frontmatter.title} 福井薬局 | ビタミン・ミネラル情報` : '福井薬局 | ビタミン・ミネラル情報';
 ---
 
 <BaseLayout
-  title={frontmatter.title}
+  title={pageTitle}
   description={frontmatter.description}
   currentSlug={slug}
   currentSection={section}
   allPages={allPages}
 >
-  <section class="content-wrapper">
-    {frontmatter.title && <h1>{frontmatter.title}</h1>}
-    <article>
-      <slot />
-    </article>
-  </section>
+  <div class="markdown-body">
+    <slot />
+  </div>
 </BaseLayout>
-
-<style>
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-</style>

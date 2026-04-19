@@ -1,23 +1,23 @@
 # オールドカー
 
 1910年代東京のタクシー\
-[Image]{width="500" height="350"}\
+![](/others/oldcar151.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/others/oldcar16.jpg)\
 
 豊橋市1910年代\
-[Image]{width="500" height="350"}\
+![](/others/oldcar191.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/others/oldcar12.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/others/oldcar17.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/others/oldcar19.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/others/oldcar20.jpg)\
 
 フォード\
-[Image]{width="500" height="350"}\
+![](/others/oldcar14.jpg)\
 
 シャシー\
-[Image]{width="500" height="350"}\
+![](/others/oldcarshassi.jpg)\

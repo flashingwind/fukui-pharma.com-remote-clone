@@ -1,21 +1,21 @@
 # パフィオペディラム2
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opagta.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opaubbsw.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opauma.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opawmh.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opayf.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1opawfm.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opagthft.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opawbs.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opawum2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b2opawbsh.jpg)\

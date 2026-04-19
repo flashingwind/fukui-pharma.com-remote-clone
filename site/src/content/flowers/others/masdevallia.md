@@ -1,24 +1,24 @@
 # マスデバリア
 
 シンビ、マスダ、フラグ\
-4[Image]{width="500" height="350"}\
+4![](/flowers/106cymkaizyou.jpg)\
 
-3[Image]{width="500" height="350"}\
+3![](/flowers/105cymyg.jpg)\
 
-5[Image]{width="500" height="350"}\
+5![](/flowers/109cymyg.jpg)\
 
-6[Image]{width="500" height="350"}\
+6![](/flowers/110cymwg.jpg)\
 
-12[Image]{width="500" height="350"}\
+12![](/flowers/1dorakurabeni.jpg)\
 
-14[Image]{width="500" height="350"}\
+14![](/flowers/1masudatya.jpg)\
 
-15[Image]{width="500" height="350"}\
+15![](/flowers/1masudeki.jpg)\
 　\
-21[Image]{width="500" height="350"}\
+21![](/flowers/69mastg.jpg)\
 
-23[Image]{width="500" height="350"}\
+23![](/flowers/68masdyg.jpg)\
 
-9[Image]{width="500" height="350"}\
+9![](/flowers/13paphr.jpg)\
 
-10[Image]{width="500" height="350"}\
+10![](/flowers/14paphr.jpg)\

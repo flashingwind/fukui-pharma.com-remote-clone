@@ -1,36 +1,36 @@
 # 日本橋高島屋バラ展
 
 日本橋高島屋バラ展\
-[Image]{width="500" height="350"}\
+![](/flowers/rose-aka.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-pink.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rosesiro.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-usumura.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-usumura2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kureamuaka.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-akagun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kigun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-akakigun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kureamugun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-sirogun.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kimori.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kimori.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kimori.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-kimori.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-nomu.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/rose-nomu.jpg)\

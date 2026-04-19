@@ -1,25 +1,25 @@
 # ファレノプシス
 
-[Image]{width="500" height="350"}\
+![](/flowers/kotyouran1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ophumg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ophwmg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ophmg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ophkm.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2ophmwg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/b1ophum.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2ophubsg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2ophwbk2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2ophymsg.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2ophyt1.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/a2ophwbg.jpg)\

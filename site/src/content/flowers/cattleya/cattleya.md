@@ -1,35 +1,35 @@
 # カトレア0
 
-[Image]{width="500" height="350"}
+![cattyoseue](/flowers/cattyoseue.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocyr3-1](/flowers/a1ocyr3-1.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocyr4](/flowers/a1ocyr4.jpg)
 
-[Image]{width="500" height="350"}
+![b2ocyrg](/flowers/b2ocyrg.jpg)
 
-[Image]{width="500" height="350"}
+![b1ocyutr](/flowers/b1ocyutr.jpg)
 
-[Image]{width="500" height="350"}
+![b2ocyut](/flowers/b2ocyut.jpg)
 
-[Image]{width="500" height="350"}
+![b3ocuy](/flowers/b3ocuy.jpg)
 
-[Image]{width="500" height="350"}
+![b1ocyr3-2](/flowers/b1ocyr3-2.jpg)
 
-[Image]{width="500" height="350"}
+![b2ocyr1](/flowers/b2ocyr1.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocky1](/flowers/a1ocky1.jpg)
 
-[Image]{width="500" height="350"}
+![b1ockr](/flowers/b1ockr.jpg)
 
-[Image]{width="500" height="350"}
+![b1ocry1-1](/flowers/b1ocry1-1.jpg)
 
-[Image]{width="500" height="350"}
+![b1ocry2-2](/flowers/b1ocry2-2.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocry2-2](/flowers/a1ocry2-2.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocubyv3](/flowers/a1ocubyv3.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocpry2-1](/flowers/a1ocpry2-1.jpg)
 
-[Image]{width="500" height="350"}
+![a1ocry2-1](/flowers/a1ocry2-1.jpg)

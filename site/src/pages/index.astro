@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import fs from 'fs';
+import path from 'path';
+import MarkdownLayout from '../layouts/MarkdownLayout.astro';
+
+const COLLECTIONS = [
+  'vitamin-mineral',
+  'nutrient-foods',
+  'supplement',
+  'active-oxygen',
+  'atopic',
+  'flowers',
+  'travel',
+  'others',
+  'shop',
+  'access',
+];
+
+const allPages = [];
+for (const collection of COLLECTIONS) {
+  try {
+    const entries = await getCollection(collection);
+    for (const entry of entries) {
+      const entrySlug = entry.slug || entry.id;
+      if (entrySlug && entrySlug !== 'index') {
+        allPages.push({ collection, id: entry.id, urlSlug: `${collection}/${entrySlug}` });
+      }
+    }
+  } catch (e) {}
+}
+
+const indexMd = fs.readFileSync(path.join(process.cwd(), 'src/content/index.md'), 'utf-8');
+const htmlContent = await marked(indexMd);
+---
+
+<MarkdownLayout
+  frontmatter={{ title: '福井薬局' }}
+  slug=""
+  section=""
+  allPages={allPages}
+>
+  <Fragment set:html={htmlContent} />
+</MarkdownLayout>

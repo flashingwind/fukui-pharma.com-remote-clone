@@ -24,17 +24,54 @@ const canonicalURL = new URL(Astro.url.pathname, site);
     {description && <meta name="description" content={description} />}
   </head>
   <body>
-    <div class="layout-wrapper">
-      <MenuLeftIsland client:load currentSlug={currentSlug} currentSection={currentSection} allPages={allPages} />
-      <main class="main-content">
+    <div class="app-shell">
+      <MenuLeftIsland client:only="react" currentSlug={currentSlug} currentSection={currentSection} allPages={allPages} />
+      <section id="center">
         <slot />
-      </main>
+      </section>
     </div>
   </body>
 </html>
 
-<style>
+<style is:global>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5deb3;
+    font-family: 'MS UI Gothic', 'Meiryo', sans-serif;
+    color: navy;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #0000ee;
+    text-decoration: underline;
+  }
+
+  .app-shell {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  #center {
+    background: #f5deb3;
+    margin: 0;
+    padding: 16px 24px 24px;
+    min-height: 100vh;
+    min-width: 0;
+    max-width: none;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .app-shell {
+      flex-direction: column;
+    }
+    #center {
+      width: 100%;
+      padding: 14px 14px 20px;
+      min-height: auto;
+    }
   }
 </style>

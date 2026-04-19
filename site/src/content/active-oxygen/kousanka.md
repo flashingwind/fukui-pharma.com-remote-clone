@@ -2,7 +2,7 @@
 
 - 活性酸素の生成と消去\
 - [フリーラジカル及び活性酸素](/active-oxygen/kousanka#hyou)\
-- [体内抗酸化物質がなぜ消耗するのか](/active-oxygen/kousanka#heru)[Image]{width="40" height="10"}\
+- [体内抗酸化物質がなぜ消耗するのか](/active-oxygen/kousanka#heru)![活性酸素の生成と消去図表](/active-oxygen/furiiraz.gif)\
 - [活性酸素の生成と消去図表](/active-oxygen/kousanka#zuhyou)\
 - [分子で示す活性酸素の生成と変換](/active-oxygen/kousanka#zuhyou2)
 
@@ -117,10 +117,10 @@
 
 ---
 
-<a id="zuhyou"></a>活性酸素の生成と消去図表 [Image]
+<a id="zuhyou"></a>活性酸素の生成と消去図表 ![分子で示す活性酸素の生成と変換](/active-oxygen/kasseisa.gif)
 
 ---
 
-<a id="zuhyou2"></a>分子で示す活性酸素の生成と変換 [Image]
+<a id="zuhyou2"></a>分子で示す活性酸素の生成と変換 ![new!](/icon/new.svg)
 
 ---

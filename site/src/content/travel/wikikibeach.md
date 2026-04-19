@@ -1,6 +1,6 @@
 # ワイキキビーチ
 
 ワイキキハイアットリージェンシー３７階から海岸を望む\
-[Image]{width="500" height="350"}\
+![](/travel/wikikibeach.jpg)\
 ホノルルカラカウア通り\
-[Image]{width="500" height="350"}
+![](/travel/karakaua.jpg)

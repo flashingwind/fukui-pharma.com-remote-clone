@@ -1,8 +1,8 @@
 # カアナパリの夕日
 
 マウイ島カアナパリのサンセット\
-[Image]{width="500" height="350"}\
+![](/travel/mauisunset.jpg)\
 マウイ島カアナパリの虹\
-[Image]{width="500" height="350"}\
+![](/travel/mauinizi.jpg)\
 マウイ島カアナパリの夕暮れ\
-[Image]{width="500" height="350"}
+![](/travel/kanapaliyugure.jpg)

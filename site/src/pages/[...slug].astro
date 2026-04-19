@@ -75,6 +75,10 @@ const htmlContent = await marked(entry.body);
 const section = collection;
 const slug = entry.id.split('/').pop();
 
+// frontmatterにtitleがなければ本文冒頭のh1から自動取得
+const titleMatch = entry.body.match(/^#{1,3}\s+(.+)/m);
+const title = entry.data.title ?? (titleMatch ? titleMatch[1].replace(/<[^>]+>/g, '').trim() : undefined);
+
 // frontmatterにdescriptionがなければ本文冒頭から自動生成
 const description = entry.data.description ?? (() => {
   const text = entry.body
@@ -92,7 +96,7 @@ const description = entry.data.description ?? (() => {
 ---
 
 <MarkdownLayout
-  frontmatter={{ ...entry.data, description }}
+  frontmatter={{ ...entry.data, title, description }}
   slug={slug}
   section={section}
   allPages={allPages}

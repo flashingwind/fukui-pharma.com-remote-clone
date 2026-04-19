@@ -2,20 +2,20 @@
 
 ２００６世界らん展 パフィオペディラム\
 姿態の面白い\
-[Image]{width="500" height="350"}\
+![](/flowers/P2180065.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/DSC00053.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/DSC00068.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/DSC00072.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/DSC00070.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180122.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/DSC00055.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180081.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/P2180099.jpg)\

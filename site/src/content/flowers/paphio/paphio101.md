@@ -1,24 +1,24 @@
 # パヒオペディラム１
 
 パヒオペディラム１\
-1[Image]{width="500" height="350"}\
+1![](/flowers/37kaizyou.jpg)\
 
-26[Image]{width="500" height="350"}\
+26![](/flowers/32paphg.jpg)\
 
-17[Image]{width="500" height="350"}\
+17![](/flowers/24paphsyou2.jpg)\
 
-36[Image]{width="500" height="350"}\
+36![](/flowers/41kazari.jpg)\
 
-5[Image]{width="500" height="350"}\
+5![](/flowers/1pahio1.jpg)\
 
-11[Image]{width="500" height="350"}\
+11![](/flowers/1pahiotyahan2.jpg)\
 　\
-14[Image]{width="500" height="350"}\
+14![](/flowers/1paphio2.jpg)\
 
-27[Image]{width="500" height="350"}\
+27![](/flowers/32paphv.jpg)\
 　\
-29[Image]{width="500" height="350"}\
+29![](/flowers/34papht.jpg)\
 
-31[Image]{width="500" height="350"}\
+31![](/flowers/36papht.jpg)\
 　\
-33[Image]{width="500" height="350"}\
+33![](/flowers/39paphg.jpg)\

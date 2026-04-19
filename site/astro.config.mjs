@@ -3,6 +3,8 @@ import react from '@astrojs/react';
 import fs from 'fs';
 import path from 'path';
 
+import sitemap from '@astrojs/sitemap';
+
 // Plugin to resolve images from public directory
 const resolvePublicImages = {
   name: 'resolve-public-images',
@@ -23,7 +25,7 @@ const resolvePublicImages = {
 
 export default defineConfig({
   site: 'https://fukui-pharma.com',
-  integrations: [react()],
+  integrations: [react(), sitemap()],
   output: 'static',
   outDir: './dist',
   publicDir: './public',

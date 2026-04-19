@@ -1,23 +1,23 @@
 # ２００５世界ラン展 日本大賞はデンドロビウム
 
-[Image]{width="500" height="350"}\
+![](/flowers/13nihontaisou.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/1taisyou2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/2hanadokei2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/2kazari2.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/2kazari3.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/2kazari4.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/2kazari5.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/2kazari6.jpg)\
 　\
-[Image]{width="500" height="350"}\
+![](/flowers/45kazarihina.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/1pharenoaka.jpg)\
 
-[Image]{width="500" height="350"}\
+![](/flowers/22symsyou.jpg)\
