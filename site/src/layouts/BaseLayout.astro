@@ -4,12 +4,9 @@ import { MenuLeftIsland } from '../components/MenuLeftIsland.jsx';
 export interface Props {
   title?: string;
   description?: string;
-  currentSlug?: string;
-  currentSection?: string;
-  allPages?: { collection: string; id: string; urlSlug: string }[];
 }
 
-const { title = '福井薬局 | ビタミン・ミネラル情報', description = '', currentSlug = '', currentSection = '', allPages = [] } = Astro.props;
+const { title = '福井薬局 | ビタミン・ミネラル情報', description = '' } = Astro.props;
 const site = Astro.site || new URL('https://fukui-pharma.com');
 const canonicalURL = new URL(Astro.url.pathname, site);
 const ogDescription = description || 'ビタミン vitamin ミネラル mineral 福井薬局 サプリメント 栄養療法 免疫 ベータグルカン メガフード';
@@ -35,7 +32,7 @@ const ogDescription = description || 'ビタミン vitamin ミネラル mineral 
   </head>
   <body>
     <div class="app-shell">
-      <MenuLeftIsland client:only="react" currentSlug={currentSlug} currentSection={currentSection} allPages={allPages} />
+      <MenuLeftIsland client:only="react" />
       <section id="center">
         <slot />
       </section>

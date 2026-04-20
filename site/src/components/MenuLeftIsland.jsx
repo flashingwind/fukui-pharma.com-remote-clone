@@ -1,39 +1,175 @@
 import React, { useState } from "react";
 import "../styles/MenuLeft.css";
 
-const PUBLICATION_SLUGS = ["mokuzitu", "mokuzito"];
-const SHOP_SLUGS = ["fukui"];
+// URLパス（先頭・末尾スラッシュなし）→ 開くメニューキーの完全マッピング
+const PATH_TO_MENU = {
+  // ビタミン・ミネラル
+  "vitamin-mineral/eiyou": "vitaminMineral",
+  "vitamin-mineral/vitasi2": "vitaminMineral",
+  "vitamin-mineral/vitasi3": "vitaminMineral",
+  "vitamin-mineral/vitasi4": "vitaminMineral",
+  "vitamin-mineral/magsiryou": "vitaminMineral",
+  "vitamin-mineral/serensir": "vitaminMineral",
+  "vitamin-mineral/lipoicacid": "vitaminMineral",
+  "vitamin-mineral/aensiryou": "vitaminMineral",
+  "vitamin-mineral/tetusiryou": "vitaminMineral",
+  "vitamin-mineral/ganyuute": "vitaminMineral",
+  // 出版（vitamin-mineralディレクトリだが出版メニュー）
+  "vitamin-mineral/mokuzitu": "publication",
+  "vitamin-mineral/mokuzito": "publication",
+  // 活性酸素
+  "active-oxygen/kousanka": "activeOxygen",
+  // サプリメント
+  "supplement/shyoyou": "supplement",
+  "supplement/suppuse": "supplement",
+  "supplement/begu": "supplement",
+  "supplement/be-tagur": "supplement",
+  "supplement/be-tagur10": "supplement",
+  "supplement/megafudo": "supplement",
+  // アトピー・免疫
+  "atopic/atopic": "atopic",
+  "atopic/meneki": "atopic",
+  "atopic/menekikihon": "atopic",
+  "atopic/thbalance": "atopic",
+  // 栄養素を多く含む食品
+  "nutrient-foods/aganyuu": "nutrientFoods",
+  "nutrient-foods/eganyuu": "nutrientFoods",
+  "nutrient-foods/dganyuu": "nutrientFoods",
+  "nutrient-foods/bkganyuu": "nutrientFoods",
+  "nutrient-foods/cganyuu": "nutrientFoods",
+  "nutrient-foods/b1ganyuu": "nutrientFoods",
+  "nutrient-foods/b2ganyuu": "nutrientFoods",
+  "nutrient-foods/b3ganyuu": "nutrientFoods",
+  "nutrient-foods/b5ganyuu": "nutrientFoods",
+  "nutrient-foods/b6ganyuu": "nutrientFoods",
+  "nutrient-foods/b12ganyu": "nutrientFoods",
+  "nutrient-foods/yousanga": "nutrientFoods",
+  "nutrient-foods/biotinga": "nutrientFoods",
+  "nutrient-foods/carugany": "nutrientFoods",
+  "nutrient-foods/magganyu": "nutrientFoods",
+  "nutrient-foods/karigany": "nutrientFoods",
+  "nutrient-foods/aenganyu": "nutrientFoods",
+  "nutrient-foods/tetugany": "nutrientFoods",
+  "nutrient-foods/douganyu": "nutrientFoods",
+  "nutrient-foods/cromugan": "nutrientFoods",
+  "nutrient-foods/mangagan": "nutrientFoods",
+  "nutrient-foods/yo-dogan": "nutrientFoods",
+  "nutrient-foods/serengan": "nutrientFoods",
+  "nutrient-foods/moribuga": "nutrientFoods",
+  "nutrient-foods/vanagany": "nutrientFoods",
+  "nutrient-foods/senigany": "nutrientFoods",
+  "nutrient-foods/keisogan": "nutrientFoods",
+  "nutrient-foods/housogan": "nutrientFoods",
+  "nutrient-foods/gerumaga": "nutrientFoods",
+  "nutrient-foods/coqganyu": "nutrientFoods",
+  "nutrient-foods/colingan": "nutrientFoods",
+  "nutrient-foods/inosigan": "nutrientFoods",
+  // 花の写真集
+  "flowers/2007/2007ranten120": "flower",
+  "flowers/2007/2007catC": "flower",
+  "flowers/2007/2007paphE": "flower",
+  "flowers/2006/2006ranten": "flower",
+  "flowers/2006/2006cattleya": "flower",
+  "flowers/2006/2006paphio": "flower",
+  "flowers/2006/2006lycaste11": "flower",
+  "flowers/dendrobium/dendrobiumu": "flower",
+  "flowers/paphio/paphio101": "flower",
+  "flowers/paphio/paphio202": "flower",
+  "flowers/paphio/paphio103": "flower",
+  "flowers/cattleya/cattleya1": "flower",
+  "flowers/cattleya/cattleya22": "flower",
+  "flowers/lycaste/lycaste1": "flower",
+  "flowers/phalaenopsis/phalaenopsis": "flower",
+  "flowers/others/masdevallia": "flower",
+  "flowers/dendrobium/kaizyou": "flower",
+  "flowers/2004/2004ran": "flower",
+  "flowers/cattleya/cattleya": "flower",
+  "flowers/cattleya/cattleyablue": "flower",
+  "flowers/paphio/paphiopedilum": "flower",
+  "flowers/paphio/paphiopedilum2": "flower",
+  "flowers/phalaenopsis/phalaenopsis4": "flower",
+  "flowers/dendrobium/dendrobiumnew": "flower",
+  "flowers/lycaste/lycasteNew": "flower",
+  "flowers/others/harubotan16": "flower",
+  "flowers/others/sonota": "flower",
+  "flowers/others/takasimayabaraten": "flower",
+  // ハワイ旅行
+  "travel/mauisunset": "travel",
+  "travel/mauibus": "travel",
+  "travel/mauisyokubutu": "travel",
+  "travel/suizokukan": "travel",
+  "travel/hanaumabay": "travel",
+  "travel/wikikibeach": "travel",
+  "travel/hawaibeach": "travel",
+  // 当店について（展開なし、リンクのみ）
+  "shop/fukui": null,
+  "shop/order": null,
+  "shop/tyuumon": null,
+  // アクセス（展開なし）
+  "access/fukui": null,
+  "access/fukui2": null,
+  "access/fukui3": null,
+  // 肌の美しさと栄養（展開なし）
+  "others/hadautukusisa": null,
+  "others/oldcar": null,
+};
 
-export const MenuLeftIsland = ({ currentSlug = "", currentSection = "", allPages = [] }) => {
+// 花のページの年サブセクションマッピング
+const PATH_TO_FLOWER_YEAR = {
+  "flowers/2007/2007ranten120": "y2007",
+  "flowers/2007/2007catC": "y2007",
+  "flowers/2007/2007paphE": "y2007",
+  "flowers/2006/2006ranten": "y2006",
+  "flowers/2006/2006cattleya": "y2006",
+  "flowers/2006/2006paphio": "y2006",
+  "flowers/2006/2006lycaste11": "y2006",
+  "flowers/dendrobium/dendrobiumu": "y2005",
+  "flowers/paphio/paphio101": "y2005",
+  "flowers/paphio/paphio202": "y2005",
+  "flowers/paphio/paphio103": "y2005",
+  "flowers/cattleya/cattleya1": "y2005",
+  "flowers/cattleya/cattleya22": "y2005",
+  "flowers/lycaste/lycaste1": "y2005",
+  "flowers/phalaenopsis/phalaenopsis": "y2005",
+  "flowers/others/masdevallia": "y2005",
+  "flowers/dendrobium/kaizyou": "y2005",
+  "flowers/2004/2004ran": "y2004",
+  "flowers/cattleya/cattleya": "y2004",
+  "flowers/cattleya/cattleyablue": "y2004",
+  "flowers/paphio/paphiopedilum": "y2004",
+  "flowers/paphio/paphiopedilum2": "y2004",
+  "flowers/phalaenopsis/phalaenopsis4": "y2004",
+  "flowers/dendrobium/dendrobiumnew": "y2004",
+  "flowers/lycaste/lycasteNew": "y2004",
+};
+
+export const MenuLeftIsland = ({ allPages = [] }) => {
   const pathname = typeof window !== 'undefined' ? window.location.pathname.replace(/^\/+|\/+$/g, '') : '';
-  const segments = pathname.split('/').filter(Boolean);
-  const section = segments.length > 0 ? segments[0] : (currentSection || '');
-  const slug = segments.length > 0 ? segments[segments.length - 1] : (currentSlug || '');
 
-  const isPublication = PUBLICATION_SLUGS.includes(slug);
-  const isShop = section === "shop" || SHOP_SLUGS.includes(slug);
-  const inFlower = section === "flowers";
+  const menuKey = PATH_TO_MENU[pathname];
+  const flowerYear = PATH_TO_FLOWER_YEAR[pathname];
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [openSection, setOpenSection] = useState(() => ({
-    flower: inFlower,
-    vitaminMineral: !isPublication && section === "vitamin-mineral",
-    atopic: section === "atopic",
-    activeOxygen: section === "active-oxygen",
-    travel: section === "travel",
-    publication: isPublication,
-    shop: isShop,
-    supplement: section === "supplement",
-    access: section === "access",
-    nutrientFoods: section === "nutrient-foods",
-  }));
+  const [openSection, setOpenSection] = useState({
+    flower: menuKey === "flower",
+    vitaminMineral: menuKey === "vitaminMineral",
+    atopic: menuKey === "atopic",
+    activeOxygen: menuKey === "activeOxygen",
+    travel: menuKey === "travel",
+    publication: menuKey === "publication",
+    shop: false,
+    supplement: menuKey === "supplement",
+    access: false,
+    nutrientFoods: menuKey === "nutrientFoods",
+  });
 
-  const [openYear, setOpenYear] = useState(() => ({
-    y2007: slug.startsWith("2007"),
-    y2006: slug.startsWith("2006"),
-    y2005: false,
-    y2004: slug.startsWith("2004"),
-  }));
+  const [openYear, setOpenYear] = useState({
+    y2007: flowerYear === "y2007",
+    y2006: flowerYear === "y2006",
+    y2005: flowerYear === "y2005",
+    y2004: flowerYear === "y2004",
+  });
 
   const [openNutrientGroup, setOpenNutrientGroup] = useState({ vitamin: false, mineral: false, other: false });
 

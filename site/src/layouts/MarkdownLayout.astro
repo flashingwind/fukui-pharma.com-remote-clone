@@ -7,12 +7,9 @@ export interface Props {
     title?: string;
     description?: string;
   };
-  slug?: string;
-  section?: string;
-  allPages?: { collection: string; id: string; urlSlug: string }[];
 }
 
-const { frontmatter, slug = '', section = '', allPages = [] } = Astro.props;
+const { frontmatter } = Astro.props;
 const SITE_NAME = '福井薬局 | ビタミン・ミネラル情報';
 const pageTitle = frontmatter.title && frontmatter.title !== '福井薬局'
   ? `${frontmatter.title} | ${SITE_NAME}`
@@ -22,9 +19,6 @@ const pageTitle = frontmatter.title && frontmatter.title !== '福井薬局'
 <BaseLayout
   title={pageTitle}
   description={frontmatter.description}
-  currentSlug={slug}
-  currentSection={section}
-  allPages={allPages}
 >
   <div class="markdown-body">
     <slot />
