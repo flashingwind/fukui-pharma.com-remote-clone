@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 import "../styles/MenuLeft.css";
 
+const PUBLICATION_SLUGS = ["mokuzitu", "mokuzito"];
+const SHOP_SLUGS = ["fukui"];
+
 export const MenuLeftIsland = ({ currentSlug = "", currentSection = "", allPages = [] }) => {
   const pathname = typeof window !== 'undefined' ? window.location.pathname.replace(/^\/+|\/+$/g, '') : '';
   const segments = pathname.split('/').filter(Boolean);
-  const section = segments.length > 1 ? segments[0] : (currentSection || '');
+  const section = segments.length > 0 ? segments[0] : (currentSection || '');
   const slug = segments.length > 0 ? segments[segments.length - 1] : (currentSlug || '');
 
+  const isPublication = PUBLICATION_SLUGS.includes(slug);
+  const isShop = section === "shop" || SHOP_SLUGS.includes(slug);
   const inFlower = section === "flowers";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [openSection, setOpenSection] = useState(() => ({
     flower: inFlower,
-    vitaminMineral: section === "vitamin-mineral",
+    vitaminMineral: !isPublication && section === "vitamin-mineral",
     atopic: section === "atopic",
     activeOxygen: section === "active-oxygen",
     travel: section === "travel",
-    publication: false,
-    shop: section === "shop",
+    publication: isPublication,
+    shop: isShop,
     supplement: section === "supplement",
     access: section === "access",
     nutrientFoods: section === "nutrient-foods",
