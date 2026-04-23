@@ -54,7 +54,7 @@ function main() {
   }
 
   // linkchecker is for HTML files. Run against public HTML tree.
-  const status = run('perl', ['./linkchecker/linkchecker.pl', './public']);
+  const status = run('perl', [path.join('site', 'linkchecker', 'linkchecker.pl'), path.join('site', 'public')]);
   process.exit(status);
 }
 
