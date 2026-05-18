@@ -7,9 +7,10 @@ export interface Props {
     title?: string;
     description?: string;
   };
+  canonicalSlug?: string | null;
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, canonicalSlug } = Astro.props;
 const SITE_NAME = '福井薬局 | ビタミン・ミネラル情報';
 const pageTitle = frontmatter.title && frontmatter.title !== '福井薬局'
   ? `${frontmatter.title} | ${SITE_NAME}`
@@ -19,6 +20,7 @@ const pageTitle = frontmatter.title && frontmatter.title !== '福井薬局'
 <BaseLayout
   title={pageTitle}
   description={frontmatter.description}
+  canonicalSlug={canonicalSlug}
 >
   <div class="markdown-body">
     <slot />

@@ -30,20 +30,123 @@ export async function getStaticPaths() {
     'access',
   ];
 
+  // 旧URLパス → [collection, entryId] のマッピング（Google Search Console 404対応）
+  // .html付きURLは別途 _redirects で /で終わるURLにリダイレクトするため、ここでは拡張子なし版のみ定義
+  const LEGACY_URL_MAP: Record<string, [string, string]> = {
+    // flowers: フラットURL → サブディレクトリ構造
+    'flowers/phalaenopsis':      ['flowers', 'phalaenopsis/phalaenopsis'],
+    'flowers/phalaenopsis4':     ['flowers', 'phalaenopsis/phalaenopsis4'],
+    'flowers/paphio101':         ['flowers', 'paphio/paphio101'],
+    'flowers/paphio103':         ['flowers', 'paphio/paphio103'],
+    'flowers/paphiopedilum':     ['flowers', 'paphio/paphiopedilum'],
+    'flowers/kaizyou':           ['flowers', 'dendrobium/kaizyou'],
+    'flowers/cattleya22':        ['flowers', 'cattleya/cattleya22'],
+    'flowers/cattleya1':         ['flowers', 'cattleya/cattleya1'],
+    'flowers/cattleyablue':      ['flowers', 'cattleya/cattleyablue'],
+    'flowers/lycasteNew':        ['flowers', 'lycaste/lycasteNew'],
+    'flowers/dendrobiumnew':     ['flowers', 'dendrobium/dendrobiumnew'],
+    'flowers/dendrobiumu':       ['flowers', 'dendrobium/dendrobiumu'],
+    'flowers/takasimayabaraten': ['flowers', 'others/takasimayabaraten'],
+    'flowers/sonota':            ['flowers', 'others/sonota'],
+    'flowers/harubotan16':       ['flowers', 'others/harubotan16'],
+    'flowers/masdevallia':       ['flowers', 'others/masdevallia'],
+    'flowers/2006lycaste11':     ['flowers', '2006/2006lycaste11'],
+    'flowers/2006cattleya':      ['flowers', '2006/2006cattleya'],
+    // vitamin-mineral: nutrient-foods に移動済みのページ
+    'vitamin-mineral/bkganyuu':  ['nutrient-foods', 'bkganyuu'],
+    'vitamin-mineral/b12ganyu':  ['nutrient-foods', 'b12ganyu'],
+    'vitamin-mineral/b5ganyuu':  ['nutrient-foods', 'b5ganyuu'],
+    'vitamin-mineral/b3ganyuu':  ['nutrient-foods', 'b3ganyuu'],
+    'vitamin-mineral/coqganyu':  ['nutrient-foods', 'coqganyu'],
+    'vitamin-mineral/aenganyu':  ['nutrient-foods', 'aenganyu'],
+    'vitamin-mineral/mangagan':  ['nutrient-foods', 'mangagan'],
+    'vitamin-mineral/karigany':  ['nutrient-foods', 'karigany'],
+    'vitamin-mineral/keisogan':  ['nutrient-foods', 'keisogan'],
+    'vitamin-mineral/cromugan':  ['nutrient-foods', 'cromugan'],
+    'vitamin-mineral/gerumaga':  ['nutrient-foods', 'gerumaga'],
+    'vitamin-mineral/cganyuu':   ['nutrient-foods', 'cganyuu'],
+    'vitamin-mineral/colingan':  ['nutrient-foods', 'colingan'],
+    'vitamin-mineral/yo-dogan':  ['nutrient-foods', 'yo-dogan'],
+    'vitamin-mineral/yousanga':  ['nutrient-foods', 'yousanga'],
+    'vitamin-mineral/shyoyou':   ['supplement', 'shyoyou'],
+    // vitamin-mineral/nutrient-foods/ → nutrient-foods/
+    'vitamin-mineral/nutrient-foods/b5ganyuu': ['nutrient-foods', 'b5ganyuu'],
+    'vitamin-mineral/nutrient-foods/mangagan': ['nutrient-foods', 'mangagan'],
+    'vitamin-mineral/nutrient-foods/moribuga': ['nutrient-foods', 'moribuga'],
+    'vitamin-mineral/nutrient-foods/dganyuu':  ['nutrient-foods', 'dganyuu'],
+    'vitamin-mineral/nutrient-foods/cromugan': ['nutrient-foods', 'cromugan'],
+    'vitamin-mineral/nutrient-foods/karigany': ['nutrient-foods', 'karigany'],
+    // nutri/ → vitamin-mineral/ または supplement/
+    'nutri/eiyou':    ['vitamin-mineral', 'eiyou'],
+    'nutri/serensir': ['vitamin-mineral', 'serensir'],
+    'nutri/shyoyou':  ['supplement', 'shyoyou'],
+    'nutri/magsiryou':['vitamin-mineral', 'magsiryou'],
+    // others: フラットURL → others/
+    'hadautukusisa': ['others', 'hadautukusisa'],
+    'oldcar':        ['others', 'oldcar'],
+    // supplement/: 旧suppliments → supplement
+    'suppliments/phalaenopsis4': ['flowers', 'phalaenopsis/phalaenopsis4'],
+    'suppliments/vitasi3':       ['vitamin-mineral', 'vitasi3'],
+    'supplement/suppuse':        ['supplement', 'suppuse'],
+    // 今回追加分
+    'flowers/2006paphio':        ['flowers', '2006/2006paphio'],
+    'flowers/2004ran':           ['flowers', '2004/2004ran'],
+    'flowers/2007ranten120':     ['flowers', '2007/2007ranten120'],
+    'flowers/paphio/paphio103':  ['flowers', 'paphio/paphio103'],
+    'flowers/2007/2007ranten120':['flowers', '2007/2007ranten120'],
+    'dendrobiumnew':             ['flowers', 'dendrobium/dendrobiumnew'],
+    'begu':                      ['supplement', 'begu'],
+    'eiyou':                     ['vitamin-mineral', 'eiyou'],
+    'vitasi3':                   ['vitamin-mineral', 'vitasi3'],
+    'magsiryou':                 ['vitamin-mineral', 'magsiryou'],
+    'vitamin-mineral/senigany':  ['nutrient-foods', 'senigany'],
+    'vitamin-mineral/nutrient-foods/eganyuu':  ['nutrient-foods', 'eganyuu'],
+    'vitamin-mineral/nutrient-foods/aganyuu':  ['nutrient-foods', 'aganyuu'],
+    'vitamin-mineral/nutrient-foods/carugany': ['nutrient-foods', 'carugany'],
+    'vitamin-mineral/nutrient-foods/cganyuu':  ['nutrient-foods', 'cganyuu'],
+    'suppliments/serensir':      ['vitamin-mineral', 'serensir'],
+    'supplement/2006ranten':     ['flowers', '2006/2006ranten'],
+    'vitamin-mineral/vanagany':  ['nutrient-foods', 'vanagany'],
+    'vitamin-mineral/serengan':  ['nutrient-foods', 'serengan'],
+    'vitamin-mineral/tetugany':  ['nutrient-foods', 'tetugany'],
+    'vitamin-mineral/carugany':  ['nutrient-foods', 'carugany'],
+    'vitamin-mineral/douganyu':  ['nutrient-foods', 'douganyu'],
+    'vitamin-mineral/moribuga':  ['nutrient-foods', 'moribuga'],
+    'vitamin-mineral/b6ganyuu':  ['nutrient-foods', 'b6ganyuu'],
+    'vitamin-mineral/housogan':  ['nutrient-foods', 'housogan'],
+    'travel_top':                ['travel', 'mauibus'],
+  };
+
   const paths = [];
+
+  // コレクションエントリのキャッシュ
+  const entryCache: Record<string, Record<string, any>> = {};
   for (const collection of COLLECTIONS) {
     try {
       const entries = await getCollection(collection);
+      entryCache[collection] = {};
       for (const entry of entries) {
         const entrySlug = entry.slug || entry.id;
+        entryCache[collection][entrySlug] = entry;
         if (entrySlug && entrySlug !== 'index') {
           paths.push({
             params: { slug: `${collection}/${entrySlug}` },
-            props: { entry, collection },
+            props: { entry, collection, canonicalSlug: null },
           });
         }
       }
     } catch (e) {}
+  }
+
+  // 旧URL → 既存コンテンツのエイリアスパスを追加（canonicalSlugで正規URLを指定）
+  for (const [legacySlug, [collection, entryId]] of Object.entries(LEGACY_URL_MAP)) {
+    const entry = entryCache[collection]?.[entryId];
+    if (entry) {
+      paths.push({
+        params: { slug: legacySlug },
+        props: { entry, collection, canonicalSlug: `${collection}/${entryId}` },
+      });
+    }
   }
 
   return paths;
@@ -52,9 +155,10 @@ export async function getStaticPaths() {
 interface Props {
   entry: any;
   collection: string;
+  canonicalSlug: string | null;
 }
 
-const { entry, collection } = Astro.props;
+const { entry, collection, canonicalSlug } = Astro.props;
 const htmlContent = await marked(entry.body);
 
 // frontmatterにtitleがなければ本文冒頭のh1から自動取得
@@ -77,6 +181,6 @@ const description = entry.data.description ?? (() => {
 })();
 ---
 
-<MarkdownLayout frontmatter={{ ...entry.data, title, description }}>
+<MarkdownLayout frontmatter={{ ...entry.data, title, description }} canonicalSlug={canonicalSlug}>
   <Fragment set:html={htmlContent} />
 </MarkdownLayout>
