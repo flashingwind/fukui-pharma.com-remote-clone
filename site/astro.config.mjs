@@ -98,6 +98,24 @@ const HTML_REDIRECT_MAP = {
   // active-oxygen / atopic
   '/active-oxygen/kousanka.html':    '/active-oxygen/kousanka/',
   '/atopic/atopic.html':             '/atopic/atopic/',
+  // flowers（大文字小文字違い・追加分）
+  '/flowers/paphiopedilum2.html':    '/flowers/paphio/paphiopedilum2/',
+  // supliments typo
+  '/supliments/be-tagur.html':       '/supplement/be-tagur/',
+  '/supliments/be-tagur10.html':     '/supplement/be-tagur10/',
+  // nutri/ 追加分
+  '/nutri/colingan.html':            '/nutrient-foods/colingan/',
+  '/nutri/eganyuu.html':             '/nutrient-foods/eganyuu/',
+  '/nutri/vitasi2.html':             '/vitamin-mineral/vitasi2/',
+  '/nutri/aensiryou.html':           '/vitamin-mineral/aensiryou/',
+  '/nutri/senigany.html':            '/nutrient-foods/senigany/',
+  '/nutri/b1ganyuu.html':            '/nutrient-foods/b1ganyuu/',
+  '/nutri/b2ganyuu.html':            '/nutrient-foods/b2ganyuu/',
+  '/nutri/carugany.html':            '/nutrient-foods/carugany/',
+  '/nutri/gerumaga.html':            '/nutrient-foods/gerumaga/',
+  '/nutri/bkganyuu.html':            '/nutrient-foods/bkganyuu/',
+  '/nutri/douganyu.html':            '/nutrient-foods/douganyu/',
+  '/nutri/lipoicacid.html':          '/vitamin-mineral/lipoicacid/',
 };
 
 function htmlRedirectGenerator() {

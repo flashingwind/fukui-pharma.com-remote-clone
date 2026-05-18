@@ -115,6 +115,55 @@ export async function getStaticPaths() {
     'vitamin-mineral/b6ganyuu':  ['nutrient-foods', 'b6ganyuu'],
     'vitamin-mineral/housogan':  ['nutrient-foods', 'housogan'],
     'travel_top':                ['travel', 'mauibus'],
+    // flowers: 大文字小文字違い
+    'flowers/2007/2007paphe':    ['flowers', '2007/2007paphE'],
+    // suplement/supliments (typo) → supplement
+    'suplement/megafudo':        ['supplement', 'megafudo'],
+    'suplement/be-tagur10':      ['supplement', 'be-tagur10'],
+    'suplement/begu':            ['supplement', 'begu'],
+    'supliments/be-tagur10':     ['supplement', 'be-tagur10'],
+    'supliments/be-tagur':       ['supplement', 'be-tagur'],
+    // oldcar/oldcar → others/oldcar
+    'oldcar/oldcar':             ['others', 'oldcar'],
+    // suppliments/ 追加
+    'suppliments/2006ranten':    ['flowers', '2006/2006ranten'],
+    'suppliments/vanagany':      ['nutrient-foods', 'vanagany'],
+    'suppliments/serengan':      ['nutrient-foods', 'serengan'],
+    'suppliments/tetugany':      ['nutrient-foods', 'tetugany'],
+    'suppliments/carugany':      ['nutrient-foods', 'carugany'],
+    'suppliments/vitasi2':       ['vitamin-mineral', 'vitasi2'],
+    'suppliments/douganyu':      ['nutrient-foods', 'douganyu'],
+    'suppliments/eiyou':         ['vitamin-mineral', 'eiyou'],
+    'suppliments/moribuga':      ['nutrient-foods', 'moribuga'],
+    // supplement/ 追加
+    'supplement/tyuumon':        ['shop', 'tyuumon'],
+    'supplement/vanagany':       ['nutrient-foods', 'vanagany'],
+    'supplement/serengan':       ['nutrient-foods', 'serengan'],
+    'supplement/tetugany':       ['nutrient-foods', 'tetugany'],
+    'supplement/carugany':       ['nutrient-foods', 'carugany'],
+    'supplement/vitasi2':        ['vitamin-mineral', 'vitasi2'],
+    'supplement/douganyu':       ['nutrient-foods', 'douganyu'],
+    'supplement/eiyou':          ['vitamin-mineral', 'eiyou'],
+    'supplement/moribuga':       ['nutrient-foods', 'moribuga'],
+    // hawaii/ → travel/
+    'hawaii/mauisyokubutu':      ['travel', 'mauisyokubutu'],
+    'hawaii/hanaumabay':         ['travel', 'hanaumabay'],
+    'hawaii/wikikibeach':        ['travel', 'wikikibeach'],
+    // others/index → トップ相当なし（othersコレクションindex）
+    'others/index':              ['others', 'hadautukusisa'],
+    // nutri/ 追加分
+    'nutri/colingan':            ['nutrient-foods', 'colingan'],
+    'nutri/eganyuu':             ['nutrient-foods', 'eganyuu'],
+    'nutri/vitasi2':             ['vitamin-mineral', 'vitasi2'],
+    'nutri/aensiryou':           ['vitamin-mineral', 'aensiryou'],
+    'nutri/senigany':            ['nutrient-foods', 'senigany'],
+    'nutri/b1ganyuu':            ['nutrient-foods', 'b1ganyuu'],
+    'nutri/b2ganyuu':            ['nutrient-foods', 'b2ganyuu'],
+    'nutri/carugany':            ['nutrient-foods', 'carugany'],
+    'nutri/gerumaga':            ['nutrient-foods', 'gerumaga'],
+    'nutri/bkganyuu':            ['nutrient-foods', 'bkganyuu'],
+    'nutri/douganyu':            ['nutrient-foods', 'douganyu'],
+    'nutri/lipoicacid':          ['vitamin-mineral', 'lipoicacid'],
   };
 
   const paths = [];
