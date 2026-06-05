@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 const ROOT = process.cwd();
-const CONTENT_DIR = path.join(ROOT, 'content');
+const CONTENT_DIR = path.join(ROOT, 'src', 'content');
 const PUBLIC_DIR = path.join(ROOT, 'public');
 const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access', 'nutrient-foods', 'minerals', 'about'];
 
