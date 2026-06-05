@@ -3,7 +3,7 @@ import path from 'path';
 const ROOT = process.cwd();
 const CONTENT_DIR = path.join(ROOT, 'content');
 const PUBLIC_DIR = path.join(ROOT, 'public');
-const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access', 'nutrient-foods', 'minerals', 'about', 'icon'];
+const CONTENT_DIRS = ['vitamin-mineral', 'supplement', 'active-oxygen', 'atopic', 'flowers', 'travel', 'others', 'publication', 'shop', 'access', 'nutrient-foods', 'minerals', 'about'];
 
 const ASSET_EXT_RE = /\.(gif|jpe?g|png|webp|svg|ico|css|js|xml|txt|pdf|woff2?|ttf|eot|mp4|webm)$/i;
 const IMAGE_EXT_RE = /\.(gif|jpe?g|png|webp|svg)$/i;
