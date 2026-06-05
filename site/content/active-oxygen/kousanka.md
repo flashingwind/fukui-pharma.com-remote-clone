@@ -1,10 +1,12 @@
 # 活性酸素(フリーラジカル)が老化や成人病の原因に?
 
-- 活性酸素の生成と消去
-- [フリーラジカル及び活性酸素](/active-oxygen/kousanka#hyou)
-- <a href="/active-oxygen/kousanka#heru">体内抗酸化物質がなぜ消耗するのか</a> <img src="/icon/new.svg" alt="new!" width="40" height="10">
-- [活性酸素の生成と消去図表](/active-oxygen/kousanka#zuhyou)
-- [分子で示す活性酸素の生成と変換](/active-oxygen/kousanka#zuhyou2)
+<ul>
+<li>活性酸素の生成と消去</li>
+<li><a href="/active-oxygen/kousanka#hyou">フリーラジカル及び活性酸素</a></li>
+<li><a href="/active-oxygen/kousanka#heru">体内抗酸化物質がなぜ消耗するのか</a> <img src="/icon/new.svg" alt="new!" width="40" height="10"></li>
+<li><a href="/active-oxygen/kousanka#zuhyou">活性酸素の生成と消去図表</a></li>
+<li><a href="/active-oxygen/kousanka#zuhyou2">分子で示す活性酸素の生成と変換</a></li>
+</ul>
 
 
 
