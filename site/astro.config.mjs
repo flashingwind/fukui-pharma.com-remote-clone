@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 import sitemap from '@astrojs/sitemap';
+import astroBrokenLinksChecker from 'astro-broken-links-checker';
 
 // Plugin to resolve images from public directory
 const resolvePublicImages = {
@@ -25,7 +26,7 @@ const resolvePublicImages = {
 
 export default defineConfig({
   site: 'https://fukui-pharma.com',
-  integrations: [react(), sitemap()],
+  integrations: [react(), sitemap(), astroBrokenLinksChecker({ throwError: true, checkExternalLinks: false })],
   output: 'static',
   outDir: './dist',
   publicDir: './public',

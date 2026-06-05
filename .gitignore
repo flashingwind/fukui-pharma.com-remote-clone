@@ -1,3 +1,4 @@
 site/public/sitemap.xml
 site/tmp-*.mjs
 .qwen/
+site/.link-checker/broken-links.log
