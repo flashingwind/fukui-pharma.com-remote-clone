@@ -98,3 +98,51 @@
 /others/oldcar.html /others/oldcar/ 301
 /others/index.html /others/hadautukusisa/ 301
 /active-oxygen/kousanka.html /active-oxygen/kousanka/ 301
+# www → non-www
+https://www.fukui-pharma.com/* https://fukui-pharma.com/:splat 301
+# vitamin-mineral .html 追加分
+/vitamin-mineral/mangagan.html /nutrient-foods/mangagan/ 301
+/vitamin-mineral/b3ganyuu.html /nutrient-foods/b3ganyuu/ 301
+/vitamin-mineral/yo-dogan.html /nutrient-foods/yo-dogan/ 301
+/vitamin-mineral/mokuzitu.html /vitamin-mineral/mokuzitu/ 301
+/vitamin-mineral/mokuzito.html /vitamin-mineral/mokuzito/ 301
+# flowers フラット .html 追加分
+/flowers/sonota.html /flowers/others/sonota/ 301
+/flowers/masdevallia.html /flowers/others/masdevallia/ 301
+/flowers/2006paphio.html /flowers/2006/2006paphio/ 301
+/flowers/lycaste1.html /flowers/lycaste/lycaste1/ 301
+/flowers/2006ranten.html /flowers/2006/2006ranten/ 301
+/flowers/harubotan16.html /flowers/others/harubotan16/ 301
+/flowers/paphio103.html /flowers/paphio/paphio103/ 301
+/flowers/dendrobiumu.html /flowers/dendrobium/dendrobiumu/ 301
+/flowers/cattleyablue.html /flowers/cattleya/cattleyablue/ 301
+/flowers/2006lycaste11.html /flowers/2006/2006lycaste11/ 301
+/flowers/2006cattleya.html /flowers/2006/2006cattleya/ 301
+# nutri .html 追加分
+/nutri/cromugan.html /nutrient-foods/cromugan/ 301
+/nutri/magsiryou.html /vitamin-mineral/magsiryou/ 301
+/nutri/eiyouso.html /vitamin-mineral/ganyuute/ 301
+/nutri/vitasi4.html /vitamin-mineral/vitasi4/ 301
+# atopic .html
+/atopic/menekikihon.html /atopic/menekikihon/ 301
+/atopic/thbalance.html /atopic/thbalance/ 301
+# supliments/
+/supliments/ /supplement/ 301
+/supliments/begu.html /supplement/begu/ 301
+/supliments/begu /supplement/begu/ 301
+/supliments/be-tagur10.html /supplement/be-tagur10/ 301
+# hawaii/ → travel/
+/hawaii/mauisunset.html /travel/mauisunset/ 301
+/hawaii/hawaibeach.html /travel/hawaibeach/ 301
+/hawaii/mauibus.html /travel/mauibus/ 301
+/hawaii/mauisyokubutu.html /travel/mauisyokubutu/ 301
+# books/ → vitamin-mineral/
+/books/mokuzitu.html /vitamin-mineral/mokuzitu/ 301
+/books/mokuzito.html /vitamin-mineral/mokuzito/ 301
+/books/mokuzitu /vitamin-mineral/mokuzitu/ 301
+# phalaenopsis4 フラット
+/phalaenopsis4 /flowers/phalaenopsis/phalaenopsis4/ 301
+# その他
+/travel/suizokukan /travel/suizokukan/ 301
+/suppliments/oldcar /others/oldcar/ 301
+/oldcar/oldcar.html /others/oldcar/ 301
