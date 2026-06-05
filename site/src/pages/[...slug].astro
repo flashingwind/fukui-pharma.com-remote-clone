@@ -1,7 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
-import { marked } from 'marked';
+import { marked, Renderer } from 'marked';
 import MarkdownLayout from '../layouts/MarkdownLayout.astro';
+
+// <img ...> の直後の {width="N" height="N"} (またはHTMLエンティティ版) を img タグの属性に移す後処理
+function applyImageAttrs(html: string): string {
+  const q = '(?:"|&quot;|\')?';
+  const attrRe = new RegExp(
+    `(<img\\b[^>]*>)\\{[^}]*width=${q}(\\d+)${q}[^}]*height=${q}(\\d+)${q}[^}]*\\}`,
+    'g'
+  );
+  return html
+    .replace(attrRe, (_, imgTag, w, h) =>
+      imgTag.replace(/>$/, ` width="${w}" height="${h}">`)
+    )
+    .replace(
+      /(<img\b[^>]*>)\{[^}]*height=(?:"|&quot;|')?(\d+)(?:"|&quot;|')?[^}]*width=(?:"|&quot;|')?(\d+)(?:"|&quot;|')?[^}]*\}/g,
+      (_, imgTag, h, w) => imgTag.replace(/>$/, ` width="${w}" height="${h}">`)
+    );
+}
 
 const COLLECTIONS = [
   'vitamin-mineral',
@@ -209,7 +226,7 @@ interface Props {
 }
 
 const { entry, collection, canonicalSlug } = Astro.props;
-const htmlContent = await marked(entry.body);
+const htmlContent = applyImageAttrs(await marked(entry.body));
 
 // frontmatterにtitleがなければ本文冒頭のh1から自動取得
 const titleMatch = entry.body.match(/^#{1,3}\s+(.+)/m);
