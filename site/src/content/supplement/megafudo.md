@@ -15,7 +15,7 @@
 製造発売元　BioSan　Labs. Inc.　USA
 商品のラベルデザインは、現在の日本の商品と同様でしたが、最近左のように改装しています。日本の製品は上記のようにそのままです。
 バイオサン社のメガフードの解説は
-URL:http://www.megafood.com/weare.htm
+URL:<http://www.megafood.com/weare.htm>
 
 ---
 
