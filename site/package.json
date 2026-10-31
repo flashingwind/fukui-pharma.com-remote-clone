@@ -20,8 +20,8 @@
   "dependencies": {
     "@astrojs/react": "^5.0.3",
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.1.7",
-    "marked": "^18.0.1",
+    "astro": "^7.2.8",
+    "marked": "^18.0.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-markdown": "^10.1.0",
