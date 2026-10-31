@@ -6,6 +6,7 @@ export interface Props {
   frontmatter: {
     title?: string;
     description?: string;
+    noindex?: boolean;
   };
   canonicalSlug?: string | null;
 }
@@ -21,6 +22,7 @@ const pageTitle = frontmatter.title && frontmatter.title !== '福井薬局'
   title={pageTitle}
   description={frontmatter.description}
   canonicalSlug={canonicalSlug}
+  noindex={frontmatter.noindex}
 >
   <div class="markdown-body">
     <slot />

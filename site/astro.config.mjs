@@ -26,7 +26,9 @@ const resolvePublicImages = {
 
 export default defineConfig({
   site: 'https://fukui-pharma.com',
-  integrations: [react(), sitemap(), astroBrokenLinksChecker({ throwError: true, checkExternalLinks: false })],
+  integrations: [react(), sitemap({
+    filter: (page) => new URL(page).pathname.replace(/\/$/, '') !== '/vitamin-mineral/tetusiryou',
+  }), astroBrokenLinksChecker({ throwError: true, checkExternalLinks: false })],
   output: 'static',
   outDir: './dist',
   publicDir: './public',

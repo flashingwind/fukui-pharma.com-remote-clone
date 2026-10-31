@@ -193,3 +193,8 @@
     display: block;
   }
 }
+
+/* Keep all navigation links in HTML while preserving collapsed groups. */
+.menu-left-nav [hidden] {
+  display: none !important;
+}

@@ -55,7 +55,9 @@ function fileToUrl(filePath) {
   return `${SITE_URL}/${[routeCollection, ...rest].join('/')}`;
 }
 
-const urls = [...new Set(walk(CONTENT_DIR).map(fileToUrl).filter(Boolean))].sort();
+const urls = [...new Set(walk(CONTENT_DIR)
+  .filter(file => !/^noindex:\s*true\s*$/m.test(fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || ''))
+  .map(fileToUrl).filter(Boolean))].sort();
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
   .map(

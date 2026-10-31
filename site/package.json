@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node ./scripts/finalize-seo.js",
     "generate-flowers-index": "node ./scripts/generate-flowers-index.js",
     "generate-sitemap": "node ./scripts/generate-sitemap.js",
     "check-html-refs": "node ./scripts/check-html-references.js",

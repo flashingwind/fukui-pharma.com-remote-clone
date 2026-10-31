@@ -5,6 +5,7 @@ const contentSchema = z.object({
   title: z.string().optional(),
   description: z.string().optional(),
   date: z.date().optional(),
+  noindex: z.boolean().optional(),
 });
 
 const generateId = ({ entry }: { entry: string }) =>

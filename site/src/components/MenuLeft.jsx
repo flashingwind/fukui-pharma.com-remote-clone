@@ -224,7 +224,7 @@ const MenuLeft = () => {
       )}
 
       {/* 福井薬局 */}
-      <a className="menu-section-link" href="/shop/fukui">当店について ▶</a>
+      <a className="menu-section-link" href="/shop/fukui">旧店舗の記録 ▶</a>
 
       {/* 花の写真集 */}
       <div className="menu-section" onClick={() => toggleSection('flower')} style={{cursor:'pointer'}}>
