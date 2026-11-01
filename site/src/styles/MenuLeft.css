@@ -198,3 +198,49 @@
 .menu-left-nav [hidden] {
   display: none !important;
 }
+
+/* Center the inset search field independently of the logo and menu toggle. */
+.menu-search {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 24px);
+  margin: 8px auto 4px;
+}
+.menu-search input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 38px;
+  padding: 7px 40px 7px 13px;
+  border: 1px solid #b49b70;
+  border-radius: 19px;
+  background: #fffaf1;
+  color: navy;
+  font: inherit;
+  font-size: 14px;
+  appearance: none;
+}
+.menu-search input::-webkit-search-cancel-button { display: none; }
+.menu-search input::placeholder { color: #81725e; opacity: 1; }
+.menu-search input:focus-visible {
+  outline: 2px solid navy;
+  outline-offset: 2px;
+}
+.menu-search button {
+  position: absolute;
+  inset: 1px 1px 1px auto;
+  width: 38px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: #7a2000;
+  cursor: pointer;
+}
+.menu-search button:hover { background: #eee0c7; }
+.menu-search button:focus-visible { outline: 2px solid navy; outline-offset: -3px; }
+@media (max-width: 768px) {
+  .menu-search { width: min(220px, calc(100% - 100px)); margin: 10px auto; }
+}

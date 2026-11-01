@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="サイト内検索 | 福井薬局" description="福井薬局に残された文章・写真の記録を検索できます。" noindex={true}>
+  <main class="site-search-page">
+    <h1>サイト内検索</h1>
+    <form action="/search/" method="get" role="search" aria-label="検索結果の絞り込み" class="results-search-form">
+      <label for="results-query">検索キーワード</label>
+      <div class="results-query-row">
+        <input id="results-query" type="search" name="q" placeholder="サイト内を検索" maxlength="200" />
+        <button type="submit">検索</button>
+      </div>
+    </form>
+    <p id="search-status" role="status" aria-live="polite">キーワードを入力して検索してください。</p>
+    <noscript><p>サイト内検索を使うには、JavaScriptを有効にしてください。</p></noscript>
+    <ol id="search-results" class="search-results"></ol>
+    <button id="more-results" type="button" hidden>さらに表示</button>
+  </main>
+</BaseLayout>
+
+<script>
+  import { normalizeSearchText, keywordQuery, excerpt } from '../lib/site-search.js';
+
+  const input = document.querySelector<HTMLInputElement>('#results-query')!;
+  const status = document.querySelector<HTMLElement>('#search-status')!;
+  const list = document.querySelector<HTMLOListElement>('#search-results')!;
+  const more = document.querySelector<HTMLButtonElement>('#more-results')!;
+  const query = (new URLSearchParams(window.location.search).get('q') || '').trim().slice(0, 200);
+  input.value = query;
+  type SearchDocument = { url: string; title: string; body: string };
+  let matches: SearchDocument[] = [];
+  let shown = 0;
+
+  function showMore() {
+    const fragment = document.createDocumentFragment();
+    for (const doc of matches.slice(shown, shown + 20)) {
+      const item = document.createElement('li');
+      const heading = document.createElement('h2');
+      const link = document.createElement('a');
+      link.href = doc.url;
+      link.textContent = doc.title;
+      heading.append(link);
+      const summary = document.createElement('p');
+      summary.textContent = excerpt(doc.body, query);
+      item.append(heading, summary);
+      fragment.append(item);
+    }
+    list.append(fragment);
+    shown = Math.min(shown + 20, matches.length);
+    more.hidden = shown >= matches.length;
+    status.textContent = `「${query}」の検索結果：${matches.length}件（${shown}件表示）`;
+  }
+  more.addEventListener('click', showMore);
+
+  async function runSearch() {
+  if (query && keywordQuery(query)) {
+    status.textContent = '検索しています…';
+    status.setAttribute('aria-busy', 'true');
+    try {
+      const [{ createIndex, LinearIndex, search, StaticSeekError }, response] = await Promise.all([
+        import('staticseek'), fetch('/search-index.json'),
+      ]);
+      if (!response.ok) throw new Error('Search data unavailable');
+      const documents: SearchDocument[] = await response.json();
+      const index = createIndex(LinearIndex, documents.map(doc => ({
+        title: normalizeSearchText(doc.title), body: normalizeSearchText(doc.body),
+      })), { weights: [['title', 3], ['body', 1]] });
+      if (index instanceof StaticSeekError) throw index;
+      const results = await search(index, keywordQuery(query));
+      if (results instanceof StaticSeekError) throw results;
+      matches = results.map(result => documents[result.id]);
+      showMore();
+      if (!matches.length) status.textContent = `「${query}」に一致するページはありません。別のキーワードでお試しください。`;
+    } catch {
+      status.textContent = '検索データを読み込めませんでした。ページを再読み込みしてお試しください。';
+    } finally {
+      status.removeAttribute('aria-busy');
+    }
+  }
+  }
+  void runSearch();
+</script>
+
+<style>
+  .site-search-page { max-width: 850px; line-height: 1.7; }
+  h1 { font-size: 24px; }
+  .results-search-form label { display: block; font-size: 14px; margin-bottom: 6px; }
+  .results-query-row { display: flex; gap: 8px; }
+  input { min-width: 0; flex: 1; padding: 10px 14px; border: 1px solid #b49b70; border-radius: 18px; font: inherit; background: #fffaf1; color: navy; }
+  button { border: 1px solid #b49b70; border-radius: 16px; background: #fff7e6; color: #7a2000; font: inherit; padding: 8px 18px; cursor: pointer; }
+  input:focus-visible, button:focus-visible { outline: 2px solid navy; outline-offset: 2px; }
+  .search-results { list-style: none; padding: 0; }
+  .search-results :global(li) { padding: 16px 0; border-bottom: 1px solid #c8b38a; }
+  .search-results :global(h2) { font-size: 18px; margin: 0 0 5px; }
+  .search-results :global(p) { margin: 0; font-size: 14px; overflow-wrap: anywhere; }
+  #more-results { margin-top: 18px; }
+</style>

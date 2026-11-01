@@ -202,6 +202,15 @@ export const MenuLeftIsland = ({ pathname: pagePath = "/" }) => {
           <span className="menu-left-toggle-line" />
         </button>
       </div>
+      <form className="menu-search" action="/search/" method="get" role="search" aria-label="サイト内検索">
+        <input type="search" name="q" placeholder="サイト内を検索" aria-label="検索キーワード" maxLength={200} />
+        <button type="submit" aria-label="検索">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m15.5 15.5 4.5 4.5" />
+          </svg>
+        </button>
+      </form>
       <nav className="menu-left-nav" id="menu-left-navigation">
 
         {/* 栄養素を多く含む食品 */}
