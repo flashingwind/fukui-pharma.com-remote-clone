@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const SITE_URL = 'https://fukui-pharma.com';
+export const SITE_URL = 'https://fukui-pharma.com';
 const CONTENT_DIR = path.resolve('src', 'content');
 const PUBLIC_DIR = path.resolve('public');
 const OUTPUT_FILE = path.join(PUBLIC_DIR, 'sitemap.xml');
@@ -25,7 +25,7 @@ const COLLECTION_ROUTE_MAP = {
   'vitamin-mineral': 'vitamin-mineral',
 };
 
-function walk(dir, ext = '.md') {
+export function walk(dir, ext = '.md') {
   let results = [];
   const list = fs.readdirSync(dir);
   list.forEach(file => {
@@ -40,7 +40,7 @@ function walk(dir, ext = '.md') {
   return results;
 }
 
-function fileToUrl(filePath) {
+export function fileToUrl(filePath) {
   const rel = path.relative(CONTENT_DIR, filePath).replace(/\\/g, '/');
   if (rel === 'index.md') {
     return `${SITE_URL}/`;
@@ -55,15 +55,24 @@ function fileToUrl(filePath) {
   return `${SITE_URL}/${[routeCollection, ...rest].join('/')}`;
 }
 
-const urls = [...new Set(walk(CONTENT_DIR)
-  .filter(file => !/^noindex:\s*true\s*$/m.test(fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || ''))
-  .map(fileToUrl).filter(Boolean))].sort();
+export function buildSitemapXml(urls, { lastmod = today } = {}) {
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map(
+      url => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${lastmod}T00:00:00+09:00</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`
+    )
+    .join('\n')}\n</urlset>\n`;
+}
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-  .map(
-    url => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${today}T00:00:00+09:00</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`
-  )
-  .join('\n')}\n</urlset>\n`;
+export function collectUrls(contentDir = CONTENT_DIR) {
+  return [...new Set(walk(contentDir)
+    .filter(file => !/^noindex:\s*true\s*$/m.test(fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || ''))
+    .map(fileToUrl).filter(Boolean))].sort();
+}
 
-fs.writeFileSync(OUTPUT_FILE, xml);
-console.log(`sitemap.xml generated with ${urls.length} URLs.`);
+function main() {
+  const urls = collectUrls(CONTENT_DIR);
+  fs.writeFileSync(OUTPUT_FILE, buildSitemapXml(urls));
+  console.log(`sitemap.xml generated with ${urls.length} URLs.`);
+}
+
+main();

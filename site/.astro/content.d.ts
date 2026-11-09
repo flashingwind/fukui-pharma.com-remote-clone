@@ -85,6 +85,10 @@ declare module 'astro:content' {
 		entry: DataEntryMap[C][string],
 	): Promise<RenderResult>;
 
+	export function render<C extends keyof LiveContentConfig['collections']>(
+		entry: import('astro').LiveDataEntry<LiveLoaderDataType<C>>,
+	): Promise<RenderResult>;
+
 	export function reference<
 		C extends
 			| keyof DataEntryMap
@@ -127,6 +131,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"access">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "active-oxygen": Record<string, {
   id: string;
@@ -135,6 +140,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"active-oxygen">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "atopic": Record<string, {
   id: string;
@@ -143,6 +149,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"atopic">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "flowers": Record<string, {
   id: string;
@@ -151,6 +158,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"flowers">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "nutrient-foods": Record<string, {
   id: string;
@@ -159,6 +167,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"nutrient-foods">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "others": Record<string, {
   id: string;
@@ -167,6 +176,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"others">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "shop": Record<string, {
   id: string;
@@ -175,6 +185,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"shop">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "supplement": Record<string, {
   id: string;
@@ -183,6 +194,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"supplement">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "travel": Record<string, {
   id: string;
@@ -191,6 +203,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"travel">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 "vitamin-mineral": Record<string, {
   id: string;
@@ -199,6 +212,7 @@ declare module 'astro:content' {
   data: InferEntrySchema<"vitamin-mineral">;
   rendered?: RenderedContent;
   filePath?: string;
+  digest?: string | number;
 }>;
 
 	};
@@ -214,6 +228,7 @@ declare module 'astro:content' {
 	type ExtractEntryFilterType<T> = ExtractLoaderTypes<T>['entryFilter'];
 	type ExtractCollectionFilterType<T> = ExtractLoaderTypes<T>['collectionFilter'];
 	type ExtractErrorType<T> = ExtractLoaderTypes<T>['error'];
+	type ExtractDataType<T> = ExtractLoaderTypes<T>['data'];
 
 	type LiveLoaderDataType<C extends keyof LiveContentConfig['collections']> =
 		LiveContentConfig['collections'][C]['schema'] extends undefined
