@@ -40,8 +40,11 @@ export function walk(dir, ext = '.md') {
   return results;
 }
 
-export function fileToUrl(filePath) {
-  const rel = path.relative(CONTENT_DIR, filePath).replace(/\\/g, '/');
+export function fileToUrl(filePath, contentDir = CONTENT_DIR) {
+  // Normalize Windows-style separators before relativizing, so paths like
+  // C:\...\content\shop\order.md resolve correctly on any platform.
+  const normalized = filePath.replace(/\\/g, '/');
+  const rel = path.relative(String(contentDir).replace(/\\/g, '/'), normalized);
   if (rel === 'index.md') {
     return `${SITE_URL}/`;
   }
@@ -66,7 +69,7 @@ export function buildSitemapXml(urls, { lastmod = today } = {}) {
 export function collectUrls(contentDir = CONTENT_DIR) {
   return [...new Set(walk(contentDir)
     .filter(file => !/^noindex:\s*true\s*$/m.test(fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || ''))
-    .map(fileToUrl).filter(Boolean))].sort();
+    .map(file => fileToUrl(file, contentDir)).filter(Boolean))].sort();
 }
 
 function main() {

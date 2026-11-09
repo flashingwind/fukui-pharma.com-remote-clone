@@ -79,21 +79,21 @@ describe('walk', () => {
 
 describe('fileToUrl', () => {
   it('maps the content index.md to the site root', () => {
-    expect(fileToUrl(path.join(tmpDir, 'index.md'))).toBe(`${SITE_URL}/`);
+    expect(fileToUrl(path.join(tmpDir, 'index.md'), tmpDir)).toBe(`${SITE_URL}/`);
   });
 
   it('maps a known collection with a nested path', () => {
-    expect(fileToUrl(path.join(tmpDir, 'flowers', 'cattleya', 'cattleya1.md'))).toBe(
+    expect(fileToUrl(path.join(tmpDir, 'flowers', 'cattleya', 'cattleya1.md'), tmpDir)).toBe(
       `${SITE_URL}/flowers/cattleya/cattleya1`
     );
   });
 
   it('rewrites the about collection to the /access route', () => {
-    expect(fileToUrl(path.join(tmpDir, 'about', 'fukui.md'))).toBe(`${SITE_URL}/access/fukui`);
+    expect(fileToUrl(path.join(tmpDir, 'about', 'fukui.md'), tmpDir)).toBe(`${SITE_URL}/access/fukui`);
   });
 
   it('strips the .md extension from the URL', () => {
-    expect(fileToUrl(path.join(tmpDir, 'travel', 'hawaibeach.md'))).toBe(
+    expect(fileToUrl(path.join(tmpDir, 'travel', 'hawaibeach.md'), tmpDir)).toBe(
       `${SITE_URL}/travel/hawaibeach`
     );
   });
@@ -107,8 +107,9 @@ describe('fileToUrl', () => {
   });
 
   it('normalizes Windows-style separators (backslashes) to forward slashes', () => {
-    const winPath = path.join(tmpDir, 'shop', 'order.md').replace(/\//g, '\\');
-    expect(fileToUrl(winPath)).toBe(`${SITE_URL}/shop/order`);
+    // Build a Windows-style path without mangling the absolute prefix.
+    const winPath = `${tmpDir}\\shop\\order.md`;
+    expect(fileToUrl(winPath, tmpDir)).toBe(`${SITE_URL}/shop/order`);
   });
 });
 
