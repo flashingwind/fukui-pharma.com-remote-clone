@@ -19,7 +19,7 @@
   "dependencies": {
     "@astrojs/react": "^5.0.3",
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^7.2.8",
+    "astro": "^7.3.8",
     "marked": "^18.0.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
@@ -40,7 +40,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "playwright": "^1.58.2",
-    "vite": "^8.0.1",
+    "vite": "^8.3.7",
     "vitest": "^5.0.5"
   }
 }
